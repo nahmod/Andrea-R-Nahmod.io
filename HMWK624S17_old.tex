@@ -1,0 +1,272 @@
+\magnification=1200
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+%\NoPageNumbers
+\pagewidth{16.5truecm}
+\pageheight{22truecm}
+
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+%\hcorrection{.3in}
+
+\centerline{ \bf  M624 HOMEWORK  -- SPRING 2017}
+\vskip .1in
+\centerline{ Prof. Andrea R. Nahmod }
+\vskip .2in
+
+\document
+
+\head {\underbar{SETS 1\,\& \,2 - Due 02/09/2017}  }\endhead
+\vskip .2in
+
+
+%\smallskip
+
+\noindent {\bf From Chapter 3 (pp 145-152)}:   14, 15,19,  23,  32. 
+\smallskip
+
+\medskip
+\noindent {\bf From Chapter 3 (pp 153)}:  4.
+
+\vskip .2in
+
+\noindent\underbar{\bf Additional Questions (Chapter 3; left in class)}:
+
+\vskip .1in
+
+\noindent 1) Explain why $J_{F}(y) - J_{F}(x)  \leq \sum_{n : x < x_{n} \leq y} \alpha_{n}  \leq  F(y) - F(x)$ (proof of Lemma 3.13).
+\vskip .1in
+
+\noindent 2) Show rigorously that $J_{F}(x) - F(x)$ is continuous (in proof of Lemma 3.13). 
+
+\vskip .1in
+\noindent 3)  Rewrite explaining fully the proof of Theorem 3.14 in Chapter 3. Note you need to solve and use exercise 14 (given above in Chapter 3).
+
+
+\vskip .3in 
+
+\noindent {\bf From Chapter 4:}
+
+Recall carefully the proof of both  Theorem 2.2 (Riesz-Fisher) on Chaper 2 (p. 70)  and the one for Theorem 1.2 Chapter 4 (p. 159) (as we did in class). Then do:
+
+\smallskip
+
+
+\noindent {\bf Additional Problem:}  For any $1 \leq p < \infty$ consider the space
+$$L^p(\Bbb R^d):= \{ f: \Bbb R^d \to \Bbb C, \text{ measurable}, \, : \, \| f\|_{L^p(\Bbb R^d)}:= \left( \int_{\Bbb R^d}  | f(x) |^p \, dm  \right)^{\frac{1}{p}} < \infty \}.$$
+{\underbar{Assume}} that $ \| f\|_{L^p(\Bbb R^d)}$ is a norm ( {\it challenge:} can you guess what would you need to prove the triangle inequality when $p \neq 2$?), whence $d_p(f,g) : =  \| f - g\|_{L^p(\Bbb R^d)}$ defines a metric and $L^p$ is a metric space.  {\bf Prove} that $L^p(\Bbb R^d)$  is {\it complete}.
+
+\bigskip
+
+\noindent {\bf From Chapter 4 (pp 193-194)}:  1, 2, 3, 4, 5, 6, 7, 8a).
+
+\bigskip
+
+\noindent {\bf From Chapter 4 (pp 202)}:   $2^{\ast}$a)b)
+
+
+ \vskip .3in
+ 
+\head {\underbar{SET 3 - Due 02/23/17}  }\endhead
+\vskip .2in
+\noindent {\bf From Chapter 4 (pp 195-197)}:  10, 11, 12, 13, 20
+
+
+\medskip
+
+{\bf Pb. I.} Consider the subspace $\Cal S$ of $L^2([0,1])$ spanned by the functions: $1 ,\,  x,$ and  $x^3$. 
+
+a) Find an orthonormal basis of $\Cal S$.
+
+b)  Let $P_{\Cal S}$  denote the orthogonal projection on the subspace $\Cal S$, compute $P_{\Cal S} x^2$.
+  
+\medskip
+
+{\bf Pb. II.}  Consider  a function $ f \in L^2([-\pi, \pi])$ whose Fourier series is $\sum_{n \in \Bbb Z} a_n e^{inx} = \lim_{N \to \infty} S_N(f)(x)$ - equal a.e. to $f(x)$. 
+Show that on any subinterval $[a, b] \subset [-\pi, \pi] $ we have,
+$$ \int_a^b f(x)\, dx \, = \, \sum_n   \int_a^b  \, a_n \, e^{i n x} \, dx. $$ In particular if $g(x)= \int_a^x f(y) dy $, the Fourier coefficients and series of $g(x)$ 
+can be obtained from $a_n$, the Fourier  coefficients of $f$.
+
+\medskip
+
+{\bf Pb. III.} For $0 < \alpha < 1$, we say that  a function $f$ is  $C^{\alpha}$-H\"older
+continuous with exponent  $\alpha$ if there exists a constant $c=c_{\alpha}>0$ such that $|f(x)- f(y)| \leq c\, | x -y|^{\alpha} $ for all $x, y$. 
+For $k \in \Bbb N$, we can also define the space $C^{k, \alpha}$ to be that of functions which are $k$-th times differentiable and whose $k$-th derivative is
+$C^{\alpha}$-H\"older continuous (we could relabel $C^{\alpha}$ as $C^{0,\alpha}$). 
+
+Consider now $f$ a $2\pi$-periodic $C^{k, \alpha}$ function. If $a_n$ are the Fourier coefficients of $f$,  show that for some $C>0$ independent of $n$, 
+$$ |a_n| \leq \frac{C}{|n|^{k+\alpha} } $$
+
+\vskip .05in
+
+\noindent {\bf From Chapter 4 (pp 205)}:  11*a)b).
+
+
+\vskip .2in
+
+
+
+
+\head {\underbar{SET 4 - Due 03/02/17 }  }\endhead
+\vskip .1in
+
+\noindent {\bf From Chapter 4 (pp 197-202)}:  18, 19, 21a), 22, 24, 26.
+
+
+\vskip .2in
+
+
+
+\head {\underbar{SET 5 - Due 03/23/17 }  }\endhead
+\vskip .1in
+\noindent {\bf From Chapter 4 (pp 196-202)}:  15, 21b), 23, 25, 28, 30, 32, 33.
+\bigskip
+\underbar{Additional Problems ({\bf Bonus})}:  29 (p 199-200) and $6^{\ast}$ (p. 203-204). These are about Fredholm's Alternative for compact operators.
+
+\vskip .2in
+
+\head {\underbar{SET 6 - Due 03/30/17}}  \endhead
+
+\noindent {\bf From Chapter 5}:   1 
+
+\underbar{Definition:}  A Fourier multiplier operator $T$ on $\Bbb R^d$ is a linear operator on $L^2(\Bbb R^d)$ determined by a bounded function $m$ (the multiplier) such that $T$ is defined by the formula
+$$ \widehat{T(f)}(\xi):= m(\xi) \widehat{f}(\xi) $$ for all $\xi \in \Bbb R^d$ and any $f \in L^2(\Bbb R^d).$
+
+\bigskip 
+
+\noindent {\bf From Chapter 6}:  Read/Study the proofs in Section 1.
+
+\bigskip
+
+\noindent {\bf From Chapter 6}:  1, 2a), 3.
+
+
+\vskip .2in
+\head {\underbar{SET 7 - Thursday April 20th}}  \endhead
+
+
+
+\noindent {\bf From Chapter 6 (pp 317-322)}:  5,  8, 10, 11a)b), 16a)b)
+
+\medskip
+
+\underbar{Additional Problems:}  
+
+\smallskip
+
+\noindent {\bf(A1)} \, Let $\nu$ be a signed measure on $(X, \Cal M)$. Show that for any $E \in \Cal M$
+
+$$ \align |\nu|(E) &= \\
+&= \sup \{ \sum_{k=1}^K\,  |\nu(E_k)| \, : \,  E_1, \dots E_K  \text{ are disjoint and }\,  E=\cup_{k=1}^K E_k  \, \} \tag{1} \\
+&=   \sup \{ \, \sum_{k=1}^{\infty}\,  |\nu(E_k)| \, : \,  E_1,  E_2,  \dots   \text{ are disjoint and } \,  E=\cup_{k=1}^{\infty} E_k \, \}  \tag{2} \\ 
+&=   \sup \{ | \int_{E}   f  d \nu |  \, : \,  |f|  \leq 1 \}  \tag{3}
+\endalign $$ 
+
+You may want to proceed for example by proving that  $(1) \leq (2) \leq (3) \leq (1)$. 
+
+\medskip
+
+\noindent {\bf(A2)} \, Let $F \in BV([a,b])$ and right continuous. Let $G(x)= |\mu_F|([a, x])$. Show that $|\mu_F|=\mu_{T_F}$ by showing that $G=T_F$. To do so you may proceed by proving:
+
+1) \,  $T_F  \leq G$  (use definition of $T_F$).
+
+2) \, $|\mu_F(E)| \leq \mu_{T_F} (E) $ for any Borel set $E$  (do for an interval first).
+
+3)  Show that  $|\mu_F| \leq \mu_{T_F}$ and hence $G \leq T_F$  (use (A1)). 
+
+\medskip
+\underbar{Problems {\bf to do} (but do not turn in)}:  \, 14, 16c)d)e)f). 
+
+\vskip .1in
+
+\bigskip
+
+\noindent {\bf From Chapter 1 of [SS, Vol. 4] (pp 34-43)}:  1, 3, 5, 6, 7, 8.
+
+
+
+%\noindent {\bf(A3)}  Let $F$ and $G$ be $BV([a,b])$ and right continuous. Let $\mu_F$ and $\mu_G$ be the corresponding signed Borel measures
+%(recall these measures are uniquely determined by -say-  $\mu_F( c, d])= F(d) - F(c)$).  
+%\smallskip
+%
+%a)  Show that if either $F$ or $G$ are continuous the following {\it integration by parts} formula holds:
+%$$ \int_{(a, b]} F d\mu_G + \int_{(a, b]} G d\mu_F \, =\, F(b)G(b) - F(a)G(a) $$
+%
+%\smallskip
+%b)  If  $F$ and $G$ are absolutely continuous then 
+%$$ \int_{(a, b]} F G^{\prime} \, dx \,+\,  \int_{(a, b]} G F^{\prime} \, dx \, =\, F(b)G(b) - F(a)G(a) $$
+
+ 
+\vskip .2in
+
+ 
+ \head {\underbar{SET 8 - Due 04/27/15}}\endhead
+\medskip
+
+\noindent {\bf From Chapter 1 of [SS, Vol. 4] (pp 36-43)}: 9,  12 (do this on $\Bbb R^n$ with Lebesgue measure), 13, 15, 16, 17, 19, 20, 34, 35.
+
+
+
+
+\end{document}
+
+
+
+
+\medskip
+
+\noindent {\bf(A3)}  Let $F$ and $G$ be $BV([a,b])$ and right continuous. Let $\mu_F$ and $\mu_G$ be the corresponding signed Borel measures
+(recall these measures are uniquely determined by -say-  $\mu_F( c, d])= F(d) - F(c)$).  
+\smallskip
+
+a)  Show that if either $F$ or $G$ are continuous the following {\it integration by parts} formula holds:
+$$ \int_{(a, b]} F d\mu_G + \int_{(a, b]} G d\mu_F \, =\, F(b)G(b) - F(a)G(a) $$
+
+\smallskip
+b)  If  $F$ and $G$ are absolutely continuous then 
+$$ \int_{(a, b]} F G^{\prime} \, dx \,+\,  \int_{(a, b]} G F^{\prime} \, dx \, =\, F(b)G(b) - F(a)G(a) $$
+
+\bigskip
+
+\underbar{Problems {\bf to do} (but do not turn in)}:  \, 14, 16c)d)e)f) 
+ 
+ \bigskip
+ 
+ \bigskip
+ 
+ \head {\underbar{SET 7 - Due 04/16/15 }  }\endhead
+\medskip
+
+\noindent {\bf From Chapter 1 of [SS, Vol. 4] (pp 34-43)}:  1, 3, 5, 6, 7, 8.
+
+
+\head {\underbar{SET 8 - Due 04/30/15}}\endhead
+\medskip
+
+\noindent {\bf From Chapter 1 of [SS, Vol. 4] (pp 36-43)}: 9,  12 (do this on $\Bbb R^n$ with Lebesgue measure), 13, 15, 16, 17, 19, 20, 34, 35.
+
+
+
+ 
+ \enddocument
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+\magnification=1100
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+\NoPageNumbers
+
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+%\hcorrection{.3in}
+
+\centerline{ \bf  Math 331 Section 3. \,Solutions to Quiz 2  }
+  
+\bigskip 
+\document
+
+{\bf Problem 1.}\, \, Given the initial condition below  for the differential equation 
+$$ \frac{dy}{dt} \, =\, (y-2)\,(y-3)\,y  $$What does the Existence and Uniqueness theorem say about the corresponding solution?\, {\bf Explain}. Sketch a graph for $y(t)$ indicating its initial condition on it.
+\vskip .2in
+ 
+Since $y(y-2)(y-3)$ is continuous for all $(y,t)$ the existence theorem guarantees that for the given initial conditions a solution must exist.  Moreover, for all $(y,t)$, \,    $y(y-2)(y-3)$ is also differentiable ; hence we have that for each initial condition there must exist a {\bf \, unique}  solution. 
+
+By uniqueness, we then know that for different initial conditions the graphs of the solutions cannot intersect.  
+
+By inspecting $y(y-2)(y-3)$  we conclude that there are three equilibrium solutions, namely $y = 0$, $y=2$ and $y=3$.  \, By checking the signs we have that 
+$\frac{dy}{dt} > \,0$ for $y > 3$ and $ 0 < y < 2$; while $\frac{dy}{dt} < \, 0$ for $y < 0$ and $2 < y < 3$.  
+\vskip .1in 
+
+In case {\bf (a)}  for the initial condition $y(0) \,=\, 1$  we have that the solution is increasing and stays in between the equilibrium solutions $y = 0$ and $y =2$ by uniqueness (it cannot `cross' these lines). Moreover the $ \lim_{t \to \infty} y(t) \,=\, 2$ and $\lim_{t \to -\infty} \, y(t) = 0$ asymptotically.
+
+\vskip .1in
+
+In case {\bf (b)} for the initial condition $y(0) \,=\, 3$ by uniqueness we must have that the only solution with that initial condition must be the equilibrium solution $y =3$.
+
+\vskip 1.4in 
+
+{\bf Problem 2. } Given the differential equation $$ \frac{dy}{dt} \,=\, 3 y \, (y-1)$$ 
+{\bf (a)} \, Sketch its phase line and identify equilibrium points as sinks, sources or nodes. 
+
+\newpage
+
+{\bf (b)}  For the equation above and initial conditions  $y(0) = 1/2$ on the one hand and and $y(0) =2$on the other; sketch the graphs of the solutions satisfying these initial conditions. Put both graphs on one pair of axes.  
+
+\vskip 2.5in 
+
+{\bf Problem 3} \, Solve the following initial value problem for the given linear differential equation $$ \frac{dy}{dt} \,=\, - 2t \, y \, + 4 e^{-t^2} \qquad \quad y(0) \,=\, 3$$ 
+\vskip .4in 
+\noindent First rewrite as $$  \frac{dy}{dt} \,+\, 2t \, y \,=\, 4 e^{-t^2}  \quad \Longrightarrow \quad \mu(t) \,=\, e^{\int 2 t\, dt } \,=\, e^{t^2} $$ Multiplying both sides by $\mu(t)$ we get 
+$$ e^{t^2}\, \frac{dy}{dt} \,+\, e^{t^2}\,  2t \, y \,=\, 4 \quad \Longrightarrow \quad (\, e^{t^2} \, y \,)^{\prime} \, =\, 4 $$  Integrating both sides with respect to $t$ we obtain,
+$$  e^{t^2} \, y \, \, =\, 4 t + C \quad \Longrightarrow \quad y\,=\, 4 t e^{-t^2} \, +\, C \, e^{-t^2} $$ Since $y(0) \,=\, 3$, plugging in we have that $C=3$. Hence
+$$ y\,=\, 4 t e^{-t^2} \, +\, 3 \, e^{-t^2} $$
+
+
+\enddocument
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\enddocument
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+

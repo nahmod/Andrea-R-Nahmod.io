@@ -1,0 +1,187 @@
+\input amstex
+\documentstyle{amsppt}
+\nologo
+\magnification=\magstephalf
+\pagewidth{6.5truein}
+\pageheight{9truein}
+\parskip=5pt
+\abovedisplayskip=11pt          %plus 3pt minus 3pt
+\belowdisplayskip=11pt          %plus 3pt minus 3ptf
+
+\NoBlackBoxes
+\def\card{\operatorname{card}}
+\def\intinfin{\int_{-\infty}^{\infty}}
+\def\const{\operatorname{const.}}
+\def\dist{\operatorname{dist}}
+\def\con{\operatorname{const}}
+\def\sgn{\operatorname{sgn}}
+\def\supp{\operatorname{supp}}
+\def\sign{{\rm sgn}}
+\def\conphi{{\text const}_{\phi}}
+\def\conpsi{{\text const}_{\psi}}
+\def\J{{\cal J}}
+\def\Q{{\cal Q}}
+\def\A{{\Cal A}}
+\def\B{{\Cal B}}
+\def\C{{\Cal C}}
+\def\D{{\Cal D}}
+\def\E{{\Cal E}}
+\def\F{{\Cal F}}
+\def\G{{\Cal G}}
+\def\H{{\Cal H}}
+\def\I{{\Cal I}}
+\def\J{{\Cal J}}
+\def\K{{\Cal K}}
+\def\L{{\Cal L}}
+\def\J{{\Cal J}}
+\def\M{{\Cal M}}
+\def\Q{{\Cal Q}}
+\def\P{{\Cal P}}
+\def\S{{\Cal S}}
+\def\R{{\Cal R}}
+\def\T{{\Cal T}}
+\def\V{{\Cal V}}
+\def\W{{\Cal W}}
+\def\gA{{\frak A}}
+\def\gB{{\frak B}}
+\def\gF{{\frak F}}
+\def\gG{{\frak G}}
+\def\gH{{\frak H}}
+\def\gN{{\frak N}}
+\def\gP{{\frak P}}
+\def\gT{{\frak T}}
+\def\IC{{\Bbb C}}
+\def\II{{\Bbb I}}
+\def\IJ{{\Bbb J}}
+\def\IN{{\Bbb N}}
+\def\IP{{\Bbb P}}
+\def\IQ{{\Bbb Q}}
+\def\nat{{\Bbb N}}
+\def\que{{\Bbb Q}}
+\def\IR{{\Bbb R}}
+\def\real{{\Bbb R}}
+\def\IS{{\Bbb S}}
+\def\IT{{\Bbb T}}
+\def\IW{{\Bbb W}}
+\def\IZ{{\Bbb Z}}
+\def\zed{{\Bbb Z}}
+%\def\wal#1{\omega_{#1}}
+%\def\stof#1{\text{\rm w}_{#1}}
+\def\lto{\longrightarrow}
+\def\conj{\overline}
+\def\sign{\text{sign}}
+\def\myskip{\noalign{\vskip6pt}}
+%\def\bmatrix#1{\left[ \matrix #1\endmatrix \right]}
+\def\varep{\varepsilon}
+%\def\ch{\raise 0.3ex\hbox{$\chi$}\kern-.15em}
+\def\iprec{\mathop{\prec}_{i}}
+\def\3prec{\mathop{\prec}_{3}}
+\def\liirr{{L^2_{\rho_r}}}
+\def\so{\text{\rm SO}}
+\def\bR{\text{\bf R}}
+%\def\wal#1{\omega_{#1}}
+%\def\stof#1{{\rm w}_{#1}}
+%\def\Lip{{\rm Lip}}
+\overfullrule=0pt
+\def\ch{\raise 0.3ex\hbox{$\chi$}\kern-.15em}
+%\def\real{{\Bbb R}}
+
+\def\dist{\operatorname{dist}}
+\def\IH{{\Bbb H}}
+\def\gF{{\frak F}}
+\def\gN{{\frak N}}
+\def\IS{{\Bbb S}}
+
+\topmatter
+\title Problem Set  1 \endtitle
+\date Due September 19th,  2002 \enddate
+\endtopmatter
+
+\document
+
+\proclaim{Problem 1} Let $\{E_n\}_{n\ge 1}$ be a family of sets. 
+Prove the following facts about the $\liminf E_n$ and $\limsup E_n$
+respectively.  $$ i)  \qquad \bigcup_{k=1}^{\infty} \bigcap_{n=k}^{\infty} E_n = \{ x
+: x \in E_n \text{ for all but finitely many}\, \,  n \} \, \,
+(\text{{\rm this is by def. the }}  \liminf  E_n ) $$
+
+  $$ ii)  \qquad \bigcap_{k=1}^{\infty} \bigcup_{n=k}^{\infty} E_n = \{ x
+: x \in E_n \text{ for infinitely many} \, \,  n \} \, \, (\text{ {\rm this
+is by def. the}} \limsup  E_n ) $$
+\endproclaim
+
+
+\proclaim{Problem 2}  Let $\{E_n\}_{n\ge 1}$ be a family of sets. For
+each $n \ge 1$ let $\chi_{E_n} (x)$ denote the characteristic function
+of the set $E_n$ ( i.e. the function that equals $1$ when $x \in E_n$
+and zero otherwise). Prove the following :
+
+$$ i)\qquad \liminf \chi_{E_n} (x) = \ch_{\liminf E_n} (x) $$
+
+
+$$ ii) \qquad \limsup \chi_{E_n} (x) = \ch_{\limsup E_n} (x) $$ 
+
+\endproclaim 
+
+\proclaim{Problem 3} Let $(X, \rho)$ be a metric space.  
+
+a) Prove that the {\it finite} intersection of {\it open } sets is {\it open}. 
+
+b) Prove that the  {\it finite} union of {\it closed} sets is {\it
+closed} 
+
+\endproclaim
+
+
+
+\proclaim{Problem 4}
+
+a) Prove that a \underbar{closed} subset of a complete metric space is also complete. Show with an example that if the subset of a complete metric space 
+is not closed then it may fail to be complete.
+
+b) Prove that a complete subset of an arbitrary metric space is \underbar{closed}. 
+Find an example of an arbitrary metric space and a complete 
+subset of it and check is indeed closed. 
+
+\endproclaim
+
+
+\proclaim{Problem 5} Let $(X, \rho)$ be a metric space. Prove that if $X$ is 
+totally bounded then it  is bounded. 
+
+\endproclaim
+
+
+
+
+
+
+
+
+
+
+
+\enddocument
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

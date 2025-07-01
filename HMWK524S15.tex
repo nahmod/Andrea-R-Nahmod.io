@@ -1,0 +1,233 @@
+\magnification=1200
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+%\NoPageNumbers
+\pagewidth{16.5truecm}
+\pageheight{22truecm}
+
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+%\hcorrection{.3in}
+
+\centerline{ \bf  M524 HOMEWORK --SPRING 2015}
+\vskip .1in
+\centerline{ Prof. Andrea R. Nahmod }
+\vskip .2in
+
+\document
+
+\head {\underbar{SET 1 - Due 02/05/15  }  }\endhead
+\vskip .1in
+
+\noindent {\bf From Chapter  8 (Krantz's 167-168)}: \, 1, 2.
+\vskip .2in
+\noindent {\bf From Chapter  8 (Krantz's 171-172)}: \, 5, 6, 8, 9.
+\vskip .3in
+
+\underbar{Additional Problems (assigned in class):} 
+\medskip 
+
+{\bf I.\,} Prove all claims made in Example 8.7; that is give a full proof of Example 8.7.
+
+\medskip 
+
+{\bf II.\,}   Prove Proposition 8.11 (Theorem 2.10 in Ch 2 proves for the analogous result for sequences).
+
+\medskip 
+
+{\bf III.\,}   Find an example to prove that Theorem  8.13 fails if one only requires the $f^{\prime}_j \to  g$ pointwise  on $I=(a,b)$ rather than uniformly as in the statement.
+
+\head {\underbar{SET 2 - Due 02/12/15  }  }\endhead
+\vskip .1in
+
+\noindent {\bf From Chapter  8 (Krantz's 175-176)}: \, 3, 7, 10, 11, 13
+
+\vskip .2in
+
+\noindent {\bf From Chapter  8 (Krantz's 180-181)}: \, 3, 4.
+\vskip .1in
+\noindent {\underbar{Read}} the proof of  Lemma 8.22 (Krantz's p.179).
+
+\vskip .2in
+\head {\underbar{SET 3 - Due 02/26/15  }  }\endhead
+
+
+\noindent {\bf From Section  9.1 (Krantz's 188-189)}:   2. 
+\vskip .1in
+
+\noindent {\bf From  Section  9.2 (Krantz's 194)}: 3, 6.
+
+\vskip .1in
+
+\noindent {\bf From  Section  9.3 (Krantz's 200)}: 4.
+
+\vskip .1in
+
+\noindent {\bf From  Section  10.1 (Krantz's 210-211)}: 1, 9.
+\vskip .1in
+\noindent {\bf From  Section  10.2 (Krantz's 220-221)}:  2, 3, 5. 
+\vskip .2in
+
+\head {\underbar{SET 4 - Due 03/12/15  }  }\endhead
+
+\noindent {\bf From  Section  11.2 (Krantz's 231-234)}   3,  4a)c), 10, 13, 15, 16 ( for 15 and 16, read and use 14*).
+
+\vskip .2in
+
+\head {\underbar{SET 4 - Due 04/02/15  }  }\endhead
+
+\noindent {\bf From  Section  11.4 (Krantz's 251)}  12a)b)  (read Example 11.22 on page 247-248 first).
+\smallskip
+{\underbar{Additional problems} (from the material we covered from {\it Fourier Analysis, An Introduction} Vol. I by E.M. Stein and R. Shakarchi).
+
+\smallskip
+
+\noindent {\bf (A1)}  Let $f$ is a $2\pi$-periodic integrable function on any finite interval.
+
+(a) Prove  that for any $a, b \in \Bbb R$ 
+$$  \int_a^b f(x) d x  = \int_{a+ 2\pi}^{b+2\pi} f(x) dx = \int_{a- 2\pi}^{b -2\pi} f(x) dx $$
+(b) Prove  that for any $a \in \Bbb R$ $$  \int_{-\pi}^{\pi} f(x+a) d x  = \int_{-\pi}^{\pi} f(x) dx = \int_{- \pi +a }^{\pi+a} f(x) dx $$
+
+\medskip
+
+\noindent {\bf (A2)}  Suppose that  $\{a_n\}_{n=1}^N$ and $\{b_n\}_{n=1}^N$ are two finite sequences of complex numbers. Let $B_K = \sum_{n=1}^K  b_n$ denote the partial sums of the series $\sum b_n$, and define $B_0=0$. 
+
+(a)  Prove the {\it summation by parts} formula 
+$$\sum_{n=M}^N   a_n b_n = a_N B_N - a_M B_{M-1} - \sum_{n=M}^{N-1}  (a_{n+1} - a_n) B_n $$
+
+\smallskip
+
+(b)  Deduce from part (a) the Dirichlet's Test for convergence of a series that states:  If the partial sums $B_K =\sum_{n=1}^K  b_n $    of a series $\sum_n  b_n $ are bounded  (that is, $| B_K| \leq C$ for some $C>0$ independent of $K$) and  if  $\{a_n\}_n$ is a sequence of real numbers that decreases monotonically to $0$ (that is $a_{n+1} \leq a_n$ and 
+$a_n \to 0$) then  the series $\sum a_n b_n$ converges.
+
+\medskip
+
+\noindent {\bf (A3)}  Suppose that $f$ is a $2\pi$- periodic function which belongs to the class $C^2$ of continuous and twice differentiable functions 
+with continuous derivatives.  Show that  there exists a constant $C>0$  independent on $n$ such that $ |\widehat{f}(n)| \leq \frac{c}{|n|^2} $.
+
+\underbar{Hint} Integrate twice by parts. Use periodicity.
+
+If $f$ is a $2\pi$- periodic function which belongs to the class $C^k$ of continuous and $k$-times differentiable functions 
+with continuous derivatives.  What can you say about $|\widehat{f}(n)| $ and how would you prove that ?
+
+
+\medskip
+\noindent {\bf (A4)}   In class we discussed both the F\'ejer kernel associated to the C\`esearo summability of Fourier series and the Poisson 
+kernel associated to the Abel summability of Fourier series.  That the Fejer kernel is a "good kernel" follows from exercises 14, 15 and 16 in section 11.2 (pages 234-235 of Krantz).  Here prove that the Poisson kernel is a good kernel.  Recall that for $0 \leq r < 1$ and $ -\pi \leq x < \pi $
+$$  P_r(x) = \sum_{n=-\infty}^{\infty}  r^{|n|} e^{i n x} = \frac{1 - r^2}{ 1 - 2 r \cos x + r^2} $$ and to be a good kernel means that 
+\smallskip
+
+1)   $ \frac{1}{2\pi} \int_{-\pi}^{\pi}  P_r(x) \, dx  = 1 $  for all $ 0 \leq r < 1$ 
+\smallskip 
+2) There exists $M >0$ such that for all  $ 0 \leq r < 1$, $ \int_{-\pi}^{\pi}  |P_r(x) | \, dx  \leq M $   
+\smallskip
+
+\underbar{Hint}: note that  $P_r(x)  \geq 0$ (why?) so this should be immediate from 1).
+
+\smallskip 
+3) For every $\delta >0$ , \, $$\int_{\delta \leq |x| \leq \pi}  |P_r(x) |  dx \to 0, \, \text{ as } \,  r \to 1^{-}$$
+ 
+
+
+
+
+\vskip .2in
+
+
+\head {\underbar{SET 5 - Due 04/16/15  }  }\endhead
+
+\medskip 
+
+\noindent {\bf From  Section 12.1 (Krantz's 257-258)}  1, 2, 3, 5, 6 and 11* 
+
+\smallskip
+\underbar{Hint for 11*}:  Think for example of a function defined on all of $\Bbb R^2$  but 
+which is not continuous at -say-  $(0,0)$ but still $\frac{\partial f}{\partial x_i}(0,0)$ exist for $i=1, 2$. Show your work supporting each claim.
+
+
+\medskip
+\noindent {\bf (A1)}.  Prove by the $\varepsilon-\delta$ definition that the function $f: \Bbb R^2 \to \Bbb R$ defined by 
+$f(x_1, x_2) = x_1x_2$ is continuous at $(0,0)$.
+
+\medskip 
+
+\noindent {\bf From  Section 12.2 (Krantz's 263)}  5, 7, 8
+
+
+\vskip .3in
+
+\head {\underbar{SET 6 - Due 04/30/15  }  }\endhead
+
+\medskip
+\noindent {\bf From  Section 12.3 (Krantz's 269-270)}  2, 6, 9, 10
+
+\vskip .3in
+
+\vskip .3in
+
+
+\head{\underbar{SPECIAL PROJECTS} (\underbar{Due date}: \, TBA.)}\endhead
+
+\underbar{Work on them promptly but not turn in yet}.
+\medskip 
+
+{\bf SP I.\,}  Prove that the {\it Weierstrass-type} function $F(x): \Bbb R \to \Bbb R$  we defined in class is:  
+\medskip 
+\flushpar \quad a)  continuous for all $x \in \Bbb R$ , 
+\medskip 
+\flushpar \quad  b) nowhere differentiable- that is differentiable for no $x \in \Bbb R$.  To prove this, consider the sequence $ z_{k} := x \pm \frac{4^{-k}}{2}$ where the sign  $+$ or $-$ is chosen depending on $x$ so that there is {\bf no integer} in between $ 4^k z_k$ and $4^k x$ ( note these two number differ at most by $\frac{1}{2}$).  Then
+inspect and prove that the quotient $$ \left| \frac{F(z_k) - F(x)}{ z_k - x} \right| $$ are bigger than $3^{k-1}$ for each $ k \geq 1$.  It might be useful to separate the difference of the series in the numerator between the sum up to $k$ and the tail from $k+1$ to infinity.
+\medskip 
+
+Recall $F$ is defined as 
+$$ F(x):= \sum_{j=1}^{\infty} \, (\frac{3}{4})^{j} \, \psi(4^j x),$$ where $$\psi (x):= \cases  x -n \qquad \qquad \text{ if }  n \leq x < n+1 \text{ when } n \text{ is even } \\
+ - x + (n +1) \qquad \text{ if }  n \leq x < n+1 \text{ when } n  \text{ is odd}, \endcases $$  for all $ n \in \Bbb N$.  Note that $\psi$ is a periodic function of period $2$.
+
+\bigskip 
+
+{\bf SP II.\,}  Prove Exercise 2 (Section 8.3 Krantz's 175 ) 
+
+\bigskip 
+
+{\bf SP III.\,}  Prove Exercise $4^{\ast}$ (Section 9.1 Krantz's 188). 
+
+\bigskip 
+{\bf SP IV.\,}   Prove Exercises 18* and answer 19* (with a justification) (Section 11.2, Krantz's page 235). These two problems are based on
+Problems 14*, 15 and 16. You may use 14* without proof. Problems 15 and 16 are part of your Homework above (Set 4).
+
+
+\bigskip 
+
+{\bf SP V.\,}   {\bf Verify} that $\frac{1}{2i} \sum_{n \neq 0}  \frac{e^{inx}}{n} $ is the Fourier series of the $2\pi$-periodic {\bf sawtooth} function defined by $f(0)=0$ and 
+$$ f(x)= \cases   - \frac{\pi}{2} - \frac{x}{2},  \, & \text{ if } \, -\pi < x < 0, \\
+ - \frac{pi}{2} - \frac{x}{2}, \, & \text{ if } \,   0 < x < \pi  
+\endcases $$
+Note that the sawtooth function is not continuous. {\bf Show} nonetheless that the series converges for ever $x$ (by which we mean as usual that the partial sums 
+$S_N(x) = \frac{1}{2i}  \sum_{|n| \leq N, n \neq 0}  \frac{e^{inx}}{n} $ of the series converge ).  In particular note that the value of the series at the origin, namely $0$, is indeed the average of the values of the function $f(x)$ as $x$ approaches the origin from the left and  the right.
+
+\underbar{Hint}  Use Dirichlet's Test for convergence. 
+
+
+
+ \enddocument
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+

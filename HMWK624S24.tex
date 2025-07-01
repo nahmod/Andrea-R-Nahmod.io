@@ -1,0 +1,435 @@
+\magnification=1200
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+\NoPageNumbers
+\pagewidth{16.5truecm}
+\pageheight{22truecm}
+
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+%\hcorrection{.3in}
+
+\centerline{ \bf  M624 HOMEWORK  -- SPRING 2024}
+\vskip .1in
+\centerline{ Prof. Andrea R. Nahmod }
+\vskip .2in
+
+\document
+
+\head {\underbar{SETS 1\,\&\,2 - Due 02/27/2024}  }\endhead
+\vskip .1in
+
+\noindent {\bf From Chapter  3 (pp 145-146 -Section 5)}: \,  14, 16, 19, 23, 32 (some of you did part 16a) in M623.Please redo and complete the problem).
+
+\medskip
+
+
+\noindent {\bf From Chapter 3 (pp 153)}:  4.
+
+\bigskip
+
+\noindent\underbar{\bf Additional Questions (Chapter 3)}: After you had read carefully --as assigned in class-- the proofs of Lemma 3.`3 and Theorem 3.14 do the following
+
+\vskip .1in
+
+\noindent 1) Explain why $J_{F}(y) - J_{F}(x)  \leq \sum_{n : x < x_{n} \leq y} \alpha_{n}  \leq  F(y) - F(x)$ (proof of Lemma 3.13).
+\vskip .1in
+
+\noindent 2) Show rigorously that $J_{F}(x) - F(x)$ is continuous (in proof of Lemma 3.13). 
+
+\vskip .1in
+\noindent 3)  Rewrite explaining fully the proof of Theorem 3.14 in Chapter 3. Note you need to solve and use exercise 14 (given above in Chapter 3).
+
+\bigskip
+
+The following problems concern Chapter 3 Section 2 of SS III. Read it and read the 2 Handouts I posted. Then do:
+\medskip
+
+\noindent {\bf From Chapter  3 (pp 145-146 -Section 5)}: \, 1  [part c) is involved; see handout];  2.
+
+\medskip
+
+
+\head {\underbar{SET 3 - Due 03/05/2024}  }\endhead
+
+\vskip .1in 
+
+
+\noindent {\bf From Chapter 4} :  Recall carefully the proof of both  Theorem 2.2 (Riesz-Fisher) on Chaper 2 (p. 70)  and then the one for Theorem 1.2 Chapter 4 (p. 159) 
+
+%\noindent {\bf Additional Problem:}  For any $1 \leq p < \infty$ consider the space
+%$$L^p(\Bbb R^d):= \{ f: \Bbb R^d \to \Bbb C, \text{ measurable}, \, : \, \| f\|_{L^p(\Bbb R^d)}:= \left( \int_{\Bbb R^d}  | f(x) |^p \, dm  \right)^{\frac{1}{p}} < \infty \}.$$
+%{\underbar{Assume}} that $ \| f\|_{L^p(\Bbb R^d)}$ is a norm ( {\it challenge:} can you guess what would you need to prove the triangle inequality when $p \neq 2$?), whence $d_p(f,g) : =  \| f - g\|_{L^p(\Bbb R^d)}$ defines a metric and $L^p$ is a metric space.  {\bf Prove} that $L^p(\Bbb R^d)$  is {\it complete}.
+%
+\bigskip
+
+\noindent {\bf From Chapter 4 (pp 193-194)}:  1, $2^{\dagger}$,  3, 4 (show completeness only), 5, 6a),  7,  8a), 10.
+\smallskip
+$\dagger\,\,$ to show that $f-g$ is {\it orthogonal} to $g$ you need to show that $\langle f-g, g \rangle =0$. 
+
+\bigskip
+
+\noindent {\bf Pb.I.} \, Consider $ f \in L^2([-\pi, \pi])$ and \underbar{assume} that $\sum_{n \in \Bbb Z} a_n e^{inx} \,=\, f(x) $ a.e. $x$. Show that on any subinterval $[a, b] \subset [-\pi, \pi] $, 
+$$ \int_a^b f(x)\, dx \, = \, \sum_n   \int_a^b  \, a_n \, e^{i n x} \, dx. $$ In particular if $g(x)= \int_a^x f(y) dy $, the Fourier coefficients and series of $g(x)$  can be obtained from $a_n$, the Fourier  coefficients of $f$.
+
+\medskip
+
+{\bf Pb. II.} For $0 < \alpha < 1$, we say that  a function $f$ is  $C^{\alpha}$-H\"older
+continuous with exponent  $\alpha$ if there exists a constant $c=c_{\alpha}>0$ such that $|f(x)- f(y)| \leq c\, | x -y|^{\alpha} $ for all $x, y$. 
+For $k \in \Bbb N$, we can also define the space $C^{k, \alpha}$ to be that of functions which are $k$-th times differentiable and whose $k$-th derivative is
+$C^{\alpha}$-H\"older continuous (we could relabel $C^{\alpha}$ as $C^{0,\alpha}$). 
+Consider now $f$ a $2\pi$-periodic $C^{k, \alpha}$ function. If $a_n$ are the Fourier coefficients of $f$,  show that for some $C>0$ independent of $n$, 
+$$ |a_n| \leq \frac{C}{|n|^{k+\alpha} } $$
+
+\vskip .1in
+
+\noindent \underbar{\it Bonus Problem}:\,  \,  $2^{\ast}$a)b) from Chapter 4, pp 202. 
+
+\medskip
+
+\head {\underbar{SET 4 - Due 03/12/2024}  }\endhead
+
+\noindent {\bf From Chapter 4 (pp 195-197)}: 11, 12, 13, 18, 19, 20
+
+\medskip
+
+{\bf Pb. I.} \, Consider the subspace $\Cal S$ of $L^2([0,1])$ spanned by the functions: $1 ,\,  x,$ and  $x^3$. 
+
+a) Find an orthonormal basis of $\Cal S$.
+
+b)  Let $P_{\Cal S}$  denote the orthogonal projection on the subspace $\Cal S$, compute $P_{\Cal S} x^2$.
+
+
+\vskip .1in
+{\bf Pb. II.} \,  Let $\phi : \Bbb R \to \Bbb R$ be a periodic function with period $p$; that is $\phi(x + p) = \phi(x), \, \, \forall x \in \Bbb R$. Assume that 
+$\phi$ is integrable on any finite interval. 
+\smallskip
+
+(a) Prove  that for any $a, b \in \Bbb R$ 
+$$  \int_a^b \phi(x) d x  = \int_{a+ p}^{b+p} \phi(x) dx = \int_{a- p}^{b - p} \phi(x) dx $$
+\smallskip
+
+(b) Prove  that for any $a \in \Bbb R$ $$  \int_{-p/2}^{p/2} \phi(x+a) d x  = \int_{-p/2}^{p/2} \phi(x) dx = \int_{- p/2 +a }^{p/2+a} \phi(x) dx $$
+
+\smallskip 
+In particular we have that $\int_a^{a+p}  \phi(x) \, dx$ does not depend on $a$, as we discussed in class. 
+
+\medskip
+
+\head {\underbar{SET 5 - Due 03/28/2024 }  }\endhead
+\vskip  .2in
+
+
+\noindent {\bf Assigned Reading (in class) from Chapter  4 of  [Stein-Shakarchi Vol 3]:} 
+
+Remarks  (a), (b), (c) on pages 184-185. 
+
+
+\noindent \underbar{{\bf Turn in:}}
+
+\medskip
+
+
+\noindent {\bf From Chapter 4 (pp 187)}: Read and rewrite filling in all details the Proof of Proposition 5.5.
+
+\bigskip
+
+\noindent {\bf From Chapter 4 (pp 189)}: Read and rewrite filling in all details the Proof of  Proposition 6.1.
+
+\bigskip
+
+\noindent {\bf From Chapter 4 (pp 197-202)}:   21, 22, 23, 25, 26, 28. 
+
+\medskip
+
+\head {\underbar{SET 6 - Due 04/04/2024}}  \endhead
+\vskip  .2in
+
+\noindent {\bf From Chapter 4 (pp 197-202)}:   30,  32, 33.
+\bigskip
+
+\noindent  \underbar{\it Bonus Problems }:  $29^{\ast}$ (p 199-200) and $6^{\ast}$ (p. 203-204). These are about Fredholm's Alternative for compact operators.
+\vskip  .2in
+
+\head {\underbar{SET 6 - Due 04/18/2024 }  }\endhead
+\vskip  .2in
+\noindent {\bf From Chapter 5 (pp 253-255)}:   1, 9 (see definition and example below).
+\bigskip
+
+\noindent \underbar{Definition:}  A Fourier multiplier operator $T$ on $\Bbb R^d$ is a linear operator on $L^2(\Bbb R^d)$ determined by a bounded function $m$ (the multiplier) such that $T$ is defined by the formula
+$$ \widehat{T(f)}(\xi):= m(\xi) \widehat{f}(\xi) $$ for all $\xi \in \Bbb R^d$ and any $f \in L^2(\Bbb R^d).$ 
+
+\smallskip
+
+\noindent \underbar{Examples}. The bounded linear operator  $P_N : L^2 (\Bbb R) \to  L^2 (\Bbb R)$ defined by  $\widehat{P_N(f)}(\xi) : = \chi_{[-N, N]} (\xi) \, \widehat{f}(\xi)$  is one such operator. In fact is an orthogonal projection. 
+\smallskip
+Another well known one is the {\it Hilbert Transform} $\Cal H :L^2(\Bbb R) \to L^2(\Bbb R)$ 
+defined by $\widehat{\Cal{H}(f)}(\xi) : =  - i  sgn(\xi) \, \widehat{f}(\xi)$. The operator $\Cal{H}$ is bounded and linear on $L^2$.  That is bounded foillows from the fact that $ - i  sgn(\xi) $ is bounded point-wise by 1 and Theorem 1.1 that says the Fourier transform  is unitary on $L^2(\Bbb R^d)$
+
+
+\bigskip 
+
+\noindent {\bf From Chapter 5 (pp 260-261)}:   6.
+\bigskip
+
+\noindent {\bf Additional Problem} \,Carefully read and rewrite on your own (justifying and filling the gaps as necessary) Lemma 1.2 on page 209 proving that ${\Cal S}(\Bbb R^d)$ is dense in $L^2(\Bbb R^d)$
+\bigskip
+
+\noindent {\bf From Chapter 6}:  Read/Study the proofs in Section 1.
+
+\vskip .2in
+
+\noindent {\bf From Chapter 6 (pp 312 313)}:    1 (change $\Cal M$ to be a non-empty algebra), 2a), 8.  
+
+\bigskip
+
+
+
+\noindent {\underbar{\it Extra Problem}} (do not to turn in): \noindent {\bf From Chapter 5 (pp 260-261)}:  5
+\smallskip 
+%
+%\underbar{Definition:}  A Fourier multiplier operator $T$ on $\Bbb R^d$ is a linear operator on $L^2(\Bbb R^d)$ determined by a bounded function $m$ (the multiplier) such that $T$ is defined by the formula
+%$$ \widehat{T(f)}(\xi):= m(\xi) \widehat{f}(\xi) $$ for all $\xi \in \Bbb R^d$ and any $f \in L^2(\Bbb R^d).$ 
+%
+%\smallskip
+%
+%\underbar{Examples}. The bounded linear operator  $P_N : L^2 (\Bbb R) \to  L^2 (\Bbb R)$ defined by  $\widehat{P_N(f)}(\xi) : = \chi_{[-N, N]} (\xi) \, \widehat{f}(\xi)$  is one such operator. In fact is an orthogonal projection. 
+%\smallskip
+%Another well known one is the {\it Hilbert Transform} $\Cal H :L^2(\Bbb R) \to L^2(\Bbb R)$ 
+%defined by $\widehat{\Cal{H}(f)}(\xi) : =  - i  sgn(\xi) \, \widehat{f}(\xi)$. The operator $\Cal{H}$ is bounded and linear on $L^2$. 
+%
+\vskip .2in
+
+\head {\underbar{SET 7 - Due 04/25/2024}}  \endhead
+
+
+
+\noindent {\bf From Chapter 6 (pp 317-322)}:   5, 10, 11a)b), 16a)b)
+
+\bigskip
+
+\underbar{Additional Problems:}  
+
+\smallskip
+
+\noindent {\bf(A1)} \, Let $\nu$ be a finite signed measure on $(X, \Cal M)$. Show that for any $E \in \Cal M$
+
+$$ \align |\nu|(E) &= \\
+&= \sup \{ \sum_{k=1}^K\,  |\nu(E_k)| \, : \,  E_1, \dots E_K  \text{ are disjoint and }\,  E=\cup_{k=1}^K E_k  \, \} \tag{1} \\
+&=   \sup \{ \, \sum_{k=1}^{\infty}\,  |\nu(E_k)| \, : \,  E_1,  E_2,  \dots   \text{ are disjoint and } \,  E=\cup_{k=1}^{\infty} E_k \, \}  \tag{2} \\ 
+&=   \sup \{ | \int_{E}   f  d \nu |  \, : \,  |f|  \leq 1 \}  \tag{3}
+\endalign $$ 
+
+You may want to proceed for example by proving that  $(1) \leq (2) \leq (3) \leq (1)$. 
+
+\bigskip
+
+\noindent {\bf(A2)} \, Let $F \in BV([a,b])$ and right continuous. Let $G(x)= |\mu_F|([a, x])$. Show that $|\mu_F|=\mu_{T_F}$ by showing that $G=T_F$. To do so you may proceed by proving:
+
+\smallskip
+
+1) \,  $T_F  \leq G$  (use definition of $T_F$).
+\smallskip
+
+2) \, $|\mu_F(E)| \leq \mu_{T_F} (E) $ for any Borel set $E$  (do for an interval first).
+
+\smallskip
+
+3)  Show that  $|\mu_F| \leq \mu_{T_F}$ and hence $G \leq T_F$  (use (A1)). 
+
+\vskip .3in
+\underbar{{\bf Do} (but do not turn in)}:  \,9, 16c)d)e)f). 
+
+
+
+%\enddocument
+\vskip .2in
+
+
+
+\head {\underbar{SET 8 - Due together with Final Exam on 05/15/2024}}  \endhead
+
+
+%\underbar{Additional Problems:}  
+
+%\smallskip
+%
+%\noindent {\bf(A1)} \, Let $\nu$ be a finite signed measure on $(X, \Cal M)$. Show that for any $E \in \Cal M$
+%
+%$$ \align |\nu|(E) &= \\
+%&= \sup \{ \sum_{k=1}^K\,  |\nu(E_k)| \, : \,  E_1, \dots E_K  \text{ are disjoint and }\,  E=\cup_{k=1}^K E_k  \, \} \tag{1} \\
+%&=   \sup \{ \, \sum_{k=1}^{\infty}\,  |\nu(E_k)| \, : \,  E_1,  E_2,  \dots   \text{ are disjoint and } \,  E=\cup_{k=1}^{\infty} E_k \, \}  \tag{2} \\ 
+%&=   \sup \{ | \int_{E}   f  d \nu |  \, : \,  |f|  \leq 1 \}  \tag{3}
+%\endalign $$ 
+%
+%You may want to proceed for example by proving that  $(1) \leq (2) \leq (3) \leq (1)$. 
+%
+%\medskip
+
+%\noindent {\bf(A2)} \, Let $F \in BV([a,b])$ and right continuous. Let $G(x)= |\mu_F|([a, x])$. Show that $|\mu_F|=\mu_{T_F}$ by showing that $G=T_F$. To do so you may proceed by proving:
+%
+%1) \,  $T_F  \leq G$  (use definition of $T_F$).
+%
+%2) \, $|\mu_F(E)| \leq \mu_{T_F} (E) $ for any Borel set $E$  (do for an interval first).
+%
+%3)  Show that  $|\mu_F| \leq \mu_{T_F}$ and hence $G \leq T_F$  (use (A1)). 
+%
+%\bigskip
+%\underbar{{\bf Do} (but do not turn in)}:  \,9, 16c)d)e)f). 
+%
+%\vskip .3in
+%\head {\underbar{SET 9 - Due together with Final Exam 05/08/18}}  \endhead
+%
+%\bigskip
+
+\noindent {\bf From Chapter 1 of [SS, Vol. 4] (pp 34-43)}:  1a)b),  5, 8, 12a), 13a)b), 15, 16, 17a)c).
+\smallskip
+
+
+
+
+\underbar{Hint} For 12 use the Riesz representation theorem. 
+\smallskip
+
+\underbar{Hint} For 16 use the known H\"older for two functions and then induction.
+
+\bigskip
+
+\underbar{{\bf Do} (but do not turn in)}:   6,\,7, 19, 20. 
+\enddocument
+
+
+
+
+\vskip .2in
+\head {\underbar{SET 7 - Thursday April 20th}}  \endhead
+
+
+
+\noindent {\bf From Chapter 6 (pp 317-322)}:   8,   ( 9?) \, 10, 11a)b), 16a)b)
+
+\medskip
+
+\underbar{Additional Problems:}  
+
+\smallskip
+
+\noindent {\bf(A1)} \, Let $\nu$ be a signed measure on $(X, \Cal M)$. Show that for any $E \in \Cal M$
+
+$$ \align |\nu|(E) &= \\
+&= \sup \{ \sum_{k=1}^K\,  |\nu(E_k)| \, : \,  E_1, \dots E_K  \text{ are disjoint and }\,  E=\cup_{k=1}^K E_k  \, \} \tag{1} \\
+&=   \sup \{ \, \sum_{k=1}^{\infty}\,  |\nu(E_k)| \, : \,  E_1,  E_2,  \dots   \text{ are disjoint and } \,  E=\cup_{k=1}^{\infty} E_k \, \}  \tag{2} \\ 
+&=   \sup \{ | \int_{E}   f  d \nu |  \, : \,  |f|  \leq 1 \}  \tag{3}
+\endalign $$ 
+
+You may want to proceed for example by proving that  $(1) \leq (2) \leq (3) \leq (1)$. 
+
+\medskip
+
+\noindent {\bf(A2)} \, Let $F \in BV([a,b])$ and right continuous. Let $G(x)= |\mu_F|([a, x])$. Show that $|\mu_F|=\mu_{T_F}$ by showing that $G=T_F$. To do so you may proceed by proving:
+
+1) \,  $T_F  \leq G$  (use definition of $T_F$).
+
+2) \, $|\mu_F(E)| \leq \mu_{T_F} (E) $ for any Borel set $E$  (do for an interval first).
+
+3)  Show that  $|\mu_F| \leq \mu_{T_F}$ and hence $G \leq T_F$  (use (A1)). 
+
+\medskip
+\underbar{Problems {\bf to do} (but do not turn in)}:  \, 14, 16c)d)e)f). 
+
+\vskip .1in
+
+\bigskip
+
+\noindent {\bf From Chapter 1 of [SS, Vol. 4] (pp 34-43)}:  1, 3, 5, 6, 7, 8.
+
+
+
+%\noindent {\bf(A3)}  Let $F$ and $G$ be $BV([a,b])$ and right continuous. Let $\mu_F$ and $\mu_G$ be the corresponding signed Borel measures
+%(recall these measures are uniquely determined by -say-  $\mu_F( c, d])= F(d) - F(c)$).  
+%\smallskip
+%
+%a)  Show that if either $F$ or $G$ are continuous the following {\it integration by parts} formula holds:
+%$$ \int_{(a, b]} F d\mu_G + \int_{(a, b]} G d\mu_F \, =\, F(b)G(b) - F(a)G(a) $$
+%
+%\smallskip
+%b)  If  $F$ and $G$ are absolutely continuous then 
+%$$ \int_{(a, b]} F G^{\prime} \, dx \,+\,  \int_{(a, b]} G F^{\prime} \, dx \, =\, F(b)G(b) - F(a)G(a) $$
+
+ 
+\vskip .2in
+
+ 
+ \head {\underbar{SET 8 - Due 04/27/15}}\endhead
+\medskip
+
+\noindent {\bf From Chapter 1 of [SS, Vol. 4] (pp 36-43)}: 9,  12 (do this on $\Bbb R^n$ with Lebesgue measure), 13, 15, 16, 17, 19, 20, 34, 35.
+
+
+
+
+\end{document}
+
+
+
+
+\medskip
+
+\noindent {\bf(A3)}  Let $F$ and $G$ be $BV([a,b])$ and right continuous. Let $\mu_F$ and $\mu_G$ be the corresponding signed Borel measures
+(recall these measures are uniquely determined by -say-  $\mu_F( c, d])= F(d) - F(c)$).  
+\smallskip
+
+a)  Show that if either $F$ or $G$ are continuous the following {\it integration by parts} formula holds:
+$$ \int_{(a, b]} F d\mu_G + \int_{(a, b]} G d\mu_F \, =\, F(b)G(b) - F(a)G(a) $$
+
+\smallskip
+b)  If  $F$ and $G$ are absolutely continuous then 
+$$ \int_{(a, b]} F G^{\prime} \, dx \,+\,  \int_{(a, b]} G F^{\prime} \, dx \, =\, F(b)G(b) - F(a)G(a) $$
+
+\bigskip
+
+\underbar{Problems {\bf to do} (but do not turn in)}:  \, 14, 16c)d)e)f) 
+ 
+ \bigskip
+ 
+ \bigskip
+ 
+ \head {\underbar{SET 7 - Due 04/16/15 }  }\endhead
+\medskip
+
+\noindent {\bf From Chapter 1 of [SS, Vol. 4] (pp 34-43)}:  1, 3, 5, 6, 7, 8.
+
+
+\head {\underbar{SET 8 - Due 04/30/15}}\endhead
+\medskip
+
+\noindent {\bf From Chapter 1 of [SS, Vol. 4] (pp 36-43)}: 9,  12 (do this on $\Bbb R^n$ with Lebesgue measure), 13, 15, 16, 17, 19, 20, 34, 35.
+
+
+%\noindent {\bf Additional Problem:}  For any $1 \leq p < \infty$ consider the space
+%$$L^p(\Bbb R^d):= \{ f: \Bbb R^d \to \Bbb C, \text{ measurable}, \, : \, \| f\|_{L^p(\Bbb R^d)}:= \left( \int_{\Bbb R^d}  | f(x) |^p \, dm  \right)^{\frac{1}{p}} < \infty \}.$$
+%{\underbar{Assume}} that $ \| f\|_{L^p(\Bbb R^d)}$ is a norm ( {\it challenge:} can you guess what would you need to prove the triangle inequality when $p \neq 2$?), whence $d_p(f,g) : =  \| f - g\|_{L^p(\Bbb R^d)}$ defines a metric and $L^p$ is a metric space.  {\bf Prove} that $L^p(\Bbb R^d)$  is {\it complete}.
+%
+ 
+ \enddocument
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+

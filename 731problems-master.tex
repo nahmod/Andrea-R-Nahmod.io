@@ -1,0 +1,407 @@
+\magnification=1100
+\input amstex
+\documentstyle{amsppt}
+\pageheight{22truecm}
+\pagewidth{15.6truecm}
+\vcorrection{0.3truecm}
+\hcorrection{0.4truecm}
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+%\NoPageNumbers
+
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+
+\def \Box{\square}
+\def\nin{\noindent}
+
+\def \IT{\Bbb T}
+\def \al {\alpha}
+\def \De {\Delta}
+\def\Mc{M\raise0.7ex\hbox{\eightrm c}}
+\def\bu {\bullet}
+\def\bi{ {\tfrac{1}{b}}}
+\def\dbi{{\tfrac{1}{b}}}
+\def\A{{\Cal A}}
+\def\H{{\Cal H}}
+\def\B{{\Cal B}}
+\def\E{{\Cal E}}
+\def\L {{\Cal L}}
+\def\D{{\Cal D}}
+\def\R{{\Cal R}}
+\def \M {{\Cal M}}
+\def\N{{\Cal N}}
+\def \SS{{\Cal S}}
+\def \T {{\Cal T}}
+\def\V{{\Cal V}}
+\def\X{{\Cal X}}
+\def\Y{{\Cal Y}}
+\def\W{{\Cal W}}
+\def\K{{\Cal K}}
+\def\O{{\Omega}}
+\def\IS{{\Bbb S}}
+\def \IC {{\Bbb C}}
+\def \IP{{\Bbb P}}
+\def\RR{{\Bbb R}}
+
+\def \IR{{\Bbb R}}
+\def\DD{\bold D}
+\def\IZ{{\Bbb Z}}
+\def\IH{{\Bbb H}}
+\def\l{\lambda}
+\def\z{\zeta}
+\def\a{\alpha}
+\def\g{\gamma}
+\def\gA{{\frak A}}
+\def\gB{{\frak B}}
+\def\gF{{\frak F}}
+\def\gG{{\frak G}}
+\def\gH{{\frak H}}
+\def\gN{{\frak N}}
+\def\gP{{\frak P}}
+\def\gT{{\frak T}}
+\def \gg {{\frak g}}
+
+\def\ddx{\tfrac d {dx}}
+\def\ddy{\tfrac d {dy}}
+\def\deriv#1{{\tfrac{d#1}{dx}}}
+\def\mod#1{\left | #1\IRight |}
+
+\def\fin{\qquad \blacksquare }
+
+\def\wave{\square}
+
+\def\ch{\raise 0.3ex\hbox{$\chi$}\kern-.15em}
+
+\def\norm#1{\left\Vert{\, #1 \, }\right \Vert}
+
+\def\card{\operatorname{card}}
+\def\intinfin{\int_{-\infty}^{\infty}}
+\def\const{\operatorname{const.}}
+\def\dist{\operatorname{dist}}
+\def\con{\operatorname{const}}
+\def\sgn{\operatorname{sgn}}
+\def\supp{\operatorname{supp}}
+\def\sign{{\rm sgn}}
+
+%open and closed sectors and more
+\def\osect#1{S_{\kern-.05em #1}^0}
+\def\csect#1{S_{\kern-.05em #1}}
+\def\Hinf{H^\infty}
+\def\Hinfos#1{H^\infty(\osect#1)}
+\def\Psios#1{\Psi(\osect#1)}
+\def\inv{^{-1}}
+\def\sgn{\text{sgn}}
+\def\half{{\ssize{\frac12}}}
+
+
+%\hcorrection{.3in}
+\vskip .2in
+\centerline{ \bf M731--Partial Differential Equations \,   HOMEWORKS -- Fall 2011}
+\vskip .1in
+\centerline{ Prof. Andrea R. Nahmod}
+\document
+
+
+
+
+\centerline{ {\bf{ SET 4} }}
+\vskip .1in
+{\bf Robert McOwen's Book Section 3.2:   \, 1, 2, 2*, 3, 5, 6a)}
+
+\vskip .1in 
+{\bf Hint for Problem 2} First show that if $y=(y_1, y_2, y_3)$  is a point in the unit sphere $\IS^2$ then $$ \int_{\IS^2} \, y_j \, d\sigma(y) \, =\, 0 \qquad  \quad j=1, 2, 3$$ where as always $d \sigma$ is the area surface element. This can be proved by an explicit calculation using spherical coordinates or also by symmetry, splitting for each $j$, the integral over the sphere $\IS^2$ into the two integrals for the half spheres $y_j \geq 0$ and $y_j \leq 0$ and showing the two integrals cancel out).
+
+\vskip .1in 
+
+{\bf Problem 2*} Same as problem 2 but with initial conditions $u(x,0)=0$ and $u_t(x,0) = x_2$. 
+\vskip .2in 
+{\bf Hint for Problem 5} Follow the hint in the back of the book and define $u(x_1, x_2, x_3) = \cos(\frac{m}{c} x_3) v (x_1, x_2, t)$. Then prove by a direct calculation $u$ satisfies the $3d$ (linear homogeneous) wave equation. Hence $u$ can be represented in terms of $g$ and $h$ using Kirchhoff's formula. Assume first for simplicity that $g=0$ and write the explicit formula for $u$ in this case. Then set $x_3=0$ and proceed as in the `method of descent' (parametrize the two halves of  $\IS^2$ corresponding by graphs   $y_3= \pm \sqrt{1 -(y_1^2 + y_2^2)}$) to 
+obtain a formula for $v$ which should look like: 
+$$ v (x_1, x_2, t) = C \, t \, \int_D \, \frac{ \cos\biggl( m t \sqrt{ 1 -(y_1^2 + y_2^2)}\biggr) \, h(x_1 + c t y_1, x_2 + ct y_2) }{  \sqrt{ 1 -(y_1^2 + y_2^2)} } \, dy_1 dy_2 $$ where $D:=\{ (y_1, y_2) : \, y_1^2 + y_2^2 \leq 1\, \}$.
+
+Finally drop the assumption that $g=0$ to get the general formula. 
+
+\vskip .2in 
+
+{\bf Hint for Problem 6a)} The decay in $t$ in $3d$ is due to waves spreading out in space on expanding spheres $\partial B(x, ct)$ as $t \to \infty$. This bound reflects the {\it dispersion} of waves.  Assume first $g=0$ and use Kirchhoff's formula in conjunction with the fact that $h$ is bounded (i.e. \,  $|h(x)| \leq M$ for some $M>0$) and compactly supported ( hence $h(x) =0$ if $|x| \geq R$ for some large $R>0$). From these (plus change of variables) one can prove that 
+$$| u(x, t)| \leq \frac{M}{ C t} \text{area}(\partial B(x, ct) \cap B(0, R))$$
+where $C>0$ depends on the area of the unit sphere and the speed $c$. Next show that the area of the {\it spherical cap} $\partial B(x, ct) \cap B(0, R)$ can be bounded by some absolute constant times $R^2$- and hence by a quantity that is independent of $x$ and $t$.  Next note that if $h=0$ instead then both terms in $g$ in Kirchhoff's formula can be treated similarly as the previous case (do it!). Finally, for $g, h \in C^{\infty}_0(\IR^3)$ we have the sum of 3 terms all of which we know how to treat. 
+
+
+\vskip .1in 
+{\bf Note related to part 6b)}. In $2d$ there is `one less direction' than in $3d$ for waves to spread out so intuitively we expect the amplitude of the waves to decay slower as time increases.  And indeed, in $2d$ there is decay bound of the form $| u(x, t)| \leq \frac{C}{\sqrt{t}}$ but this is harder to prove.  In $1d$ , however, as we can clearly see from D'Alembert's formula there is no decay at all as $t \to \infty$. 
+
+\vskip .2in 
+
+\centerline{ {\bf{ SET 3} }}
+
+\vskip .1in
+
+{\bf Robert McOwen's Book Section 3.1:   \, 1, 4}  
+
+\vskip .1in
+
+{\bf Additional Problems.} 
+\vskip .1in 
+(1)  (a)Show that the general solution to the PDE $u_{xy}=0$  is
+$$ u(x,y) = F(x) + G(y)$$ 
+
+for arbitrary functions $F,\, G$
+\vskip .1in
+(b) Using a change of variables $\xi = x+t$ and $\eta = x -t$, show that $$ u_{tt} - u_{xx} =0 \quad \text{ if and only if } \quad u_{\xi \eta} = 0$$
+\vskip .1in
+(c) Use parts (a) and (b) to rederive D'Alembert's formula.
+
+\vskip .2in 
+
+(2) Let $u \in C^2(\IR \times [0, \infty))$ be a solution to the Cauchy initial value problem  $$\cases u_{tt} - u_{xx} = 0  \qquad \text{in} \quad \IR \times (0, \infty)\\
+u(0, x) = g(x)  \qquad \text{in} \quad \IR \\
+u_t(0, x) = h(x)  \qquad \text{in} \quad  \IR  \endcases $$ Suppose that $g$ and $h$ are smooth and have compact support.  The {\it kinetic energy} is $$k(t):= \frac{1}{2} \int_{\IR} \, u_t^2(t, x) \, dx $$ and the {\it potential energy } is 
+$$p(t):= \frac{1}{2} \int_{\IR} \, u_x^2(t, x) \, dx $$ 
+Prove : 
+
+(a) k(t) + p(t) is constant in $t$.
+\vskip .1in 
+(b)  k(t) = p(t) for all {\it large enough} times $t$.
+ 
+\vskip .1in
+
+
+
+\vskip .2in
+
+\centerline{ {\bf{ SET 2} }}
+
+\vskip .1in
+
+{\bf From McOwen's Book Section 2.1:\quad  1, 2, 7 (modified in class). } 
+
+\vskip .1in
+
+{\bf From McOwen's Book Section 2.2:} \, Read examples in 2.2a); read all of Section 2.2b). Then  {\bf do \, $1$}.
+
+
+\vskip .2in
+
+\centerline{ {\bf{ SET 1} }}
+\vskip .2in 
+
+{\bf From McOwen's Book: read the introduction \& Sections 1.1d), 1.2, 1.3. }
+
+\vskip .2in 
+ 
+
+{\bf From McOwen's Book Section 1.1 do:\quad   1, 2, 3, 4a)b), 9.} 
+
+\vskip .2in 
+
+{\bf Additional Problems.}  
+\vskip .1in 
+
+
+ (1) \, Write down an explicit formula for a function $u$ solving the inhomogeneous initial value problem 
+$$\cases  u_t + b \cdot \nabla u = \, f \qquad \text{on} \quad \IR^n \times (0,\infty) \\
+\qquad \qquad  u =\, g \qquad \text{on} \quad \IR^n \times \{t=0\}   \endcases $$
+where $f = f(x,t)$, $f: \IR^n \times [0, \infty) \to \IR$, $c \in \IR$, $b \in \IR^n$ and $g : \IR^n \to \IR$ are all given.
+(Hint.  Solve first the homogeneous problem (i.e. $f =0$) using the method of characteristics (as in class or  section 1.1a) ).  Then use the Fundamental Theorem of Calculus to write $u(x,t)-g(x-bt)$ for $(x,t)$ along a characteristic  ($g(x-bt)$ is the homogeneous solution) as an appropriate integral of $f$.  At the end $u$ will be the sum of the homogeneous solution plus an integral term.)   
+
+ \vskip .2in 
+ 
+ 
+ (2) \, Write down an explicit formula for a function $u$ solving the initial value problem 
+$$\cases u_t + b \cdot \nabla u + c \, u =\, 0 \qquad \text{on} \quad \IR^n \times (0,\infty) \\
+\qquad \qquad \quad  \quad u =\, g \qquad \text{on} \quad \IR^n \times \{t=0\} \endcases $$
+where $c \in \IR$, $b \in \IR^n$ and $g : \IR^n \to \IR$ are given.
+
+\vskip .2in 
+
+ (3) \, Let $f$ be a continuous function on an open set $D \subset \IR^n$ such that 
+ $$ \int_{D_0}  \, f(x) \, dx \, =\, 0 \qquad \quad \text{ for all }\quad  D_0 \subset D.$$
+ 
+Prove that then $f \equiv 0$ on $D$.  
+
+
+
+
+\enddocument
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\enddocument
+
+
+
+                                               
+
+
+\centerline{ {\bf{ SET 8} }}
+\vskip .1in
+
+{\bf Robert Owen's Book Section 6.2: \, \, 1,  2, 4, 6}
+
+\vskip .2in
+{\bf Robert Owen's Book Section 6.1: \, \,  5a), 6, 15, 16}
+
+\vskip .2in 
+
+\centerline{ {\bf{ SET 7} }}
+\vskip .1in
+{\bf Robert Owen's Book Section 5.2:  1, 2, 3, 4, 11 }
+
+\vskip .1in
+{\bf Robert Owen's Book Section 5.1:  7}
+
+\vskip .1in
+
+{\bf Additional Problems.} Compute (in the sense of distributions) the following Fourier transforms on $\IR^n$:
+\vskip .1in 
+
+(i) \, \, $\widehat{\delta_0}$  \qquad (ii) \, \, $\widehat{ D^{\alpha} \, \delta_0}$ \qquad (iii) \, \, $\widehat{ x^{\alpha}}$ \qquad (iv) \, \,  $\widehat{ H }$  \quad  where $H(x)$ is the Heaviside function.
+\vskip .2in
+
+\centerline{ {\bf{ SET 6} }}
+\vskip .1in 
+{\bf Additional Problem}: Let $\Omega \subset \IR^n$, bounded open set and $g \in C^1(\partial \Omega)$.  Find the PDE for  $u \in C^2(\Omega)$ such that $u$ is the minimizer over $\A$ of $$ E(v) =\int_{\Omega} \sqrt{ 1 + | \nabla v|^2} \, dx $$ Here $\A$ is the as we defined in class.
+
+\vskip .2in
+
+{\bf Robert Owen's Book Section 4.2:  3, 4, 5, 6, 8, 10a) }
+
+\vskip .1in
+{\bf Robert Owen's Book Section 4.1:  1, 2, 5, 6, 7 }
+
+
+\vskip .2in 
+
+\centerline{ {\bf{ SET 5} }}
+\vskip .1in
+
+\vskip .1in 
+
+{\bf Robert Owen's Book Section 3.3:   \, 1, 2, 4, 5. }
+
+\vskip .1in 
+{\bf Robert Owen's Book Section 2.3:   \, 4, 8, 10, 11c).}
+\vskip .1in 
+
+{\bf Additional Problems.}
+
+\vskip .1in 
+
+(1) Let $\{ f_j\} \in L^1(\IR^n)$ be a sequence of  nonnegative functions such that 
+$$\align &\int_{\IR^n} \, f_j(x) \, dx \to 1 \quad \text{ as} \quad   j \to \infty \quad \text{ and for any }  a>0,  \\ 
+&\int_{|x| > a} \, f_j(x) \, dx \to 0 \quad \text{ as} \quad j \to \infty . \endalign$$Let $F_{f_j}$ be the distribution defined by $f_j$.  Prove that $F_{f_j} \to \delta$ in ${\Cal D}^{\prime}$. 
+
+\vskip .2in 
+
+
+(2)  Compute $\frac{d}{dx} ( \log |x|) $  on $\IR$  in the sense of distributions. 
+\vskip .05in
+( Hint:  recall that the principal value of $\frac{1}{x}$ is defined as 
+$$ \langle  \text{pv} \frac{1}{x} , \phi \rangle = \text{pv} \int_{\IR} \frac{ \phi(x)}{x} \, dx := \lim_{\varepsilon \to 0^+} \int_{ |x| > \varepsilon} \,  \frac{ \phi(x)}{x} \, dx $$
+
+\vskip .2in
+
+
+
+
+\centerline{ {\bf{ SET 4} }}
+\vskip .1in
+{\bf Robert Owen's Book Section 3.2:   \, 1, 2, 2*, 3.}
+
+\vskip .1in 
+{\bf Problem 2*} Same as Problem 2 but with initial conditions to $u(x,0)=0$ and $u_t(x,0) = x_2$ instead. 
+
+\vskip .1in
+{\bf Additional Problem.}
+
+Let $u$ solve $$\cases u_{tt} - \Delta u &= 0 \qquad  \text{ in } \IR^3
+\times (0, \infty) \\
+u = g, \quad u_t &= h \qquad \text{ on }  \IR^3 \times \{ t=0\}
+\endcases $$
+  
+where $g$ and $h$ are smooth functions with \underbar{compact
+support}. Show that there exists a constant $C>0$ such that 
+$$ | u(x, t) | \le \frac{C}{t} \qquad \text{ for any } \, x \in \IR^3,
+t>0 $$
+
+\vskip .2in 
+
+
+\centerline{ {\bf{ SET 3} }}
+
+\vskip .1in
+
+{\bf Robert Owen's Book Section 3.1:   \, 1, 4,  8.}  
+
+\vskip .1in
+
+{\bf Additional Problems.} 
+\vskip .1in 
+(1)  (a)Show that the general solution to the PDE $u_{xy}=0$  is
+$$ u(x,y) = F(x) + G(y)$$ 
+
+for arbitrary functions $F,\, G$
+\vskip .1in
+(b) Using a change of variables $\xi = x+t$ and $\eta = x -t$, show that $$ u_{tt} - u_{xx} =0 \quad \text{ if and only if } \quad u_{\xi \eta} = 0$$
+\vskip .1in
+(c) Use parts (a) and (b) to rederive D'Alembert's formula.
+
+\vskip .2in 
+
+(2) Let $u \in C^2(\IR \times [0, \infty))$ solve the initial value problem  $$\cases u_{tt} - u_{xx} = 0  \qquad \text{in} \quad \IR \times (0, \infty)\\
+u(0, x) = g(x)  \qquad \text{in} \quad \IR \\
+u_t(0, x) = h(x)  \qquad \text{in} \quad  \IR  \endcases $$ Suppose that $g$ and $h$ are smooth and have compact support.  The {\it kinetic energy} is $$k(t):= \frac{1}{2} \int_{\IR} \, u_t^2(t, x) \, dx $$ and the {\it potential energy } is 
+$$p(t):= \frac{1}{2} \int_{\IR} \, u_x^2(t, x) \, dx $$ 
+Prove : 
+
+(a) k(t) + p(t) is constant in $t$.
+\vskip .1in 
+(b)  k(t) = p(t) for all {\it large enough} times $t$.
+ 
+\vskip .1in
+
+
+\centerline{ {\bf{ SET 2} }}
+
+\vskip .1in
+
+{\bf Robert Owen's Book Section 2.1:\quad  1, 2, 7. } 
+
+\vskip .1in
+
+{\bf Robert Owen's Book Section 2.2:} \, Read examples in 2.2a); read all of Section 2.2b), and then do  $1$.
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,121 @@
+\magnification=1200
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+%\NoPageNumbers
+\pagewidth{16.5truecm}
+\pageheight{22truecm}
+
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+%\hcorrection{.3in}
+\def\IR{{\Bbb R}}
+
+\centerline{ \bf  M534H  Special Assignment-- Spring 2009}
+\vskip .1in
+\centerline{ Due Date:  Thursday March 26th, 2009 }
+\vskip .1in
+\centerline{ Prof. Andrea R. Nahmod }
+\vskip .2in
+
+\document
+
+
+\proclaim {Theorem (Finite Propagation Speed Theorem)} \endproclaim
+
+Consider the {\it initial value problem for the wave equation} on $\IR$:
+
+$$\cases  u_{tt} - u_{xx} \,=\,0  \\
+u(x, 0) \,=\, \phi(x) \\
+u_t(x, 0) \,=\, \psi(x) \endcases $$ where $\phi, \psi :\IR \to \IR$ are two smooth given functions (data).  Let $x_0 \in \IR$ $t_0 >0$ be fixed and \underbar{suppose} that $\phi(x)$ and $\psi(x)$ vanish for all 
+$x$ in the interval $[x_0 - t_0, x_0 + t_0]$. 
+
+
+\underbar{Prove} that $u(x,t)$ vanishes for all  $(x,t)$ within  $\Cal C$, the domain of dependence of $(x_0, t_0)$.  
+
+\vskip .05in 
+
+Recall $\Cal C :=  \{ (x,t)  :  0 \le t \le t_0  \, \text{ and }  \, x_0 -(t_0 - t)  \le x \le x_0 + (t_0 -t) \}$
+
+\vskip .1in 
+
+
+{\bf Notes} The Theorem is also valid in higher dimensions but for simplicity prove it only in one (space) dimension. In one dimension, one can trivially prove the above theorem directly using the representation formulas for the solution $u(x,t)$  in terms of the initial data which are available in one dimension.
+
+Or, one could prove it \underbar{without} using this explicit representation of $u$, but by using \underbar{the {\it energy method}} instead --as we have seen in class-. This is a harder proof but the advantage of the method is that it also works in higher dimensions.
+
+This assignment is then to prove the Finite Propagation Speed Theorem using the {\it energy method}. 
+
+
+To do so, for each $0 \le t \le t_0$,  let $I_t : = [x_0-(t_0-t), x_0 + (t_0-t) ]$. Note $I_t$ is contained in the interval $(x_0 - t_0, x_0 + t_0)$. Define the modified energy:
+$${\tilde E} (t) = \frac{1}{2} \int_{I_t} \, |u_t|^2 + |u_x|^2 \, dx $$
+
+Note ${\tilde E} (t) \ge 0$ for any $t$ and that  $\Cal C = \bigcup_{ 0 \le t \le t_0}  I_t$.
+The goal is to show that for each $0 \le t \le t_0$, $u(x,t)=0$ for all $x \in I_t$. Do so by proving the following: 
+
+
+
+(1) \, Prove that ${\tilde E} (t)$ is a decreasing function of $t$ by showing that 
+$\dfrac{d{\tilde E}}{dt} \le 0$ 
+
+To compute the derivative in time \underbar{use}: (see A.3 Theorem 3 in Strauss's book p.421).
+
+$$\frac{d}{dt} \int_{a(t)}^{b(t)} \, F(x,t) \, dx \,= \,  \int_{a(t)}^{b(t)} \, \frac{d}{dt} F(x,t){dt} \, dx  +  [ F(b(t), t) b^{\prime}(t) - F(a(t), t) a^{\prime}(t) ] $$
+
+\vskip .1in
+
+(2) Show that ${\tilde E} (0) =0$  
+ 
+ \vskip .1in 
+ 
+(3) By (1) you then have that $\tilde E(t) \le \tilde E (0)$ for any $0 \le t \le t_0$ and 
+by (1) you can conclude that ${\tilde E} (t)  =0$ for any $0 \le t \le t_0$.
+\underbar{Prove} then that this implies that $u(x,t)=0$ for  any $x \in I_t$ and any $0 \le t \le t_0$.
+
+
+
+ 
+ 
+
+\enddocument
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\enddocument
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+

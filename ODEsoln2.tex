@@ -1,0 +1,194 @@
+\documentclass[12 pt letterpaper]{article}
+\usepackage{amsmath,amssymb,amscd,amsthm,amsxtra}
+\usepackage{latexsym}
+\usepackage[dvips]{graphics,epsfig}
+%\usepackage{graphicx}
+
+\setlength{\topmargin}{-0.5in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+
+
+%\headheight=8pt
+%\topmargin=0pt
+\textheight=624pt
+%\textwidth=432pt
+%\oddsidemargin=18pt
+%\evensidemargin=18pt
+
+\newcommand{\LA}{\Longrightarrow}
+
+\pagestyle{empty}
+%\setlength{\voffset}{-1cm}
+%\setlength{\hoffset}{-1.6cm}
+%\setlength{\oddsidemargin }{0cm}
+%\setlength{\textwidth}{15cm}
+
+
+
+\begin{document}
+
+
+\large
+\begin{center}
+\textbf{MATH331: Solution to the Last Homework}
+\end{center}
+\vspace{0.6cm}
+
+\normalsize
+
+\noindent {\bf \underline{6.2}}
+
+\noindent
+1. 
+\[F(s) = \frac{3}{s^2+4} = \frac{3}{2} \frac{2}{s^2 +2^2}
+\Longrightarrow f(t) = \frac{3}{2} \sin 2t.\]
+
+\noindent
+3. \[F(s) = \frac{2}{s^2 + 3s - 4} = \frac{2}{(s + 4)(s - 1)}
+= \frac{2}{5}\frac{1}{s-1} - \frac{2}{5}\frac{1}{s-(-4)}
+\Longrightarrow f(t) = \frac{2}{5} e^t -\frac{2}{5} e^{-4t}.\]
+
+\noindent
+4. \[F(s) = \frac{3s}{s^2 - s- 6} = \frac{3s}{(s-3)(s+2)}
+= \frac{6}{5} \frac{1}{s+2} + \frac{9}{5}\frac{1}{s-3}
+\Longrightarrow f(t) = \frac{6}{5} e^{-2t} + \frac{9}{5} e^{3t}.\]
+
+\noindent
+5. \[F(s) = \frac{2s + 2}{s^2 +2s+5} = \frac{2(s+1)}{(s+1)^2 +2^2}
+\Longrightarrow f(t) = 2 e^{-t}\cos 2t. \]
+
+\noindent
+6. \[F(s) = \frac{2s-3}{s^2 -4} = \frac{2s -3}{(s+2)(s-2)}
+= \frac{7}{4}\frac{1}{s+2} + \frac{1}{4}\frac{1}{s-2}
+\Longrightarrow f(t) = \frac{7}{4} e^{-2t} + \frac{1}{4} e^{2t}.\]
+NOTE: This can be written as $2 \cosh 2t - \frac{3}{2} \sinh2t$
+since $\cosh x = \frac{e^x + e^{-x}}{2}$ and 
+$\sinh x = \frac{e^x - e^{-x}}{2}$.
+
+\noindent
+8. \[F(s) = \frac{8 s^2 - 4s + 12}{s(s^2+4)} = \frac{5s-4}{s^2+4} + \frac{3}{s}
+= 5\frac{s}{s^2+2^2} -2\frac{2}{s^2 + 2^2} +3\frac{1}{s} 
+\Longrightarrow f(t) = 5 \cos 2t -2 \sin 2t +3. \]
+
+\noindent
+13. By taking the Laplace transform of the ODE, we have
+\begin{gather*} s^2 Y(s) -s \cdot 0 - 1 -2(sY(s) - 0) + 2 Y(s) = 0
+\Longrightarrow (s^2 -2s + 2) Y(s) = 1 \\
+\LA Y(s) = \frac{1}{s^2 -2s + 2} = \frac{1}{(s-1)^2 +1^2}
+\LA y(t) = e^t \sin t.  
+\end{gather*}
+
+\noindent
+14. By taking the Laplace transform of the ODE, we have
+\begin{gather*} s^2 Y(s) -s \cdot 1 - 1 -4(sY(s) - 1) + 4Y(s) = 0
+\LA (s^2 -4s +4) Y(s) = s -3 \\
+\LA  Y(s) = \frac{s-2 -1}{(s-2)^2} = \frac{1}{s-2} - \frac{1}{(s-2)^2}
+\LA y(t) = e^{2t} - te^{2t}. 
+\end{gather*}
+
+\noindent
+20. By taking the Laplace transform of the ODE, we have
+\begin{gather*} s^2 Y(s) -s \cdot 1 - 0  + \omega^2 Y(s) = \frac{s}{s^2+4}
+\LA  (s^2 +\omega^2) Y(s) = \frac{s}{s^2+4} +s \\
+\LA Y(s) = \frac{s}{(s^2+4)(s^2 +\omega^2)} + \frac{s}{s^2 +\omega^2}
+= \frac{1}{\omega^2 - 4} \frac{s}{s^2+2^2} - \frac{1}{\omega^2 - 4} \frac{s}{s^2+\omega^2}
++ \frac{s}{s^2 +\omega^2} \\
+\LA y(t) = \frac{1}{\omega^2 - 4} \cos 2t - \frac{1}{\omega^2 - 4} \cos \omega t
++ \cos \omega t
+= \frac{1}{\omega^2 - 4} \cos 2t + \frac{\omega^2 - 5}{\omega^2 - 4} \cos \omega t.
+\end{gather*}
+
+\noindent
+22. By taking the Laplace transform of the ODE, we have
+\begin{gather*} s^2 Y(s) -s \cdot 0 - 1 -2(sY(s) - 0) + 2Y(s) = \frac{1}{s+1}
+\LA (s^2 -2s +2) Y(s) = \frac{1}{s+1} +1 \\
+\LA Y(s) = \frac{1}{(s+1)\big( (s-1)^2 + 1\big)} + \frac{1}{(s-1)^2+1} 
+= \frac{1}{5}\frac{1}{s+1} -\frac{1}{5} \frac{s-3}{(s-1)^2 + 1} + \frac{1}{(s-1)^2+1}\\
+= \frac{1}{5}\frac{1}{s+1} -\frac{1}{5} \frac{s-1}{(s-1)^2 + 1} + \frac{7}{5}\frac{1}{(s-1)^2+1}
+\LA y(t) = \frac{1}{5} e^{-t} - \frac{1}{5} e^t \cos t + \frac{7}{5} e^t \sin t.
+\end{gather*}
+
+\noindent
+23. By taking the Laplace transform of the ODE, we have
+\begin{gather*} s^2 Y(s) -s \cdot 2 -(- 1) + 2(sY(s) - 2) + Y(s) = \frac{4}{s+1}
+\LA (s^2 + 2s + 1) Y(s) = \frac{4}{s+1} + 2s + 3\\
+\LA Y(s) = \frac{4}{(s+1)^3} + \frac{2(s+1) + 1}{(s+1)^2}
+= 2 \frac{2 \! }{(s+1)^3} + \frac{2}{s+1} + \frac{1}{(s+1)^2}
+\LA y(t) = 2 t^2 e^{-t} + 2 e^{-t} + t e^{-t}.
+\end{gather*}
+
+\vspace{2mm}
+
+\noindent {\bf \underline{6.3}}
+
+\noindent
+7. \[f(t) = u_2(t)(t-2)^2  \LA F(s) = e^{-2s} \frac{2}{s^3}.\]
+
+\noindent
+9. \[f(t) = \big(u_\pi (t) - u_{2\pi}(t) \big) (t- \pi)
+= u_\pi(t) (t- \pi) - u_{2\pi}(t - 2 \pi) - \pi u_{2\pi}
+\LA F(s) = \frac{e^{-\pi s}}{s^2} - \frac{e^{-2\pi s}}{s^2} - \frac{\pi e^{-2\pi s}}{s}.\]
+
+\noindent
+14.
+\[F(s) = e^{-2s}\frac{1}{(s+2)(s - 1)} 
+= e^{-2s} \left( \frac{1}{3} \frac {1}{s- 1} - \frac{1}{3} \frac{1}{s+2} \right)
+\LA f(t) = \frac{1}{3}u_2(t) e^{t- 2} - \frac{1}{3} u_2(t) e^{-2(t-2)} .
+\]
+
+\noindent
+15.
+\[F(s) = e^{-2s} \frac{2(s-1)}{(s-1)^2 + 1^2}
+\LA f(t) = 2 u_2(t) e^{(t-2)} \cos (t- 2).\]
+
+\noindent
+16.
+\[F(s) = 2 e^{-2s} \frac{1}{(s+2)(s-2)} 
+= 2 e^{-2s} \frac{1}{4} \left(\frac{1}{s-2} - \frac{1}{s+2} \right) 
+\LA f(t) =  \frac{1}{2}u_2(t) \big( e^{2(t-2)} - e^{-2(t-2)}\big)
+= u_2(t) \sinh 2(t-2).\]
+
+
+\vspace{2mm}
+
+\noindent {\bf \underline{6.4}}
+
+\noindent
+3. By taking the Laplace transform of the ODE, we have
+\begin{gather*} s^2 Y(s) -s \cdot 0 - 0  + 4 Y(s) 
+= \frac{1}{s^2+1} - e^{-2\pi t}\frac{1}{s^2+1}\\
+\LA Y(s) = (1 - e^{-2\pi t}) \frac{1}{s^2+4}\frac{1}{s^2+1}
+= (1 - e^{-2\pi t}) \frac{1}{3} \left( \frac{1}{s^2+1}- \frac{1}{s^2+4} \right)\\
+\LA y(t) = \frac{1}{3}(\sin t - \frac{1}{2} \sin 2t)
+- \frac{1}{3}u_{2 \pi}(t) (\sin (t-2\pi) - \frac{1}{2} \sin 2(t-2\pi))
+= \frac{1}{3}\big( 1 - u_{2\pi}(t)\big) (\sin t - \frac{1}{2} \sin 2t),
+\end{gather*}
+because $\sin (t-2\pi) = \sin t$ and $\sin 2(t-2\pi) = \sin 2t$.
+
+\noindent
+4. By taking the Laplace transform of the ODE, we have
+\begin{gather*} s^2 Y(s) -s \cdot 0 - 0  + 4 Y(s) 
+= \frac{1}{s^2+1} + e^{-\pi t}\frac{1}{s^2+1}\\
+\LA Y(s) = (1 + e^{-\pi t}) \frac{1}{s^2+4}\frac{1}{s^2+1}
+= (1 + e^{-\pi t}) \frac{1}{3} \left( \frac{1}{s^2+1}- \frac{1}{s^2+4} \right)\\
+\LA y(t) = \frac{1}{3}(\sin t - \frac{1}{2} \sin 2t)
++ \frac{1}{3}u_{ \pi}(t) (\sin (t-\pi) - \frac{1}{2} \sin 2(t-\pi))
+= \frac{1}{3}\big( 1 - u_{\pi}(t)\big) \sin t 
+- \frac{1}{6}\big( 1 + u_{\pi}(t)\big) \sin 2t,
+\end{gather*}
+because $\sin (t-\pi) = -\sin t$ and $\sin 2(t-\pi) = \sin 2t$.
+
+\noindent
+7. By taking the Laplace transform of the ODE, we have
+\begin{gather*} s^2 Y(s) -s \cdot 1 - 0  +  Y(s) 
+= \frac{e^{-3\pi s}}{s} 
+\LA Y(s) = \frac{e^{-3\pi s}}{s(s^2+1)} + \frac{s}{s^2+1}
+= e^{-3\pi s} \left(\frac{1}{s} - \frac{s}{s^2+1} \right) + \frac{s}{s^2+1}\\
+\LA y(t) = u_{3 \pi}(t) \big(1 - \cos (t- 3 \pi) \big) + \cos t.
+\end{gather*}
+
+
+%\Longrightarrow 
+\end{document}

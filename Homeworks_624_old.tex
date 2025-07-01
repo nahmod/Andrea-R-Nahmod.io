@@ -1,0 +1,212 @@
+\magnification=1200
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+%\NoPageNumbers
+\pagewidth{16.5truecm}
+\pageheight{22truecm}
+
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+%\hcorrection{.3in}
+
+\centerline{ \bf  M624 HOMEWORKS-- Spring 2009}
+\vskip .1in
+\centerline{ Prof. Andrea R. Nahmod }
+\vskip .2in
+
+\document
+
+\head { SET 6:  Problems to do before Final Exam--Do not turn in}\endhead
+\vskip .1in
+
+
+\proclaim{From Folland's book \# 6.1 pages 186, 187. Do problems: 1, 3, 6,
+7, 9, 10, 12.}   
+
+\endproclaim 
+
+
+\proclaim{From Folland's book \# 6.3 page 196. Do problem: 31}  
+\endproclaim 
+
+\proclaim{From Folland's book \# 6.4 page 199. Do problems 38, 39}
+
+\endproclaim 
+
+\vskip .3in 
+
+
+\underbar{Further Reading Suggestions:}   Besides your class notes on Ch. 6,  you may want to read:
+
+\vskip .1in 
+
+From \underbar{Folland:}
+
+\vskip .1in
+
+(1)\,   Section 6.1 (all), Prop. 6.17 in Section 6.3, Propositions 6.22, 6.23 and 6.24 in Section 6.4  
+\vskip .1in 
+
+(2)\,   Page 238 (Lemma 8.4 and Poposition 8.5) in Section  8.1.
+\vskip .1in 
+
+From \underbar{ W. Rudin's book , `Real and Complex Analysis'}:
+\vskip .1in
+
+(3)\,  Theorem 3.13, 3.14 and  following Remarks on pages 70 and 71. 
+
+
+
+\vskip .2in 
+
+\head{Folland's Problem 29-Reformulated}\endhead
+\vskip .1in
+
+Consider $\ell^1(\Bbb N)$,  the space of sequences of real numbers $\{a_n\}_{n \ge 1}$ such that 
+
+$ \Vert \{a_n\}_{n \ge 1} \Vert_{\ell^1} := \sum_{n=1}^{\infty}  | a_n | <  \infty$. Define $S : \ell^1(\Bbb N) \to \ell^1(\Bbb N) $ as $$S(\{a_n\}_{n \ge 1}) = \{ \frac {a_n}{n} \}_{n \ge 1} $$
+
+(a) Prove that $S$ is linear and continuous (bounded) from $\ell^1$ into $\ell^1$. 
+\vskip  .1 in 
+(b) Prove that $S$ is not onto. That is show that the range of $S$,  $\Cal R(S)$ which equals the set of all sequences of real numbers $\{b_n\}_{n \ge 1}$ such that $b_n = \frac{a_n}{n}$ for some $a_n \in \ell^1(\Bbb N)$   (or equivalently such that   $\{ n b_n\}_{n\ge 1} \in \ell^1(\Bbb N)$)  is a proper subset of $\ell^1(\Bbb N)$.
+
+\vskip .1in
+
+(c) Prove that $\Cal R(S)$ is dense in $\ell^1(\Bbb N)$. 
+
+\vskip .1in
+
+(d) Prove that  $S$ is not open. 
+
+\vskip .08in
+
+\underbar{Hint.} To do so consider $B:=\{ \{a_n\}_{n \ge 1}  \, / \,   \Vert \{a_n\}_{n \ge 1} \Vert_{\ell^1} < 1 \, \}$ the open ball in $\ell^1(\Bbb N)$ and prove that $S(B)$ is not open. Note that since  $0 \in S(B)$ (by linearity),  it is enough to show that
+there exists a sequence of sequences --  say $\{ a^{(k)} \}_{k \ge 1}$ where for each $k$,   $a^{(k)} : = \{ a^{(k)}_n \}_{n \ge 1} \in \ell^1(\Bbb N)$ -- such that for each $k$, $a^{(k)} \notin S(B)$ but $a^{(k)} \to 0$ as $k \to \infty$  in $\ell^1(\Bbb N)$.
+
+\vskip .15in 
+
+(e)  Consider now  the space $\Cal R(S)$ endowed with the  $\ell^1(\Bbb N)$ norm.  This space, namely  ${\Cal X} := ( \Cal R(S), \ell^1(\Bbb N) )$ is itself a normed space which by parts (b) and (c) is not complete.  If we now view $S:  \ell^1(\Bbb N)  \to {\Cal X}$ (i.e. we restrict the codomain to its range and call this map $S$ as well) then $S$ is bounded,  surjective 
+and one-to-one (check).  
+
+Hence  $ S^{-1} : {\Cal X} \to \ell^1(\Bbb N)$ exists and it is defined as $S^{-1}(\{b_n\}_{n\ge 1}) := \{n  b_n\}_{n \ge 1}$.  Let call  this $S^{-1} =: T$.  Prove that $T$ is closed but not bounded.
+
+\vskip .1in
+
+{\bf Q.} Why doesn't this problem contradict the open mapping and closed graph theorems? 
+
+
+
+\vskip .3in
+
+ \head { SET 5: Due  April 30th,  2009}\endhead
+\vskip .1in
+
+\proclaim{From Folland's book \# 5.5 page 177. Do problems 54, 55,  57b)d) - use  22) in conjunction with 57a)- ,\, 58,  59, 60, 61}
+\endproclaim 
+
+ \head { SET 4: Due  April 23rd,  2009}\endhead
+\vskip .1in
+
+\proclaim{From Folland's book \# 5.1 page 155. Do problems 3, 6,  
+7, 9, 12a)-d) For this read the discussion in middle of page 153 first)}
+
+\endproclaim 
+
+\proclaim{From Folland's book \# 5.2 page 159. Do problems 17, 22 a)} 
+\endproclaim 
+
+%
+%\proclaim{From Folland's book \# 5.3 page 164. Do problem 29}
+%\endproclaim 
+%
+
+ \head { SET 3: Due  March 26th,  2009}\endhead
+\vskip .1in
+
+\proclaim{From Folland's book \# 3.5 page 107. Do problems 27, 28, 31,
+32 33, 37, 42}
+\endproclaim 
+
+
+\vskip .2in 
+
+ \head { SET 2: Due  February 26th  2009}\endhead
+\vskip .1in
+\proclaim{From Folland's book \# 3.3 page 94. Do problem 20}
+
+\vskip .1in
+
+{\bf Extra Problem 2} : Let $\mu$ be a positive measure over $(X, \Cal
+M)$ and let $f : X \to \Bbb C$ be a $\mu$-integrable function on $X$;-- i.e. $f
+\in L^1(\mu)$. Define 
+$$\nu (E) \, := \, \int_E \, f \, d\,\mu \qquad E \in \Cal M $$
+\quad {\bf (a)} Show that $\nu$ is a {\it complex measure} on $(X, \Cal M)$
+
+\quad {\bf (b)} In particular, show that if $f \in L^1(\mu)$ takes
+only {\it real} values --i.e. $f: X \to \Bbb R$ -- then $\nu$ as defined 
+here is a {\bf finite} {\it signed measure} (here use the Extra Problem 1 above). 
+\vskip .1in 
+
+{\bf Extra Problem 3}:  Let $\mu$ and $\nu$ be two measures on $(X, \Cal M)$ defined by $$\mu(A) := \int_A \, e^{-x^2} \, dx \qquad A \in \Cal M$$
+$$ \nu(A) = \int_A \, e^{-x^2 +x} \, dx \qquad A \in \Cal M .$$ Show that $\mu << \nu$ and compute the Radon-Nikodym derivative $\dfrac{d\mu}{d \nu}.$
+\endproclaim 
+                      
+\vskip .2in 
+
+\proclaim{From Folland's book \# 3.4 page 100. Do problems 22, 23, 24,
+25a) }
+
+\endproclaim
+\vskip .2in 
+
+\head SET 1:  Due February 12th, 2009  \endhead 
+\vskip .1in
+
+\proclaim{From Folland's book \# 3.1 page 88. Do problems 2, 3, 4  }
+\endproclaim
+\vskip .1in
+\proclaim{From Folland's book \# 3.2 page 92. Do problems 8, 9, 10,
+13, 16 (correction: need both measures to be $\sigma$-finite), 17
+(correction: need $\nu$ to be $\sigma$-finite {\bf also}} 
+\endproclaim 
+
+\vskip .1in 
+
+
+{\bf Extra Problem 1} : Let $\mu$ be a positive measure over $(X, \Cal M)$ and let
+$f$ real be an {\it extended $\mu$-integrable} function on $X$. Define 
+$$\nu (E) \, := \, \int_E \, f   \, d\,\mu \qquad E \in \Cal M $$
+Show that $\nu$ is a {\it signed measure} on $(X, \Cal M)$
+
+
+
+                                                                                                                                                                                                     
+
+
+
+
+
+
+
+\enddocument
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+

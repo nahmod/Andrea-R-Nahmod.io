@@ -1,0 +1,489 @@
+\magnification=1100
+\input amstex
+
+\documentstyle{amsppt}
+%%\vcorrection{1.2truein} 
+\pageheight{21truecm}
+\pagewidth{16truecm}
+
+\NoBlackBoxes
+%\NoPageNumbers
+
+
+\document
+\baselineskip=12pt
+%%\parskip=5pt
+\centerline{ \bf The Lebesgue-Radon-Nikodym Theorem }
+\vskip .3in
+In what follows we assume all measures are defined on $(X, \Cal M)$. 
+
+\vskip .1in 
+\proclaim{ Definition 1} Let $\mu$ be a positive measure and $f: X \to
+[-\infty, \infty]$ a $\mu$-measurable function. We say that $f$ is 
+{\bf extended $\mu$-integrable} if \underbar{ at least } one of $$
+\int_X f^{+} \, \, d \,\mu \qquad  \text { or } \qquad   \int_X f^{-}
+\, \, d \, \mu  $$ is {\bf finite}.  
+\endproclaim 
+
+\vskip .2in 
+
+\subhead Remarks \endsubhead 
+
+(a) Given $\mu$ a positive measure and $f$ an extended
+$\mu$-integrable function; 
+if we define the `set function' $\nu$ on $\Cal M$ by 
+$$ \nu (E) \, := \, \int_{E} f \,\, d\, \mu \qquad \quad E \in \Cal
+M$$ then $\nu$ {\it is} a signed measure ( you had to prove this in 
+the homeworks). 
+\vskip .1in 
+(b)  Recall that $f$ is {\bf
+$\mu$-integrable} when {\bf both} are finite; which is the same as
+saying that $\int_X |f| \, \, d\, \mu \, < \, \infty $. In this case
+we write $f \in L^1(\mu)$. 
+\vskip .1in 
+(c) If $\nu$ is a signed measure and $\nu = \nu^{+} - \nu^{-}$ is the
+decomposition into its positive and negative variations -- both
+$\nu^{+}$ and $\nu^{-}$ are positive measures-- then
+by integration of measurable functions with respect to $\nu$ is defined by 
+$$\int_X f \, \, d\, \nu := \, \int_X f \, \, d\, \nu^{+} \, - \,  \,
+\int_X f \, \, d\, \nu^{-}. $$ 
+Then the space of $\nu$-integrable functions is defined by 
+$$L^1(\nu) \, :=\, L^1(\nu^{+}) \cap L^1(\nu^{-})   $$
+where $L^1(\nu^{+})$ and $L^1(\nu^{-})$ are defined as in (a). 
+
+
+
+\vskip .2in 
+
+ 
+\proclaim{ Definition 2} Let $\nu$ and $\mu$ be two signed
+measures. We say that they are {\bf{mutually singular}} and write 
+$\nu \perp \mu$ or $\mu \perp \nu$ if there exist $E, F \in \Cal M$
+such that 
+\roster 
+
+\item $E \cap F \, = \, \emptyset $, \qquad $E \cup F \, = \, X$.     
+
+\item $E\, $ is null for $\, \mu$ and $\, F\, $ is null for $\, \nu$.
+
+\endroster 
+
+\endproclaim
+\vskip .2in 
+
+\proclaim{ Definition 3} Let $\nu$ be a signed measure and $\mu$ a
+positive measure. We say that $\nu$ is {\bf absolutely continuous}
+with respect to $\mu$ and write $ \nu << \mu$ if 
+$$ \nu(E) \, = \, 0 \quad \text{ for every } \quad E \in \Cal M \quad
+\text{ for which } \quad \mu (E) \, =\, 0  $$
+
+\endproclaim 
+\vskip .2in 
+
+
+
+\proclaim{ Notation } Let $\mu$ be a positive measure, $f$ be an
+extended $\mu$-integrable function. In what follows we shall somehwat
+abuse notation and simply 
+write  $d \,\nu = f \, d \,\mu$ to refer to the  {\it signed measure} $\nu$ 
+defined by $ \nu(E) \, = \, \int_X \, f \, \, d\, \mu $, $E \in \Cal
+M$. 
+
+
+\endproclaim
+
+\vskip .2in 
+
+
+\proclaim{Technical Lemma 1} Let $\nu$ and $\mu$ be two finite positive
+measures. Then either 
+\vskip .1in 
+{\rm (i)} \qquad $\nu \perp \mu$  \qquad \qquad {\rm {\bf \, or }}
+\vskip .1in 
+{\rm(ii)} \, There exists $\varepsilon > 0 $ and a set \,  $E \in \Cal M$
+s.t. $\mu(E) >0$ and $E$ is a positive set for $ \nu - \varepsilon \mu$.
+\endproclaim
+
+\vskip .1in 
+
+\demo{Proof} Suppose $\nu$ and $\mu$ are {\bf not} mutually singular. Then want to show there exists
+an $\varepsilon >0$ and a set $E \in \Cal M$ with $\mu (E) >0$ and $E$ a
+{\bf positive set} for $\nu - \varepsilon \mu$.  
+
+
+Now, for each $n \in \Bbb N$  let  $\, P_n \, \cup \, N_n \, = \, X$ be a Hahn
+decomposition for $\, \nu - \dfrac{1}{n} \mu \, $. Define 
+$$P= \bigcup_1^\infty P_n \qquad \text{ and } \qquad N =
+\bigcap_1^\infty N_n = P^c .$$ 
+Then in particular $X \,= \, P \cup N$ and $N$ is a {\bf negative set} for {\bf
+all} $n \in \Bbb N$. But then the latter implies that $$ 0 \le \nu(N)
+\le \dfrac{1}{n} \mu(N) \qquad \text{ for all } \quad n \in \Bbb N . $$ By the Squeeze theorem we then have that
+$\nu(N) \, =\, 0$. 
+
+\vskip .1in 
+
+On the other hand, $\mu (P)\ge 0$. \, But since we assumed that $\nu$ and $\mu$ were not mutually
+singular, \ $\mu (P) \ne 0\,$  because we showed $\nu(N)=0$ and $X$ is the disjoint
+union of $P$ and $N$.\,  Hence $\mu (P) >0$ whence there must exist an $n_0
+\in \Bbb N$ with $\mu (P_{n_0}) > 0$ and $P_{n_0}$ a {\bf positive
+set} for $ \nu - \dfrac{1}{n_0} \mu $ by deinition of $P_{n_0}$. 
+
+Let then $\varepsilon := \dfrac{1}{n_0} $ and $E := P_{n_0}$ to otain
+the desired conclusion.   
+
+
+\enddemo 
+
+\vskip .2in 
+
+
+\proclaim{Technical Lemma 2} Let $\nu_1$, $\nu_2$ and $\eta$ be three
+signed measures, such that $\nu_1 \perp \eta$ and $\nu_2 \perp
+\eta$. Then for any $a_1, a_2 \in \Bbb R$ for which 
+$a_1\,  \nu_1 + a_2 \, \, \nu_2$ is well defined as a signed measure,
+we have that ( $a_1 \, \nu_1 + a_2 \, \nu_2 ) \, \perp \, \eta$. 
+
+\endproclaim
+\demo{Proof} First note that we only need to consider $a_j \neq 0$ and
+since $\nu_j \perp \eta $ then implies $a_j \nu_j
+\perp \eta $, for $j=1,2$ we can further assume WLOG that $a_j = \pm 1
+for  j=1, 2$. In any of such cases we proceed as follows. 
+
+By definition of mutually singular we have that $X= A_1 \cup A_1^c$
+and $X= A_2 \cup A_2^c$ where $A_i \in \Cal M$ be such that 
+$A_i$ is $\eta$-null for $i=1,2$ and $A_i^c$ is $\nu_i$-null for  $i=1,2$. 
+
+We want to show that there exists a set $A \in \Cal M$ such that 
+$X= A \cup A^c$, $a$ is $\eta$-null and $A^c$ \quad ($\nu_1 +
+\nu_2$)-null. 
+
+Set $A:= A_1 \cup A_2$. Then clearly $A^c = A_1^c \cap A_2^c$ ; 
+$A^c \subset A_i^c$, $i=1,2$. Hence $A^c$ is null for {\it both }
+$\nu_1$ and $\nu_2$ thus it is also null for $\nu_1 + \nu_2$ so long
+as the latter makes sense as a signed measure (which we are
+assuming). 
+
+It remains to show that $A$ is still a null set for $\eta$. For
+example we rewrite $$A =  (A_1 \setminus A_2)  \cup  (A_2 \setminus A_1)
+\cup  ( A_1 \cap A_2 ).$$ Then given any $F \subset A$; we use the
+additivity of the measure to write 
+$$ \align \eta (F) &= \eta( F \cap (A_1 \setminus A_2)) +  \eta( F \cap (A_2
+\setminus A_1)) + \eta( F \cap (A_1 \cap A_2)) \\
+& =  0 \endalign $$ because each term on the right hand side vanishes
+since $A_i$ are null sets for $\eta$ and each set on the right hand
+side is a subset of $A_1$ or $A_2$. Thus concluding the proof.
+
+\enddemo 
+
+\vskip .2in 
+\proclaim{Technical Lemma 3} Let $\mu$ be a positive measure and $f_1,
+\, f_2: X \to [-\infty , \infty]$ be extended $\mu$-integrable functions such that 
+$$\align & |f_1| \, d\mu \qquad \text{ and } \qquad |f_2| \, d\mu \quad \text { are
+$\sigma$-finite } \\
+&\int_X {f_1}^{-} \, d \mu < \infty \quad \text{ and }  \quad \int_X {f_2}^{-} \, d \mu < \infty \\
+&\int_A \,f_1 \, d \mu  \,  = \, \int_A \,f_2  \, d \mu  \quad \text{for
+all } \,  A \in \Cal M.  \endalign $$  Then $f_1(x) \, = \, f_2(x) \, \, \mu-a.e$. 
+\endproclaim
+\demo{Proof} By the $\sigma$-finiteness of the measures we have that  
+$$X = \bigcup X_i, \quad \int_{X_i}  |f_1| d \mu < \infty \quad \text{ and } \quad  
+X= \bigcup {X'}_j  \quad \int_{{X'}_j}  | f_2 |  d\mu  < \infty. $$ 
+Let $Z_{i, j} := (X_i \cap {X'}_j)\, \, i, j \in \Bbb N$.  Since $\Bbb
+N \times \Bbb N \sim \Bbb N $, we can relabel $Z_{i,j} =: Z_k$; then $X = \bigcup Z_k$.
+
+Let now $ X = \bigcup_n ( \bigcup_{k=1}^n Z_k)\, := \, \bigcup_n Y_n
+$; $Y_n \subset Y_{n+1}$. 
+We have that  $$\int_{Y_n}  |f_1| \, d \mu  < \infty \quad \int_{Y_n}  |f_2| \, d \mu
+<\infty \qquad \text{ for all } n \in \Bbb N. $$ In other words 
+$\chi_{Y_n} f_1$ and $\chi_{Y_n} f_2$ are in $L^1(\mu)$.  On the other
+hand by assumption we have, $$ \int_A \, \chi_{Y_n}(x) f_1(x) \, =\,
+\int_{A\cap Y_n} f_1(x)  d \mu \, =\, \int_{A \cap Y_n} f_2(x) \, d \mu \, = \, \int_{A} \chi_{Y_n}(x) {f_2}(x)  \, \quad
+\text{for all } A \in \Cal M $$   Then by Proposition 2.23
+b. $\chi_{Y_n}(x) f_1(x) \, = \, \chi_{Y_n}(x) f_2(x), \, \mu-a.e$ in
+$x$. 
+
+ Thus $  | \chi_{Y_n}(x) f_1(x) \, - \, \chi_{Y_n}(x) f_2(x), | \, = 0 \, \, \mu-a.e$ in
+$x$.   By Proposition 2.16  we then have 
+ $$  \int  \chi_{Y_n}  \, | f_1 (x) - f_2(x) | \, d\mu \, = \, \int_{Y_n} | f_1(x)  - f_2(x)|  d \mu \, =\, 0 \qquad
+\text{for all }  n \in \Bbb N \tag1$$  
+Then by the MCT letting $n \to \infty$ in (1) we can
+conclude that   $f_1(x) = {f_2}(x), \, \mu-a.e.$ in $x \in X$. 
+
+\enddemo 
+
+\vskip .3in 
+\proclaim{Main Theorem} Let $\nu$ be a $\sigma$-finite signed measure
+and let $\mu$ be a $\sigma$-finite positive measure on $(X, \Cal
+M)$. Then there exist unique $\sigma$-finite signed measures $\lambda$ and
+$\rho$ on $(X, \Cal M)$ such that 
+$$\lambda \perp \mu, \qquad  \rho << \mu, \quad \text{ and } \quad \nu
+= \lambda + \rho $$  Moreover, there is an extened $\mu$-integrable
+function $f:X \to \Bbb R$ such that 
+$$ d \rho \, = \, f\,   d \mu $$ and any two such functions are equal
+$\mu$-a.e. 
+
+\endproclaim 
+
+\demo{Proof} 
+
+{\bf{ CASE I:}} \, Assume $\nu$ and $\mu$ are \underbar{both}
+\underbar{finite} and \underbar{positive} measures.  
+\vskip .1in 
+\underbar{\it Existence} Define $$\Cal F :
+=\, \{ f: X \to [0, \infty]\, :\, \int_E f\, d\mu \leq \nu(E), \text{
+for all } E \in \Cal M\, \} .$$ Then 
+\roster 
+\item  $\Cal F \neq \emptyset$ since $f \equiv 0 \in \Cal F$. 
+\vskip .1in 
+
+\item  If $f, g \, \in \Cal F$ then $h(x):=\, \text{max}( f(x), \,
+g(x) ) \, \in \Cal F.\, \, $  Indeed, 
+$$\align \int_E \, h(x) d \mu & = \int_{E \cap \{x\, : \, f(x) > g(x)\, \}}\,
+f(x) \, d\mu \, +\,   \int_{E \setminus \{x\, : \, f(x) >  g(x)\, \}}\,
+g(x) \, d\mu \\
+& \le \nu(\, E \cap \{x\, : \, f(x) > g(x)\, \} \,)  +  \nu(\, E
+\setminus \{x\, : \, f(x) >  g(x)\, \} \,) \\
+& = \nu (E) \endalign $$ where the second inequality holds since $f, g
+\in \Cal F$. 
+\endroster 
+\vskip .15in 
+
+Let ${\bold a } : = \sup_{f \in \Cal F} \{\, \int_X \, f \, d\mu \, 
+\}$. Then $\, {\bold a} \le \nu(X) < \infty$. 
+\vskip .1in 
+
+\noindent By definition of
+supremum there must exist a sequnce $\{f_n\}_{n \ge 1} \subset \Cal F$
+such that $$\int_x f_n \, d\mu \, \to \, {\bold a} \qquad \text{ as }
+\quad n \to \infty $$ For each $n \ge 1$ define a new sequence 
+$$g_n \, := \, \text{ max } ( f_1, f_2, \dots, f_n )\quad \text{ and a
+function } \quad f(x)\, := \sup_n f_n(x). $$ Then 
+\roster 
+\item $g_n \in \Cal F$
+\item $g_n(x) \le g_{n+1} \qquad \text{and}\qquad g_n(x) \to f(x)
+\, \text{ as } \,  n \to \infty $
+\item ${\bold a} \ge \int g_n \, d \mu \, \ge \, \int f_n \, d\mu $ by
+(1) and the definition of $g_n$. 
+\endroster 
+
+From (3) and the Squeeze theorem (for sequences of real numbers) we
+then have that $$\lim_{n\to \infty} \int g_n \, d\mu \, \to \, {\bold
+a}. $$ Moreover, by (2) and the MCT (all functions are in $L^{+}$) we
+can conclude that 
+$$f \in \Cal F \qquad \text{ and } \qquad \int f \, d\mu = {\bold a} $$
+Since ${\bold a} < \infty$ and $f \in L^{+}$ the latter implies in
+particular that $f(x) < \infty\, \, \mu-a.e. $. 
+
+Define $\lambda$ so that $d\lambda := d\nu - f\, d\mu $. Then since
+$f\in \Cal F$ we have  
+$$\nu(E) - \int_E f \, d\mu \ge 0 \quad \text{ for all } \, E \in \Cal
+M.$$ Hence $\lambda$ is a positive (and finite) measure. 
+   
+\vskip .1in 
+Next, we need to show that $\lambda \perp \mu$. We do this by
+contradiction. Assume $\lambda$ and $\mu$ are {\bf not} mutually
+singular. By the Technical Lemma 1, there exist a set $E_0 \in
+\Cal M$ and an $\varepsilon_0 > 0$ with  $\mu(E_0) >0$ and $E_0$ a positive
+set for $\lambda - \varepsilon_0 \, \mu$.  But then $$\varepsilon_0 \chi_{E_0} d
+\mu \, \le \, \chi_{E_0} d \lambda \, \le \, d \lambda = d \nu  - f d \mu \,
+\longrightarrow \int_{E} \, (f + \varepsilon_0 \chi_{E_0} ) d \mu \le  \int_E \, d \nu = \nu(E) \, \text{ for any } E \in \Cal M
+  $$ Thus,   $(f +\varepsilon_0 \chi_{E_0}) \in \Cal F$ and 
+$$ \int_X  \, (f + \varepsilon_0 \chi_{E_0} ) d \mu  = {\bold a} +
+\varepsilon_0 \mu(E_0) > {\bold a}$$ which contradicts the fact that
+${\bold a} $ was the supremum of $\Cal F$.  We must then have that
+$\lambda \perp \mu$ as desired. This concludes the existence of
+$\lambda$, $f$ and $d \rho := f d \mu$. 
+
+\vskip .1in 
+
+\underbar {\it Uniqueness} Suppose there exist another 
+$\mu$-integrable function $f'$, and $\lambda'$
+another positive finite measure such
+that $d \nu = d \lambda' + f' d\mu $ as well. 
+
+Then $d \lambda - d \lambda' \,= \, (f' - f ) \, d \mu $. On the other
+hand, by Technical Lemma 2  $\lambda - \lambda' \perp \mu$ and by
+definition $\, (f' -f ) \, d\mu << d \mu$ with $ (f'-f) \, \in L^1(\mu)$. Hence we must have that $$d \lambda - d \lambda' = (f'
+-f) d\mu =0 \, \longrightarrow \lambda = \lambda' \text{ and by
+ Prop. 2.23 b. } f = f' \mu-a.e $$  
+
+
+\vskip .2in 
+
+{\bf{ CASE II:}}  Assume $\nu$ and $\mu$ are \underbar{both}
+\underbar{$\sigma$- finite} \underbar{positive} measures.
+\vskip .1in 
+\underbar{\it Existence} Let $X = \bigcup X_i \quad \mu(X_i)< \infty$
+and  $X = \bigcup Y_j \quad \nu(Y_j)< \infty$. For each $k \in \Bbb N$
+define $A_{i,j} = X_i \cap Y_j $ then $ \mu(A_{i,j}) = \nu(A_{i,j}) < \infty$  and
+since $\Bbb N \times \Bbb N \sim \Bbb N$, by relabeling we can
+simply write $X= \bigcup_k A_k $. 
+
+Define $$ \mu_k (E) = \mu( E \cap A_k) \qquad
+\nu_k(E) = \nu(E \cap A_k)\, ; \, \, k \in \Bbb N.$$ By Case I, for
+each $k \in \Bbb N$ there exist unique $\lambda_k,\, f_k$ such that 
+$$d \nu_k   \,= \, d \lambda_k \, +\, f_k \, d \mu_k \qquad \lambda_k
+\perp \mu_k .$$ Since $\mu_k (A_k^{c}) = \nu_k(A_k^c) =0$ we have that
+$\lambda_k(A_k^c) = \nu_k( A_k^c) - \int_{A_k^c} \, f_k \, d \mu_k =
+0$. Hence we may, in particular, assume that $f_k =0 $ on $A_k^c$. 
+
+Define $$\lambda = \sum_k  \lambda_k \qquad f = \sum_k f_k . $$ Then
+$d \nu = d \lambda + f d \mu$, \, $\lambda \perp \mu$ (you proved this
+in Exercise 9) and $d \lambda, d \rho : = f \, d \mu$
+are$\sigma$-finite as desired. Note that since  $f: X \to [0,
+\infty]$, $\int_X \, f^{-} \, d \mu < \infty$ hence $f$ is extended
+$\mu$-integrable. 
+
+\vskip .1in
+\underbar {\it Uniqueness} Follows along the same lines of
+Case I in conjunction with Technical Lemma 3 to conclude $f = f'$
+$\mu$-a.e in $x$ from $d\rho = f \, d \mu $ and $d\rho' = f' \, d mu$
+are $\sigma$-finite and $f, f': X \to [0, \infty]$ extended $\mu$-integrable. 
+
+\vskip .2in 
+
+{\bf{ CASE III:}}  Assume $\nu$ is {\it{signed }}  \underbar{$\sigma$-
+finite} and $\mu$ is \underbar{$\sigma$- finite} and \underbar{positive}
+
+\vskip .1in 
+
+\underbar{\it Existence} Let $\nu = \nu^{+} - \nu^{-}$ be the Jordan
+decomposition of $\nu$; where $\nu^{+}$ and $\nu^{-}$ are positive
+measures. Then since $\nu$ is {\it signed} and
+$\sigma$-finite WLOG we can assume $\nu^{+}(X) < \infty$ and $\nu^{-}$
+is $\sigma$-finite. Then by the previous case there exist positive
+functions $f_{+}$ and $f_{-} : X \to [0, \infty]$ and measures
+$\lambda_{+}, \lambda_{-}$ such that if $d \rho_{+} = f_{+} d \mu $
+and $d \rho_{-} = f_{-} d \mu $, 
+$$\nu^{+} = \lambda_{+} + \rho_{+}, \quad \nu^{-} =
+\lambda_{-} + \rho_{-}, \quad \lambda_{+} \perp \mu \text{ and }
+\lambda_{-} \perp \mu$$ Since $$ \infty > \nu^+(X) = \int_X f_{+} d\mu
++ \lambda_{+} (X)$$ we have that $f_{+} \in L^1(\mu)$ and
+$\lambda_{+}(X) < \infty$ so that $f = f_{+} - f_{-}$ is extended
+$\mu$-integrable, $d \rho : = f d \mu $ and $\lambda_{+} -
+\lambda_{-}$ are signed measures, $\lambda_{+} -
+\lambda_{-} \perp \mu$.  This concludes the existence since,  
+$$\nu \, = \, \rho_{+} + \lambda_{+} - ( \rho_{-} + \lambda_{-} ) $$
+
+\vskip .1in
+\underbar {\it Uniqueness} Follows along the same lines of uniqueness
+in Case II. 
+\vskip .2in 
+
+\enddemo
+
+{\bf Remark} The deomposition $\nu = \lambda + \rho$ where $\lambda
+\perp \mu$ and $\rho << \mu$ is called the {\bf Lebesgue
+decomposition} of $\nu$ w.r.t. $\mu$. 
+
+In the case where $\nu << \mu$ the theorem says that $d \nu = f \,
+d\mu$  for some extended $\mu$-integrable function $f$. In this case
+such $f$ is called the {\bf Radon-Nikodym derivative} of $\nu$
+w.r.t. $\mu$ and it is \underbar{denoted} by $\dfrac{d \nu}{d \mu}$. 
+  
+\enddocument
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

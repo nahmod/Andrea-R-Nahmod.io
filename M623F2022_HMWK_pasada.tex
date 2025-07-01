@@ -1,0 +1,671 @@
+\magnification=1200
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+%\NoPageNumbers
+\pagewidth{16.5truecm}
+\pageheight{22truecm}
+
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+%\hcorrection{.3in}
+
+\centerline{ \bf  M623 HOMEWORK  -- Fall 2022}
+\vskip .1in
+\centerline{ Prof. Andrea R. Nahmod }
+\vskip .2in
+
+\document
+
+
+\head {\underbar{SET 1:  Due Date 09/15/2022}  }\endhead
+
+\vskip .1in
+
+	
+ \underbar{Problem 1}  Give an example of a decreasing sequence of nonempty closed sets in $\Bbb R^n$ whose intersection is empty.	
+\medskip
+ \underbar{Problem 2}  Give an example of two {\bf closed} sets $F_1,F_2 \subset \Bbb R^2$ such that $F_1 \cap F_2 = \emptyset$ and  $\text{dist}(F_1,F_2) = 0$.
+ 
+%\medskip	
+%\item If $\delta = (\delta_1,\ldots,\delta_d)$ is a $d$-tuple of positive numbers $\delta_i>0$, and $E$ is a subset of $\mathbb{R}^d$, we define $\delta E$ by
+%\begin{align*}
+%  \delta E := \left \{ (\delta_1x_1,\ldots,\delta_d x_d) : \textnormal{ where}  (x_1,\ldots,x_d) \in E\right \}	
+%\end{align*}	
+%Prove that $E$ is measurable whenever $\delta E$ is measurable, and
+%\begin{align*}
+%  m(\delta E) = \delta_1\ldots \delta_d m(E)	
+%\end{align*}	
+%\item Show that any \emph{countable} set $E\subset \mathbb{R}$ must be a \emph{set of measure zero}.\\
+%\emph{Hint: Think first of the case where $E$ is actually finite. For the general case, it might be helpful to think about infinite converging series, e.g. the geometric series.}\\
+
+ \underbar{Problem 3}  a) Given an interval $[a,b]\subset \Bbb R$, construct a sequence of continuous functions $\phi_k(x)$ such that for every fixed $x\in \Bbb R$ we have
+ $$ \lim_{k\to\infty}\phi_k(x) =   \cases  1 \qquad \text{if} \quad x \in [a,b]  \\
+0 \qquad \text{ if } \,\, x \notin [a,b]  \endcases $$	
+ 	
+\smallskip
+b) Can one construct such a sequence $\phi_k$ so that it also converges uniformly as $k\to \infty$? Explain and justify your answer.
+	
+ \medskip
+
+\underbar{Problem 4}  A continuous function $\phi:\Bbb{R} \to \Bbb{R}$ is said to be convex if
+$$
+  \phi(\lambda x+(1-\lambda)y )\leq \lambda \phi(x)+(1-\lambda)\phi(y),\quad ;\forall\;x,y\in \Bbb{R},\forall\;\lambda \in [0,1]	
+$$
+Show that if $\phi$ is convex, then if $x_1,\ldots,x_n$ are points in $\Bbb{R}$ then
+$$
+  \phi \left ( \frac{x_1+\ldots+x_n}{n} \right ) \leq \frac{\phi(x_1)+\ldots \phi(x_n)}{n}
+$$	
+More generally, show that if $\alpha_1,\ldots,\alpha_n$ is a sequence of nonnegative numbers with
+$$
+  \sum \limits_{i=1}^n \alpha_i = 1	
+$$
+Then, for any $n$ points $x_1,\ldots,x_n$ in $\Bbb{R}$ we have
+$$
+  \phi \left ( \sum \limits_{i=1}^n \alpha_i x_i \right ) \leq \sum\limits_{i=1}^n \alpha_i \phi(x_i)
+$$	
+This last inequality is known as {\it Jensen's inequality.}
+
+ \medskip
+\underbar{Problem 5} Let $x_1,\ldots,x_n$ be all nonnegative numbers. Prove the {\it arithmetic-geometric mean inequality}
+$$
+  \bigl(x_1 x_2\ldots x_n\bigr)^{1/n} \,  \leq \, \frac{x_1+x_2+\ldots+x_n}{n}	
+$$
+\underbar{Hint} Apply Jensen's inequality with a conveniently chosen convex function.
+ \medskip
+ 
+\underbar{Problem 6} Compute the following Riemann integrals:
+
+$$
+ \int_0^1 x^k\;dx,\;\;\ k>0;\quad  \int_0^1 x^{-k}\;dx,\;\; k\in (0,1); \quad  \int_1^\infty x^{-k}\;dx,\;\; k\in (1,\infty)
+$$	
+
+$$
+  \int_0^\infty e^{-ax^2}x\;dx,\;\;\;a>0; \quad \int_0^\infty e^{-ax^2}x^2\;dx,\;\;\; a>0\, \, \,
+  (\text{use that} \int_{-\infty}^\infty  e^{-x^2/2}\;dx = \sqrt{2\pi})
+$$	
+
+$$
+  \int_a^b \cos(mx)\;dx,\;\;\;m\in\Bbb{N}.	
+$$
+\noindent For the last one, fix $a$ and $b$ and investigate the limit $m\to \infty$. Does the result depend on $a,b$?	
+
+
+
+
+
+
+
+\vskip .1in
+
+
+
+
+
+ 
+
+\noindent {\bf From Chapter 1 (pp 37-42)}:\, 1, 2
+
+
+\vskip .4in
+
+\head {\underbar{SET 2:  Due Date 09/22/2022}  }\endhead
+
+\medskip
+
+\noindent {\bf From Chapter 1 (pp 37-42)}:\,  11
+
+\medskip
+
+\underbar{Additional Problems}
+
+\medskip
+
+
+{\bf AI.} Construct a subset of $[0,1]$ in the same manner as the Cantor set, except that at the $k$th stage, each interval removed has length $\delta 3^{-k}$, for some $0<\delta<1$. Show that the resulting set is perfect, has measure $1-\delta$, and it is totally disconnected (in particular contains no intervals). 
+
+\bigskip
+
+ {\bf AII.}   For $x \in [0,1]$,  let 
+$$
+x = \sum_{n=1}^\infty \frac{a_n}{2^n} \,, \quad   a_{n} \in \{0,1\} \,, $$
+be the binary expansion of $x$.    Let $A$ be the set of points $x$ which admit a binary expansion
+with zero in all even positions (i.e., $a_{2n}=0$ for all $n \ge 1$).   Show that $A$ is a set  of 
+Lebesgue measure $0$. 
+% (Recall that a subset $B$ of a topological space $X$ is nowhere dense if the closure of $B$ has empty interior.)
+\medskip
+
+{\underbar{Hint:}}  Write the set $A$ has $A = \cap_{n=0}^\infty A_n$ where $A_0=[0,1]$,  $A_{n+1} \subset A_n$ and $A_{n+1}$ is obtained from $A_n$ by  removing some of the dyadic intervals in $A_n$. 
+% \qquad $(\dfrac{j}{2^n}, \dfrac{j+1}{2^n})$, $0\le j \le 2^n-1$ in $A_n$.
+
+
+\bigskip
+
+
+{\bf AIII.} The following problem is a special case of Problem 4 in [SS, Ch1] dealing with what we call {\it Fat Cantor Sets}. 
+
+Construct a closed set $\Cal C$ analogous to the Cantor $\frac{1}{3}$-set by removing instead at the stage $k^{th}$ stage $2^{k-1}$ centrally situated open intervals each of length $\ell_k= \frac{1}{4^k}$.  The set 
+$\Cal C$ is again defined as the (countably) infinity intersection of the closed sets $C_k$ appearing at stage.
+ $k$.
+  \smallskip
+ a) Show that $\Cal C$ is compact, totally disconnected and has no isolated points (this is similar to problem 1).
+ 
+ \smallskip
+  b) Show that $m_{\ast}(\Cal C) = \frac{1}{2}$ and conclude (with justification) that $\Cal C$ is uncountable.
+
+\bigskip
+
+{\bf AIV.}   a) \, Let $ A = \cup_{n=1}^{\infty} A_n$ with $ m_{\ast}(A_n) = 0$. \underbar{Use} the definition of exterior measure to prove that $m_{\ast}(A) =0$.
+
+\smallskip
+
+b)\, Use a) to prove that any countable set in $\Bbb R^d$ is measurable and has measure zero. 
+
+
+\vskip .2in
+\noindent {\bf From Chapter 1 (pp 37-42)}:\  5, 6, 7.
+
+
+
+
+\vskip .4in
+
+
+
+
+\head {\underbar{SET 3:  Due Date 09/29/2022}  }\endhead
+
+\medskip
+
+\noindent {\bf From Chapter 1 (pp 37-42)}:\   16, 25, 28, 29.
+\smallskip
+
+\bigskip
+\underbar{Additional Problems:}  
+
+\bigskip
+
+
+
+{\bf AI.)}  \, Prove that a set $E$ in $\Bbb R^d$ is measurable \underbar{if and only if} for every set $A$ in $\Bbb R^d$, 
+$$  m_{\ast} (A) =   m_{\ast} (A \cap E) \, +\, m_{\ast} (A - E) \quad \tag{1} $$  
+
+\underbar{Hint}:  First assume $E$ is measurable and prove (1). Then to prove the converse, to prove that  (1) implies that E is measurable, assume first that $m_{\ast} (E) < \infty$.   Then do the case of $m_{\ast} (E) = \infty$. For the later write $ E = \bigcup_{k=1}^{\infty}  [ E \cap B(0, k) ] $ where $B(0, k)$ is the ball centered at the origin of radius $k$.   This characterization of measurability is called the {\it{Carath\'eodory condition.}}
+\bigskip
+
+\underbar{Remark}:  Note that  $A- E =  A \cap E^{c}$ so the {\it{Carath\'eodory condition}} could be rephrased as:   
+A set $E$ in $\Bbb R^d$ is measurable \underbar{if and only if} for every set $A$ in $\Bbb R^d$, 
+$$  m_{\ast} (A) =   m_{\ast} (A \cap E) \, +\, m_{\ast} (A \cap E^{c})  \tag{1'}$$  
+
+
+\bigskip
+
+{\bf AII.}  Let $\{E_n\}_{n\geq 1}$ be a countable collection of measurable sets in $\Bbb R^d$. Define
+$$  \quad  \limsup_{n \to \infty} E_n \,:=\, \{ x \in \Bbb R^d \, :\, \, x \in E_n, \, \text{ for infinitely many } \, n \, \} $$
+$$  \quad  \liminf_{n \to \infty} E_n \,:=\, \{ x \in \Bbb R^d \, :\, \, x \in E_n, \, \text{ for all but finitely many } \, n \, \} $$
+ 
+\smallskip 
+
+a) Show that  $$\limsup_{n\to \infty} E_n \,=\, \bigcap_{n=1}^\infty \bigcup_{k=n}^{\infty} E_k \qquad \liminf_{n\to \infty} E_n \,=\, \bigcup_{n=1}^\infty \bigcap_{j=n}^{\infty} E_j $$
+
+b) Show that $$ m( \liminf_{n\to \infty} E_n ) \leq \liminf_{n\to \infty} m(E_n ) $$ 
+$$  m( \limsup_{n\to \infty} E_n ) \geq   \liminf_{n\to \infty} m(E_n )  \quad \text{ provided that } \, m(\bigcup_{n=1}^\infty E_n ) < \infty $$
+
+c)  Find  $\limsup E_k$ \, and \, $\liminf E_k$ for the sequence $\{E_k\}$ defined as follows:
+$$  E_k :=  \cases \, \, [-1/k,1]  \quad \text{ for } k \text{ odd}  \\  [-1,1/k]  \quad \text{ for } k  \text{ even} \endcases $$	
+
+\bigskip
+
+
+\vskip .1in
+
+
+
+\underbar{Bonus Problem$^{\ast}$}:  {From Chapter 1 (pp 37-42)}  do problem 10 
+
+\bigskip
+
+\underbar{Bonus Problem$^{\ast}$}:  First do  32 (pp 44-45).  (Hint for part a) consider the sets $E_k = E + r_k \subset \Cal N_k$, where $\{r_k\}_{k \geq 1}$ is an enumeration of the rationals.)
+
+Note that part b) should read  ``...prove that {\it there exists} a subset of G which is....".
+\smallskip
+Furthermore, show:
+\smallskip
+c) $\Cal N^{c} = I \setminus \Cal N$ satisfies $m_{\ast}(\Cal N^{c}) = 1$. ( Hint: argue by contradiction and use  a) )
+
+\smallskip
+d) Conclude that  $$ m_{\ast}(\Cal N) + m_{\ast}(\Cal N^{c})  \neq m_{\ast}(\Cal  N\cup \Cal N^{c}) $$
+\bigskip
+
+
+\bigskip
+
+\vskip .2in
+\head {\underbar{SET 4:  Due Date 10/13/2022}  }\endhead
+\vskip .15in
+
+
+
+
+\noindent {\bf From Chapter 1 (pp 37-42)}:\  17,  22 
+\smallskip
+
+\underbar {Hint for $17$}:  Note that $$ \{ x : |f_n(x)| \, =\, \infty \} =  \bigcap_{j=1}^\infty \{ x : |f_n(x)| > \frac{j}{n} \, \}.$$ Hence the hypothesis implies that for each $n$, 
+$$m ( \bigcap_{j=1}^\infty \{ x : |f_n(x)| > \frac{j}{n} \, \}) \, =\, 0. $$ But then $\lim_{j \to \infty} m (\{ x : |f_n(x)| > \frac{j}{n} \, \}) \, =\, 0$ (Why? Justify.).
+Next, follow the hint in the book from here.
+\smallskip
+\underbar {Hint for $22$}:  Argue by contradiction and use the continuity of such an $f$ at $x=1$  to show that $m(\{ x \, :\, f (x) \neq \chi_{[0,1]}(x)\})$ contains an interval of small but positive measure and hence it can't be zero (which gives you the contradiction).
+\bigskip
+
+{\bf AI.}  \,   Do problem   13a)  \, in Chapter 1 page 41. 
+
+\medskip
+{\underbar{Hints for 13a)} First show that for each $n \in \Bbb N$, the set $\Cal O_n:= \{ x \, : \, d(x, F) < \frac{1}{n} \}$ is open. 
+
+Then show that if $x \notin F$ then since $F$ is closed, $d (x, F) > \delta$ for some $\delta >0$.
+
+Finally prove  that if  $F$ is closed then \, $F \, = \, \bigcap_{n=1}^{\infty} \Cal O_n$.  
+
+Conclude. 
+
+\vskip .15in
+{\bf AII.}  The following relates to the proof of Theorem 4.1  page  31. Prove that the sequence of nonnegative simple functions $\{\phi_k\}_k$ that 
+approximate pointwise $f$ is indeed increasing, ie. $\phi_k  \leq \phi_{k+1}$.
+
+\medskip
+
+\vskip .15in
+\noindent {\bf From Chapter 2 (pp 89-97)}: \,  1 
+
+\vskip .1in
+\underbar{Hint} One way to proceed is as follows.   For $j = 1, \dots, N$  ($N=2^n-1$) write each $j$ as an $n$-digit binary number  $j_1j_2\dots j_n$ 
+For example, $2 = 000 \dots 10$ in binary representation.  Next define the set  $A_k$ to be $F_k$ if $j_k=1$ and $F_k^{c}$ if $j_k=0$ and let 
+$F_k^{\ast}$ be the intersection from $k=1$ up to$n$ of $A_k$. You'll see that such $F_k^{\ast}$ is intersection of $n$ sets each of which could be
+$F_j$ or $F_j^{c}$ depending on the binary representation of $k$. Now:
+\smallskip
+
+i) Prove that the collection of $F_k^{\ast}$ thus defined is pairwise disjoint and that $$F_k  = \bigcup_{ F_j^{\ast} \subset F_k} F_j^{\ast}$$.
+\smallskip
+ii) Argue  from i) to deduce form here that $\bigcup_{\ell=1}^n  \, F_{\ell} \, \subset \, \bigcup_{j=1}^N  \, F_j^{\ast}$.
+\smallskip
+
+iii) Finally show that the reverse inclusion easily holds.
+
+
+\vskip .2in
+
+
+
+\underbar{Bonus Problem$^{\ast}$}:  The Baire Category Theorem states:  {\it A complete metric space cannot be written as a countable union of nowhere dense sets}. Recall that a set  $A$ is said to be {\it nowhere dense} if the interior of the closure of $A$ is empty  ( that is,  $({\overline{A}})^{o} = \emptyset$). 
+
+Now, consider the rational numbers $\Bbb Q$ in $\Bbb R$. Note $\Bbb R$ is a complete metric space.  Use the Baire Category Theorem to prove that $\Bbb Q$ is {\bf not} a $G_{\delta}$ set. (\underbar{Hint.} Proceed by contradiction). 
+
+\medskip
+
+\underbar{Bonus Problem$^{\ast}$}:  Now the Bonus Problem above  to prove 13b) and 13c)  \, in Chapter 1 page 41. 
+
+\medskip
+
+%\underbar{Bonus Problem$^{\ast}$}:  {From Chapter 1 (pp 44)}  do problem 29
+%\medskip
+
+
+
+
+
+
+
+
+
+\vskip .2in
+\head {\underbar{SET 5:  Due Date 10/27/2022}  }\endhead
+
+\noindent {\bf From Chapter 1 (pp 37-42)}:   Prove  $18$ in this case only  ``Every measurable function $f: [a, b]  \to \Bbb R$  is the limit a.e. of a sequence of continuous functions on $[a,b]$."   
+\vskip .2in
+
+\noindent {\bf From Chapter 2 (pp 89-93)}:  6,  8, 9, 10, 11. 
+
+\medskip
+
+\underbar{Hints}. For 6a) consider the positive real $x$ axis and select intervals of the form $[k, k+ \frac{1}{2^{2k}}], k \geq 0$ integer. Now think of a continuous (piecewise linear) function $f$ whose graph looks like series of triangles that get higher and higher over each of these intervals so that the area under each one is $2^{-k}$ and  $f$ is zero elsewhere. You don't need to attempt to write the function analytically, but graph it identifying the height of the triangles and argue why this function gives you the desired conclusion. 
+ 
+For 6b) Use the $\varepsilon-\delta$ definition of uniform convergence to choose a suitable countable family of disjoint intervals of small fixed length (say $C \delta$) on which $|f | \geq  c \varepsilon$ (for some suitable fixed constants $C, c >0$.  Tchebychev might then be useful to draw the conclusion.
+
+\medskip
+
+
+\underbar{Additional Problems:}
+\medskip
+
+%{\bf I.\,}  Prove that if $E$ is measurable on $\Bbb R$ with $m(E) < \infty$ then for every $\varepsilon >0$ there exists a finite and disjoint collection of open intervals $I_1, \dots I_N$ such that 
+%$$ m ( E  \, \Delta  \, (\bigcup_{j-1}^N I_j) ) \leq \varepsilon $$
+%This is result is reminiscent of Theorem 3.4 iv) except that on $\Bbb R$ one can take open intervals.
+%
+%\medskip
+%
+%
+%
+%{\bf II.\,}  Let $F$ be a closed set in $\Bbb R$ and supposed that $f: F \to \Bbb R$ is continuous. Prove that there exists an extension $G$ of $f$ to all of $\Bbb R$  (that is $G=f$ on $F$ and $G: \Bbb R \to \Bbb R$) which is continuous on $\Bbb R$   (do a constructive proof by defining writing $\Bbb R \setminus F$ as a countable union of disjoint open intervals and define $G$ to be linear on the closure of each of this intervals.)
+%
+
+\medskip
+
+{\bf I.\,} Prove the Auxiliary Lemma left as homework on 10/12/2022 class. It was stated as follows. Let $h$ be a simple function on $E$, measurable, $m(E) < \infty$.  Then for every $\varepsilon >0$ there exists a closed set $H_{\varepsilon}$ in $E$, with $m (E \setminus H_{\varepsilon}) < \varepsilon$ such that $h$ restricted to $H_{\varepsilon}$ is continuous. 
+
+(\underbar{Hint} Work with $h$ written in canonical/standard form as we defined in class and is also defined in [SS] page 50 Chapter 2) 
+
+\medskip
+
+%\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\vskip .15in
+
+
+
+
+
+\smallskip
+{\bf II.\,} If a function $f$ is integrable then we proved in Proposition 1.12 (Chapter 2) that for any $\varepsilon>0$ there exists a $\delta >0$
+such that for any set $A$ with $m(A) \leq \delta$, we have that $\int_A |f(x)| \, dm \leq \varepsilon$ ({\it absolute continuity of the Lebesgue integral}).
+\bigskip
+
+ We say that a sequence of functions $\{ f_n\}_{n\geq 1}$ is {\bf equi-integrable} if for every $\varepsilon >0$
+there exists $\delta >0$ s.t.  for any set $A$ with $m(A) \leq \delta$, we have that $\int_A |f_n(x)| \, dm \leq \varepsilon$ \underbar{for all} $n \geq 1$. 
+
+\smallskip
+
+Now prove the following.   
+
+\smallskip
+
+Let $E$ be  a set of finite measure, $m(E) < 1$, and let $\{f_n\}: E \to R $ be a
+sequence of functions which is equi-integrable. Show that if  $\lim_{n \to \infty} f_n(x) = f(x)$ a.e. $x$, then 
+$$ \lim_{n \to \infty} \int_E |f_n(x) - f(x)| \, dm \, =\, 0.$$
+\underbar{Hint}. Use Egorov's Theorem as in the bounded convergence theorem.
+
+\medskip
+
+{\bf III.} We say that a sequence of measurable functions $\{f_n\}_{n\geq 1}$ {\it converges in measure} to another measurable function $f$ is for every $\varepsilon >0$, 
+$$ m(\{ x \,:\, |f_n(x) \,- \, f(x)| > \varepsilon \} ) \, \to \, 0, \qquad \text{as} \qquad n \to \infty $$
+Prove that if a sequence of measurable function $f_n$ converges in measure to another measurable function $f$ then there exists a subsequence $\{f_{n_j}\}_{j \geq 1}$ which converges almost everywhere to $f$, that is $ f_{n_j}(x) \to f(x)$ a.e. $x$ as $ j \to \infty$.
+\smallskip
+\underbar{Hint.} First  show that for $\varepsilon = 2^{-j}$ one can choose $n_j$ such that for all $n \geq n_j$ 
+$$ m(\{ x \,:\, |f_n(x) \,- \, f(x)| > 2^{-j} \} ) \,  \leq \, 2^{-j}. $$
+Next note that for each $j \geq 1$ one may choose $ n_{j+1} \geq n_j$  (note this is needed to satisfy the definition of subsequence) and
+define $A_j:=  \{ x \,:\, |f_{n_j}(x) \,- \, f(x)| > 2^{-j} \} $. 
+
+Use Borel-Cantelli to prove $m(\limsup_{j \to \infty}\, A_j) =0$ and show this is equivalent to the desired conclusion.
+
+\medskip
+
+{\bf IV.} Suppose that $\{f_n\}_{n \geq 1}$ is a sequence of non-negative measurable function, that is $f_n\geq 0$ for all $n$, such that $ f_n$ converges in measure to $f$ . Show that then 
+
+$$ \int f(x) \, \, dm \, \leq \, \liminf_n \, \int f_n(x)\, \, dm $$
+
+\smallskip
+\underbar{Hint.}   Let us call denote by $I= \int f dx,  \, \,  a_n= \int f_n dx,  \, \,  \text{and} 
+\, \,  A= \liminf \int f_n dx $.
+
+We wish to prove that $ I \le A$. Note that since A is the smallest of all limit points, there must exist a subsequence of $a_{n_k} $ of  $a_n$ that converges to A ; i.e. 
+$\lim_{k \to \infty} a_{n_k} = A.$
+In particular note that $$ A = \lim_{k \to \infty} \int f_{n_k} dx \qquad \text{and that }  \, f_{n_k} \to f \text{ in measure as well } $$  
+Then for every subsequence $a_{n_{k_j}}$ of $a_{n_k}$ we also have that 
+ $$ A = \lim_{j \to \infty}a_{n_{k_j}} =  \lim_{j \to \infty} \int f_{n_{k_j}} dx $$ and  $f_{n_{k_j}} \to f \text{ in measure as well } $ . 
+Next use the previous problem {\bf III} to obtain one such (sub)subsequence for which we have 
+a.e. convergence to $f$.   Apply Fatou's Lemma and conclude.
+
+
+
+\vskip .2in
+\head {\underbar{SET 6:  11/03/2022.}  }\endhead
+
+
+\bigskip
+\noindent {\bf From Chapter 2 (pp 89-93)}: 16, \, 22.
+
+\smallskip
+
+\noindent {\bf From Chapter 2 (pp 95)}:  3. 
+
+\smallskip
+
+\underbar{Hint.} Note $\{f_n\}  \to f$ in $L^1$ as $n\to \infty$  means $\| f_n - f\|_{L^1} \to 0$ as $n \to \infty$. To demonstrate one direction
+ suitably use Tchebychev's inequality. For the converse consider $f_n(x) = n \chi_{[0, \frac{1}{n})}$.
+\bigskip
+
+\underbar{Additional Problems:}
+\medskip
+
+{\bf I.\,} Let  $f$ and $f_n$, $n \ge 1$ be measurable functions on $\Bbb R^d$
+\smallskip
+{\bf a)}\, Suppose that $\mu (E) < \infty$ and that  $f$ and $f_n$, $n \ge 1$ are all supported on $E$. 
+Prove that $f_n \to f$ a.e implies $f_n \to f$ in measure. 
+\smallskip
+
+{\bf b)}\,  Prove that the converse of  (a) is false even under the hypothesis of (a)  ( ie. all functions supported on $E$ a set of finite measure)
+
+\underbar{ Hint.} Let $E=[0,1]$ and consider  the (double) sequence 
+$f_{m,k} (x) = 1_{E_{m,k}}(x)$ ($m,k \in \Bbb N$), where $E_{m,k}:= [ \frac{m-1}{k}, \frac{m}{k} ]$.)
+
+\bigskip
+
+{\bf II.} Consider the sequence of functions $f_n(x): = \frac{n}{1 +  (n x)^2}$.  For $a \in \Bbb R$ be a fixed number consider the Lebesgue integral $I_a(f_n)(x) := \int_a^\infty \, f_n(x)  \, dm$. Compute $\lim_{n \to \infty} I_a(f_n)(x)$ in each case: i) $a =0$  ii) $a > 0$  and iii) $a <0$. Carefully justify your calculations (recall the transformation of integrals under dilations). 
+\bigskip
+
+{\bf III.\,} In Chapter 2 we first prove the {Bounded Convergence Theorem} (using Egorov Theorem).
+Then, we proved Fatou's Lemma (using the BCT) and
+deduced from (a corollary of) it the Monotone Convergence Theorem. Finally we proved the Dominated 
+Convergence Theorem (using both BCT and MCT). Here we would like to prove these sequence of results in a different order.
+Namely, prove:
+
+{\bf a)}\,  Prove Fatou's Lemma {\it from} the MCT by showing
+that for any sequence of measurable functions $\{f_n\}_{n \geq 1}$, 
+$$  \int  \liminf_{ n\to \infty}  f_n  \, dm \,  \leq  \,  \liminf_{ n\to \infty} \int f_n \, dm . $$
+
+\underbar{Hint}. \, Note that   $\inf_{ n \geq k} \,  f_n \leq f_j$ for any $ j \geq k$, whence  $\int \inf_{ n \geq k} \, f_n \, dm\,  \leq \, \inf_{j \geq k} \int  f_j.$ 
+\medskip
+
+{\bf b)}  Now prove the DCT  from Fatou's Lemma. 
+
+\smallskip
+
+\underbar{Hint}. Apply Fatou's Lemma to the nonnegative functions $g + f_n$ and  $g - f_n$.
+
+\bigskip
+
+{\bf IV.\,}   Use the DCT to prove the following:   let $\{f_n\}_{n \ge 1}$ be a sequence of integrable functions on $\Bbb R^d$ such that $\sum_{n=1}^{\infty}\,  \int  |f_n(x)| \, dm < \infty$.  \, Show that   $\sum_{n=1}^{\infty}\,  f_n(x) \,$ {\it converges} a.e. \, $x \in \Bbb R^d$ to an {\it integrable function} and that  $\sum_{n=1}^{\infty}\,  \int  f_n(x) \, dm \, = \,  \int \, \sum_{n=1}^{\infty}\,  f_n(x) dm $.
+
+
+
+
+\bigskip
+
+\head {\underbar{SET 7:  Due Date 11/17/2022}  }\endhead
+
+\bigskip
+
+\noindent {\bf Chapter 2 (pp 90-95)}:  2, 4, 15, 18, 19
+
+\smallskip
+
+\underbar{Hint.} For 2. suitably approximate $f$ by a continuous function $g$ with compact support.
+
+
+\vskip .2in
+\underbar{Additional Problems:}
+\medskip
+
+
+
+
+{\bf I.\,}   Consider the function on $\Bbb R \times \Bbb R$ given by 
+$$f(x, y) =  y e^{-(x^2 +1) y^2}\quad \text{ if }   x \geq 0, y \geq 0 \quad \text{and} \quad  0 \quad \text{ otherwise }.$$
+
+a) Integrate $f(x,y)$ over $\Bbb R \times \Bbb R$   (justify your steps carefully)
+
+b) Use a) to prove that $\int_0^\infty  e^{-x^2} \, d x \, =\, \frac{\sqrt{\pi}}{2}$.
+
+c) Use b) and dilation to prove that $\int_{-\infty}^\infty  e^{- a x^2} \, d x \, =\, \sqrt{\frac{\pi}{a}}$.
+
+\bigskip
+
+{\bf II.\,}  Let $f(x)$ be a measurable function over $\Bbb R^{d_1}$ and $g(y)$  be a measurable function over $\Bbb R^{d_2}$. Prove that $F(x,y) = f(x) g(y) $ is a measurable function over $\Bbb R^{d_1 + d_2}$.
+\smallskip
+
+\underbar{Hint.} Might be helpful to read the Handout, that is do {\bf V.} below first.
+
+\bigskip
+{\bf III.\,} Let $s$ be a fixed positive number.  Prove that
+$$
+\int_0^\infty e^{-s x} \, \frac{\sin^{2}x}{x} \, dx 
+= \frac{1}{4} \log(1 + 4 s^{-2}) $$
+by integrating $e^{-s x}\sin(2xy)$ with respect to $x \in (0,\infty)$,
+$y \in (0,1)$ and with respect to $y \in (0,1)$, $x \in (0,\infty)$.  Justify all your steps.
+\ \ \ ({\bf Hints.}  $\cos(2 \theta) = 1 - 2 \sin^2\theta$.  In order to do one of the integrations,
+either integrate by parts twice or use the definition of the appropriate trigonometric function in 
+terms of complex exponentials.)
+
+
+\bigskip
+{\bf IV.\,}   Consider the function $f(x,y):=  e^{-xy} - 2 e^{-2xy}$ where $ x \in [ 0, \infty)$ and $ y \in  [ 0,1]$. 
+
+i)  Prove that for a.e.  $y \in [0,1]$  $f^{y}$ is integrable on $[0, \infty)$ with respect to  $m_{\Bbb R}$. 
+
+ii) Prove that for a.e.  $x \in [0,\infty)$  $f^{x}$ is integrable on $[0, 1]$ with respect to  $m_{\Bbb R}$.
+
+iii) Use Fubini to prove that $f(x,y)$ is not integrable
+on $[ 0, \infty) \times [ 0,1]$ with respect to  $m_{\Bbb R^2}$.   
+
+
+{\bf V.\,}  {\bf Read  carefully the Handout:} {\it{On Fubini and Product Sets}} in the class webpage under `Some useful notes'.
+
+\bigskip
+
+\head {\underbar{SET 8 - Due Tuesday 12/06/2022} (note the day and date) }\endhead
+
+\medskip
+
+\noindent {\bf Chapter 2 (pp 90-95)}: Do  21.  This is long problem! First recall the Handout you had to read in the previous set about the end of Chapter 2. Now some hints:  for 21a) you need to use Proposition 3.9, Corollary 3.7 and that the product of measurable functions is measurable (Property 5, page 29); while 21b)--e) require Fubini. 
+
+
+\bigskip
+\noindent {\bf From Chapter  3 (pp 145-147)}: \, 4, 5, 7.
+
+\bigskip
+
+\noindent \underbar{Bonus Problem*} from {Section 6 Problems in Chapter 3 page 152}}: Do  \,  1  \,(this problem is based on a good understanding of Lemma 1.2  p.102 and of Lemma 3.9 p.128-definition of Vitali covering is just before the statement of Lemma 3.9.)
+
+
+\end{document}
+
+
+
+
+
+\bf V.\,}  {\bf Having read the Handout:} {\it{On Fubini and Product Sets}} in the class webpage under `Some useful notes'. Do the following:
+
+a)  \,  7  from Chapter 2 p.91) 
+
+b)  \,  21a)b)c)d)  from Chapter 2 p.94)      RICA: ESTE VA BIEN CON GOOD KERNELS 
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%
+\vskip .2in
+
+%\vskip .15in
+%
+\head {\underbar{SET 7 - Due 12/12/17}  }\endhead
+\vskip .1in
+
+\noindent {\bf From Chapter  2 (pp 88-97)}:  Read Cor. 3.7- 3.8,  then do 7.  Recall Invariance (p. 73). \,  Read Prop 3.9 then do 21a)b)c). 
+
+
+\bigskip
+\noindent {\bf From Chapter  3 (pp 145-146 -Section 5)}: \, 4, 5, 7.  
+
+\bigskip
+\noindent {\bf From Chapter  3 (pp 152- Section 6):  \,  1  \,(this problem is based on a good understanding of Lemma 1.2  p.102 and of Lemma 3.9 p.128-definition of Vitali covering is just before the statement of Lemma 3.9.)
+
+
+
+\enddocument
+
+\vskip .15in
+
+
+\head {\underbar{SET 8 - Due 12/08/16} }\endhead
+
+\vskip .1in
+
+ 
+
+\noindent {\bf  Chapter  3 (pp 145-150- Section 5)}:  \, 1  (part c) is involved) ,  \,   16b), 22. 
+
+
+\vskip .1in
+
+{\bf Note}:   Please start working on the above. I'll add a couple more on BV and absolute continuity. 
+
+
+
+\vskip .2in
+
+
+\enddocument
+
+
+                                          
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\medskip
+
+
+{\bf I.}  First recall that a set $E$ in $\Bbb R^d$ is closed if and only if $E$ contains all its limit points; in particular any convergent sequence in $E$ has limit in $E$.
+Next recall that a set $K \subset \Bbb R^d$ is said to be compact if $K$ is closed and bounded. 
+
+\medskip
+
+Show that the following are equivalent:
+
+\smallskip
+
+i)  \, $K$ is compact
+
+\smallskip
+
+ii) \,  Any cover of $K$ by open sets, $K \subset \cup_{\alpha} \Cal{O}_{\alpha}, \quad \Cal{O}_{\alpha}$ open,  contains a finite sub-cover $$K \subset \cup_{j=1}^M  \Cal{O}_{j}, \qquad \text{ for some } \, \, M \geq 1$$ 
+
+\smallskip
+
+iii)\, Any sequence $\{y_n\}_{n \geq 1} \subset K$, contains a convergent subsequence whose limit is in $K$.
+
+
+\underbar{Additional Problem:}    Suppose that A is a measurable set in $\Bbb R^d$ with $m(A) > 0$. Show that for any
+$q < m(A)$ there exist a measurable set $B\subset  A$ with $m(B) = q$. 
+
+(Hint: Prove it first for the case that $m(A)=p < \infty$. Use then the intermediate value theorem for
+$A \cap B_R(0)$.)
+
+
+
+
+
+
+

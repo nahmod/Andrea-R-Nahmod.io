@@ -1,0 +1,142 @@
+\magnification=1200
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+\NoPageNumbers
+
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+%\hcorrection{.3in}
+
+
+\centerline{ \bf  Math 331 Section 3}
+
+\centerline{ Prof. Andrea R. Nahmod}  
+\medskip 
+\centerline{ {\bf Quiz 1--- Solutions  } \, }
+
+\document
+\bigskip 
+
+{\bf Problem 1.}\, \, Consider the logistic population model $$ \frac{dP}{dt} \,=\, 0.4 \, P \, (1 - \frac{P}{230}) $$ where $P(t)$ is the population at time $t$. 
+\vskip .2in
+(a) For what values of $P$ is the population in {\it equilibrium} ? 
+\vskip .1in 
+
+Population is in equilibrium whenever  $\dfrac{dP}{dt} =0$.
+
+This holds  whenever  either $P=0$ or  $P=230$.
+\vskip .2in
+ 
+(b) For what values of $P$ is the population in {\it increasing} ?
+\vskip .1in
+Here we need to find for what values of $P$  $\dfrac{dP}{dt} \ge 0$.
+
+This is when  $ 0 \le P \le 230 $  
+
+\vskip .2in 
+
+(c) For what values of $P$ is the population in {\it decreasing} ?
+\vskip .1in 
+Here we need to find for what values of $P$  $\dfrac{dP}{dt} \le 0$
+\vskip .1in
+Since negative population doesn't make sense, we always have $P \ge 0$. 
+Hence population is decreasing when $ P \ge  230 $ 
+  
+\vskip .3in 
+  
+{\bf Problem 2. }\, \, Solve the following initial value problem
+$$ \frac{dy}{dt} \,=\, \frac{1}{2 y +3}, \quad \qquad y(0)= 1 $$
+
+First we note that there are no equilibrium solutions. 
+
+Next we solve using separation of variables. We write 
+
+$$ ( 2 y + 3)  \frac{dy}{dt} = 1  \Longrightarrow   y^2 + 3 y = t +  C $$
+To determine C we use the initial condition; set $t=0$ and $y=1$ to get 
+$ 4 = C$ hence we have 
+$$ y^2 + 3y = t + 4 \Longrightarrow y^2 + 3 y - (t+4) = 0 $$
+Solving the quadratic equation we get that 
+$ y(t) =  \frac{3}{2} \pm \sqrt{ 25 + 4 t}$ But since we {\bf must have} that $y(0)=1$ the solution we seek is 
+$$ y(t) =  \frac{3}{2} + \sqrt{ 25 + 4 t}$$ 
+
+
+
+
+\newpage
+
+{\bf Problem 3} \, Given the initial value problem $$ \frac{dy}{dt} =  y^3 , \quad \qquad y(0)= 1 $$
+
+(a) \, Find a formula for the solution
+
+\vskip .1in
+
+First we note that $y=0$ is an equilibrium solution.  For $y \ne 0$ we solve by separation of variables to get 
+
+$$ \frac{1}{y^3} \frac{dy}{dt} = 1 \Longrightarrow  - \frac{1}{2} \frac{1}{y^2} = t +C$$
+Using the initial condition we can now find C; set  $t=0$ and $y=1$ to get
+$ - \frac{1}{2} = C$.  Hence 
+$$  -\frac{1}{y^2} = 2 t - 1   \Longrightarrow  y^2 = 1 - 2t   \Longrightarrow y = \pm \sqrt{ 1-2t}$$  But since the solution we seek {\bf must satisfy} $y(0)=1 $; we must have 
+$y = \sqrt{ 1- 2 t}$. 
+
+\vskip .2in 
+
+(b) State the domain of definition of the solution 
+
+\vskip .1in 
+
+The solution $y(t)$ found in (a) has domain of definition the set of all $t \le \frac{1}{2}$ 
+
+\vskip .2in
+
+(c) Describe what happens to the solution as it approaches the limits of its domain of definition. 
+\vskip .1in
+
+Since the domain of definition are all   $ - \infty < t \le \frac{1}{2} $;  we need to compute :
+
+$$ \lim_{t \to \frac{1}{2}^{-}} \, \, \sqrt{ 1- 2 t} \, = \,  0 $$ and 
+
+$$ \lim_{t \to - \infty } \, \, \sqrt{ 1- 2 t} \, = \,  + \infty  $$ 
+
+\enddocument
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\enddocument
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+

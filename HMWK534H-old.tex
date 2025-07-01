@@ -1,0 +1,807 @@
+\magnification=1200
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+%\NoPageNumbers
+\pagewidth{16.5truecm}
+\pageheight{22truecm}
+
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+%\hcorrection{.3in}
+
+\centerline{ \bf  M534H   HOMEWORK-- Spring 2017}
+\vskip .1in
+\centerline{ Prof. Andrea R. Nahmod }
+\vskip .2in
+
+\document
+
+$\bullet$\, {\bf{Set 1. Due date:  Thursday February 9th }}
+\vskip .2in
+
+1. Let $(x, y) \in \Bbb R^2$. Determine which of the following differential operators is {\it linear} :
+\medskip 
+\roster
+\item  $\Cal L (u) = 2 u_x - x u_y$
+\smallskip 
+
+\item  $\Cal L (u) =  4 u_x + u u_y$
+\smallskip 
+
+\item  $\Cal L (u) = u_x +  u_y^2 $
+\smallskip 
+
+\item  $\Cal L (u) = 1 - u_x + 2  u_y$
+\smallskip 
+
+\item  $\Cal L (u) = \cos(y) u_x +  \sqrt{x^2 +4}  \, u_{xy} + \arctan(2 x) u $
+
+\endroster 
+
+\bigskip 
+
+2.  For each of the following equations, state the {\it order} and whether is {\it nonlinear}, {\it linear and homogeneous} or {\it linear and inhomogeneous}. Explain/justify your answer.
+\medskip
+
+\roster
+\item  $  u_t -  2 u_{xx} +1 =0 $
+\smallskip 
+
+\item  $  u_t -  2 u_{xx} + x u =0$
+\smallskip 
+
+\item  $  u_{tt} -  2 u_{xx} + x^4 =0$
+\smallskip 
+
+\item  $ u_t -   u_{xxt} + u u_x =0$
+\smallskip 
+
+\item  $ i u_t -   2 u_{xx} + \frac{u}{3x} =0$
+\smallskip 
+
+\item  $ 3 u_y + 2 e^{-y} u_{x} =0$
+
+\smallskip 
+
+\item  $ u_t - u_{xxxx}  + \sqrt{ 1 + u^2} =0$
+\endroster 
+
+\vskip  .2in
+
+3. Let $g$ be a given function and let $u_1$ and $u_2$ be two solutions to the linear inhomogeneous differential equation $\Cal{L}(u) = g$. 
+Prove that $u_1 - u_2$ solves the linear homogeneous differential equation $\Cal{L}(u) = 0$. 
+
+\vskip  .2in
+
+4.  Let $g \in C^2([0, \pi])$ such that $g(0)=g(\pi) =0$. Use the method of separation of variables to find the solution to:  
+\vskip .1in 
+
+$u_t - 2 u_{xx} =0\, $ in $0< x< \pi$ with Dirichlet boundary conditions $u(0,t)\, = \,u(\pi, t) \,=\,0$ and Cauchy data $u(x, 0)= g(x)$
+
+\bigskip
+{\it Hint}. First find the general (series) solution to $u_t - 2 u_{xx} =0\, $ in $0< x< \pi$ satisfying $u(0,t)\, = \,u(\pi, t) \,=\,0$. 
+\vskip  .2in
+\newpage
+5. Use the method of separation of variables to find the general solution to: 
+\vskip .1in 
+
+
+\quad $u_t - 4 u_{xx} =0 $ in  $0<x< 1$ with Neumann boundary conditions $u_x(0,t) = u_x (1,t) =0$. 
+
+\vskip  .2in
+
+
+6.  Let $g \in C^2([0, 1])$ such that $g(0)=g(1) =0$.  Consider the Dirichlet  IVB problem 
+\vskip  .1in
+$u_t -  u_{xx} + 3 u= 0\, $ in $0< x< 1$  with $u(0,t)\, = \,u(1, t) \,=\,0$ and  $u(x, 0)= g(x)$  \quad  $(\ast)$
+\vskip  .1in
+a)  Consider the change of variables $u(x,t) = e^{-3 t} v (x, t)$ and prove that $v$ solves 
+\vskip  .1in
+$v_t -  v_{xx}= 0$ \, in $0< x< 1$  with $v(0,t)\, = \,v(1, t) \,=\,0$ and $v(x, 0)= g(x)$.   \quad  $(\dagger)$
+\vskip  .1in
+b)  Use the method of separation of variables to find  $v$,  the solution to $(\dagger)$.
+\vskip .1in
+c)  Use a) and b) to find $u$, the solution to  $(\ast)$.
+
+\vskip  .3in
+
+$\bullet$\, {\bf{Set 2. Due date:  Thursday February 23rd}}
+
+\vskip  .2in
+1)  Let $\phi : \Bbb R \to \Bbb R$ be a periodic function with period $p$; that is $\phi(x + p) = \phi(x), \, \, \forall x \in \Bbb R$. Assume that 
+$\phi$ is integrable on any finite interval. 
+\smallskip
+
+(a) Prove  that for any $a, b \in \Bbb R$ 
+$$  \int_a^b \phi(x) d x  = \int_{a+ p}^{b+p} \phi(x) dx = \int_{a- p}^{b - p} \phi(x) dx $$
+\smallskip
+
+(b) Prove  that for any $a \in \Bbb R$ $$  \int_{-p/2}^{p/2} \phi(x+a) d x  = \int_{-p/2}^{p/2} \phi(x) dx = \int_{- p/2 +a }^{p/2+a} \phi(x) dx $$
+
+\smallskip 
+In particular we have that $\int_a^{a+p}  \phi(x) \, dx$ does not depend on $a$, as we discussed in class. 
+\vskip  .2in
+
+2)  Let $x \in (-\ell, \ell)$. Prove that the family  $\{ 1, \cos( \dfrac{n\pi x}{\ell}),  \sin(\dfrac{n\pi x}{\ell}) \}_{n \geq 1}$ satisfies: 
+\medskip
+$$(i) \qquad \int_{-\ell}^{\ell}  \cos( \dfrac{n\pi x}{\ell}) \sin(\dfrac{m\pi x}{\ell}) \, dx \, =\, 0   \, \, \, \text{for any } \,  n, \, m \in \Bbb Z.$$
+\smallskip
+$$(ii) \qquad \int_{-\ell}^{\ell}  \cos( \dfrac{n\pi x}{\ell}) \cos(\dfrac{m\pi x}{\ell}) \, dx \, =\, 0   \, \, \, \text{ whenever } \, n\neq m  \, \in  \Bbb Z.$$
+\smallskip
+$$(iii) \qquad \int_{-\ell}^{\ell}  \sin( \dfrac{n\pi x}{\ell}) \sin(\dfrac{m\pi x}{\ell}) \, dx \, =\, 0   \, \, \, \text{ whenever } \, n\neq m  \, \in  \Bbb Z.$$
+\smallskip
+$$(iv) \qquad \int_{-\ell}^{\ell}  1 \, . \, \cos( \dfrac{n\pi x}{\ell}) \, dx \, =\, 0 \, =\int_{-\ell}^{\ell}  1 \, . \, \sin( \dfrac{n\pi x}{\ell}) \, dx   \, \, \, \text{ for any} \, n \in  \Bbb Z.$$
+\smallskip
+$$(v) \qquad \int_{-\ell}^{\ell}  \, \cos^2( \dfrac{n\pi x}{\ell}) \, dx \, =\, \ell\, =\int_{-\ell}^{\ell}  \, \sin^2( \dfrac{n\pi x}{\ell}) \, dx   \, \, \, \text{ for any} \, n \in  \Bbb Z.$$
+\smallskip
+$$(vi) \qquad \int_{-\ell}^{\ell}  1^2 \, dx \, =\, 2\ell. $$
+\smallskip
+{\it Hint.} Use the trigonometric identities. 
+\vskip  .2in
+
+3) Consider diffusion inside an enclosed circular tube. Let its length (circumference) be $2 \ell$. Let $x$ denote the arc length parameter where $-\ell \leq x \leq \ell$. Then the concentration of the diffusing substance satisfies:
+\vskip  .1in
+$$ \cases u_{t} \, =\,  k u_{xx}  \qquad -\ell < x < \ell , \\
+u(-\ell, t) \,=\, u(\ell, t)\quad \text{and} \quad u_x(-\ell, t) \,=\, u_x(\ell, t). \endcases $$ 
+\vskip .1in
+These are called {\it periodic boundary conditions}. {\underbar{Show that:}}
+\vskip .1in
+a) the eigenvalues are  \, $ (\dfrac{n \pi}{\ell})^2, \, n=0, 1, 2, 3, \dots $
+\vskip .1in
+b) the concentration $u(x,t)$ is given by: 
+
+$$u(x, t)\,=\, \frac{1}{2} A_0 \, +\, \sum_{n=1}^{\infty} \bigl( A_n  \, \cos( \dfrac{n\pi x}{\ell})  \, +\, B_n \sin( \dfrac{n\pi x}{\ell}) \bigr)\, e^{- \frac{n^2 \pi^2}{\ell^2} k t}  $$
+
+
+\vskip  .2in
+
+4) Consider the function $\phi(x) \equiv 1$ defined on $[0, \ell]$. 
+\smallskip
+a) Find its {\underbar{Fourier sine} series in $(0, \ell)$.
+\vskip  .1in
+b) Find its {\underbar{Fourier cosine} series in $(0, \ell)$.
+
+\vskip  .2in
+
+5) Consider the function $\phi(x) = x $ defined on $[0, \ell]$. {\underbar{Prove that}}:
+\smallskip
+a) its Fourier sine series in $(0, \ell)$ is given by
+$$ x \, =\, \frac{2 \ell}{\pi} \bigl(\sin{\frac{\pi x}{\ell}}  -   \frac{1}{2} \sin{\frac{2 \pi x}{\ell}}  + \frac{1}{3} \sin{\frac{3\pi x}{\ell}} \, - \, \dots   \bigr).  $$
+
+\vskip .1in
+b) its Fourier cosine  series  in $(0, \ell)$ is given by
+$$ x \, =\, \frac{\ell}{2} \, -\, \frac{4 \ell}{\pi^2}  \bigl(\cos{\frac{\pi x}{\ell}}  +  \frac{1}{9} \cos{\frac{3 \pi x}{\ell}}  + \frac{1}{25} \cos{\frac{5\pi x}{\ell}} \, + \, \dots   \bigr).  $$
+ 
+ \vskip .2in 
+ 
+6) Consider now $\phi(x) = x $ defined on $[-\ell, \ell]$. Find its full Fourier series  in $(-\ell, \ell)$.
+\vskip .2in
+Compare your answer here ( valid on $(-\ell, \ell)$ ),  with that found in 5a) (valid on $(0, \ell)$)  while noting that $\phi$ is an {\it odd function} on $(-\ell, \ell)$. 
+ \vskip .2in 
+ 
+ 7) Using the corresponding definitions of {\it odd} and {\it even} functions, \underbar{prove} that:
+ \smallskip
+ 
+ a) if $\phi$ is an {\it odd function} then \, \, $\int_{-\ell}^{\ell}  \phi(x) \, dx  \,=\, 0. $
+ \smallskip
+ b)  if $\phi$ is an {\it even function} then \, \, $\int_{-\ell}^{\ell}  \phi(x) \, dx  \,=\,  2 \int_{0}^{\ell}  \phi(x) \, dx$
+ 
+  \vskip .2in
+ 8) Use Problem 7) and the definitions of what the coefficients are in each case to prove that:
+ \smallskip
+a) if $\phi$ is an {\it odd function} its full Fourier series on $(-\ell, \ell)$ has only {\underbar{sine}} terms.
+\smallskip
+b)  if $\phi$ is an {\it even function} its full Fourier series on $(-\ell, \ell)$ has only {\underbar{cosine}} terms.
+\vskip .1in
+{\underbar{\it Hint.}}  Do not use the series directly. Use the formula for the coefficients and Problem 7) to show that certain 
+coefficients vanish in each case.
+
+  \vskip .3in
+  
+  9) This problem tell us how to change of variables to reduce the homogeneous diffusion equation on $(0, \ell)$ with constant but non-zero Dirichlet  boundary conditions to a homogeneous diffusion equation on $(0, 1)$ with zero Dirichlet conditions.  More precisely: let $k >0$ be fixed and suppose that real constants $u_{0},  u_{\ell}$ and a function $g \in C^2([0,\ell])$ are given. Consider the problem:
+  $$(\dagger)\quad  \qquad  \cases u_{t} \,- \,  k u_{xx} \, =\, 0,   \qquad  0< x < \ell, \, \, \, t>0 \\
+  u(x, 0) \, =\, g(x), \quad   0< x < \ell \\
+u(0, t) \,= \, u_{0} \quad \text{and} \quad u(\ell, t) \,=\, u_{\ell} \endcases $$ 
+
+\vskip .1in
+
+a) Show that if $u(x, t)$ is a solution to  $u_{t} \,- \,  k u_{xx} \, =\, 0$  then the function $ u_{\gamma}(x, t) := u(\gamma x, \gamma^2 t)$ also solves $(u_{\gamma})_{t} \,- \,  k  (u_{\gamma})_{xx} \, =\, 0$   
+\vskip .1in
+b) Let  $$\tau: = \frac{\ell^2}{k}, $$ set $$y:= \frac{x}{\ell}, \qquad  s:= \frac{t}{\tau}$$ and define $$v(y, s):= u(\ell y, \tau s),\qquad 0 < y <1.$$ {\underbar{Prove}} that $v(y, s)$ is a solution to 
+  $$(\dagger\dagger)\quad  \qquad  \cases v_{s} \,- \,  v_{yy} \, =\, 0,   \qquad  0< y < 1, \, \, \, s>0  \\
+  v(y, 0) \, =\, g(\ell y), \quad 0< y<1 \\
+v(0, s) \,= \, v_{0} \quad \text{and} \quad v(1, s) \,=\, v_{1} \endcases $$ where $v_0 = u_0$ and $v_{1} = u_{\ell}$. 
+\vskip .1in
+c)  Let us denote by $\tilde g(y) := g(\ell y)$ and define $$w(y, s):= \frac{ v(y, s) - v_0}{v_1 - v_0}  \, - \, y, \quad \text{ and } \quad  G(y):=  \frac{\tilde g(y) - v_0}{v_1 - v_0} \, -y.$$ {\underbar{Prove}} that $w(y,s)$ solves:
+$$(\ast)\quad  \qquad  \cases w_{s} \,- \,  w_{yy} \, =\, 0,   \qquad  0< y < 1, \, \, \, s>0 \\
+  w(y, 0) \, =\, G(y), \quad 0<y<1  \\
+w(0, s) \,= \, 0 \quad \text{and} \quad w(1, s) \,=\, 0, \endcases $$  
+\vskip .1in
+
+The idea then is that once we find $w(y, s)$, the solution to $(\ast)$, we can undo the definitions and change of variables above to obtain $u(x, t)$, the solution to $(\dagger)$.
+  
+ \vskip .3in
+  
+$\bullet$\, {\bf{Set 3. Due date: Thursday March 2 }}
+  \bigskip
+  
+{\underbar{Problem I}}:  a) {\underbar{From S. Salsa 3rd Edition (Chapter 2 pg 109)} :   Do problem  2.2 
+
+\bigskip
+
+b) {\bf Do not turn in this part; I'll explain this in class.}
+ Assume that $g \in C^2( [0, L])$ whence  $u$ is continuous  on $[0, L] \times [0, \infty)$.  Interpret the problem supposing $u$ is the concentration of a substance under diffusion and explain why as $t \to \infty$, the solution 
+$$u(x, t) \longrightarrow   M:= \frac{1}{L}   \int_0^L \, g(y) \, dy,  \qquad \text{for all} \quad 0 < x < L. $$
+\underbar{Hints.} Recall here we have zero {\bf Neumann} boundary conditions.  Prove first that $\frac{d}{dt} \int_0^L u(x, t) \, dx \, =\, 0$, whence $\int_0^L u(x, t) \, dx $ is constant in time and that by the continuity of $u$, \,  $\int_0^L u(x,t)\, dx \longrightarrow  \int_0^L g(x)\, dx$ as $ t \longrightarrow 0^+$. )
+  
+ \bigskip
+ 
+  c) Assume that $g \in C^2( [0, L])$ with $g^{\prime}(0) = 0 = g^{\prime}(L)$ and consider the even extension $g_{\text{even}}$ of $g$ on $[-L, L]$ --in particular $g_{\text{even}}$ is also $C^2([-L, L])$. Show then that the {\it full Fourier series} of $g_{\text{even}}$ on $[-L, L]$ reduces to just a {\it cosine} Fourier series of the form
+  $$  \frac{A_0}{2}  \,  + \, \sum_{m=1}^\infty \, A_m  \cos( \frac{m \pi x}{L} ) $$ where 
+  $$  \frac{A_0}{2} \,=\, M, \qquad \text{and} \qquad  A_m=  \frac{2}{L} \int_0^L \, g(x)  \cos( \frac{m \pi x}{L} ) \, dx $$
+ 
+  \bigskip
+
+ 
+{\underbar{Problem II}}:  a) Prove that the solution $u$ to Problem 4) in Set 1 is continuous on $[0, L] \times [0, \infty)$. 
+     \medskip
+     b) Use the maximum principle to prove that said solution is unique. 
+
+  \bigskip
+  
+  
+{\underbar{Problem III}}:  Use the energy method to show that the solution to problem 2.2 (from part a) Problem I above) is unique. 
+  
+
+\vskip .3in
+  
+$\bullet$\, {\bf{Set 4. Due date: Thursday March 23rd }}
+  \vskip .2in
+%The following problems are about uniqueness, maximum principle and energy method.   
+  %\vskip .2in
+1) Supposed that $u(x,t):= 1 - x^2 - 2 k t$ is a solution to the diffusion $u_t - k u_{xx} =0$. Find the locations of its maximum and of its minimum in the closed rectangle ${\overline Q_T} = [0, 1] \times [0, T]$
+  \vskip .2in
+2)  Let $u(x,t)$ be a solution to 
+
+  $$\cases u_{t} \,- \,  u_{xx} \, =\, 0,   \qquad  0< x < 1, \, \, \, t>0  \\
+  u(x, 0) \, =\, \sin(\pi \, x) , \quad 0< x<1 \\
+u(0, t) \,= \, 2 t \,e^{1-t} \quad \text{and} \quad u(1, t) \,=\, 1 - \cos(\pi\, t) \endcases $$
+  that is continuous on the closed half strip $\overline S = [0, 1] \times [0, \infty)$.
+  
+ \bigskip
+ a) Prove that $u(x, t) \geq 0$. Show your analysis along  $\partial_p S$, the parabolic boundary of $S$.
+ 
+ \medskip
+ b) By carefully examining the values along the parabolic boundary of $S_{\frac{1}{8}} = (0, 1) \times (0, \frac{1}{8})$ determine an upper bound for 
+ $u(\frac{1}{2}, \frac{1}{8})$ (that is,  an explicit constant $A>0$ such that $u(\frac{1}{2}, \frac{1}{8}) \leq A$). 
+ 
+Proceeding similarly find an upper bound for  $u(\frac{1}{2}, 3)$ ( consider now  $\partial_p S_{3}$).
+ 
+  \vskip .2in
+  
+  3)  Let $u(x, t)$ be a continuous solution to the diffusion equation $u_t - u_{xx}=0$ in $ [0, \ell] \times  [0, \infty)$. 
+  \medskip 
+  a) Let $M(T)$ be the maximum of $u(x,t)$ in the closed rectangle $[0, \ell] \times [0, T]$. Does $M(T)$ increase or decrease as a function of $T$? 
+  \medskip
+  b) Let $m(T)$ be the minimum of $u(x,t)$ in the closed rectangle $[0, \ell] \times [0, T]$. Does $m(T)$ increase or decrease as a function of $T$? 
+  
+    \vskip .2in
+    
+    4)  Let $u(x,t)$ be a smooth solution to 
+    
+ $$\cases u_{t} \,- \,  u_{xx} \, =\, 0,   \qquad  0< x < 1, \, \, \, t>0  \\
+  u(x, 0) \, =\, 4 x (1-x)  , \quad 0< x<1 \\
+u(0, t) \,= \, 0 \quad \text{and} \quad u(1, t) \,=\, 0. \endcases $$ 
+a) Use the max/min principle to show  $0 \leq u (x, t) \leq 1$ for  $0 < x<1 $ and $t >0$.
+
+\medskip
+
+b) Show that  $u(x,t) =  u(1-x, t)$ for all $ t \geq 0$ and $0 \leq x \leq 1$.
+\smallskip
+\noindent \underbar{Hint.} Do not solve explicitly. Rather prove that $u(1-x, t)$ also solves the equation and then apply the uniqueness theorem.
+  \medskip
+  c) Use the {\it energy method} to show that $$ E(u)(t):= \int_0^1  [u(x,t)]^2 \, dx   $$ is a strictly decreasing function of $t$. 
+     
+      \vskip .2in
+      5)   Prove the Comparison Principle: that is prove part a) of Corollary 2.5 p. 38 (Salsa, 3rd edition). (use Theorem 2.4 (max. pple) ).
+      
+      \vskip .2in
+      6) The purpose of this exercise is to show that the maximum principle is {\bf not} true for the variable coefficients heat equation
+      $u_t - x\, u_{xx} =0$.
+      \medskip
+      a) Verify that $u(x,t) = - 2xt - x^2$ is a solution. 
+            \medskip
+      b) Find the location of its maximum in the closed rectangle $\{ -2 \leq x \leq 2, \, 0\leq t \leq 1 \}$.
+            \medskip
+            c) Where precisely does our proof of the maximum principle break down for this equation?     
+      
+      \vskip .2in
+      
+7)      This problem pertains the heat equation on the whole real line ($\&$ 2.3). Let us introduce Gauss' {\it error function} 
+$$ \text{erf}(x) \, :=  \, \frac{2}{\sqrt{\pi}}\, \int_0^x  e^{-z^2} dz .$$ 
+
+a) Prove that all solutions to the equation 
+$u_t - k u_{xx} =0$ of the form  $ u(x, t) = v(\frac{x}{\sqrt{t}})$, for $x \in \Bbb R$ and $t >0$ have the form $$(\dagger) \qquad \quad  u(x, t) = C_1 + C_2 \, \text{erf}(\frac{x}{\sqrt{4k t}}). $$
+
+\medskip
+
+b) Prove that by choosing $C_2$ suitably in $(\dagger)$ the fundamental solution $\Gamma_k(x,t) = u_x(x, t)$.
+\medskip 
+\underbar{Hint.} For a):   First change variables $y:= \frac{x}{\sqrt{t}}$, whence $$\frac{\partial y}{\partial t}=  -\frac{x}{2 t \sqrt{t}}, \quad
+\frac{\partial y}{\partial x}=  \frac{1}{\sqrt{t}}, \quad \text{and} \quad \frac{\partial^2 y}{\partial x^2}= 0. $$ Then prove that if $u(x,t)$ is a solution to the heat equation as above then $v(y)$ solves the ODE 
+$$ \frac{y}{2k} v^{\prime}(y) \, +\, v^{\prime\prime}(y) \, =\, 0$$ which can be viewed as a {\it first order} ODE for   w= $v^{\prime}(y)$. Solve then first $ \frac{y}{2k} w(y) \, +\, w^{\prime}(y) \, =\, 0$ and then by further integration find $v(y)$ expressed in terms of Gauss' {\it error function}. Recall
+finally that $u(x, t) = v(\frac{x}{\sqrt{t}}).$
+
+      \vskip .2in
+      
+      8) ( Differentiation Theorem) Suppose that $f(x,t)$ and $\frac{\partial f}{\partial t} (x, t)$ are continuous functions of $x$ and $t$ on
+      the rectangle $[A, B] \times [ S, T] $. Suppose that $a(t), b(t)$ are differentiable functions of $t$ on $[S,T]$ and that the space interval $[A, B]$ contains
+      the union of all intervals $[a(t), b(t)]$ as $t$ varies on $[S, T]$.  
+      \, (A simple \underbar{example} of this would be the interval  $[A, B] = [0, 1]$ in $x$, the interval $[S, T] = [0, 1]$ in $t$ and the functions $a(t)=0$ and $b(t)= t$.) 
+      
+      Consider $$ I(t):= \int_{a(t)}^{b(t)} \, f(x, t) \, dx. $$ Prove that then 
+      $$ \frac{dI}{dt} \, =\, \int_{a(t)}^{b(t)} \, \frac{\partial f}{\partial t} (x, t) \, dx \, +\, f( b(t), t)\, b^{\prime}(t)  \, -\, f( a(t), t) \, a^{\prime}(t). $$
+ 
+\vskip .1in
+      
+      \underbar{Hint.} Think of $I(t)$ as $g(t, a(t), b(t))$ where $g$ is a function of three independent variables and apply chain rule. Differentiation under the integral sign is possible since both $f(x,t)$ and $\frac{\partial f}{\partial t} (x, t)$ are continuous. 
+\vskip .1in
+
+We will use this differentiation theorem in class. 
+
+\newpage
+
+$\bullet$\, {\bf{Set 5. Due date: To be turned in on Midterm date}}
+
+\vskip .2in
+
+{\underbar{Problem 1}} a) Show that the fundamental solution on $\Bbb R$ given by,  $$\Gamma_k(x,t):= \frac{1}{\sqrt{4 \pi kt}}  e^{\frac{-x^2}{4kt}}$$ solves the heat equation $ u_t - k u_{xx} = 0$.
+
+
+\vskip .1in
+
+b) Show that $$ \int_{-\infty}^{\infty} \, \Gamma_k(x,t) \, dx \, =\, 1 \qquad \text{ for all} \quad t >0.$$
+\medskip
+\underbar{Hint} Change variables $y:= \frac{x}{\sqrt{4kt}}$ and use that $\int_{-\infty}^\infty  e^{-y^2}  \, dy = \sqrt{\pi}$
+\medskip
+c) Use b) and another simple change of variables to show that $$ \int_{-\infty}^{\infty} \, \Gamma_k(x-z ,t) \, dz \, =\, 1 \qquad \text{ for all} \quad t >0.$$
+
+\vskip .2in
+{\underbar{Problem 2} a) Show that the function $ u(x, t) = e^{-k t} \sin(x) $ solves $ u_t - k u_{xx} = 0$.
+\medskip
+b) Find a relationship between the constants $a$ and $b$ so that $u(x,t)= e^{-a t} \cos(b x) $ is a solution to $ u_t - k u_{xx} = 0$ (assume $\cos(bx) \neq 0$). 
+
+\vskip .2in
+{\underbar{Problem 3}:  Consider the Cauchy IVP for the heat equation:
+$$(\dagger\dagger) \qquad \cases u_{t} \,- \,  k u_{xx} \, =\, 0,   \qquad  x \in \Bbb R, \, \, \, t>0  \\
+  u(x, 0) \, =\, H(x) , \quad x \in \Bbb R \endcases $$
+where $H(x)$ is the Heaviside function, $H(x) = 0$ if $x <0$ and $H(x) =1$ for $x \geq 0$.  
+
+Using the general formula given in 7a) find the constants $C_1$ and $C_2$ so that $u(x,t)$  \underbar{also} satisfies the initial condition and hence is a solution to $(\dagger\dagger)$. 
+
+In other words find $C_1$ and $C_2$ so that  for $x<0$ 
+$$ 0 = u(x, 0^{+}) = \lim_{t \to 0^{+}}  C_1 + C_2 \, \text{erf}(\frac{x}{\sqrt{4k t}}) $$ 
+and for $x  >0$, 
+$$ 1 = u(x, 0^{+}) = \lim_{t \to 0^{+}}  C_1 + C_2 \, \text{erf}(\frac{x}{\sqrt{4k t}}) $$
+Note in the first case get an integral between $0$ and $-\infty$ while on the second you get an integral between $0$ and $\infty$.
+
+After finding $C_1$ and $C_2$ write down the final expression for $u(x,t)$ solving $(\dagger\dagger)$ in terms of the $ \text{erf}$ function and the explicit constants $C_1$ and $C_2$.
+
+
+\vskip .2in
+{\underbar{Problem 4}: Find the solution to the following Cauchy IVP for the heat equation:
+$$\cases u_{t} \,- \,  k u_{xx} \, =\, 0,   \qquad  x \in \Bbb R, \, \, \, t>0  \\
+  u(x, 0) \, =\, 2 , \quad x \in \Bbb R \endcases, $$ 
+  by using Problem 1c) and that $u(x,t) = (\Gamma_k (\cdot, t) \ast g)(x)$ where $g$ is the initial datum. Check your answer indeed solves the Cauchy IVP above.
+   
+ 
+\vskip .2in
+
+
+{\underbar{Problem 5}:  Let $\Omega \subset \Bbb R^d$ be a connected domain with a smooth boundary $\partial \Omega$. Use the energy method to prove the uniqueness of solutions of the Dirichlet BVP for the Laplace equation: 
+$$(\dagger) \qquad \cases \Delta u  \, =\, f , \quad \text{ for}  \qquad  x \in \Omega,  \\
+  u\, =\, g, \quad \text{for} \quad x \in \partial \Omega \endcases  $$ 
+  
+(\underbar{Hint} Consider $w = u - v$ where both $u$ and $v$ solve the same problem $(\dagger)$, multiple $\Delta w$ by $w$ and, as we did in class, integrate by parts -or use the divergence theorem-).
+
+\vskip .2in
+{\underbar{Problem 6}: Let  $ \Omega \subseteq \Bbb R^d$ be a smooth domain. A function $v \in C^2(\Omega)$, $ \Omega \subseteq \Bbb R^d$  is said to be {\it subharmonic} if  $\Delta v \geq 0$. 
+\smallskip
+a) Show that $v(x,y):=  (x^2 + y^2)^2$, \, $(x,y) \in\Bbb R^2$ is subharmonic. Write down your computation of $\Delta v$. 
+\medskip
+b) Prove that if $u$ is harmonic then $u^2$ is subharmonic. 
+
+\vskip .2in
+{\underbar{Problem 7}: Consider the function $u(x,y):=  x^2 - y^2$. 
+
+a) Prove that $u$ is harmonic.
+\smallskip
+b) Find $$ \frac{1}{ |B_R(0)|} \int_{B_R(0)} \, u(x,y) \, dx dy $$
+\underbar{Hint} Use the mean value property (as we saw in class or Theorem 3.4 page 122 of Salsa). Note that 
+$\frac{d}{\omega_d R^d}$  or what in class I denoted simply by $\frac{c_d}{R^d}$ amounts to $1$ over the area/volume of
+the ball of radius $R$ in $\Bbb R^d$.
+
+
+\vskip .2in
+
+$\bullet$\, {\bf{Set 6. Due date: Thursday April 20th}}
+
+\vskip .2in
+{\underbar{Problem 1}: If $v$ is subharmonic ($\Delta v \ge 0$) then the mean of $v$ over $B_R(x_0)$ is bigger than or equal than $v(x_0)$   (instead of equal). That is 
+$$ v(x_0)  \leq \frac{1}{|B_R(x_0)|} \int_{B_R(x_0)} \, v(y) \, d y.$$  Use this fact (together with Pb 6b) in Set 5) to prove that if  $u$ is harmonic on $\Omega = \Bbb R^d$ and 
+$$ \int_{\Bbb R^d} u^2(y) \, dy \leq M, $$ 
+where $0< M< \infty$ is a constant; then $ u \equiv 0$. 
+
+\vskip .2in
+{\underbar{Problem 2}:  Determine for which $\alpha \in \Bbb R$ the function $u(x) = |x|^{\alpha}$ is subharmonic in $\Bbb R^d \setminus \{0\}$.  (\underbar{Hint}. Note that if $u$ is radial,then $\Delta u = u_{rr} + \frac{d-1}{r} u_r $ where $r=|x|$. 
+
+\vskip .2in
+{\underbar{Problem 3}: Let $u=u(x,y) \geq 0$ be harmonic on $B_4(0,0) \in \Bbb R^2$ with $u(1, 0)=1$. Using Harnack's inequality find the upper and lower bounds for $u(-1, 0)$.
+
+\vskip .2in
+{\underbar{Problem 4}: Let $\Omega$ be a bounded domain in $\Bbb R^d$ and suppose $u \in C^2(\Omega) \cap C(\overline{\Omega})$ is a solution of the equation $\Delta u = u^3 - u$ with $u =0$ on $\partial \Omega$. Show that $|u(x)| \leq 1$ for all $x \in \Omega$
+
+\vskip .2in
+{\underbar{Problem 5}:  Do Problem 3.6 Chapter 3 of S. Salsa (p. 175, 3rd ed.).
+
+%Do Problem 3.14 Chapter 3 of S. Salsa (p. 176-177, 3rd ed.).
+
+\vskip .2in
+$\bullet$\, {\bf{Set 7. Due date: Thursday April 27th}}
+\vskip .2in
+
+{\underbar{Problem 1}}:  Recall in class we showed that the Green's function for the upper half plane $x, y \in \Bbb R^d_{+}=\{ (x_1, \dots,  x_d) : \, x_d >0 \}$ 
+is given by  $$ G(x,y): = \Phi(x, y) -  \Phi(x^{\ast}, y), \quad x^{\ast}= (x_1, \dots , -x_d), \quad x, y \in \Bbb R^d_{+} $$
+where $\Phi$ is the fundamental solution for the Laplace opertor $\Delta$ in dimension $d$. 
+\smallskip
+
+Consider $d=2$ and compute the Poisson kernel, $\frac{\partial G}{\partial {\bold n}}( x, \overline{y})$, where $\overline y = ( y_1, 0)  \in \partial \Bbb R^d_{+}$.  \, Recall $\frac{\partial G}{\partial {\bold n}} = \nabla_y G \cdot {\bold n}$ and $\bold n = ( 0, -1)$ is the outward normal vector to 
+$\partial \Bbb R^d_{+}$.
+
+\vskip .2in
+{\underbar{Problem 2}}: Follow the idea and computation we did in class to find the Green's function for the unit ball in $\Bbb R^3$ 
+to find instead the Green's function for the ball in $\Bbb R^3$ of radius $R>0$. 
+\smallskip 
+
+\noindent \underbar{Hints}. Note that now  $x^{\ast}$ will depend on $R$. Also, treat the case $x=0$ separately.
+\vskip .2in
+
+{\underbar{Problem 3}}:  Consider the following Poisson equation on the upper half plane $\Bbb R^2_{+}$ with Dirichlet boundary data 
+$g \in C(\partial \Bbb R^2_{+})$, 
+$$(\dagger) \qquad \cases  \Delta u\, =\, 0,   \qquad  x \in \Bbb R^2_{+},  \\
+  u(\overline x) \, =\, g(\overline x) , \quad {\overline x} \in  \partial \Bbb R^2_{+} \endcases, $$ 
+
+Use the representation formula for solutions to the Poisson equation with Dirichlet boundary data in 
+conjunction with the explicit formula for the Poisson kernel found in Problem 1 to write down an integral formula for $(\dagger)$.
+
+\vskip .2in
+
+\underbar{The following problems are about the transport equation and the wave equation}
+\vskip .2in
+
+{\underbar{Problem 4}}: a) Find the general form for the solution $u=u(x,y), \, x, y \in \Bbb R$ to the transport equation $ 4 u_x - 3 u_y =0$. 
+\smallskip
+b) Use part a) to find the solution $u$ that satisfies the auxiliary condition $u(0, y) =  y^3$ 
+
+\vskip .2in
+
+{\underbar{Problem 5}}: Consider the wave equation on $\Bbb R$, 
+$$(\dagger) \qquad \cases u_{tt} \,- \,  c^2 u_{xx} \, =\, 0,   \qquad  x \in \Bbb R,   t>0  \\
+  u(x, 0) \, =\, \phi(x), \quad   u_t(x, 0) = \psi (x), \qquad  x \in \Bbb R \endcases $$
+
+Use the D' Alembert formula to find the solution $u=u(x, t)$ in the following cases:
+\smallskip
+
+a) Speed $c=1$, $\phi(x)= \sin x$ and  $\psi(x)= 0$.  Calculate then $u_t(0, t)$.
+
+\smallskip
+
+b)  Speed $c= 2$, $\phi =0$, and  $\psi(x)= \cos x$
+
+\smallskip
+
+c)  Speed $c=1$, $\phi(x)=0$, and $$\psi(x) = \cases  1,  \qquad |x| < 3 \\ 0,  \qquad |x| \geq 3 \endcases $$ \underbar{Hint} Show 
+$$ \int_{x-t}^{x+t} \psi(y) \, dy \,=\,  \text{length}[\,( x-t, x+t) \cap (-3, 3) \,].$$
+
+
+
+\vskip .2in
+$\bullet$\, {\bf{Set 8. Due date: Tuesday May 2nd}}
+\vskip .2in
+
+\underbar{Problem 1:}
+
+\vskip .1in 
+Let $u\,= \,u(x, t)$ be a solution to the wave equation $u_{tt} -  u_{xx} =0$ in $\Bbb R$.  Assuming that $ u_x \to 0$ fast enough as $| x| \to \infty$ prove that $$ E(t) \, =\, {\int_{\Bbb R} }\, \,  |u_t|^2 \, + \,  |u_x |^2 \, \, dx $$  is constant in $t$ for all time $t$. 
+\vskip .2in
+
+\underbar{Problem 2:}  Use Problem 1 together with the energy method to prove that solutions to the IVP for wave equation on $\Bbb R$
+$$\qquad \cases u_{tt} \,- \,  c^2 u_{xx} \, =\, 0,   \qquad  x \in \Bbb R,   t>0  \\
+  u(x, 0) \, =\, \phi(x), \quad   u_t(x, 0) = \psi (x), \qquad  x \in \Bbb R \endcases $$
+are unique. 
+
+\vskip .2in
+\underbar{Problem 3:}
+
+Find the solution to the wave equation $ u_{tt} - 4 u_{xx} =0$ \,  with initial conditions $u(x, 0) = \cos x, \, u_t(x, 0)= 0$.  Compute  $u_t(x,t)$ and then calculate then $u_t(0, t)$. 
+
+
+\vskip .1in
+\underbar{Problem 4:}  The following equation is a linear homogeneous wave equation on $\Bbb R$ in disguise. Find the general solution by following the indicated 
+steps.
+$$(\dagger) \qquad   3 u_{tt} - 4  u_{xt}  + u_{xx} \, =\, 0  $$ 
+%  u(x, 0) \, =\, \phi(x), \quad   u_t(x, 0) = 0, \qquad  x \in \Bbb R \endcases $$
+  
+ i)  Consider the linear operator associated to the equation $$\Cal L =3 \partial^2_{t}  - 4 \partial_{t}  \partial_{x} +  \partial^2_{x} $$ and complete the square in terms of $\partial_x$ and $\partial_t$ to show that for suitable $a$ and $b$ ( which you need to explicitly find)   
+$$\Cal L =  ( a \partial_x  - b  \partial_t)^2\, - \, \partial_{tt} = 0 $$ 
+\medskip
+
+ii) Next consider the change of variables   $$ z = x \qquad \qquad y = b x + a t $$ where $a$ and $b$ are those found in i) and prove that 
+the equation $(\dagger)$ in the $z, y$ variables becomes 
+
+$$(\dagger \dagger) \qquad   u_{zz} -  u_{yy} \, =\, 0. $$ 
+
+\underbar{Hint}. Use chain rule to compute  $\partial_x$ in terms of $\partial_z$ and $\partial_y$,  and $\partial_t$ in terms of $\partial_z$ and $\partial_y$.
+ 
+ \medskip
+ 
+iii)  Write the general solution $u(z, y)$ to the equation $(\dagger \dagger)$  in the $z, y$ variables. Then undo the change of variables to 
+find the solution $u(x,t)$ to the equation $(\dagger)$. 
+
+\enddocument
+\newpage 
+
+\centerline{\bf To do (but do not turn in yet).} 
+\bigskip
+
+{\underbar{Final Problem 1}:  Find the solution $u(x,t)$ to the following inhomogeneous diffusion boundary/initial value problem  with Dirichlet boundary conditions (proceed as in handout example). 
+
+\vskip .05in
+  $$\cases u_{t} \,- \,  u_{xx} \, =\, e^{-t},   \qquad  0< x < \pi, \, \, \, t>0  \\
+  u(x, 0) \, =\, 1, \quad 0< x<\pi \\
+u(0, t) \,= \, 0 \quad \text{and} \quad u(\pi, t) \,=\, 0 \endcases $$
+
+\underbar{Hints}  First find the sine Fourier series for $e^{-t}$ on $(0, \pi)$. Note that you had to find the sine Fourier series for $1$ in Set  2 Problem 4.  
+
+At some point you'll encounter an ODE of the form  $a_n^{\prime}(t)  + c_1 n^2  a_n(t)  = c_2 \frac{e^{-t}}{n}$,  for some specific constants $c_1, c_2$. To find the solution to this ODE, consider $a_n(t) = A_n e^{-t}$ for suitable $A_n$ that you would need to find.
+
+\bigskip
+
+
+{\underbar{Final Problem 2}:  Prove the uniqueness of solutions to the Poisson equation on the whole space $\Bbb R^d$. 
+Treat the case $d\geq 3$ first when solutions $u(x) \to 0$ as $|x| \to \infty$. Then treat separately the case $d=2$ where  uniqueness is under the assumptions $\frac{u(x)}{|x|} \to 0$ as $|x| \to \infty$ and $|\nabla u(x)| \to 0$ as $|x| \to \infty$.
+
+\enddocument 
+
+
+%{\underbar {Some more problems, related to the Laplace's equation will be added soon --this week.}} 
+
+%{\underbar{Please start working on the above.}}
+
+
+%\end{document}
+
+$\bullet$\, {\bf{Set 7. Due date:  Tuesday May 6  }}
+\vskip .1in 
+\underbar{Section 5.2} \, \, \,  3, 4, 7, 9, 10, 11, 17.
+
+\vskip .1in 
+\underbar{Section 5.3} \, \, \, 1, 2a)b), 3, 4a)b), 5a), 6, 10.
+
+\vskip .1in  
+
+\underbar{Section 5.4} \, \, \,  1, 5, 6, 7 , 8a)
+
+
+
+\vskip .2in 
+
+$\bullet$\, {\bf{Set 6. Due date:  Thursday April 24 }}
+\vskip .1in 
+\underbar{Section 4.3} \, \, \,   2, 4, 6, 11
+
+\vskip .1in 
+\underbar{Section 5.1} \, \, \, 3, 5, 6, 7, 9. 
+\vskip .1in 
+
+\underbar{Additional Problems for 4.3 and 5.1} 
+
+\vskip .2in 
+
+$\bullet$\, {\bf{Set 5. Due date:  Thursday April 10 }}
+
+\vskip .1in
+
+\underbar{Section 2.4}:\quad  1, 2, 7 (here you can use that the integral is $\sqrt{\pi}$ which we proved in class) 
+
+\hskip 0.8in 8, 14, 15 16, 18
+
+\vskip .1in 
+
+\underbar{Section 2.5}:\quad 1  
+
+\vskip .1in 
+
+\underbar{Section 4.1}:\quad  2, 3
+\vskip .1in 
+
+\underbar{Section 4.2}:\quad  1, 3
+
+\vskip .1in
+
+
+
+
+\underbar{Additional Problems} Separate variables to solve the following problems. 
+\vskip .1in 
+
+A1.  \quad  $u_{tt} - u_{xx} =0$ in $0<x<3$ with boundary conditions $u(0, t)= u(3, t)=0$
+
+\vskip .1in
+A2. \quad $u_t=u_{xx}$ in $0<x< L$ with boundary conditions $u_x(0,t)= u (L,t)=0$
+
+\vskip .1in
+
+A3. \quad \, $u_t \,=\, u_{xx}\,+\, u$ in $0< x< \pi$ with boundary conditions $u(0,t)\, = \,u(\pi, t) \,=\,0$
+\vskip .2in 
+
+$\bullet$\, {\bf{Set 4. Due date:  Thursday March 13th }}
+
+\vskip .1in
+
+
+\underbar{Section 2.3}:\quad 2, 4, 5, 6, 7. 
+
+\vskip .2in 
+$\bullet$\, {\bf{Set 3. Due date:  Thursday March 6th.\, \underbar{Postponed to March 11th}}}
+
+\vskip .1in
+
+\underbar{Section 2.1}:\quad 1, 2, 5,  8, 9, 11  
+
+\vskip .1in
+
+{\bf Problem 11.}   Find the general solution of $$ 3u_{tt} +10 u_{xt} + 3 u_{xx} \, =\, \sin( x+t ) $$
+
+\vskip .1in 
+
+\underbar{Section 2.2}:  1, 2, 3, 5* 
+\vskip .1in
+{\bf Problem 5*}  \, Consider the wave equation in $1$D with {\it damping} 
+$$ u_{tt} = c^2\, u_{xx} - k u - r u_{t} \, \qquad k, r >0$$  show that the {\it energy functional} $$E(t) \, =\, \frac{1}{2} \int_{-\infty}^{\infty} \, |u_t|^2  + c^2 |u_x|^2 + k |u|^2 \, dx $$ satisfies $dE/dt \le 0$; that is {\it energy decreases}. Assume $u$ and its derivatives vanish as  $x \to \pm \infty$. 
+
+\vskip .1in
+
+{\bf Additional Problems}.
+\vskip .1in 
+{\bf Problem A.1.} \,\, Find the solution to wave equation with initial conditions $u(x, 0) = \sin x, \, u_t(x, 0)= 0$. Calculate then $u_t(0, t)$. 
+
+\vskip .1in
+
+{\bf Problem A.2.}\, \, Solve the PDE \quad $ u_{xx} + u_{xt} -  10 u_{tt} \,=\, 0$
+
+
+
+\vskip .2in
+
+
+$\bullet$\, {\bf{Set 2. Due date:  Thursday February 28th }}
+\vskip .2in
+
+\underbar{Section 1.4}:  \quad  1
+
+\vskip .1in 
+
+\underbar{Section 1.5}:  \quad 1,  4,  5,  6 (modified; see below)
+
+\vskip .2in 
+
+\underbar{Problem 5 states}:  Consider the equation $$u_x + y u_y =0$$ 
+
+with boundary condition $u(x,0)= \phi(x)$.
+
+(a) \, For $\phi(x)= x$, for all $x$, show that no solution exists.
+
+(b) \, For $\phi(x)=1$ for all $x$, show that there are many solutions. 
+
+\vskip .1in
+
+\underbar{Problem 6 states}:  Solve the equation $u_x \, +\, 2 x \, y^2\, u_y \,=\,0$ and find a solution that satisfies the auxiliary condition $u(0, y) =  y$.  
+
+\vskip .2in 
+
+\underbar{Section 1.6}:  \quad 1, 2, 4
+
+\vskip .2in 
+\underbar{Additional Problems:} 
+
+(1) \, Find the general solution of $u_x - \sin(x)\, u_y \,=\,0$. 
+Then find the special solution that satisfies $f(0, e^y)= e^{y}$.   
+
+\vskip .1in
+
+(2) \, Find the regions in 2d-space where $x^2\, u_{xx} + 4 u_{xy} +  y^2 \, u_{yy} \, =\,0$ 
+is respectively elliptic, parabolic, hyperbolic. Plot these regions. 
+
+
+
+\vskip .2in
+
+
+$\bullet$\, {\bf{Set 1. Due date:  Thursday February 14th }}
+\vskip .2in
+
+
+\underbar{Section 1.1}:  \quad 2, 3, 4, 11
+
+\vskip .1in 
+
+\underbar{Section 1.2}:  \quad   2, 3, 4, 5.
+
+\vskip .1in 
+
+\underbar{Section 1.3}: \quad 7,  9,  10 (in $\Bbb R^3$), 11.
+
+\vskip .2in 
+
+\underbar{Additional Problem:}
+
+\vskip .1in 
+Let $u\,= \,u(\bold{x}, t)$ be a solution to the wave equation $u_{tt} - \Delta u =0$ in $\Bbb R^2$.  Assuming that $ \nabla u \to 0$ fast enough as $| \bold{x}| \to \infty$ prove that $$ E(t) \, =\, {\int}_{\Bbb R^2} \, \,  |u_t|^2 \, + \,  |\nabla\, u |^2 \, \, dx dy $$  is constant in $t$ for all time $t$. 
+
+\enddocument
+
+
+
+
+
+                                               
+
+ \newpage 
+ \ 
+${\bold 2}$)  Consider the solution to the initial value problem for the wave equation on $\IR$:
+$$ \cases u_{tt} - u_{xx} \,=\, 0  \qquad x \in \IR, \\
+u(x, 0) = 0 \\
+u_t (x, 0) = \chi_{[-2, 2]}(x)  \quad \text{this is }  1 \text{ on }  |x| \le 2; \text{ and } \, 0 \, \text{ otherwise. } \endcases $$ 
+
+
+(a) Use D' Alembert's formula to write down the solution $u(x,t)$ in terms of its initial data (do not evaluate the integral).
+\vskip 1in
+
+(b) Use basic rules for integrals to compute $u_t (x,  t)$. 
+\vskip 3.5in
+(c)  Set $x=0$ in (b) and prove that for all $|t|>2$ we have that $u_t (0,  t) \,=\, 0$. 
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+

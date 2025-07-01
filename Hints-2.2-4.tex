@@ -1,0 +1,197 @@
+\magnification=1100
+\input amstex
+\documentstyle{amsppt}
+\pageheight{22.3truecm}
+\pagewidth{15.6truecm}
+\vcorrection{0.18truecm}
+\hcorrection{0.23truecm}
+\NoBlackBoxes
+\NoRunningHeads                                  
+
+
+\def \Box{\square}
+\def\nin{\noindent}
+
+\def \IT{\Bbb T}
+\def \al {\alpha}
+\def \De {\Delta}
+\def\Mc{M\raise0.7ex\hbox{\eightrm c}}
+\def\bu {\bullet}
+\def\bi{ {\tfrac{1}{b}}}
+\def\dbi{{\tfrac{1}{b}}}
+
+%%%% Caligraphics%%%%
+
+\def\A{{\Cal A}}
+\def\B{{\Cal B}}
+\def\C{{\Cal C}}
+\def\D{{\Cal D}}
+\def\E{{\Cal E}}
+\def\EE{{\Cal E}}
+\def\F {{\Cal F}}
+\def\FF{{\Cal F}}
+\def\H{{\Cal H}}
+\def\K{{\Cal K}}
+\def\L {{\Cal L}}
+\def \M {{\Cal M}}
+\def\N{{\Cal N}}
+\def\R{{\Cal R}}
+\def \SS{{\Cal S}}
+\def \T {{\Cal T}}
+\def\V{{\Cal V}}
+\def\X{{\Cal X}}
+\def\Y{{\Cal Y}}
+\def\W{{\Cal W}}
+
+
+%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%% Blackboard %%%%%%%%%
+
+\def \IC {{\Bbb C}}
+\def\IH{{\Bbb H}}
+\def \IP{{\Bbb P}} 
+\def \IR{{\Bbb R}}
+\def\IS{{\Bbb S}} 
+\def \IT{{\Bbb T}}
+\def\IZ{{\Bbb Z}}
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%Others%%%%%
+\def\DD{\bold D}
+\def \OO{{\Omega}} 
+\def\l{\lambda}
+\def\z{\zeta}
+\def\a{\alpha}
+\def\g{\gamma}
+
+\def\gA{{\frak A}}
+\def\gB{{\frak B}}
+\def\gF{{\frak F}}
+\def\gG{{\frak G}}
+\def\gH{{\frak H}}
+\def\gN{{\frak N}}
+\def\gP{{\frak P}}
+\def\gT{{\frak T}}
+\def \gg {{\frak g}}
+
+\def\ddx{\tfrac d {dx}}
+\def\ddy{\tfrac d {dy}}
+\def\deriv#1{{\tfrac{d#1}{dx}}}
+\def\mod#1{\left | #1\IRight |}
+
+\def\fin{\qquad \blacksquare }
+
+\def\wave{\square}
+
+\def\ch{\raise 0.3ex\hbox{$\chi$}\kern-.15em}
+
+\def\norm#1{\left\Vert{\, #1 \, }\right \Vert}
+
+\def\card{\operatorname{card}}
+\def\intinfin{\int_{-\infty}^{\infty}}
+\def\const{\operatorname{const.}}
+\def\dist{\operatorname{dist}}
+\def\con{\operatorname{const}}
+\def\sgn{\operatorname{sgn}}
+\def\supp{\operatorname{supp}}
+\def\sign{{\rm sgn}}
+
+%open and closed sectors and more
+\def\osect#1{S_{\kern-.05em #1}^0}
+\def\csect#1{S_{\kern-.05em #1}}
+\def\Hinf{H^\infty}
+\def\Hinfos#1{H^\infty(\osect#1)}
+\def\Psios#1{\Psi(\osect#1)}
+\def\inv{^{-1}}
+\def\sgn{\text{sgn}}
+\def\half{{\ssize{\frac12}}}
+
+
+%%%%% Body of paper  %%%%%%%%%%%%%
+ 
+ 
+
+
+ 
+
+
+\centerline{{\bf Some hints for Problems in Sections 2.2 and 2.4}}
+\vskip .1in
+\centerline{Math 523H -- Andrea R. Nahmod}
+\vskip .25in
+\document
+\baselineskip 12pt
+
+
+{\bf Problem 9-- Section 2.2} For part (a) the guess is the limit is $a=4$.  To show this first prove  using the recursive definition of the sequence that  
+$$ \align |a_{n+1} -4| &= \frac{1}{2} | a_n - 4 | \\
+&= \frac{1}{2^2}  | a_{n-1} - 4 | \\
+&= \dots  \\  
+&= \frac{1}{2^n} | a_1 - 4|  \tag1 \endalign $$  and then argue that given any $\varepsilon >0$ there exists 
+an $n_0$ such that this last expression $(1)$ can be made less than $\varepsilon$ provided $n \geq n_0$. 
+
+
+\vskip .1in
+
+For part (b) you need to guess on your own what the limit should be.  There are several ways of doing this. One quick way is to note that if the 
+sequence defined by  $$ a_{n+1} = \alpha\, a_n +2 $$  converges then its limit --call it  `$a$'-- should satisfy an equation of the form
+$$ a = \alpha \, a +2 \tag 2$$ where we have used the properties of limits in section 2.2 and the uniqueness of a limit. 
+From (2) we deduce that $a=  \frac{2}{1 -\alpha}$.  This is now `your guess". To prove that the sequence indeed converges to this limit
+you should proceed as above to show that 
+
+$$ \align |a_{n+1} -  \frac{2}{1 -\alpha} | &= |\alpha| | a_n -   \frac{2}{1 -\alpha} | \\
+&= |\alpha|^2  | a_{n-1} -   \frac{2}{1 -\alpha} | \\
+&= \dots  \\  
+&= |\alpha|^n | a_1 -  \frac{2}{1 -\alpha}|  \tag3 \endalign $$  and then argue that given any $\varepsilon >0$ there exists 
+an $n_0$ such that this last expression $(3)$ can be made less than $\varepsilon$ provided $n \geq n_0$ using that 
+$|\alpha| <1$.  Note that the specific value of $a_1$ is irrelevant;  think of $ | a_1 -  \frac{2}{1 -\alpha}| $ as some fixed  
+number $C>0$ in solving for $n$.
+
+
+
+\noindent \underbar{Note}: there are other ways to guessing what `$a$'  should be for example by trying to deduce a pattern from part (a). 
+
+\bigskip
+ 
+{\bf Problem 7-- Section 2.4}  First note that in the definition of Cauchy and without any loss of generality one can assume that given $n  \leq  m$.
+Then note that by adding and subtracting all the intermediate terms and using the triangle inequality we have that
+$$ |a_n -a_m| \leq |a_n - a_{n+1}|  + |a_{n+1} - a_{n+2}|  + \dots \dots + |a_{m-1} - a_m| $$ 
+Recall that $\sum_{k=n}^m 2^{-k} \leq 2 \, 2^{-n} $ and that given any $\varepsilon>0$ there is an $n_0 \in \Bbb N$ such that 
+$$2 \, 2^{-n_0} < \varepsilon. $$ Hence  for all $n \ge n_0,\quad   2\,  2^{-n} \leq  2\, 2^{-n_0} < \varepsilon.$
+ 
+ \bigskip
+ 
+ {\bf Problem 9 -- Section 2.4}  First observe that by definition the sequence is monotone increasing. Hence if  $a_1>0$  and 
+{\bf if} the sequence were to converge then its limit --let's call it `$a$'--  could not be zero. 
+You wish to prove it diverges. Argue by contradiction assuming first it {\bf does} converge to  `$a$'
+(which we know it's not zero). Then from the recursive equation 
+
+$$ a_{n+1} = a_n  +  \frac{1}{a_n}    $$
+using the properties of  limits in 2.2 (and the uniqueness of a limit) you would have the limit satisfy an equation of the form 
+$$a = a +  \frac{1}{a} $$
+which implies that  $\frac{1}{a}=0$ which is absurd, hence a contradiction.  Note you {\it absolutely needed to know} $a\neq 0$ for this argument; otherwise you cannot claim that $\lim_{n\to \infty} \frac{1}{a_n} = \frac{1}{a}$.
+
+Therefore,  the sequence cannot converge to a finite limit.  Next use the fact the sequence is 
+{\bf monotone increasing}  to conclude it must diverge to  $+\infty$  (since it does not converge and is monotonic it cannot be bounded (why?).  
+Hence it grows with no bound and thus satisfies the definition of divergence to  $+\infty$ -- check all this!).  
+ 
+\bigskip 
+ 
+{\bf Problem 13 -- Section 2.4}  To prove $b_n$ is bounded is easy:  $\{a_n\}$  is bounded so  $|a_n| \leq  M$ for some $M>0$ and for all $n \geq 1$ 
+Hence by the triangle inequality  $ |a_1+ \dots + a_n| \leq n\, M$  whence  $$|b_n|  \leq \frac{ n \, M}{n} =M. $$
+
+Monotone is a bit harder... but you should bear in mind $\{a_n\}$  is monotone and bounded. 
+One way to do it is as follows:  first, prove that   $$b_n  \leq  a_{n+1}.\tag 4$$ This is easy similar to the argument above to show it's bounded but using now $a_1, a_2, \dots, a_n$ are all less than or equal to $a_{n+1}$ by monotonicity.
+
+Then a trick is to rewrite $b_{n+1}$ as  (check!)
+
+$$b_{n+1}  \, =\,  b_n  \, \frac{n}{(n+1)}  + \frac{ a_{n+1} }{(n+1)} \tag5$$
+and using that you have already proved in (4) that  $a_{n+1} \geq b_n$ make this last expression (5) bigger than or equal to $b_n$ .
+
+
+\enddocument

@@ -1,0 +1,278 @@
+\magnification=1200
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+%\NoPageNumbers
+\pagewidth{16.5truecm}
+\pageheight{22truecm}
+
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+%\hcorrection{.3in}
+
+\centerline{ \bf  M623 HOMEWORK  -- Fall 2016}
+\vskip .1in
+\centerline{ Prof. Andrea R. Nahmod }
+\vskip .2in
+
+\document
+
+
+\head {\underbar{SET 3:  Due Date 10/20/16}  }\endhead
+
+\vskip .1in
+
+
+\noindent {\bf From Chapter 1 (pp 37-42)}:\,  2, 6,  10, 11,  17, 22.
+
+\underbar {Hint for $17$}:  Note that $$ \{ x : |f_n(x)| \, =\, \infty \} =  \bigcap_{j=1}^\infty \{ x : |f_n(x)| > \frac{j}{n} \, \}.$$ Hence the hypothesis implies that for each $n$, 
+$$m ( \bigcap_{j=1}^\infty \{ x : |f_n(x)| > \frac{j}{n} \, \}) \, =\, 0. $$ But then $\lim_{j \to \infty} m (\{ x : |f_n(x)| > \frac{j}{n} \, \}) \, =\, 0$ (Why? Justify.).
+Next, follow the hint in the book from here.
+\bigskip
+
+\underbar{Bonus Problem$^{\ast}$}: Do  32 (pp 44-45). Note that part b) should read  ``...prove that {\it there exists} a subset of G which is....".
+\bigskip
+
+\underbar{Additional Problems--Chapter I} (to do)
+
+\medskip
+
+
+{\bf I.}   a) \, Let $ A = \cup_{n=1}^{\infty} A_n$ with $ m_{\ast}(A_n) = 0$. \underbar{Use} the definition of exterior measure to prove that $m_{\ast}(A) =0$.
+
+\smallskip
+
+b)\, Use a) to prove that any countable set in $\Bbb R^d$ is measurable and has measure zero. 
+
+
+\bigskip
+
+
+{\bf II.}  Let $\{E_n\}_{n\geq 1}$ be a countable collection of measurable sets in $\Bbb R^d$. Define
+$$  \quad  \limsup_{n \to \infty} E_n \,:=\, \{ x \in \Bbb R^d \, :\, \, x \in E_n, \, \text{ for infinitely many } \, n \, \} $$
+$$  \quad  \liminf_{n \to \infty} E_n \,:=\, \{ x \in \Bbb R^d \, :\, \, x \in E_n, \, \text{ for all but finitely many } \, n \, \} $$
+ 
+\smallskip 
+
+a) Show that  $$\limsup_{n\to \infty} E_n \,=\, \bigcap_{n=1}^\infty \bigcup_{k=n}^{\infty} E_k \qquad \liminf_{n\to \infty} E_n \,=\, \bigcup_{n=1}^\infty \bigcap_{j=n}^{\infty} E_j $$
+
+b) Show that $$ m( \liminf_{n\to \infty} E_n ) \leq \liminf_{n\to \infty} m(E_n ) $$ 
+$$  m( \limsup_{n\to \infty} E_n ) \geq   \liminf_{n\to \infty} m(E_n )  \quad \text{ provided that } \, m(\bigcup_{n=1}^\infty E_n ) < \infty $$
+
+
+\bigskip
+
+{\bf III.} The following relates to the proof {\bf given in class} for Theorem 4.1  page  . Prove that the sequence of nonnegative simple functions $\{\phi_k\}_k$ that 
+approximate pointwise $f$ is indeed increasing, ie. $\phi_k  \leq \phi_{k+1}$
+
+
+\vskip .2in
+
+\head {\underbar{SET 4:  Due Date 10/27/16}  }\endhead
+
+\smallskip
+
+\noindent {\bf From Chapter 2 (pp 89-97)}:  6,  9, 10,  11.
+
+\smallskip
+\noindent {\bf From Chapter 2 (pp 88-97)}: 2, 8, 15 
+
+
+\vskip .15in
+\underbar{Additional Problems:}
+\medskip
+
+{\bf I.\,}  Fill in all details to give a full proof of  Lemma 1.2 (ii)  (Chapter 2 pages 53-54).
+
+
+{\bf II.\,} If a function $f$ is integrable then we proved in Proposition 1.12 (Chapter 2) that for any $\varepsilon>0$ there exists a $\delta >0$
+such that for any set $A$ with $m(A) \leq \delta$, we have that $\int_A |f(x)| \, dm \leq \varepsilon$ ({\it absolute continuity of the Lebesgue integral}).
+
+\smallskip
+
+ We say that a sequence of functions $\{ f_n\}_{n\geq 1}$ is {\bf equi-integrable} if for every $\varepsilon >0$
+there exists $\delta >0$ s.t.  for any set $A$ with $m(A) \leq \delta$, we have that $\int_A |f_n(x)| \, dm \leq \varepsilon$ \underbar{for all} $n \geq 1$. 
+
+\smallskip
+
+Now prove the following.   
+
+\smallskip
+
+Let $E$ be  a set of finite measure, $m(E) < 1$, and let $\{f_n\}: E \to R $ be a
+sequence of functions which is equi-integrable. Show that if  $\lim_{n \to \infty} f_n(x) = f(x)$ a.e. $x$, then 
+$$ \lim_{n \to \infty} \int_E |f_n(x) - f(x)| \, dm \, =\, 0.$$
+\underbar{Hint}. Use Egorov's Theorem as in the bounded convergence theorem.
+
+\bigskip
+
+{\bf III.\,} In Chapter 2 we first prove the {Bounded Convergence Theorem} (using Egorov Theorem).
+Then, we proved Fatou's Lemma (using the BCT) and
+deduced from it the Monotone Convergence Theorem. Finally we proved the Dominated 
+Convergence Theorem (using both BCT and MCT). Here we would like to prove these sequence of results in a different order.
+Namely, prove:
+
+{\bf a)}\,  Prove Fatou's Lemma {\it from} the MCT by showing
+that for any sequence of measurable functions $\{f_n\}_{n \geq 1}$, 
+$$  \int  \liminf_{ n\to \infty}  f_n  \, dm \,  \leq  \,  \liminf_{ n\to \infty} \int f_n \, dm . $$
+
+\underbar{Hint}. \, Note that   $\inf_{ n \geq k} \,  f_n \leq f_j$ for any $ j \geq k$, whence  $\int \inf_{ n \geq k} \, f_n \, dm\,  \leq \, \inf_{j \geq k} \int  f_j.$ 
+\medskip
+
+{\bf b)}  Now prove the DCT  from Fatou's Lemma. 
+
+\smallskip
+
+\underbar{Hint}. Apply Fatou's Lemma to the nonnegative functions $g + f_n$ and  $g - f_n$.
+
+\bigskip
+
+{\bf IV.\,}   Consider the sequence of functions $f_n(x): = \frac{n}{1 +  (n x)^2}$.  For $a \in \Bbb R$ be a fixed number consider the Lebesgue integral $I_a(f_n)(x) := \int_a^\infty \, f_n(x)  \, dm$. Compute $\lim_{n \to \infty} I_a(f_n)(x)$ in each case: i) $a =0$  ii) $a > 0$  and iii) $a <0$. Carefully justify your calculations (recall the transformation of integrals under dilations). 
+
+\bigskip 
+
+{\bf V.\,}   Use the DCT to prove the following:   let $\{f_n\}_{n \ge 1}$ be a sequence of integrable functions on $\Bbb R^d$ such that $\sum_{n=1}^{\infty}\,  \int  |f_n(x)| \, dm < \infty$.  \, Show that   $\sum_{n=1}^{\infty}\,  f_n(x) \,$ {\it converges} a.e. \, $x \in \Bbb R^d$ to an {\it integrable function} and that  $\sum_{n=1}^{\infty}\,  \int  f_n(x) \, dm \, = \,  \int \, \sum_{n=1}^{\infty}\,  f_n(x) dm $.
+
+
+
+
+
+\vskip .2in
+
+\head {\underbar{SET 5:  Due Date 11/03/16}  }\endhead
+
+\smallskip
+
+\noindent {\bf Chapter 2 (pp 89-97) (Problems on Fubini-Tonelli)}:   4, 18, 19.
+
+
+\vskip .15in
+\underbar{Additional Problems:}
+\medskip
+
+
+{\bf I.\,}   Consider the function on $\Bbb R \times \Bbb R$ given by 
+$$f(x, y) =  y e^{-(x^2 +1) y^2}\quad \text{ if }   x \geq 0, y \geq 0 \quad \text{and} \quad  0 \quad \text{ otherwise }.$$
+
+a) Integrate $f(x,y)$ over $\Bbb R \times \Bbb R$   (justify your steps carefully)
+
+b) Use a) to prove that $\int_0^\infty  e^{-x^2} \, d x \, =\, \frac{\sqrt{\pi}}{2}$.
+
+c) Use b) and dilation to prove that $\int_{-\infty}^\infty  e^{- a x^2} \, d x \, =\, \sqrt{\frac{\pi}{a}}$.
+
+\bigskip
+
+{\bf II.\,}  Let $f(x)$ be a measurable function over $\Bbb R^{d_1}$ and $g(y)$  be a measurable function over $\Bbb R^{d_2}$. Prove that $F(x,y) = f(x) g(y) $ is a measurable function over $\Bbb R^{d_1 + d_2}$.
+
+
+\vskip .15in
+
+\head {\underbar{SET 6 - Due 12/01/16}  }\endhead
+\vskip .1in
+
+\noindent {\bf From Chapter  2 (pp 88-97)}:   Read Cor. 3.7- 3.8,  then do 7.  Recall Invariance (p. 73). Read Prop 3.9 then do 21a)b)c). 
+ 
+\vskip .1in
+\underbar{Additional Problems}
+\bigskip
+{\bf I.\,} Let $s$ be a fixed positive number.  Prove that
+$$
+\int_0^\infty e^{-s x} \, \frac{\sin^{2}x}{x} \, dx 
+= \frac{1}{4} \log(1 + 4 s^{-2}) $$
+by integrating $e^{-s x}\sin(2xy)$ with respect to $x \in (0,\infty)$,
+$y \in (0,1)$ and with respect to $y \in (0,1)$, $x \in (0,\infty)$.  Justify all your steps.
+\ \ \ ({\bf Hints.}  $\cos(2 \theta) = 1 - 2 \sin^2\theta$.  In order to do one of the integrations,
+either integrate by parts twice or use the definition of the appropriate trigonometric function in 
+terms of complex exponentials.)
+
+
+\bigskip
+{\bf II.\,}   Consider the function $f(x,y):=  e^{-xy} - 2 e^{-2xy}$ where $ x \in [ 0, \infty)$ and $ y \in  [ 0,1]$. 
+
+i)  Prove that for a.e.  $y \in [0,1]$  $f^{y}$ is integrable on $[0, \infty)$ with respect to  $m_{\Bbb R}$. 
+
+ii) Prove that for a.e.  $x \in [0,\infty)$  $f^{x}$ is integrable on $[0, 1]$ with respect to  $m_{\Bbb R}$.
+
+iii) Use Fubini to prove that $f(x,y)$ is not integrable
+on $[ 0, \infty) \times [ 0,1]$ with respect to  $m_{\Bbb R^2}$.   
+
+\bigskip
+\noindent {\bf From Chapter  3 (pp 145-146 -Section 5)}: \, 1  (part c) is involved) , 4, 5. 
+
+\bigskip
+\noindent {\bf From Chapter  3 (pp 152- Section 6) Bonus Problem}: \,  1  \,(this problem is based on a good understanding of Lemma 1.2  p.102 and of Lemma 3.9 p.128-definition of Vitali covering is just before the statement of Lemma 3.9.)
+
+
+
+
+\vskip .15in
+
+
+\head {\underbar{SET 8 - Due 12/08/16} }\endhead
+
+\vskip .1in
+
+ 
+
+\noindent {\bf  Chapter  3 (pp 145-150- Section 5)}:  \,  7, 11, 12, 15, 16,  22. 
+
+
+\vskip .1in
+
+{\bf Note}:   Please start working on the above. I'll add a couple more on BV and absolute continuity. 
+
+
+
+\vskip .2in
+
+
+\enddocument
+
+
+                                          
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\medskip
+
+
+{\bf I.}  First recall that a set $E$ in $\Bbb R^d$ is closed if and only if $E$ contains all its limit points; in particular any convergent sequence in $E$ has limit in $E$.
+Next recall that a set $K \subset \Bbb R^d$ is said to be compact if $K$ is closed and bounded. 
+
+\medskip
+
+Show that the following are equivalent:
+
+\smallskip
+
+i)  \, $K$ is compact
+
+\smallskip
+
+ii) \,  Any cover of $K$ by open sets, $K \subset \cup_{\alpha} \Cal{O}_{\alpha}, \quad \Cal{O}_{\alpha}$ open,  contains a finite sub-cover $$K \subset \cup_{j=1}^M  \Cal{O}_{j}, \qquad \text{ for some } \, \, M \geq 1$$ 
+
+\smallskip
+
+iii)\, Any sequence $\{y_n\}_{n \geq 1} \subset K$, contains a convergent subsequence whose limit is in $K$.
+
+
+\underbar{Additional Problem:}    Suppose that A is a measurable set in $\Bbb R^d$ with $m(A) > 0$. Show that for any
+$q < m(A)$ there exist a measurable set $B\subset  A$ with $m(B) = q$. 
+
+(Hint: Prove it first for the case that $m(A)=p < \infty$. Use then the intermediate value theorem for
+$A \cap B_R(0)$.)
+
+
+
+
+
+
+

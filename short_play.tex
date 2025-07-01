@@ -1,0 +1,291 @@
+\magnification=1200
+\input amstex
+\documentstyle{amsppt}
+\pageheight{23truecm}
+\pagewidth{16truecm}
+\parskip 3pt plus 1pt minus 1pt
+\hfuzz 0.5cm
+\vbadness2000
+\baselineskip 13pt
+\NoBlackBoxes
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+
+
+%%author macros
+
+\def \f {\frac}
+\def \cS {{\Cal S}}
+\def \bu {\bullet}
+\def\card{\operatorname{card}}
+\def\intinfin{\int_{-\infty}^{\infty}}
+\def\const{\operatorname{const.}}
+\def\dist{\operatorname{dist}}
+\def\supp{\operatorname{supp}}
+\def\sign{{\rm sgn}}
+\def\conpsi{{\text const}_{\psi}}
+\def\A{{\Cal A}}
+\def\B{{\Cal B}}
+\def\C{{\Cal C}}
+\def\D{{\Cal D}}
+\def\E{{\Cal E}}
+\def\F{{\Cal F}}
+\def\G{{\Cal G}}
+\def\H{{\Cal H}}
+\def\I{{\Cal I}}
+\def\J{{\Cal J}}
+\def\K{{\Cal K}}
+\def\L{{\Cal L}}
+\def\M{{\Cal M}}
+\def\N{{\Cal N}}
+\def\Q{{\Cal Q}}
+\def\P{{\Cal P}}
+\def\R{{\Cal R}}
+\def\S{{\Cal S}}
+\def\T{{\Cal T}}
+\def\V{{\Cal V}}
+\def\W{{\Cal W}}
+\def\IC{{\Bbb C}}
+\def\IH{{\Bbb H}}
+\def\II{{\Bbb I}}
+\def\IJ{{\Bbb J}}
+\def\IN{{\Bbb N}}
+\def\IP{{\Bbb P}}
+\def\IQ{{\Bbb Q}}
+\def\IR{{\Bbb R}} 
+\def\IS{{\Bbb S}}
+\def\real{{\Bbb R}}
+\def\IT{{\Bbb T}}
+\def\IW{{\Bbb W}}
+\def\IZ{{\Bbb Z}}
+\def\zed{{\Bbb Z}}
+\def\tee{{\Bbb T}}
+
+\def\gA{{\frak A}}
+\def\gB{{\frak B}}
+\def\gF{{\frak F}}
+\def\gG{{\frak G}}
+\def\gH{{\frak H}}
+\def\gN{{\frak N}}
+\def\gP{{\frak P}}
+\def\gT{{\frak T}}
+\def \gg{{\frak g}}
+\def\nat{{\Bbb N}}
+\def\que{{\Bbb Q}}
+\def\real{{\Bbb R}}
+\def \tq {{\tilde q}}
+\def \tp {{\tilde p}}
+\def\so{\text{\rm SO}}
+\def \inv {|\nabla|^{-1}}
+\def\bR{\text{\bf R}}
+
+\overfullrule=0pt
+
+\def\varep{\varepsilon}
+\def\ch{\raise 0.3ex\hbox{$\chi$}\kern-.15em}
+
+
+\def\lto{\longrightarrow}
+
+\def\conj{\overline}
+
+\def\myskip{\noalign{\vskip5pt}}
+
+\def\bmatrix#1{\left[ \matrix #1\endmatrix \right]}
+
+
+
+%%endauthormacros
+
+
+
+\subhead Basic Littlewood-Paley theory \endsubhead
+
+
+Let $f(x)$ be a function on $\IR^n$ and $\hat{f}(\xi)$ its Fourier transform.
+
+
+Consider $m(\xi)$ to be a non-negative radial bump function supported on the ball 
+$|\xi |\leq 2$ and equal to $1$ on the ball $|\xi| \leq 1$. 
+
+\vskip .8in
+
+Then for each integer $k$ let  $P_k(f)$ be the {\it  Littlewood-Paley} 
+projection operator  onto {\it frequencies}  
+$|\xi| \lesssim 2^k$. This is defined by 
+$$ \widehat{ P_k (f) }(\xi) := m(2^{-k} \xi ) \hat{f}( \xi ).  $$ 
+
+$\bullet$ $ P_k \to 0$ as $ k \to -\infty$ and $P_k \to I$ as $k \to \infty$ in any reasonable sense- e.g. $L^2$
+
+\vskip .2in 
+
+$\bullet$ The function $P_k(f)(x)$ is a (smoothed) average of $f$ localized to {\it physical scales } $\lesssim 2^{-k}$. By the uncertainty principle one expects $P_k(f)$ to be essentially constant at scales much smaller than $2^{-k}$.   
+
+\vskip .2in 
+
+\noindent The operator $Q_k$ is the projection  
+onto the {\it frequency annulus} $|\xi| \sim 2^k \,$ given by the formula,
+$$ Q_k := P_k  -  P_{k- 1}. $$
+
+\noindent Hence $ \psi({\xi}) := m( \xi ) - m (2 \xi ) $ is supported 
+on the annulus $ 1/2 \le |\xi | \le 2 $,  for all  
+$\xi \neq 0,$ \, $ \sum_{k \in \IZ} \psi(2^{-k} \xi) \equiv 1$, and 
+$$ \widehat{ Q_k (f)}( \xi) = \psi( 2^{-k} \xi ) \hat{f}(\xi). $$
+
+\vskip .8in
+
+
+
+$\bullet$ The L-P projections are bounded operators 
+in all the Lebesgue spaces. In fact,  
+$Q_k$ is given by a convolution kernel whose $L^p$-norm equals $2^{ ( k n )( 1 - 1/p)}$, \, $1 \le p \le \infty$. 
+
+In particular its $L^1$- norm is identically $1$ for all $ k \in \IZ$. 
+
+\vskip .1in 
+
+$\bullet$  Note that  \quad $ Q_k(f)(x) = P_{k+10} Q_k(f) $  
+
+i.e. it is essentially constant on physical scales $<< 2^{-k}$. 
+
+\vskip .1in 
+
+$\bu$ On the other hand  \quad $ P_{k-10} Q_k(f) \equiv 0 $ 
+
+i.e. it has mean zero at scales $\lesssim 2^{- (k-10)}$. 
+\vskip .2in 
+
+$\bu$ On a ball in physical space of radius $O( 2^{-k})$ the function 
+$Q_k(f)$ is {\it smooth} at physical scales $<< 2^{-k}$ and contains 
+about $O(1)$ oscillations.  In fact, all moments of $Q_k(f)$ vanish: \quad   
+$\partial^{\alpha}_{\xi} ( \widehat{ Q_k(f)})(0) \ = \ 0 $.
+\vskip .2in
+
+
+By telescoping the series we have the {\it Littlewood-Paley decomposition}
+$$ f \ =: \  \sum_{k \in \IZ}\  Q_k (f) \quad \text{ in the sense of }\,   L^2$$ or for  any locally integrable function with decay at infinity.
+
+$\bu$ We have thus written $f$ as a superposition of functions $Q_k(f)$, each of which has frequency of magnitude $\sim 2^k$. 
+
+{\it Lower values} of $k$ represent {\it low frequency} components of $f$. 
+{\it Higher values} represent {\it high frequency} components.
+
+\vskip .1in 
+
+$\bullet$ How are the L-P pieces $Q_k(f)$ of a function related to the function $f$ itself ? 
+
+When $p=2$, by construction and Plancherel, 
+$$ || f ||_2  \sim \bigl( \sum_k \| Q_k (f) \|_2^2 \bigr)^{1/2} \sim \Vert \bigl( \sum_k | Q_k(f)(\cdot)|^2 \bigr)^{1/2} \Vert_2 $$
+
+The {\it function} $S(f) (x) \ =: \ \bigl( \sum_k \, | Q_k(f)(x)|^2 \, \bigr)^{1/2} $ is known as the Littlewood-Paley {\it Square Function}.  In general,
+
+\proclaim{Littlewood-Paley Inequality}. For any $1 < p < \infty$ we have 
+$$ \| S f \|_p \sim || f ||_p $$ 
+\endproclaim 
+\noindent Proof is standard harmonic analysis and follows in a starightforward fashion from Calder\'on-Zygmund theory. 
+
+This gives a nice characterization of the Lebesgue spaces in terms of very friendly building blocks.  Much more is actually true. 
+
+\vskip .2in 
+
+\subhead Advantage of this for PDE's \endsubhead
+
+$$ \| \nabla Q_k(f)\|_p  \sim  2^k  \| Q_k(f)\|_p \, , \, \qquad   1 \le p \le \infty $$ 
+
+Roughly, $\nabla$  is multiplication by $ 2\pi i \xi $ 
+and $ |\xi| \sim 2^k$  on the support of $ Q_k(f)$. So -morally- 
+one can split a derivative as a linear combination of L-P operators.
+$$ \nabla f \sim \sum_{k \in \IZ} \, 2^k \,  Q_k(f) $$
+
+$\bu$ The effect of a derivative on a function $f$ is to {\it accentuate} the {\it high frequencies} and {\it diminish} the {\it low frequencies} 
+
+A similar principle applies to other differentiation or pseudodifferential 
+opertors ($\Delta$,  $\Delta^{-1}$ or `powers' of them). 
+
+$\bu$ Thus Littlewood-Paley is nicely adapted to dealing with spaces which 
+combine $L^p$-type norms with derivatives.  
+{\it Sobolev spaces}, {\it Besov spaces}, {\it H\"older spaces, etc}. 
+
+For example, one can very simply characterize the Sobolev norm using L-P decompositions:
+$$ \| f \|_{W^{s, p}} \sim \| f \|_p + \| \bigl( \sum_k | 2^{k s}  Q_k (f) |^2 \bigr)^{1/2} \|_p $$
+
+\subhead{Nice Remark} \endsubhead  Although
+$W^{n/2, 2}(\IR^n)$ fails to embed into $L^\infty(\IR^n)$  it is 
+true on L-P pieces :
+$$ \| Q_k(f) \|_{L^\infty}  \lesssim 2^{ \frac{n}{2}\, k} \| f\|_2 $$ 
+On L-P pieces:  BMO norm $\sim$ $L^\infty$ norm. 
+\vskip .2in 
+
+\subhead Products and Product Estimates \endsubhead 
+
+
+Let $f$ and $g$ be two nice functions. By splitting them using Littlewood-Paley decompositions we analyze  {\it bilinear } expressions such as  the pointwise product $B(f, g)(x) = f(x) g(x) $. 
+
+$\bu$ Observe that $\widehat{(f\,g)}(\xi) = \int \widehat {f}(\xi - \eta) \widehat{g} (\eta) \, d\eta $ whence $$\text{ supp } \widehat{(f\, g)} \subseteq \text{ supp } \widehat{f} + \text{ supp } \widehat{ g } $$
+
+$$\align f g  &=  \sum_{k, j} Q_k(f) Q_j(g) = \sum_{k \ge j} Q_k(f) Q_j(g) +  \sum_{ k < j} Q_k(f) Q_j(g) \\
+&= \sum_{k \in \IZ, m \ge 0} Q_k(f) Q_{k-m}(g) + \sum_{j \in \IZ, m > 0} Q_{j-m}(f) Q_j(g) \endalign $$ Further, we can split 
+$$\align  f g  &\  = \  \sum_l Q_l ( f g ) \ =  \\ = \sum_{l, k} \sum_{m \ge 0} &  Q_l ( Q_k(f) Q_{k-m}(g)) + \\  &+ \ \sum_{l,j} \sum_{m > 0} Q_l(  Q_{j-m}(f) Q_j(g)). \endalign $$  But by inspecting the Fourier supports we find that :
+$$ \text{ (1) \ \ \ \ supp} \, (\widehat{ Q_k(f) Q_{k-m} (g)}) \subseteq \{ | \xi| \lesssim 2^{k}\}. $$ Hence  $$Q_l( Q_k(f) Q_{k-m} (g)) = 0 \text{ unless }  k \ge l$$ 
+\newpage 
+  
+$$\text{(2) \ \ supp}\, (\widehat {Q_k(f) Q_{k-m} (g)})   \cap  \{ |\xi| << 2^{k-m} \} = \emptyset \text{ if } m > 5 .$$  Hence, 
+$$\align  Q_l( Q_k(f) Q_{k-m} (g)) \ & = \ 0 \quad \text{ unless }: \\
+& l =k  \text{ and } m > 5  \qquad \text{ \underbar{\bf or}}   \\
+& l < k  \text{ and } 0\le m \le 5 \endalign $$ All in all we {\bf only} have {\bf three types } of  sums :
+
+$$\align f g &=  \sum_l \sum_{m \ge 5} Q_l ( Q_l(f) Q_{l-m}(g)) + \\  
+&+ \ \sum_{m=0}^5 \sum_l  \sum_{ k > l} Q_l(  Q_{k}(f) Q_{k-m}(g)) \\ 
+&+\,  \sum_l \sum_{m \ge 5}   Q_l ( Q_{l-m}(f) Q_{l}(g))  \\  
+&+ \ \sum_{m=0}^5 \sum_l  \sum_{ j > l} Q_l(  Q_{j-m}(f) Q_{j}(g)) \endalign $$
+
+\vskip .2in 
+
+This could be re-written as well as : 
+
+$$\align & f g  = \sum_{\ell}  P_{\ell+1}(f) P_{\ell+1}(g) -  P_{\ell}(f) P_{\ell}(g) \\ 
+& =  \sum_{\ell}  Q_{\ell}(f) P_{\ell}(g) + \sum_{\ell}  P_{\ell}(f) Q_{\ell}(g)\\
+& \quad +  \sum_{\ell}  Q_{\ell}(f) Q_{\ell}(g) \endalign  $$
+
+\vskip .3in 
+
+Paraproduct \,  + \, Paraproduct  \, +  \, Diagonal .
+
+\vskip .2in
+
+$\bu$ In various applications the {\it high-low} interactions are 
+`easily dealt with'   ( $\sim$ paraproducts). It is the {\it high-high} interactions what usually may account for energy cascade effects; they are subtler to analyze. 
+
+
+ 
+
+
+\enddocument
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

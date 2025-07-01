@@ -1,0 +1,235 @@
+\input amstex
+\documentstyle{amsppt}
+\nologo
+\magnification=\magstephalf
+\pagewidth{6.5truein}
+\pageheight{9truein}
+\parskip=5pt
+\abovedisplayskip=11pt          %plus 3pt minus 3pt
+\belowdisplayskip=11pt          %plus 3pt minus 3ptf
+
+\NoBlackBoxes
+\def\card{\operatorname{card}}
+\def\intinfin{\int_{-\infty}^{\infty}}
+\def\const{\operatorname{const.}}
+\def\dist{\operatorname{dist}}
+\def\con{\operatorname{const}}
+\def\sgn{\operatorname{sgn}}
+\def\supp{\operatorname{supp}}
+\def\sign{{\rm sgn}}
+\def\conphi{{\text const}_{\phi}}
+\def\conpsi{{\text const}_{\psi}}
+\def\J{{\cal J}}
+\def\Q{{\cal Q}}
+\def\A{{\Cal A}}
+\def\B{{\Cal B}}
+\def\C{{\Cal C}}
+\def\D{{\Cal D}}
+\def\E{{\Cal E}}
+\def\F{{\Cal F}}
+\def\G{{\Cal G}}
+\def\H{{\Cal H}}
+\def\I{{\Cal I}}
+\def\J{{\Cal J}}
+\def\K{{\Cal K}}
+\def\L{{\Cal L}}
+\def\J{{\Cal J}}
+\def\M{{\Cal M}}
+\def\Q{{\Cal Q}}
+\def\P{{\Cal P}}
+\def\S{{\Cal S}}
+\def\R{{\Cal R}}
+\def\T{{\Cal T}}
+\def\V{{\Cal V}}
+\def\W{{\Cal W}}
+\def\gA{{\frak A}}
+\def\gB{{\frak B}}
+\def\gF{{\frak F}}
+\def\gG{{\frak G}}
+\def\gH{{\frak H}}
+\def\gN{{\frak N}}
+\def\gP{{\frak P}}
+\def\gT{{\frak T}}
+\def\IC{{\Bbb C}}
+\def\II{{\Bbb I}}
+\def\IJ{{\Bbb J}}
+\def\IN{{\Bbb N}}
+\def\IP{{\Bbb P}}
+\def\IQ{{\Bbb Q}}
+\def\nat{{\Bbb N}}
+\def\que{{\Bbb Q}}
+\def\IR{{\Bbb R}}
+\def\real{{\Bbb R}}
+\def\IS{{\Bbb S}}
+\def\IT{{\Bbb T}}
+\def\IW{{\Bbb W}}
+\def\IZ{{\Bbb Z}}
+\def\zed{{\Bbb Z}}
+%\def\wal#1{\omega_{#1}}
+%\def\stof#1{\text{\rm w}_{#1}}
+\def\lto{\longrightarrow}
+\def\conj{\overline}
+\def\sign{\text{sign}}
+\def\myskip{\noalign{\vskip6pt}}
+%\def\bmatrix#1{\left[ \matrix #1\endmatrix \right]}
+\def\varep{\varepsilon}
+%\def\ch{\raise 0.3ex\hbox{$\chi$}\kern-.15em}
+\def\iprec{\mathop{\prec}_{i}}
+\def\3prec{\mathop{\prec}_{3}}
+\def\liirr{{L^2_{\rho_r}}}
+\def\so{\text{\rm SO}}
+\def\bR{\text{\bf R}}
+%\def\wal#1{\omega_{#1}}
+%\def\stof#1{{\rm w}_{#1}}
+%\def\Lip{{\rm Lip}}
+\overfullrule=0pt
+%\def\ch{\raise 0.3ex\hbox{$\chi$}\kern-.15em}
+%\def\real{{\Bbb R}}
+
+\def\dist{\operatorname{dist}}
+\def\IH{{\Bbb H}}
+\def\gF{{\frak F}}
+\def\gN{{\frak N}}
+\def\IS{{\Bbb S}}
+
+\topmatter
+\title Problem Set  4 \endtitle
+\date Due November 7th 2002 \enddate
+\endtopmatter
+
+\document
+
+\proclaim{Problem 1}: Do Problem \# 26 in Folland's page 39. Recall that 
+$$ E \triangle A := (E \setminus A ) \cup ( A \setminus E) $$
+\endproclaim 
+
+\proclaim{Problem 2}: (a) Give the {\it definition} of the outer
+measure $m^{\ast}$ that arises in the construction of the Lebesgue
+measure $m$ on $\IR$. 
+
+\vskip .1in
+(b) Use (a), that is the definition of $m^{\ast}$ to \underbar{prove}
+that for any subset $A$ of $\IR$ and any $s \in \IR$, 
+$$m^{\ast}( A + s) \ = \ m^{\ast} (A) . $$
+\endproclaim 
+ 
+\proclaim{Problem 3 ($\#28$ from Folland p.39)} Let $F$ be increasing and right continuous, and let $\mu_F$ be the associated measure. Then $\mu(\{ a\}) = F(a) - F(a-)$, \, \, $\mu_F([a, b)) = F(b-) - F(a-)$, \, \, $ \mu_F([a, b])= F(b)-F(a-)$, and  $\mu_F((a,b))=F(b-) - F(a)$.
+\endproclaim 
+
+\subhead{Remark}\endsubhead  Recall that $$F(a+) = \lim_{ x \searrow a} F(x) = \inf_{ x > a} F(x) \qquad    F(a-) = \lim_{ x \nearrow  a} F(x) = \sup_{ x < a} F(x). $$ Also $F$ is called right continuous if $F(a)= F(a+)$ and left continuous if $F(a)=F(a-)$. 
+
+
+
+\proclaim{Problem 4 ($\# 30 $ from Folland p.40)} If $E$ is Lebesgue measurable (i.e. if $E \in \Cal L$ ) and $m(E) >0$, then for any $0< \alpha <1$ there is an open interval $I$ such that $m ( E \cap I) > \alpha \, m(I)$ 
+\endproclaim 
+
+\proclaim{Problem 5 ($\# 31 $ from Folland p.40) }  If $E \in \Cal L$ and $m(E) > 0$ the set $E - E := \{ x -y \,  : \, x, y \in E \} $ contains an interval centered at $0$. 
+
+(Hint. Prove that if $I$ is as in the previous exercise with $\alpha > 3/4$ then $E -E$ contains $(- 1/2 m(I), 1/2 m(I))$.  
+
+\endproclaim
+
+
+
+\proclaim{Problem 6  ($\# 27 $ from Folland p.39) } Prove that the ternary Cantor set $C$ constructed in class ( see Proposition 1.22 in Folland, pg. 38)  is 
+\underbar{compact}, \underbar{nowhere dense} and \underbar{totally
+disconnected}.  Prove that moreover, $C$ has no isolated points.
+
+A set $C$ is said to be {\bf totally disconnected} if the only
+connected subsets of $C$ are single points. And it is said to be 
+{\bf nowhere dense} if $\bar{C}$ has empty interior. 
+
+{\bf Hint.} Show that if $x, y \, \in C$ and $x < y$, there exists a $z
+\notin C$ such that $ x < z < y$. 
+
+\endproclaim
+
+\proclaim{Problem 7} Construct a subset of $[0,1]$ in the same manner as the Cantor set, except that at the $kth$ stage, each interval removed has length 
+$\delta 3^{-k}$, for some $0 < \delta <1$. Show the resulting set is perfect, has measure $1 - \delta$ and contains no intervals. 
+
+\endproclaim
+
+\proclaim{Problem 8} Let $\{ a_k\}$ be a sequence of real numbers, $ a_k \in (0, 1)$ for all $k \ge 1$. Prove:
+
+$$i) \qquad  \Pi_{k\ge1} \, (1 - a_k)  \, > 0 \, \, \text{ iff } \, \,   \sum_{k\ge1}\, \log (1 - a_k) \, \,  \text{ converges iff } \, \,  \sum_{k \ge 1} a_k   \, \, \text{ converges } $$
+
+ii) \qquad Construct a Cantor-type subset of $[0,1]$ by removing from each interval remaining at the $k-th$ stage a subinterval of relative length $0 < \theta_k <1$. Show that the remainder set ( ie. the infinite intersection of the sets that remained at each stage - as in the Cantor ternary contruction-) has measure zero if and only if $\sum_{k \ge 1} \, \theta_k \,  = \infty $ ( Hint. Use i) ).   
+
+\endproclaim
+
+
+
+\enddocument
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\enddocument 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

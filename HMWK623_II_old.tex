@@ -1,0 +1,149 @@
+\magnification=1200
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+%\NoPageNumbers
+\pagewidth{16.5truecm}
+\pageheight{22truecm}
+
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+%\hcorrection{.3in}
+
+\centerline{ \bf  M623 HOMEWORK  Part II  -- Fall 2014}
+\vskip .1in
+\centerline{ Prof. Andrea R. Nahmod }
+\vskip .2in
+
+\document
+
+
+\head {\underbar{SET 8 - Due 12/11/14 (with Exam)} }\endhead
+
+\vskip .1in
+
+ 
+
+\noindent {\bf  Chapter  3 (pp 145-155)}: 11, 12, 15, 16, 22. \, Do also:  \,  1,\, 4 (from last time), \, 7. 
+
+
+\vskip .1in
+
+{\bf Note}:   Please start working on the above. I will add a couple more on BV and absolute continuity soon.
+
+
+
+\vskip .2in
+
+
+
+\head {\underbar{SET 7 - Due 11/25/14 }  }\endhead
+\vskip .1in
+Do the three problems I assigned in class last week plus:
+
+\noindent {\bf From Chapter  2 (pp 88-97)}: \, 16,  21d)e), 24,  25.
+
+
+\noindent {\bf From Chapter  3 (pp 146-Section 5)}: \,  4, 5. 
+
+\noindent {\bf From Chapter  3 (pp 152- Section 6)}: \,  $1^{\ast}$. This problem is based on a good understanding of Lemma 1.2  p.102 and of Lemma 3.9 p.128-definition of Vitali covering is just before the statement of Lemma 3.9.
+
+$\ast$: do not turn in.
+
+
+\vskip .1in
+
+\head {\underbar{SET 6 - Due 11/13/14 }  }\endhead
+\vskip .1in
+
+\noindent {\bf From Chapter  2 (pp 88-97)}:   Read Cor. 3.7- 3.8,  then do 7.  Recall Invariance (p. 73). Read Prop 3.9 then do 21. 
+ 
+\vskip .1in
+\underbar{Additional Problems}
+\medskip
+{\bf I.\,} Let $s$ be a fixed positive number.  Prove that
+$$
+\int_0^\infty e^{-s x} \, \frac{\sin^{2}x}{x} \, dx 
+= \frac{1}{4} \log(1 + 4 s^{-2}) $$
+by integrating $e^{-s x}\sin(2xy)$ with respect to $x \in (0,\infty)$,
+$y \in (0,1)$ and with respect to $y \in (0,1)$, $x \in (0,\infty)$.  Justify all your steps.
+\ \ \ ({\bf Hints.}  $\cos(2 \theta) = 1 - 2 \sin^2\theta$.  In order to do one of the integrations,
+either integrate by parts twice or use the definition of the appropriate trigonometric function in 
+terms of complex exponentials.)
+
+
+\smallskip
+{\bf II.\,}   Consider the function $f(x,y):=  e^{-xy} - 2 e^{-2xy}$ where $ x \in [ 0, \infty)$ and $ y \in  [ 0,1]$. 
+
+i)  Prove that for a.e.  $y \in [0,1]$  $f^{y}$ is integrable on $[0, \infty)$ with respect to  $m_{\Bbb R}$. 
+
+ii) Prove that for a.e.  $x \in [0,\infty)$  $f^{x}$ is integrable on $[0, 1]$ with respect to  $m_{\Bbb R}$.
+
+iii) Use Fubini to prove that $f(x,y)$ is not integrable
+on $[ 0, \infty) \times [ 0,1]$ with respect to  $m_{\Bbb R^2}$.   
+
+\bigskip
+
+\head{\underbar{SET 5 -- Due Thursday 11/13/14} (from before Midterm. Please turn in)}\endhead
+
+\medskip
+
+
+\noindent {\bf From S-K's Book, do problems:}   8 (p. 39),   13a) (p 41), 17 (p 42), 19 (p 42),  20 (p42-43),  30 (p 44).
+\medskip
+\underbar{Additional Problems:} 
+
+{\bf I.\,}   Consider the sequence of functions $f_n(x): = \frac{n}{1 +  (n x)^2}$.  For $a \in \Bbb R$ be a fixed number consider the Lebesgue integral $I_a(f_n)(x) := \int_a^\infty \, f_n(x)  \, dm$. Compute $\lim_{n \to \infty} I_a(f_n)(x)$ in each case: i) $a =0$  ii) $a > 0$  and iii) $a <0$. Carefully justify your calculations (recall the transformation of integrals under dilations). 
+
+\medskip 
+
+{\bf II.\,}   Use the DCT to prove the following:   let $\{f_n\}_{n \ge 1}$ be a sequence of integrable functions on $\Bbb R^d$ such that $\sum_{n=1}^{\infty}\,  \int  |f_n(x)| \, dm < \infty$.  \, Show that   $\sum_{n=1}^{\infty}\,  f_n(x) \,$ {\it converges} a.e. \, $x \in \Bbb R^d$ to an {\it integrable function} and that  $\sum_{n=1}^{\infty}\,  \int  f_n(x) \, dm \, = \,  \int \, \sum_{n=1}^{\infty}\,  f_n(x)  dm$.
+
+\medskip 
+
+{\bf III.\,}  Let $ 0 < c <d$ be fixed real numbers and for $n \geq 1$ consider the sequence function $f_n(x) =    c e^{ - c n x}  -    d e^{ - d n x},$ where $ x \geq 0$. Prove that:
+
+\roster
+\item  $\sum_{n=1}^{\infty} \int |f_n(x)| \, dm   $   diverges 
+\item  $\sum_{n=1}^{\infty} \int f_n(x) \, dm  = 0 $  
+\item  $\sum_{n=1}^{\infty} f_n(x)$   is an integrable function on $[0, \infty)$ and that 
+$$ \int_{[0, \infty)} \, \sum_{n=1}^{\infty} f_n(x)  \, dm \, =\, \ln(\frac{d}{c}). $$
+\endroster
+
+\medskip
+{\bf IV.\,}   Consider the function on $\Bbb R \times \Bbb R$ given by 
+$$f(x, y) =  y e^{-(x^2 +1) y^2}\quad \text{ if }   x \geq 0, y \geq 0 \quad \text{and} \quad  0 \quad \text{ otherwise }.$$
+
+a) Integrate $f(x,y)$ over $\Bbb R \times \Bbb R$   (justify your steps carefully)
+
+b) Use a) to prove that $\int_0^\infty  e^{-x^2} \, d x \, =\, \frac{\sqrt{\pi}}{2}$.
+
+c) Use b) and dilation to prove that $\int_{-\infty}^\infty  e^{- a x^2} \, d x \, =\, \sqrt{\frac{\pi}{a}}$.
+
+\medskip
+
+{\bf V.\,}  Let $f(x)$ be a measurable function over $\Bbb R^{d_1}$ and $g(y)$  be a measurable function over $\Bbb R^{d_2}$. Prove that $F(x,y) = f(x) g(y) $ is a measurable function over $\Bbb R^{d_1 + d_2}$.
+
+
+
+ \enddocument
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,139 @@
+\magnification=1100
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+\NoPageNumbers
+\pagewidth{16truecm}
+\pageheight{22truecm}
+\vcorrection{-1.truecm}
+
+\def \IR {\Bbb R}
+\def \IN {\Bbb N}
+\def \IC {\Bbb C}
+\def \B {\Cal B}
+\def \M {\Cal M}
+\def \N {\Cal N}
+\def \H {\Cal H}
+\def \C {\Cal C}
+\def \R {\Cal R}
+\def \A {\Cal A}
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+%\hcorrection{.3in}
+\hskip 3.2in {\bf NAME: }
+\vskip .15in 
+\hskip 3.2in {\bf  ID \#: }
+
+\vskip .7in
+
+\centerline{ \bf TAKE HOME FINAL MATH 534H}
+\vskip .2in
+\centerline{Sunday May 17th,  2009 }
+\vskip 1in
+\document
+\subhead{ Instructions }\endsubhead
+\vskip .3in 
+ 
+\roster
+
+
+\item {\bf This exam consists of 4 problems with parts for a total of $\bold{100\%}$.}
+\vskip .3in 
+
+\item {\bf  It is due no later than Tuesday May 19th  at 4pm in LGRT 1338 } 
+\vskip .3in 
+
+\item {\bf You should work on it alone. You may consult Strauss'  book, the class notes and your homework ONLY. \, No other material is allowed. }
+
+\vskip .3in 
+
+\item {\bf Show \underbar{all} the work needed to reach your answer for full credit.}
+\vskip .3in 
+
+\item {\bf You cannot discuss the problems with other people, including
+classmates.}
+\vskip .2in 
+
+\item {\bf You may ask me any questions you have.} 
+
+\noindent (If via email use nahmod at math dot umass dot edu) 
+\vskip .2in 
+
+
+\item {\bf Write each problem and its solution following each problem and staple them all together with this cover. 
+Insert additional pages if needed.}
+
+\endroster 
+
+
+
+\newpage 
+
+
+${\bold {1)}}$  Waves in medium where there is a transverse elastic force (as in a coiled sprig) 
+satisfy the following type of  wave equation equation
+$$ \cases \, &u_{tt} \, - \, u_{xx}\,  + \,  5 u \,=\, 0 \qquad \qquad  0 < x < \pi \\
+&u(0, t) \, = \, 0 = u(\pi, t) \\
+& u(x, 0)= \phi(x)  \qquad u_t(x, 0) = \psi(x) \endcases $$ where $\phi, \psi$ are smooth functions. 
+
+Use separation of variables and solve the corresponding eigenvalue problems to write down the sine-cosine series expansion of the solution $u(x,t) \, =\, \sum_{n=1}^{\infty} \, X_n(x) T_n(t)$.  Describe the coefficients in terms of the initial data $\phi(x)$ and $\psi(x)$.   
+
+  
+\newpage 
+
+${\bold {2)}}$ \, \,  Consider  the heat equation $u_t = k u_{x x}$ with $x \in [0, 2 \pi]$ and initial temperature $u(x, 0)= \phi(x)$;  where $\phi$ is smooth function. View $\phi$ and $u$ as  $2\pi$-periodic real valued functions of $x$. 
+
+${\bold {(a)}}$ \,  Consider the quantity $$I(t) \,=\, \frac{1}{2 \pi} \, \int_0^{2\pi}  \, u(x, t) \, dx .$$
+Using the equation show that $I(t)$ is independent of $t$ (i.e. a constant). In other words, show that the mean of $u$ is conserved.  
+
+\vskip 2in
+
+${\bold{ (b)}}$ \, Using separation of variables  show that the general solution of the heat equation is 
+$$ \frac{A_0}{2} + \sum_{n=1}^{\infty} \, e^{-n^2 k t} \, ( A_n \cos(n x) \, +\, B_n \sin(nx) )$$ and \underbar{find} $A_n$ and $B_n$ in terms of $\phi$.  \, \underbar{Hint}\, Note that periodic boundary conditions satisfy condition (10) in Theorem 3 section 5.3 (Strauss). Hence what do you {\it a priori}  know about the eigenvalues? 
+
+
+\newpage 
+
+
+${\bold {(c)}}$ \, Find $I$ in terms of $A_n$ and $B_n$. What does the conservation of the mean found in (a) correspond to in the series solution of part (b) ? 
+
+
+\vskip 4in 
+
+${\bold {(d)}}$  Find $\lim_{t \to \infty} \, u(x, t)$ in terms of $\phi$. Interpret the result physically.
+
+
+\newpage 
+
+
+
+${\bold {3)}}$  Consider the differential operator  $$A \, =\, - \frac{d}{d x} ( x^2 \, \frac{d}{d x} ) $$ on twice differentiable functions $f$ on the interval $[0, L]$ which satisfy Dirichlet boundary  conditions $f(0)=f(L)=0$.  That is, for this functions $ A f = - ( x^2\,  f^{\prime}{x})^{\prime} $. Consider the usual $L^2([0,L])$ inner product $ \langle f, g \rangle  =  \int^L_0 \, f(x) \, \overline{g(x)} \, dx $
+\vskip .2in
+${\bold {(a)}}$ \, Show that $A$ is positive: that is, $\langle A f, f \rangle \ge 0$ for all $f$ as above.
+\vskip 2.5in
+${\bold {(b)}}$ \, Use (a) to prove that all eigenvalues of $A$ are real and positive  
+
+\newpage
+${\bold {(c)}}$ \, Show that $A$ is symmetric; that is prove $\langle A f, g \rangle \,= \, \langle f, A g \rangle$ for all function $f$ and $g$ satisfying the boundary conditions above.
+
+\vskip 3in
+${\bold {(d)}}$ \, Use (c) to prove that all eigenvectors associated to different eigenvalues are orthogonal. 
+
+
+\newpage 
+
+${\bold {4)}}$   For both of the following functions $f$ on $[0, \pi]$ find its associated Fourier \underbar{cosine} series and state whether such series converges on $[0, \pi]$ in each of the following senses: uniformly, pointwise, in $L^2$. If the series converges pointwise, state what it converges to for each $x \in [0, \pi]$. Make sure that you carefully explain and justify the reasoning that led you to your conclusions.
+
+
+\vskip .2in
+${\bold {(a)}}$ \,  $f(x) = x\, ( \sin (x))^2 $
+
+\newpage
+${\bold {(b)}}$  \, $f(x) = 0$ for $ 0< x\le \pi/2$ \, and \, $f(x) = 1$ for $\pi/2 < x \le \pi $. 
+ \enddocument 
+
+
+

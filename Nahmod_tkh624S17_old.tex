@@ -1,0 +1,247 @@
+
+
+
+\documentclass[12pt]{article}
+\usepackage{times}
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage{amsfonts}
+\newcommand{\limj}{\lim_{j\rightarrow\infty}}
+\newcommand{\limn}{\lim_{n\rightarrow\infty}}
+\newcommand{\limx}{\lim_{x\rightarrow\infty}}
+\newcommand{\noi}{\noindent}
+\newcommand{\R}{I\!\!R}
+\newcommand{\Rd}{\R^d}
+\newcommand{\rd}{\R^d}
+\newcommand{\ZZ}{{Z\!\!\!Z}}
+\newcommand{\X}{{\cal X}}
+\newcommand{\M}{{\cal M}}
+\newcommand{\N}{{I\!\!N}}
+\newcommand{\C}{l\!\!\!C}
+\newcommand{\T}{I\!\|\|T}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\lan}{\langle}
+\newcommand{\ran}{\rangle}
+\newcommand{\goto}{\rightarrow}
+\setlength{\textheight}{22.5cm}
+\setlength{\textwidth}{16cm}
+\setlength{\topmargin}{-1cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+
+\begin{document}
+
+{\bf \Large NAME:}
+\vspace{.2in}
+
+\begin{center}
+{\bf MATH  624  \quad Final Take Home Exam}\\
+\underbar{\bf Due}: Wednesday, May 10th 2017 no later than 5:30PM
+\end{center}
+\vskip 1in
+
+{\bf Instructions} 
+\begin{enumerate}
+
+\item This exam consists of five (5) problems all counted equally 
+for a total of $100\%$.
+\vskip .5in 
+
+\item You may consult Stein-Shakarchi books III and IV, your homework or the class notes \underbar{\bf only}.
+No other books or notes are permitted. 
+
+\vskip .5in 
+
+\item You should work on the problems alone; do not discuss the problems with other people or classmates. 
+You may ask me any questions you have.
+\vskip .5in 
+
+\item State explicitly all results that you use in your proofs and
+verify that these results apply.
+\vskip .5in 
+
+\item  Please \underbar{{\bf type}} your full work and answers \underbar{clearly} after each problem 
+and attached each answer to the stated problem
+\vskip .5in 
+
+\item Show all your work and \underbar{ justify each and all steps} in your proofs. 
+
+
+
+
+
+\end{enumerate}
+%\vspace{.25in}
+
+%{\bf Conventions}
+%\begin{enumerate}
+%
+%%\item For a set $A$, $\chi_A$ denotes the
+%%indicator function or characteristic function of $A$. 
+%
+%\vskip .1in 
+%
+%\item If a measure is not specified, use Lebesgue measure on
+%$\mathbb R$. This measure is denoted by $m$. 
+%
+%\vskip .1in 
+%
+%\item If a $\sigma$-algebra on $\mathbb R^d$ is not specified, use the
+%Borel $\sigma$-algebra ${\cal B}(\mathbb R^d)$
+%\end{enumerate}
+%
+
+
+\begin{enumerate}
+\newpage
+\item
+\vspace{.2in}
+% Problem 1
+
+ Let $\mu$ and $\nu$ be two positive measures on a 
+measurable space $(X, \mathcal M)$. Assume that $\nu$ is finite. Show that that following are
+equivalent:
+
+
+\vskip .2in 
+
+
+a)   $\nu \, \ll \, \mu$  holds. 
+
+
+\vskip .2in
+
+
+b) For each $\{A_n \}_{n \ge 1}$ in $\mathcal M$ with $\lim_{n
+\to \infty} \mu(A_n) = 0$,  we have that  $\lim_{n \to \infty}
+\nu(A_n) = 0$. 
+
+
+\vskip .2in
+
+
+(c) For every $\varepsilon >0$ there exists $\delta =
+\delta(\varepsilon) >0$ such that whenever $A \in \mathcal M$ satisfies $
+\mu(A) < \delta$, then $ \nu(A) < \varepsilon$ holds.  
+
+
+
+\newpage
+
+
+\item
+\vspace{.2in}
+% Problem  3
+
+a) Let $(X, \|\cdot\|)$ be a normed vector space. Show that the following are equivalent:
+
+i) $X$ is complete (hence $X$ is Banach).
+\smallskip
+
+ii)  If  $\{x_n\}_{n\ge 1} \subseteq X$ satisfies that $\sum_{n=1}^{\infty} \|x_n\| < \infty$ then $\sum_{n=1}^{\infty} x_n$  \underbar {converges in} $X$
+
+\medskip
+
+b)  Let $(X, \mathcal M)$ be a measurable space. Show that $M(X):=$ the space of all signed {\bf finite} measures on $(X, \mathcal M)$ together with the norm $$\| \mu\|= |\mu|(X) $$ is a Banach space. 
+\smallskip
+
+Here, $|\mu|$ denotes the total variation of $\mu$. You may assume without proof that $M(X)$ is a vector space over $\mathbb R$ and that the total variation is a norm.
+
+\vskip .2in
+
+\underbar{Hints.}  Use part a) to prove completeness by establishing ii). 
+
+To prove ii) suppose $\sum_n \| \mu_n\|  < \infty$ and consider -for example- $\nu:= \sum_{n=1}^{\infty}  |\mu_n|$,  a positive finite measure (why?).  {\bf Prove} that $ \mu_n$ are all absolutely continuous w.r.t. $\nu$. Then use the Radon-Nikodym theorem to find $f_n \in L^1(d\nu)$ (here recall $\mu_n$ are signed {\bf finite}). Use this to find an $f \in L^1(d\nu)$ and then a $\mu \in  M(X)$ such that $\| \mu - \sum_{n=1}^N \mu_n \| \to 0$ as $N \to \infty$. 
+
+
+\newpage
+
+\item
+\vspace{.2in}
+% Problem  4
+Let $X$ be a Banach space and $X^{\ast}$ its dual.  Recall a sequence $\{x_n\}_{n\geq 1}$ is said to {\it converge weakly} to $x$ if 
+$$\lim_{n\to \infty} \ell(x_n) \,=\, \ell(x)$$ for any $\ell \in  X^{\ast}$.
+
+\begin{enumerate}
+\item Show that convergence implies weak convergence.
+
+\item Show that if $X=H$ a separable Hilbert space and $\{x_n\}_n$ is an orthonormal  basis of $H$ then $x_n$ converges weakly to $0$
+but it does {\bf not} converge strongly.
+
+\smallskip
+
+\item Suppose $X= \ell^1(\mathbb N)$. Show that if $x_n$ converges weakly in $\ell^1$ then it converges in $\ell^1$ (use what's the dual of $\ell^1$). 
+
+\item Let  $f_n := n \, 1_{(0, \frac{1}{n})} \in L^p$ (for any $p \geq 1$). Show that $f_n$ converges to $0$ in measure and a.e. but it does not converge to $0$ weakly in $L^p$ for any $p$. 
+
+\end{enumerate}
+\newpage
+
+\item 
+
+ \, Let $f(x) = |x|$, $x \in \mathbb R$. Let $\mathcal M$ be the {\it smallest} $\sigma$-algebra with respect to 
+which $f$ is measurable. 
+\vskip .2in
+
+(a) Characterize $\mathcal M$, i.e. describe the measurable sets. Characterize also 
+the the measurable functions with respect to $\mathcal M$.  
+\vskip .1in 
+
+Hint: For a given $J$, interval, what does the set $f^{-1}(J)$ --  which
+must be in $\mathcal M$ -- look like? 
+
+\vskip .3in
+
+(b) Let $\mu$ and $\nu$ be two measures on $\mathcal M$ defined by 
+$$ \mu(A) \,=\, \int_A e^{-x^2}\, dx\,, \quad A \in \mathcal M \,, $$
+$$ \nu(A) \,=\, \int_A e^{-x^2+x}\, dx\,, \quad A \in \mathcal M \,.  $$ Show
+that $\mu$ is absolutely continuous with respect to $\nu$ and compute
+the Radon-Nikodym derivative $d\mu/d\nu$. 
+\vskip .1in
+Hints: \qquad i) \, Make sure this derivative is $\mathcal M$-measurable. 
+
+\qquad \qquad ii) \, Recall \,  $\cosh(x)\, = \,  \dfrac{ e^{x} + e^{-x}}{2} $  
+
+
+\newpage 
+
+\item
+\vspace{.2in}
+% Problem  5
+Let $(X, {\cal M}, \mu)$ be a measure space. Let $0 < p <1 $ and let $q$ be such that $\frac{1}{p} + \frac{1}{q} =1$.  Show that if $f$ and $g$  are positive functions then 
+\[
+\int f g d\mu  \,\ge \,  \left( \int  f^p d\mu\right)^{1/p} \left( \int  g^q d\mu\right)^{1/q}  \,.
+\]
+
+{\it Hint:} Use H\"older inequality for some suitable chosen functions ( call them $u$ and $v$.) 
+
+
+
+
+
+
+
+
+
+\end{enumerate} 
+\end{document}
+
+
+   \item
+\vspace{.2in}
+% Problem 2
+Let $\mathcal H$ be a Hilbert space and let $S$ be a non-trivial closed subspace of  $\mathcal H$. Let $P_S: \mathcal H \to \mathcal H$ be the orthogonal projection from $\mathcal H$ to $S$. We know then that $P_S$ is linear, and for all $x \in \mathcal H$, $$P_S(x) = y \in S \qquad  \text{and}  \qquad x - P_S (x) = z \in S^{\perp}.$$
+Show that: 
+\begin{enumerate}
+
+\item\quad  $ \|P_S\|  =1$   \, \, ( $\| \cdot \|$ is the operator norm).
+
+\item \quad $P_S^2 = P_S $   \, \, (left hand side is composition of operators).
+
+\item \quad $P_S^{\ast} = P_S$  \,\,  (ie. $P_S$ is self-adjoint).
+
+\end{enumerate}
+
+\newpage
+
+                                

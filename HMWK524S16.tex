@@ -1,0 +1,526 @@
+\magnification=1200
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+%\NoPageNumbers
+\pagewidth{16.5truecm}
+\pageheight{22truecm}
+
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+%\hcorrection{.3in}
+
+\centerline{ \bf  M524 HOMEWORK --SPRING 2016}
+\vskip .1in
+\centerline{ Prof. Andrea R. Nahmod }
+\vskip .2in
+
+\document
+
+\head {\underbar{SET 1 - Due 02/04/16   }  }\endhead
+\vskip .1in
+
+\noindent {\bf Chapter  4 of Beals:}  
+\vskip .1in
+{\bf 4A:} \, 1, 2, 3.  {\bf 4B:}  1, 2, 5, 9, 10, 12, 25. \,  Additional ones (pp 59-60): 1, 2. 
+
+\vskip .3in
+
+{\bf Additional Problem:}  Prove Theorem 4.8 ( $2^m$ test) in Chapter 4.
+{\underbar{Hint}}Prove first that   $$2^{m-1} a_{2^m}  \leq  \sum_{j= 2^{m-1} + 1}^{2^m}  a_j  \leq 2^{m-1} a_{2^{m-1}} $$ and use the first inequality when assuming that $\sum_j  a_j$ converges and the second inequality when assuming that $\sum_{m=1} 2^m a_{2^m}$ converges. 
+
+\vskip .3in
+\noindent {\bf Chapter  5 of Beals:}
+\vskip .1in
+{\bf 5A:} 1, 2, 6, 9, 10. \quad {\bf 5B:} 1, 2, 7.   
+\vskip .1in
+{\underbar{Hints}}. For {\bf 5A.} 1. Consider all cases for $a \in \Bbb R$:  positive, negative, zero.   
+\vskip .1in 
+For {\bf 5A.} 9.  Consider $\lambda:= \limsup_{j \to \infty}  \vert \frac{a_{j+1}}{a_j} \vert < 1$ and choose a real number $\mu$ such that $\lambda <\mu < 1$. Note then that by the definition of $\limsup$ there is an $N$ large enough so that if $j > N$ the  $\vert \frac{a_{j+1}}{a_j} \vert < \mu$. 
+This in turn gives for any $k \geq 0$
+$$ |a_{N + k}| \leq \mu |a_{N + k-1}|   \leq \mu a_{N + k-2} \dots     \leq \mu^k  |a_{N}|  $$ for any $k \geq 0$, which can be written (change variables  $n= N+k$)
+as $ |a_n| \leq \mu^{N-n} | a_N|$.  Use the root test.
+
+\vskip .2in
+{\underbar{\bf Additional problem.}} In light of Theorem 5.9 (p. 71) we have the following 
+\vskip .1in
+{\bf Definition}: A series $\sum_n a_n$ is said to be Abel summable (to $L$) if:
+\vskip .1in
+a) The power series $\sum_n a_n x^n$ converges for all $|x| <1$, \,  {\underbar{and }}
+\vskip .1in
+b) $f(x) := \sum_n a_n x^n \to L$ as $x \to 1^{-}$. 
+
+Consider $$g(x)= \sum_{n\geq 1}  (-1)^{n+1} n \, x^{n}.$$ 
+
+i)  \,Find the radius and interval  $I \subset \Bbb R$ of convergence ( ie. domain of $g$). 
+\vskip .1in
+ii) \, Prove that if $h(x) = \sum_{n \geq 0}  (-1)^{n+1} x^n$ then $ g(x) = x h^{\prime}(x) $ on $-1 < x< 1$. Justify your answer.
+\vskip .1in
+iii) Show that $\lim_x \to 1^{-} \, g(x) = \frac{1}{4}$
+\vskip .1in
+iv) Deduce that the {\it divergent} series $\sum_n  (-1)^{n+1}  n $ is Abel summable to $\frac{1}{4}$.
+
+\vskip .3in
+
+{\bf Note} As this example shows a series that is Abel summable is not necessarily convergent. So the converse of Th. 5.9 is false. However if one add an extra condition to $a_n$ a `partial' result can be obtained (this is due to Tauber). Namely:
+\vskip .1in
+
+{\bf Theorem} (Tauber, circa 1897)  Suppose that the series $ \sum_n a_n $ is Abel summable  {\bf and} that $\lim_{n \to \infty} a_n = 0$.
+Then  $\sum_n a_n$ converges.
+
+\vskip .3in
+
+\head {\underbar{SET 2 - Due 02/11/16   }  }\endhead
+\vskip .1in
+
+
+\noindent {\bf Chapter  6 of Beals:}
+\vskip .1in
+{\bf 6A:}  1. \quad {\bf 6B:} 1, 2, 4, 10 (see hint).
+
+\vskip .1in
+{\underbar{Hint}}. Before proving exercise 10 in 6B, show the Additional Problem 1 below.
+\vskip .2in
+
+In what follows, $A$ is a subset of a metric space $(S, d)$. 
+
+\vskip .1in
+{\underbar{\bf Additional Problem 1.}} Show that $\bar A = A^{\circ} \cup \partial A$.  That is,  show that if $p \in \bar A $ then $p \in A^{\circ} \cup \partial A$ and  that if $p \in A^{\circ} \cup \partial A$ then $p \in \bar A $. 
+
+\vskip .05in
+As a consequence note that one also has that $\bar A = A  \cup \partial A$. 
+
+\vskip .2in
+{\underbar{\bf Additional Problem 2.}}  Let $p \in A$.  Prove that either $p$ is a limit point of $A^{c}$ \underbar{or} $p$ is an interior point of  $A$,   but not both.
+
+\vskip .2in
+\head {\underbar{SET 3 - Due 02/18/16   }  }\endhead
+\vskip .1in
+\noindent {\bf Chapter  6 of Beals:}(cont.).
+\vskip .1in
+{\bf 6B:}  3, 13 (first part only for $[0,1]$). \quad  {\bf 6C:} 1, 2.  \quad  {\bf 6D:} 1, 2, 3, 5.
+\vskip .2in
+{\underbar{Note}} An alternative definition of {\it {connected}} is:   A subset $B$ of a metric space $(S, d)$ is said to be {\it{connected}} if whenever $U$ and $V$
+are \underbar{disjoint} \underbar{open} subsets of $S$
+$$B \subseteq U \cup  V  \quad \text{implies that } \quad  B \subseteq  U \, \, \text{or}\, \,  B \subseteq V$$
+The empty set is connected.   
+
+\vskip .2in
+\head {\underbar{SET 4 - Due 02/25/16   }  }\endhead
+\vskip .1in
+\noindent {\bf Chapter  6 of Beals:}(cont.).
+\vskip .1in
+
+{\bf 6D:} 6, 8, 9, 10,13. 
+\vskip .2in
+
+\head {\underbar{SET 5 - Due 03/10/16   }  }\endhead
+\vskip .1in
+
+
+\vskip .1in
+%\noindent {\bf Chapter  6 of Beals:}(cont.).
+
+%\vskip .1in
+
+{\underbar {Additional Problem (related to 6E*)}}Consider the unit interval $[0,1]$ and let $\xi$ be a fixed real number $0 < \xi <1$. In stage 1 of the construction remove a centrally open interval of length $\xi$. In stage 2, remove two central open intervals each of {\it relative length} $\xi$, one in each of the remaining subintervals after stage 1.  Note that each of the two subintervals has length $\frac{1-\xi}{2}$  ( the total length that remains after stage 1 is $1-\xi$ ) so what one removes in stage 2 is two intervals {\bf each} of length $\xi  (\frac{1 -\xi}{2}) $. So the total removed has length  $\xi  (1 -\xi)$ and the total length left after stage 2 is $ (1-\xi) - \xi (1 -\xi)= (1 - \xi)^2$. 
+Continue in this manner. Let $\Cal C_{\xi}$ denote the set that remains after applying this procedure indefinitely and $\Cal C^k_{\xi}$ the set that remains after completing stage $k$. Prove that:
+\vskip .05in
+a) The complement of $\Cal C_{\xi}$ in $[0,1]$ is the union of open intervals of total length 1  ( this would be the set you have removed at the end).
+\vskip .05in
+b) Compute the length of the set  $\Cal C^k_{\xi}$ and prove that the limit as $k \to \infty$ of the length of the set  $\Cal C^k_{\xi}$ is zero. 
+
+\vskip .1in
+(Note that when $\xi = \frac{1}{3}$ the above construction is the one that gives the Cantor $1/3$ set.)
+\vskip .2in
+\noindent {\bf Chapter  7 of Beals:}
+\vskip .1in 
+
+{\bf 7A:}  1, 3, 4.
+
+
+\vskip .2in
+
+\head {\underbar{SET 6 - Due 03/24/16   }  }\endhead
+\vskip .1in
+
+
+\vskip .1in
+
+{\bf 7C:} 1a) d) 
+
+
+\underbar{Hint}. Problem 1) : for  the uniform part it is useful to find  $x_n$ the maximum of each $f_n$. For part a) a useful trick is to consider $\log[(f_n(x)]$.
+
+
+\vskip .2in
+
+{\bf 7D*:}  \underbar{Graphing Problem}:    Consider $I=[0,1]$ and the Bernstein polynomials $P_n(x)$, \, $x\in I, \, n \in \Bbb N$  defined by (9)  (Beals p. 95). Consider the  continuous function  on $I$ defined by $$f(x) = \frac{1}{ 1+ 10 (x - \frac{1}{2})^2}.$$  Compute $P_6, P_{10}, P_{20}$ and plot all three together with $f$ on the same graph (scale suitably so  the graphs are clearly visible).
+
+
+\vskip .2in
+\noindent {\bf Chapter  8 of Beals:}
+
+\vskip .1in
+
+{\bf 8A:}  2, 3a), 5, 6 (use 5).
+\vskip .1in
+
+{\bf 8B:}  2  (use IVT and monotonicity).
+\vskip .2in
+
+\head {\underbar{SET 7 - Due 04/07/16   }  }\endhead
+\vskip .1in
+
+
+\vskip .1in
+
+{\bf 10B:} 1, 2, 3, 6.
+
+{\bf 10C:}  1
+
+{\bf 11A:}  1
+
+{\bf 11C:}  1
+
+\vskip .2in
+
+\head {\underbar{SET 8 - Due 04/14/16  }  }\endhead
+\vskip .1in
+
+
+\vskip .1in
+
+{\bf  12C:} \underbar{Additional Problem 1}: Prove that if $f: \Bbb R \to \Bbb R$ is continuous and compactly supported (see Definition p.164) then
+$f$ is (Lebesgue) integrable. 
+
+\vskip .2in
+
+{\bf  12D:}  1, 3, 4, 6. 7.
+
+
+\bigskip
+
+{\underbar{Additional Problem 2}}.
+\smallskip
+
+ Let $f$ is a $2\pi$-periodic integrable function on any finite interval.
+\smallskip
+
+(a) Prove  that for any $a, b \in \Bbb R$ 
+$$  \int_a^b f(x) d x  = \int_{a+ 2\pi}^{b+2\pi} f(x) dx = \int_{a- 2\pi}^{b -2\pi} f(x) dx $$
+\smallskip
+
+(b) Prove  that for any $a \in \Bbb R$ $$  \int_{-\pi}^{\pi} f(x+a) d x  = \int_{-\pi}^{\pi} f(x) dx = \int_{- \pi +a }^{\pi+a} f(x) dx $$
+
+
+
+\vskip .3in 
+\head {\underbar{SET 9 - Due 04/26/16  }  }\endhead
+\vskip .2in
+
+
+{\bf  13B:} \, 1a)d), 2, 8. 
+
+\vskip .2in
+
+{\bf  13D:}   \, 2 \, (use Fej\'er's Theorem). 
+ 
+\vskip .2in
+{\underbar{Additional Problem}}. Suppose that $f$ is a $2\pi$- periodic function which belongs to the class $C^2$ of continuous and twice differentiable functions 
+with continuous derivatives.  Show that  there exists a constant $C>0$  independent on $n$ such that $ |\widehat{f}(n)| \leq \frac{c}{|n|^2} $.
+
+\vskip .1in
+\underbar{Hint} Integrate twice by parts. Use periodicity.
+\vskip .1in
+If $f$ is a $2\pi$- periodic function which belongs to the class $C^k$ of continuous and $k$-times differentiable functions 
+with continuous derivatives.  What can you say about $|\widehat{f}(n)| $ and how would you prove that ?
+
+
+
+
+\vskip .5in
+
+
+
+
+
+\head{\underbar{SPECIAL PROJECTS} (\underbar{Due date}: \, 04/29/16 )}\endhead
+\medskip 
+\underbar{The projects below should be typed.}
+\medskip 
+\underbar{Show all your work and steps clearly, justifying where appropriate what are you using.}
+\medskip 
+\underbar{Check your work carefully.} 
+\bigskip 
+
+
+
+{\bf SP I.\,}  Do Problem 2  Section 7C (p 94). 
+
+\vskip .05in
+{\underbar {Hint.}}  For 2b) Prove that $d(x_{n+m}, x_n) = \sup_{x \in I} |x^{n+m} - x^n|$ does not converge to zero as $m \to \infty$ for each fixed $n$ (so that $f_n$ is not Cauchy). To do this consider the function $F(x)= x^{n+m} - x^n$. Note $F(x) \leq 0$ and $F(0)=0=F(1)$. Find the extremum ${\bar x}$ of $F$ (which depends on $n, m$) and show that as $m \to \infty$ the values of $|F(\bar x)| \to 1$.
+
+\vskip .2in 
+
+{\bf SP II.\,}   Prove that the series $$\sum_{j=1}^{\infty}\, 2^{-j/2 } \, \sin({2^jx}), $$ defines a continuous function.   Prove that it is {\it not}  differentiable 
+at any $x$ such that $\frac{x}{\pi} \notin \Bbb Q$.  
+
+\vskip .1in
+{\underbar{Hints.}} First recall the M-test for series to first verify that the series is indeed absolutely convergent for each fixed $x$. 
+You may then adapt a similar strategy to the one in the handwritten notes I distributed for the Weierestrass-type function to prove the continuity and the non-differentiability 
+at each fixed $x$ such that $\frac{x}{\pi} \notin \Bbb Q$.
+
+\vskip .1in 
+
+\underbar{NB:}  The function is in fact {\it{nowhere differentiable}} but the proof for $x$ which are of the form
+$\frac{x}{\pi} = \frac{p}{2^k}$ for some $k \geq 0$ and $p \in \Bbb Z$ requires a more refined argument.
+
+ 
+\vskip .2in
+ 
+{\bf SP III.\,}   {\bf Verify} that $\frac{1}{2i} \sum_{n \neq 0}  \frac{e^{inx}}{n} $ is the Fourier series of the $2\pi$-periodic {\bf sawtooth} function defined by $f(0)=0$ and 
+$$ f(x)= \cases   - \frac{\pi}{2} - \frac{x}{2},  \, & \text{ if } \, -\pi < x < 0, \\
+  \frac{\pi}{2} - \frac{x}{2}, \, & \text{ if } \,   0 < x < \pi  
+\endcases $$
+Note that the sawtooth function is not continuous. {\bf Show} nonetheless that the series converges for ever $x$; by which we mean as usual that the partial sums 
+$$S_N(x) = \frac{1}{2i}  \sum_{|n| \leq N, n \neq 0}  \frac{e^{inx}}{n} $$ of the series converge.  In particular note that the value of the series at the origin, namely $0$, is indeed the average of the values of the function $f(x)$ as $x$ approaches the origin from the left and  the right.
+
+\underbar{Hint}  Use Dirichlet's Test for convergence.  Check the convergence at $x=0$ separately.
+
+\vskip .2in
+
+{\bf SP IV.\,}  In class we discussed the Fej\'er kernel associated to the (Ces\`aro) summability of Fourier series and proved that the Fej\'er kernel is a ``good kernel".   
+The project here aims at proving that the Poisson kernel defined below is also a good kernel (the Poisson 
+kernel is associated to the `Abel summability' of Fourier series.). 
+\medskip
+
+For $0 \leq r < 1$ and $ -\pi \leq x < \pi $, the Poisson kernel $P_r(x)$ is defined by:
+$$  P_r(x) := \sum_{n=-\infty}^{\infty}  r^{|n|} e^{i n x} = \frac{1 - r^2}{ 1 - 2 r \cos x + r^2} $$ and to be a good kernel means that 
+\smallskip
+\vskip .2in
+\underbar{Prove}: 
+ \vskip .2in
+1)   $ \frac{1}{2\pi} \int_{-\pi}^{\pi}  P_r(x) \, dx  = 1 $  for all $ 0 \leq r < 1$ 
+\smallskip 
+2) There exists $M >0$ such that for all  $ 0 \leq r < 1$, $ \int_{-\pi}^{\pi}  |P_r(x) | \, dx  \leq M $   
+\smallskip
+
+\underbar{Hint}: note that  $P_r(x)  \geq 0$ (why?) so this should be immediate from 1).
+
+\smallskip 
+3) For every $\delta >0$ , \, $$\int_{\delta \leq |x| \leq \pi}  |P_r(x) |  dx \to 0, \, \text{ as } \,  r \to 1^{-}$$
+ 
+
+\enddocument
+
+
+\smallskip
+{\underbar{Additional problems} (from the material we covered from {\it Fourier Analysis, An Introduction} Vol. I by E.M. Stein and R. Shakarchi).
+
+\smallskip
+
+\noindent {\bf (A1)}  Let $f$ is a $2\pi$-periodic integrable function on any finite interval.
+
+(a) Prove  that for any $a, b \in \Bbb R$ 
+$$  \int_a^b f(x) d x  = \int_{a+ 2\pi}^{b+2\pi} f(x) dx = \int_{a- 2\pi}^{b -2\pi} f(x) dx $$
+(b) Prove  that for any $a \in \Bbb R$ $$  \int_{-\pi}^{\pi} f(x+a) d x  = \int_{-\pi}^{\pi} f(x) dx = \int_{- \pi +a }^{\pi+a} f(x) dx $$
+
+\medskip
+
+\noindent {\bf (A2)}  Suppose that  $\{a_n\}_{n=1}^N$ and $\{b_n\}_{n=1}^N$ are two finite sequences of complex numbers. Let $B_K = \sum_{n=1}^K  b_n$ denote the partial sums of the series $\sum b_n$, and define $B_0=0$. 
+
+(a)  Prove the {\it summation by parts} formula 
+$$\sum_{n=M}^N   a_n b_n = a_N B_N - a_M B_{M-1} - \sum_{n=M}^{N-1}  (a_{n+1} - a_n) B_n $$
+
+\smallskip
+
+(b)  Deduce from part (a) the Dirichlet's Test for convergence of a series that states:  If the partial sums $B_K =\sum_{n=1}^K  b_n $    of a series $\sum_n  b_n $ are bounded  (that is, $| B_K| \leq C$ for some $C>0$ independent of $K$) and  if  $\{a_n\}_n$ is a sequence of real numbers that decreases monotonically to $0$ (that is $a_{n+1} \leq a_n$ and 
+$a_n \to 0$) then  the series $\sum a_n b_n$ converges.
+
+\medskip
+
+\noindent {\bf (A3)}  Suppose that $f$ is a $2\pi$- periodic function which belongs to the class $C^2$ of continuous and twice differentiable functions 
+with continuous derivatives.  Show that  there exists a constant $C>0$  independent on $n$ such that $ |\widehat{f}(n)| \leq \frac{c}{|n|^2} $.
+
+\underbar{Hint} Integrate twice by parts. Use periodicity.
+
+If $f$ is a $2\pi$- periodic function which belongs to the class $C^k$ of continuous and $k$-times differentiable functions 
+with continuous derivatives.  What can you say about $|\widehat{f}(n)| $ and how would you prove that ?
+
+
+\medskip
+\noindent {\bf (A4)}   In class we discussed both the F\'ejer kernel associated to the C\`esearo summability of Fourier series and the Poisson 
+kernel associated to the Abel summability of Fourier series.  That the Fejer kernel is a "good kernel" follows from exercises 14, 15 and 16 in section 11.2 (pages 234-235 of Krantz).  Here prove that the Poisson kernel is a good kernel.  Recall that for $0 \leq r < 1$ and $ -\pi \leq x < \pi $
+$$  P_r(x) = \sum_{n=-\infty}^{\infty}  r^{|n|} e^{i n x} = \frac{1 - r^2}{ 1 - 2 r \cos x + r^2} $$ and to be a good kernel means that 
+\smallskip
+
+1)   $ \frac{1}{2\pi} \int_{-\pi}^{\pi}  P_r(x) \, dx  = 1 $  for all $ 0 \leq r < 1$ 
+\smallskip 
+2) There exists $M >0$ such that for all  $ 0 \leq r < 1$, $ \int_{-\pi}^{\pi}  |P_r(x) | \, dx  \leq M $   
+\smallskip
+
+\underbar{Hint}: note that  $P_r(x)  \geq 0$ (why?) so this should be immediate from 1).
+
+\smallskip 
+3) For every $\delta >0$ , \, $$\int_{\delta \leq |x| \leq \pi}  |P_r(x) |  dx \to 0, \, \text{ as } \,  r \to 1^{-}$$
+ 
+
+
+
+
+\enddocument
+
+\smallskip
+{\underbar{Additional problems} (from the material we covered from {\it Fourier Analysis, An Introduction} Vol. I by E.M. Stein and R. Shakarchi).
+
+\smallskip
+
+\noindent {\bf (A1)}  Let $f$ is a $2\pi$-periodic integrable function on any finite interval.
+
+(a) Prove  that for any $a, b \in \Bbb R$ 
+$$  \int_a^b f(x) d x  = \int_{a+ 2\pi}^{b+2\pi} f(x) dx = \int_{a- 2\pi}^{b -2\pi} f(x) dx $$
+(b) Prove  that for any $a \in \Bbb R$ $$  \int_{-\pi}^{\pi} f(x+a) d x  = \int_{-\pi}^{\pi} f(x) dx = \int_{- \pi +a }^{\pi+a} f(x) dx $$
+
+\medskip
+
+\noindent {\bf (A2)}  Suppose that  $\{a_n\}_{n=1}^N$ and $\{b_n\}_{n=1}^N$ are two finite sequences of complex numbers. Let $B_K = \sum_{n=1}^K  b_n$ denote the partial sums of the series $\sum b_n$, and define $B_0=0$. 
+
+(a)  Prove the {\it summation by parts} formula 
+$$\sum_{n=M}^N   a_n b_n = a_N B_N - a_M B_{M-1} - \sum_{n=M}^{N-1}  (a_{n+1} - a_n) B_n $$
+
+\smallskip
+
+(b)  Deduce from part (a) the Dirichlet's Test for convergence of a series that states:  If the partial sums $B_K =\sum_{n=1}^K  b_n $    of a series $\sum_n  b_n $ are bounded  (that is, $| B_K| \leq C$ for some $C>0$ independent of $K$) and  if  $\{a_n\}_n$ is a sequence of real numbers that decreases monotonically to $0$ (that is $a_{n+1} \leq a_n$ and 
+$a_n \to 0$) then  the series $\sum a_n b_n$ converges.
+
+\medskip
+
+\noindent {\bf (A3)}  Suppose that $f$ is a $2\pi$- periodic function which belongs to the class $C^2$ of continuous and twice differentiable functions 
+with continuous derivatives.  Show that  there exists a constant $C>0$  independent on $n$ such that $ |\widehat{f}(n)| \leq \frac{c}{|n|^2} $.
+
+\underbar{Hint} Integrate twice by parts. Use periodicity.
+
+If $f$ is a $2\pi$- periodic function which belongs to the class $C^k$ of continuous and $k$-times differentiable functions 
+with continuous derivatives.  What can you say about $|\widehat{f}(n)| $ and how would you prove that ?
+
+
+\medskip
+\noindent {\bf (A4)}   In class we discussed the F\'ejer kernel associated to the (C\`esearo) summability of Fourier series and the Poisson 
+kernel associated to the Abel summability of Fourier series.  That the Fejer kernel is a "good kernel" follows from exercises 14, 15 and 16 in section 11.2 (pages 234-235 of Krantz).  Here prove that the Poisson kernel is a good kernel.  Recall that for $0 \leq r < 1$ and $ -\pi \leq x < \pi $
+$$  P_r(x) = \sum_{n=-\infty}^{\infty}  r^{|n|} e^{i n x} = \frac{1 - r^2}{ 1 - 2 r \cos x + r^2} $$ and to be a good kernel means that 
+\smallskip
+
+1)   $ \frac{1}{2\pi} \int_{-\pi}^{\pi}  P_r(x) \, dx  = 1 $  for all $ 0 \leq r < 1$ 
+\smallskip 
+2) There exists $M >0$ such that for all  $ 0 \leq r < 1$, $ \int_{-\pi}^{\pi}  |P_r(x) | \, dx  \leq M $   
+\smallskip
+
+\underbar{Hint}: note that  $P_r(x)  \geq 0$ (why?) so this should be immediate from 1).
+
+\smallskip 
+3) For every $\delta >0$ , \, $$\int_{\delta \leq |x| \leq \pi}  |P_r(x) |  dx \to 0, \, \text{ as } \,  r \to 1^{-}$$
+ 
+
+
+
+
+\vskip .2in
+
+
+\head {\underbar{SET 5 - Due 04/16/15  }  }\endhead
+
+\medskip 
+
+\noindent {\bf From  Section 12.1 (Krantz's 257-258)}  1, 2, 3, 5, 6 and 11* 
+
+\smallskip
+\underbar{Hint for 11*}:  Think for example of a function defined on all of $\Bbb R^2$  but 
+which is not continuous at -say-  $(0,0)$ but still $\frac{\partial f}{\partial x_i}(0,0)$ exist for $i=1, 2$. Show your work supporting each claim.
+
+
+\medskip
+\noindent {\bf (A1)}.  Prove by the $\varepsilon-\delta$ definition that the function $f: \Bbb R^2 \to \Bbb R$ defined by 
+$f(x_1, x_2) = x_1x_2$ is continuous at $(0,0)$.
+
+\medskip 
+
+\noindent {\bf From  Section 12.2 (Krantz's 263)}  5, 7, 8
+
+
+\vskip .3in
+
+\head {\underbar{SET 6 - Due 04/30/15  }  }\endhead
+
+\medskip
+\noindent {\bf From  Section 12.3 (Krantz's 269-270)}  2, 6, 9, 10
+
+\vskip .3in
+
+\vskip .3in
+
+
+\head{\underbar{SPECIAL PROJECTS} (\underbar{Due date}: \, TBA.)}\endhead
+
+\underbar{Work on them promptly but not turn in yet}.
+\medskip 
+
+{\bf SP I.\,}  Prove that the {\it Weierstrass-type} function $F(x): \Bbb R \to \Bbb R$  we defined in class is:  
+\medskip 
+\flushpar \quad a)  continuous for all $x \in \Bbb R$ , 
+\medskip 
+\flushpar \quad  b) nowhere differentiable- that is differentiable for no $x \in \Bbb R$.  To prove this, consider the sequence $ z_{k} := x \pm \frac{4^{-k}}{2}$ where the sign  $+$ or $-$ is chosen depending on $x$ so that there is {\bf no integer} in between $ 4^k z_k$ and $4^k x$ ( note these two number differ at most by $\frac{1}{2}$).  Then
+inspect and prove that the quotient $$ \left| \frac{F(z_k) - F(x)}{ z_k - x} \right| $$ are bigger than $3^{k-1}$ for each $ k \geq 1$.  It might be useful to separate the difference of the series in the numerator between the sum up to $k$ and the tail from $k+1$ to infinity.
+\medskip 
+
+Recall $F$ is defined as 
+$$ F(x):= \sum_{j=1}^{\infty} \, (\frac{3}{4})^{j} \, \psi(4^j x),$$ where $$\psi (x):= \cases  x -n \qquad \qquad \text{ if }  n \leq x < n+1 \text{ when } n \text{ is even } \\
+ - x + (n +1) \qquad \text{ if }  n \leq x < n+1 \text{ when } n  \text{ is odd}, \endcases $$  for all $ n \in \Bbb N$.  Note that $\psi$ is a periodic function of period $2$.
+
+\bigskip 
+
+{\bf SP II.\,}  Prove Exercise 2 (Section 8.3 Krantz's 175 ) 
+
+\bigskip 
+
+{\bf SP III.\,}  Prove Exercise $4^{\ast}$ (Section 9.1 Krantz's 188). 
+
+\bigskip 
+{\bf SP IV.\,}   Prove Exercises 18* and answer 19* (with a justification) (Section 11.2, Krantz's page 235). These two problems are based on
+Problems 14*, 15 and 16. You may use 14* without proof. Problems 15 and 16 are part of your Homework above (Set 4).
+
+
+\bigskip 
+
+{\bf SP V.\,}   {\bf Verify} that $\frac{1}{2i} \sum_{n \neq 0}  \frac{e^{inx}}{n} $ is the Fourier series of the $2\pi$-periodic {\bf sawtooth} function defined by $f(0)=0$ and 
+$$ f(x)= \cases   - \frac{\pi}{2} - \frac{x}{2},  \, & \text{ if } \, -\pi < x < 0, \\
+ - \frac{\pi}{2} - \frac{x}{2}, \, & \text{ if } \,   0 < x < \pi  
+\endcases $$
+Note that the sawtooth function is not continuous. {\bf Show} nonetheless that the series converges for ever $x$ (by which we mean as usual that the partial sums 
+$S_N(x) = \frac{1}{2i}  \sum_{|n| \leq N, n \neq 0}  \frac{e^{inx}}{n} $ of the series converge ).  In particular note that the value of the series at the origin, namely $0$, is indeed the average of the values of the function $f(x)$ as $x$ approaches the origin from the left and  the right.
+
+\underbar{Hint}  Use Dirichlet's Test for convergence. 
+
+
+
+ \enddocument
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+

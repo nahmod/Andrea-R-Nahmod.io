@@ -1,0 +1,235 @@
+\magnification=1200
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+%\NoPageNumbers
+\def \IR {\Bbb R}
+\def \IN {\Bbb N}
+\def \IC {\Bbb C}
+\def \B {\Cal B}
+\def \M {\Cal M}
+\def \N {\Cal N}
+\def \H {\Cal H}
+\def \C {\Cal C}
+\def \R {\Cal R}
+\def \A {\Cal A}
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+%\hcorrection{.3in}
+\hskip 3in {\bf NAME: }
+\vskip .2in
+\centerline{ \bf Real Analysis II, Final Exam}
+\vskip .1in
+\centerline{May 17th 2009}
+\vskip .2in
+\document
+
+\subhead{ Instructions }\endsubhead
+\vskip .2in 
+ 
+{\bf { \roster
+
+
+\item This exam is due no later than Thursday May 21 at 4pm.   
+
+\vskip .2in 
+
+\item  It has 4 questions  for a total of $100$ points. 
+\vskip .2in 
+
+ 
+\item You must work on this exam alone. 
+\vskip .2in 
+
+\item  You may consult Folland's book or the class notes \underbar{ONLY}. \newline Absolutely \underbar{no other books or notes} are permitted.
+\vskip .2in 
+
+\item You cannot discuss the problems with other people, including
+classmates.
+\vskip .2in 
+
+\item You may ask me any questions you have.
+\vskip .2in 
+
+\item  {\bf State explicitely all results that you use in your proofs and
+verify that these results apply.}
+
+
+\vskip .2in 
+
+\item Show all your work and \underbar{ justify each and all steps} in your proofs. 
+
+\vskip .2in 
+
+\item Write each problem and its solution following each problem and staple them all together with this cover. 
+Insert additional pages if needed.
+\endroster } 
+
+
+
+
+\vskip .3in 
+
+
+\subhead{Conventions and Definitions }\endsubhead 
+\vskip .2in 
+
+\roster 
+
+\item For a set $A$, \, $\chi_A$ denotes the characteristic function of $A$. 
+\vskip .2in 
+
+\item If a measure is not specified, use the Lebesgue measure on
+$\IR^n$. This measure is denoted by $m$.  If a $\sigma$-algebra on $\IR^n$ is not specified, use the
+Borel $\sigma$-algebra.
+
+
+\endroster}
+
+
+\newpage 
+
+
+${\bold 1}$)  Let $\H$ be a Hilbert space with inner product  $\langle
+\cdot , \cdot \rangle $
+\vskip .2in 
+(a)  Suppose that $\H$ is a {\it real} Hilbert space; that is suppose
+that  $\langle \cdot , \cdot \rangle: \H \times \H \to \IR.$ 
+Show then that $x \perp y$ if and only if the identity $\Vert
+x+y\Vert^2 =\Vert x\Vert^2 +\Vert y\Vert^2 $ holds. 
+
+\vskip .15in 
+
+(b)  Suppose now that $\H$ is a {\it complex} Hilbert space; that is suppose
+that  $\langle \cdot , \cdot \rangle : \H \times \H \to \IC$ . 
+Show with an example that the identity   $\Vert x+y\Vert^2 =\Vert x\Vert^2 +\Vert
+y\Vert^2$  may \underbar{not} imply that  $x \perp y$ . 
+
+\vskip .15in
+
+
+
+
+
+
+(c) Let $\{x_n\}_{n \ge 1} $ be an {\it orthonormal basis} of $\Cal H$ and define
+$$ y_n := x_{n+1} - {x_n} \qquad \qquad n \geq 1. $$ Show that if $z$
+is orthogonal to $y_n$ for each $n \ge 1$, then $z=0$. 
+
+\vskip .15in 
+
+
+
+(d) Use Bessel's inequality  to show that if  $\{x_n\}_n $ is any orthonormal sequence in $\Cal H$, 
+then $$ \lim_{n \to \infty} \langle x_n , y \rangle =0 \qquad \text{ for
+all } \, y \in \H. $$ 
+
+\vskip .2in 
+(e) Let $\H = L^2([0, 2 \pi), m )$.
+\vskip .2in 
+
+
+
+\hskip .2in (i) Prove that the system $\{ \sqrt{1/\pi} \cos(kx) \, : \, k \in \IN\} $ is 
+orthonormal in $L^2([0, 2\pi),m)$. 
+
+
+\vskip .2in 
+
+
+\hskip .2in (ii) Let $f$ be any function in $L^2([0, 2 \pi),m)$. 
+Prove that $$\lim_{k \to \infty} \int_0^{2 \pi} \, f(x) \,
+\cos(kx)   \, dx \, = \, 0 $$
+
+
+
+
+
+\newpage
+
+
+ 
+${\bold 2}$)  Let $\H$ be a Hilbert space and let $M$ be a non-trivial closed subspace of $\H$.  
+
+\noindent Let $P_{M}: \H \to \H$ be the orthogonal projection from $\H$ to $M$. You may assume without proof that $P_M$ is linear and in the notation of Th. 5.24, that $P_{M} x = y \in M$ and that $x- P_Mx= z \in M^{\perp}$ for all $x \in H$. 
+
+\vskip .1in 
+
+(a) \, Show that  $P_M$ is bounded and that moreover, $\Vert P_M  \Vert_{op} = 1$ where 
+$$\Vert P_M  \Vert_{op} := \sup \{ \Vert P_M x \Vert_{\H} \, : \, \Vert x \Vert_{\H} \le 1\, \}.$$
+
+\vskip .2in 
+
+(b) \,  Show that $P_{M} (P_{M} x) =  P_M x$ for all $x \in \H$; that is that $P^2_M=P_M$
+
+\vskip .2in
+
+(c) \, Show that  $P_M$ is self-adjoint. That is, using the notation of Pb57 in \&5.5, show that $P_M x=P_M^{\ast} x $ for all $x \in \H$. 
+
+
+\newpage 
+
+${\bold 3}$)  \, Let $V$ be a vector space and $\A$ a non-empty index set. For each $\alpha \in \A$ let $Y_{\alpha}$ be a subspace of $V$ equipped with a norm $\Vert \cdot \Vert_{Y_{\alpha}}$ which we assume turns $Y_{\alpha}$ into a Banach space for each $\alpha \in \A$.  Furthermore, assume the following property holds:
+
+\vskip .2in
+
+\quad  If $\alpha, \beta \in \A$ and a sequence $ x_n \in Y_{\alpha} \cap Y_{\beta}$ converges to $x$ in the $Y_{\alpha}$-norm and 
+
+\quad to $x'$ in the $Y_{\beta}$-norm  then $x=x'$. 
+
+\vskip .2in 
+
+\noindent Define a new vector space $X$ by $$ X:= \{ x \in \bigcap_{\alpha \in \A} Y_{\alpha} \, :\, \sum_{\alpha \in \A} \Vert x \Vert_{Y_{\alpha}}  < \infty \, \}$$ and equip this space with the norm defined by 
+$$ \Vert x \Vert_{X}:=  \sum_{\alpha \in \A} \Vert x \Vert_{Y_{\alpha}} $$
+
+\noindent Show:  (a)  that  $ \Vert x \Vert_{X}$ is indeed a norm and (b) that this norm turns $X$ into a Banach space.
+
+
+
+\newpage 
+${\bold 4}$)  Let $1 \le p < \infty$ and  $\{f_n\}_{n\ge 1}$ a sequence in $L^p(\IR^d)$.  
+
+\vskip .1in 
+
+(a) \,  Suppose there is an $f \in L^p(\IR^n)$ such that $f_n \to f$ in $L^p(\IR^d)$.  Prove that there exists constants $N_0 \in \IN$ and $C_p>0$ such that $\Vert f_n\Vert_p  \le C_p  \Vert f\Vert_p$ for  $n \ge N_0$.  
+
+\vskip .2in 
+
+(b) \, {\underbar{Use H\"older's inequality}} and part (a) to prove the following:  
+\vskip .1in 
+
+If $\{f_n\}$ is Cauchy in $L^p$ then there exists $f \in L^p(\IR^d)$ such that $$\int_{\IR^d}\, |  \, |f(x)|^p  -  | f_n(x)|^p \,| \, dx \to 0 \qquad \text{ as } \qquad n \to \infty$$
+
+\vskip .2in
+
+Hint.  Before applying H\"older,  note that  for any $a, b >0$ and $p\ge 1$ $$|a^p - b^p| \le p  \, \max{\{ a, b\} }^{p-1}  |a-b| \le p \,  (|a| + |b|)^{p-1} \, |a-b|$$  which is easily proved using the mean value theorem on $h(x)= x^p, \, x>0$.  
+
+\enddocument 
+
+${\bold 3}$)   (a) \, For any $1 \le p < \infty$ we know that $L^p$ is a Banach space. So, for  any   \underbar{{\it  fixed}} \,  $ z \in \IR$  we define the operator $T_z : L^p(\IR) \to L^p(\IR)$ by  $$ T_z(f)(x) \, = \, f(x -z) , \qquad \qquad \text{ for all} \quad x \in \IR $$  
+
+(i)  Show that  $T_z \in {\Cal L} ( L^p, L^p)$,  i.e that $T_z$ is linear and bounded on $L^p(\IR)$. 
+
+  
+\vskip 1in   
+
+(ii)   Show that $T_z$  is an invertible operator on $L^p$  and compute  $\Vert T_z^{-1} \Vert_{op}  $    
+
+             
+\vskip 1in 
+
+
+(b)  Show that for any $g \in C_c(\IR)$,  and  any $1 \le p < \infty$, $$\lim_{y\to 0}  \Vert T_{z+y} (g) \, - \, T_z (g) \Vert_{L^p(\IR)} \, = \,  0$$
+
+{\bf Hints.}  Note that $T_{z+y} = T_y \circ T_z$ and use it to reduce first to $z=0$ relying on part (a(i)).  
+
+                    Show that if $g \in C_c$ then $T_y(g)$ are all supported in a common compact provided $|y| \le 1$. 
+                    
+                     Use the Heine-Borel theorem ( "Any continuous function with compact support is  uniformly continuous on its support. ") 
+                     
+
+
+

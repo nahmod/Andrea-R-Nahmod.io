@@ -1,0 +1,141 @@
+\magnification=1200
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+%\NoPageNumbers
+
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+\centerline{ \bf Sketch of a solution to Problem 12 Section 1.1 }
+\vskip .1in
+\centerline{ \bf Math 523H -- Prof. Nahmod }
+\bigskip 
+
+\document
+We start with $\Longrightarrow$: ie. we want to prove that is $P \in {\Cal
+F}$ satisfies the properties (a) and (b) then $\leq$ -as defined in
+the problem- satisfies properties (O1)-(O5).
+
+\vskip .15in
+
+Proof of (O1) : Let $x, y \in {\Cal F}$ by the definition of $\leq$ we
+need to show that that either 
+$(y-x) \in P$ or $(x-y) \in P$ or $y=x$. 
+
+Since $\Cal F$ is a field, if $x$ and $y$ are in $\Cal F$, then $-x$
+and hence $y+(-x) = y-x$ are in $\Cal F$. Let's call $z= y-x$. By (a)
+then we know that either $z \in P$, $-z \in P$ or $z=0$. That is 
+either $(y-x) \in P$, $-(y-x) \in P$ or $y-x=0$. 
+
+But additive inverses are unique so by P1) P2) and P4 we have that 
+$-(y-x)=(x-y)$. and by P1) P3) and P4) we have that $y-x=0$ implies $y=x$
+
+Hence all in all we have that either $(y-x) \in P$, $(x-y) \in P$ or $y=x$
+as desired. 
+                                                         
+\vskip .15in
+Proof of (O2): Suppose that both $x \leq y$ and $y \leq x$. 
+To say $x \leq y$  means that $(y-x) \in P$ or $x=y$. And to say that 
+$y \leq x$ means that $(x-y) \in P$ or $x=y$.
+
+But if we suppose that  
+$(y-x) \in P$; then $-(y-x)=(x-y)$ (as we showed above) is not in $P$.
+And hence we must have $x=y$. But $x=y$ means $y-x=0$ which
+contradicts (a) since we are assuming $(y-x) \in P$.
+ 
+A similar argument gives a contradiction if we suppose that $(x-y) \in
+P$. 
+
+Therefore we must have that $x=y$. 
+
+\vskip .15in 
+ 
+Proof of (O3): If $x \leq y$ then $(y-x) \in P$ or $x=y$. If $y \leq
+z$ then $(z-y) \in P$ or $y=z$. 
+
+Now if $(y-x) \in P$ and $(z-y) \in P$ then $(z-y) + (y-x) \in P$ by
+(b). Therefore $z+ ( -y +y) - x \in P$ by P2) and $z + 0 -x \in P$
+by P4). By P3) we then have that $z-x \in P$. Then $x \leq z$. 
+
+If $(y-x) \in P$ and $y=z$ then $y-x = z-x$ so $x \leq z$. 
+
+If $(z-y) \in P$ and $x=y$ then $z-y = z-x$ so $x \leq z$.
+
+If $z=y$ and $x=y$ then $z=x$, so $x \leq z$. 
+
+\vskip .15in 
+
+Proof of (04): If $x \leq y$ then either $(y-x) \in P$ or $x=y$. If
+$(y-x) \in P$, $y-x + 0 \in P$. Since $z +(-z) = 0$ we then have
+that $(y-x) + (z + (- z)) \in P$. By P1) and P2) then $(y +z) - (x+z)
+\in P$ which means that $x +z \leq y+z$ as desired.
+
+If $x=y$ then $x+z = y +z$; therefore $x+z \leq y+z$ once again. 
+
+\vskip .15in
+
+Proof of (O5): If $x \leq y$ and $0 \leq z$ then either $(y-x) \in P$
+or $x=y$ and either  $z=0$ or $z \in P$.
+
+If $z=0$, then $xz=0 = yz$ (by homework problem 4- also proved in
+class); so in this case $xz \leq yz$. 
+
+If $x=y$ then $xz=yz$ so $xz \leq yz$. 
+
+If $z \in P$ and $(y-x ) \in P$, then $z (y-x) \in P$ by (b). Now, by
+P9) $zy -zx \in P$. By P5) we see that $yz - xz \in P$. Therefore $xz
+\leq yz$. 
+
+\vskip .25in
+
+Next we prove $\Longleftarrow$: ie. we need to prove that if $ \leq$
+satisfies the properties (O1)-(O5) then $P$ satisfies the properties
+(a) and (b). 
+
+\vskip .15in
+
+Proof of (a):  By (O1) either $x \leq 0$ or $x \geq 0$. And by (O2) if $x\neq 0$ then exactly 
+one of the following hold : either $x \leq 0$ or $x \geq 0$. If $x \leq 0$ and $x \neq 0$ then $(0-x)= -x \in P$. If $x \geq
+0$ and $x \neq 0$ then $(x-0)= x \in P$. Hence (a) holds. 
+
+\vskip .15in
+
+Proof of (b):  First part: let $x \in P$ and $y \in P$. Then $ 0 \leq
+x$ and $0 \leq y$. Then by P3)  and (O4) we have that 
+$$ 0 \leq y = 0 + y \leq x +y $$
+that is $0 \leq x +y$ which means that $x + y - 0 = x + y \in P$ as
+desired. 
+\vskip .1in 
+
+Second part: since $x, y$ are in $P$, we have that 
+$0 \leq x$ and $0 \leq y$; and we also have that $x \neq 0$ and $y
+\neq 0$ by (a) which we have independently proved already. By
+(O5) then $ 0y \leq xy$. And by homewrok problem 4 we have then that 
+$0 \leq xy$ since $ 0=0y$. Therefore $xy \in P$ ( $x \neq 0 , y\neq 0$
+so $xy \neq 0$). 
+
+
+
+
+
+\enddocument
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,986 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%                 This file should be compiled using Latex2e
+%                                                                              
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[reqno,12pt]{amsart}
+\usepackage{amsfonts,amsmath,amssymb}
+
+%\usepackage[notcite,notref]{showkeys}
+\usepackage{hyperref}
+\usepackage{color}
+
+%\usepackage[nottoc,notlof,notlot]{tocbibind} 
+
+%\renewcommand\bibname{Publications}
+
+\usepackage[margin=1.10in]{geometry}
+\setlength{\textwidth}{16cm}
+\setlength{\oddsidemargin}{0.2cm}
+\setlength{\evensidemargin}{0.2cm}
+\pagestyle{plain}
+\numberwithin{equation}{section}
+
+\def\pr{{\partial}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\def\phii{\widetilde{\varphi}}
+\def\b{{\beta}}
+\def\lab{\label}
+\def\g{\mathbf{g}}
+\def\Zv{\mathbf{Z}}
+\def\Tv{\mathbf{T}}
+\def\r_h{r_{\mathcal{H}}}
+\def\KK{\mathcal{K}}
+\def\be{{\beta}}
+\def\X{\mathbb{X}}
+\def\ga{\gamma}
+\def\Ga{\Gamma}
+\def\De{\Delta}
+\def\ep{\epsilon}
+\def\eps{\epsilon}
+\def\ka{\kappa}
+\def\la{\lambda}
+\def\La{\Lambda}
+\def\si{\sigma}
+\def\Si{\Sigma}
+\def\Om{\Omega}
+\def\th{\theta}
+\def\ze{\zeta}
+\def\ka{\kappa}
+\def\nab{\partial}
+\def\varep{\varepsilon}
+\def\vphi{\varphi}
+\def\pr{{\partial}}
+\def\les{\lesssim}
+\def\c{\cdot}
+\def\rh{{\rho}}
+\def\D{\mathbf{D}}
+\def\R{\mathbb{R}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{step}[theorem]{Step}
+
+\def\Re{{\hbox{Re}}}
+\def\P{{\hbox{\bf P}}}
+\def\diam{{\hbox{diam}}}
+\def\dist{{\hbox{\rm dist}}}
+\def\Ti{{{\mathbb T}_{irr}}}
+\def\Hil{{\mathbb H}}
+\def\H{{{\mathcal H}}}
+\def\B{{\hbox{\bf B}}}
+\def\P{{\hbox{\bf P}}}
+\def\Manifold{{\mathcal M}}
+\def\ino{{\ \in_{[0,1]}\ }}
+\def\inot{{\ \in_{[0,T]}\ }}
+\def\eps{\varepsilon}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\lims}{\varlimsup}
+\newcommand{\T}{\mathbb T}
+\newcommand{\M}{\mathcal M}
+\newcommand{\s}{\mathbb S}
+\newcommand{\Ell}{\mathcal L}
+\newcommand{\sgn}{\mbox{sgn}}
+\newcommand{\rcompact}{\subset \subset}
+\newcommand{\vem}{\varnothing}
+\newcommand{\p}{\partial}
+\newcommand{\al}{\alpha}
+
+\newcommand{\ww}{\vec w}
+\newcommand{\de}{\delta}
+\newcommand{\e}{\epsilon}
+\newcommand{\tht}{\theta}
+\newcommand{\lam}{\lambda}
+\newcommand{\h}{\mathcal H}
+\newcommand{\sech}{\mbox{sech}}
+\newcommand{\Rea}{\mbox{Re}}
+\newcommand{\Ima}{\mbox{Im}}
+\newcommand{\hp}{\dot H^{s_p} \times \dot H^{s_p-1}}
+%\newcommand{\vec}{\overrightarrow}
+\newcommand{\om}{\omega}
+\newcommand{\cl}{\mathcal}
+\newcommand{\energysp}{\dot{H}^1 \times L^2}
+\newcommand{\tk}{\tilde k}
+\newcommand{\supp}{\mbox{supp }}
+\newcommand{\vl}{\vec \ell}
+\newcommand{\grad}{\nabla}
+\newcommand{\vep}{\varepsilon}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%FROM BODY%%%%%%%%%%%%%%%%%%
+
+\def\bi{\begin{itemize}}
+\def\bs{\begin{split}}
+\def\bs{\end{split}}
+\def\ba{\begin{align}}
+\def\bas{\begin{align*}}
+\def\ea{\end{align}}
+\def\eas{\end{align*}}
+\def\tlv{{\tilde v}}
+\def\w{\tilde w}
+\def\vapr{\tilde v_{\text{appr}}}
+\def\u{{\tilde u}}
+\def\Im{{\hbox{Im}}}
+\def\sgn{{\hbox{sgn}}}
+\def\Re{{\hbox{Re}}}
+\def\P{{\hbox{\bf P}}}
+\def\diam{{\hbox{diam}}}
+\def\dist{{\hbox{\rm dist}}}
+%\def\mathcal{{\hbox{\bf C}}}
+\def\R{{{\mathbb R}}}
+\def\Hp{{\mathbb H}}
+\def\S{{{\mathbb S}}}
+\def\H{{{\mathcal H}}}
+\def\B{{\hbox{\bf B}}}
+\def\P{{\hbox{\bf P}}}
+\def\M{{\hbox{\bf M}}}
+\def\Manifold{{\mathcal M}}
+\def\Z{{{\mathbb Z}}}
+\def\T{{{\mathbb T}}}
+\def\N{{{\mathbb N}}}
+\def\ino{{\ \in_{[0,1]}\ }}
+\def\inot{{\ \in_{[0,T]}\ }}
+\def\eps{\varepsilon}
+\newcommand{\ft}{\widehat}
+\newcommand{\rar}{\rightarrow}
+\newcommand{\mathcalj}{\overline}
+\newcommand{\FF}{\mathcal F} 
+\newcommand{\rd}{{\rm d}}
+\newcommand{\bg}{\boldsymbol\gamma}
+\newcommand{\sh}{Schr\"odinger\ }
+% \newcommand{\ka}{K\"ahler\ }
+\newcommand{\po}{\partial\O}
+\newcommand{\tr}{\mathrm{Tr}}
+\newcommand{\G}{\Gamma}
+\newcommand{\mathcalF}{\mathcal{F}}
+\newcommand{\mathcalO}{\mathcal{O}}
+\newcommand{\mathcalG}{\mathcal{G}}
+\renewcommand{\H}{\mathcal H}
+\newcommand\res{\hbox{ {\vrule height .22cm}{\leaders\hrule\hskip.2cm} } }
+\newcommand{\mathcalL}{\mathcal{L}}
+\newcommand{\vecnQr}{\overrightarrow{n_{Q,r}}\,}
+\newcommand{\vecnQs}{\overrightarrow{n_{Q,s}}\,}
+\newcommand{\Int}{\mathrm{int}\,}
+\renewcommand{\d}{\delta}
+\newcommand{\Rn}{\R^{n+1}}
+%\newcommand{\D}{\Delta}
+\renewcommand{\O}{\Omega}
+\newcommand{\loc}{\mathrm{loc}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\BB}{\mathbb{B}}
+\newcommand{\vecn}{\overrightarrow{n}\,}
+\newcommand{\Div}{\mathrm{div}}
+\newcommand{\id}{\mathrm{Id}}
+\renewcommand{\SS}{\mathbb S}
+\renewcommand{\a}{\alpha}
+\renewcommand{\div}{\,\mathrm{div}\,}
+\renewcommand{\k}{\kappa}
+\renewcommand{\L}{\Lambda}
+\renewcommand{\l}{\lambda}
+\renewcommand{\o}{\omega}
+\renewcommand{\th}{\theta}
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+
+
+
+\newcommand{\uy}{\underline{y}}
+\newcommand{\sfrac}[2]{{\textstyle \frac{#1}{#2}}}
+\newcommand{\bc}{{\bf c}}
+\newcommand{\bw}{{\bf w}}
+\newcommand{\bp}{{\bf p}}
+\newcommand{\bq}{{\bf q}}
+\newcommand{\br}{{\bf r}}
+\newcommand{\bv}{{\bf v}}
+\newcommand{\bu}{{\bf u}}
+\newcommand{\bk}{{\bf k}}
+\newcommand{\bm}{{\bf m}}
+\newcommand{\bx}{{\bf x}}
+\newcommand{\by}{{\bf y}}
+\newcommand{\bz}{{\bf z}}
+\newcommand{\bh}{{\bf h}}
+\newcommand{\bK}{{\bf K}}
+\newcommand{\bn}{{\bf n}}
+\newcommand{\bX}{{\bf X}}
+\newcommand{\bV}{{\bf V}}
+\newcommand{\bY}{{\bf Y}}
+\newcommand{\bA}{{\bf A}}
+\newcommand{\ve}[1]{\bf #1}
+\newcommand{\ax}{{\langle x \rangle}}
+\newcommand{\axi}{{\langle \xi \rangle}}
+\newcommand{\axil}{{\langle \xi_l \rangle}}
+\newcommand{\axij}{{\langle \xi_j \rangle}}
+\newcommand{\axik}{{\langle \xi_k \rangle}}
+\newcommand{\aeta}{{\langle \eta \rangle}}
+\newcommand{\aetal}{{\langle \eta_l \rangle}}
+\newcommand{\aetaj}{{\langle \eta_j \rangle}}
+\newcommand{\aetak}{{\langle \eta_k \rangle}}
+\newcommand{\ay}{{\langle y \rangle}}
+\newcommand{\aq}{{\langle q \rangle}}
+\newcommand{\at}{{\langle t \rangle}}
+
+\newcommand{\tU}{{\widetilde U}}
+\newcommand{\tJ}{{\widetilde J}}
+\newcommand{\tA}{{\widetilde A}}
+\newcommand{\tb}{{\tilde b}}
+\newcommand{\tc}{{\tilde c}}
+\newcommand{\tp}{{\tilde p}}
+\newcommand{\tq}{{\tilde q}}
+\newcommand{\tu}{{\tilde u}}
+\newcommand{\tv}{{\tilde v}}
+\newcommand{\ts}{{\tilde s}}
+\newcommand{\tn}{{\tilde n}}
+\newcommand{\tell}{{\tilde\ell}}
+\newcommand{\tI}{{\tilde I}}
+\newcommand{\tN}{{\tilde N}}
+\newcommand{\tm}{{\widetilde m}}
+\renewcommand{\tt}{t}
+\newcommand{\ttt}{{\tilde t}}
+\newcommand{\ta}{{\tilde\alpha}}
+\newcommand{\tbeta}{{\tilde\beta}}
+\newcommand{\tsi}{{\tilde\sigma}}
+\newcommand{\ttau}{{\tilde\tau}}
+\newcommand{\tka}{{\tilde\kappa}}
+\newcommand{\teta}{{\tilde\eta}}
+\newcommand{\tchi}{{\tilde\mathcalhi}}
+\newcommand{\ph}{\varphi}
+\newcommand{\E}{\mathbb{E}}
+% \newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\tbk}{{\tilde{\bf k}}}
+\newcommand{\tbp}{{\tilde{\bf p}}}
+\newcommand{\tbq}{{\tilde{\bf  q}}}
+\newcommand{\tbr}{{\tilde{\bf  r}}}
+\newcommand{\tbv}{{\tilde{\bf v}}}
+\newcommand{\tbu}{{\tilde{\bf  u}}}
+\newcommand{\tbK}{{\widetilde{\bf K}}}
+\newcommand{\tmu}{{\tilde\mu}}
+\newcommand{\tbm}{{\widetilde{\bf m}}}
+\newcommand{\tbh}{{\tilde{\bf  h}}}
+\newcommand{\balpha}{{\boldsymbol \alpha}}
+\renewcommand{\a}{\alpha}
+\renewcommand{\b}{\beta}
+%\newcommand{\g}{\gamma}
+%\newcommand{\om}{{\omega}}
+\newcommand{\bU}{{\bf U}}
+\newcommand{\bE}{{\bf E}}
+\newcommand{\mathcalU}{{\mathcalal U}}
+\newcommand{\mathcalM}{{\mathcalal M}}
+\newcommand{\mathcalX}{{\mathcalal X}}
+\newcommand{\bR}{{\mathbb R}}
+\newcommand{\bC}{{\mathbb C}}
+\newcommand{\bN}{{\mathbb N}}
+\newcommand{\bZ}{{\mathbb Z}}
+\newcommand{\noi}{\noindent}
+\newcommand{\wt}{\widetilde}
+\newcommand{\wh}{\widehat}
+\newcommand{\ov}{\overline}
+
+\newcommand{\bxi}{{\boldsymbol \xi}}
+\newcommand{\bzeta}{\mbox{\boldmath $\zeta$}}
+\newcommand{\bpsi}{\mbox{\boldmath $\psi$}}
+\newcommand{\bnabla}{\mbox{\boldmath $\nabla$}}
+\newcommand{\btau}{\mbox{\boldmath $\tau$}}
+\newcommand{\tbtau}{\widetilde{\btau}}
+\newcommand{\mathcalonst}{\mathrm{const}}
+
+%\newcommand{\Sch}{{Schr\"odinger\,}}
+%\newcommand{\mathcalS}{{\mathcalal S}}
+%\newcommand{\mathcalC}{{\mathcalal C}}
+%\newcommand{\mathcalA}{{\mathcalal A}}
+%\newcommand{\mathcalB}{{\mathcalal B}}
+%\newcommand{\mathcalE}{{\mathcalal E}}
+%\newcommand{\mathcalP}{{\mathcalal P}}
+%\newcommand{\mathcalD}{{\mathcalal D}}
+%\newcommand{\mathcalV}{{\mathcalal V}}
+%\newcommand{\mathcalW}{{\mathcalal W}}
+%\newcommand{\mathcalK}{{\mathcalal K}}
+%\newcommand{\mathcalH}{{\mathcalal H}}
+%\newcommand{\mathcalN}{{\mathcalal N}}
+%\newcommand{\mathcalJ}{{\mathcalal J}}
+%\newcommand{\mathcalI}{{\mathcalal I}}
+
+\newcommand{\usi}{\underline{\sigma}}
+\newcommand{\ubp}{\underline{\bp}}
+\newcommand{\ubk}{\underline{\bk}}
+\newcommand{\utbp}{\underline{\tbp}}
+\newcommand{\utbk}{\underline{\tbk}}
+\newcommand{\um}{\underline{m}}
+\newcommand{\utm}{\underline{\tm}}
+\newcommand{\utau}{\underline{\tau}}
+\newcommand{\uttau}{\underline{\ttau}}
+\newcommand{\uxi}{\underline{\xi}}
+\newcommand{\ueta}{\underline{\eta}}
+\newcommand{\ux}{\underline{x}}
+\newcommand{\uv}{\underline{v}}
+\newcommand{\ualpha}{\underline{\alpha}}
+%\newcommand{\Om}{\Omega}
+\newcommand{\Hn}{\mathcalH^{\otimes n}}
+\newcommand{\Hsn}{\mathcalH^{\otimes_s n}}
+\newcommand{\EE}{\mathcal E}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\thi}{ \; | \!\! | \!\! | \;}
+\newcommand{\bfeta}{{\boldsymbol \eta}}
+%%%%%%%%%%%%%%%Kay%%%%%%%%%
+\newtheorem{assumption}[theorem]{Assumption}
+%\numberwithin{equation}{section}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\makeatletter
+%\def\@bibitem#1{\item[]%
+%    \if@filesw\immediate\write\@auxout{\string \bibcite {#1}{\the\value{\@listctr }}}\fi\ignorespaces}
+%\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\centerline{\bf Publications and Preprints}
+\vskip .1in
+\centerline{\bf Andrea R. Nahmod }
+
+\bigskip
+
+
+
+\renewcommand\refname{\hskip -5.4in {\bf }}
+
+
+
+%\title{List of Work}
+%
+%
+%
+%\author{Andrea R. Nahmod}
+%
+%
+%\maketitle
+
+%\setcounter{tocdepth}{1}
+%\tableofcontents
+
+%\setcounter{page}{1}
+
+
+\begin{thebibliography}{}
+
+\vskip .05in
+
+{\normalsize{
+
+
+
+
+\bibitem{DNY}  Y. Deng, A. R. Nahmod, and H. Yue, Invariant Gibbs measures and global strong solutions for the nonlinear Schr\"odinger equations in dimensions two,   \url{https://arxiv.org/abs/1910.08492}, Submitted (2019), 60pp.
+\medskip
+
+
+\bibitem{MNPRS2_2019} D. Mendelson, A.R. Nahmod, N. Pavlovi\'c, M. Rosenzweig  and  G. Staffilani,
+ Poisson commuting  energies for a system of infinitely many bosons, \url{https://arxiv.org/abs/1910.06959},  Submitted (2019) 97pp.
+
+
+
+%\medskip
+%
+%\bibitem{MNPRS} D. Mendelson, A.R. Nahmod, N. Pavlovi\'c, M. Rosenzweig  and  G. Staffilani, A Rigorous Derivation of the Hamiltonian Structure for the Nonlinear Schr\"odinger Equation.  \url{https://arxiv.org/abs/1908.03847},  Advances in Mathematics, {\bf 365}, art. 107054, (2020), 115pp.
+%
+\medskip
+
+\bibitem{DNLS}  Y. Deng, A. R. Nahmod, and H. Yue, Optimal local well-posedness for the periodic derivative nonlinear Schr\"odinger equation. \url{https://arxiv.org/abs/1905.04352}, Submitted (2019), 37pp. 
+
+\medskip
+
+\bibitem{MNPRS} D. Mendelson, A.R. Nahmod, N. Pavlovi\'c, M. Rosenzweig  and  G. Staffilani, A Rigorous Derivation of the Hamiltonian Structure for the Nonlinear Schr\"odinger Equation,  Advances in Mathematics, {\bf 365}, art. 107054, (2020),  115pp.
+
+\medskip
+
+
+
+\bibitem{MNPS}   D. Mendelson, A.R. Nahmod, N. Pavlovi\'c  and  G. Staffilani, 
+An infinite sequence of conserved quantities for the cubic Gross-Pitaevskii hierarchy on $\R$,  Trans. Amer. Math. Soc. {\bf371} (2019), no. 7, 5179--5202. 
+
+\medskip
+
+\bibitem{NS19} A.R. Nahmod  and G. Staffilani, 
+Randomness and nonlinear evolution equations, Acta Math. Sin. (Engl. Ser.) {\bf35} (2019), no. 6, 903--932.
+
+\medskip
+
+
+\bibitem{BNSW}  T. Buckmaster, A. Nahmod, G. Staffilani and K. Widmayer, The surface quasi-geostrophic equation with random diffusion, International Math Research Notices (IMRN), \, rny261, (2018),  16pp \, \url{https://doi.org/10.1093/imrn/rny261}
+
+%Also \url{https://arxiv.org/abs/1806.03734}
+
+\medskip
+\bibitem{CCMNS}  S. Chanillo, M. Czubak, D. Mendelson, A. Nahmod and  G. Staffilani,
+Almost sure boundedness of iterates for derivative nonlinear wave equations, To appear in Comm. Anal. Geom. (2018) , 22pp \,  \url{https://arxiv.org/abs/1710.09346}.
+
+
+\medskip
+
+
+\bibitem{NPST}  A.R. Nahmod, N. Pavlovic, G. Staffilani, and N. Totz,  Global Flows with Invariant Measures for the Inviscid Modified SQG Equations,  Stoch. Partial Differ. Equ. Anal. Comput. {\bf6}, no. 2, 184--210,
+(2018).
+
+\medskip
+
+\bibitem{NAH} Andrea R. Nahmod,  The Nonlinear Schr\"odinger Equation on Tori: Integrating Harmonic Analysis, Geometry and Probability,  Bull. Amer. Math. Soc. (N.S.) {\bf53}, (2016), no. 1, 57--91.
+
+%{(2015 Annual JMM-AMS Currents Events Lectures)}
+\medskip
+
+
+
+\bibitem{NS} A.R. Nahmod  and G. Staffilani, 
+Almost sure well-posedness for the periodic 3D quintic nonlinear Schr\"odinger equation below the energy space,  J. Eur. Math. Soc. (JEMS) {\bf17} (2015), no. 7, 1687--1759.
+
+\medskip
+\bibitem{GN}   V. Grigoryan and A. R.  Nahmod,  Almost critical well-posedness for  nonlinear wave equations with $Q_{\mu\nu}$ null forms in 2D  Math Res. Letters, \textbf{21} (2014), no. 2, 313--332.  
+
+
+\medskip
+
+
+\bibitem{LNZ} N. Lu, A. Nahmod, and C. Zeng,  Equivariant and self-similar
+standing waves for a Hamiltonian hyperbolic-hyperbolic spin-field system. \, SIAM Journal on Mathematical Analysis, Vol. 46, (2014), No. 6, 3913--3956. 
+\medskip
+
+\medskip
+
+\bibitem{NPS}  A. R. Nahmod, N. Pavlovi\'c and G. Staffilani,
+Almost sure existence of global weak solutions for super-critical Navier-Stokes equations,  SIAM J. Math. Anal. {\bf45} (2013), no. 6, 3431--3452.
+
+\medskip
+
+
+
+
+
+
+
+\bibitem{NORS} A. Nahmod,  T. Oh, L. Rey-Bellet and G. Staffilani,  Invariant weighted Wiener measures and  almost sure global well-posedness  for the periodic derivative NLS.\rm \,  J. Eur. Math Soc. (JEMS), Vol. 14, Issue 4, (2012), 1275--1330. 
+
+ 
+
+\medskip
+
+\bibitem{NRSS} A. Nahmod,  L. Rey-Bellet, S. Sheffield and G. Staffilani,  Absolute continuity of Brownian bridges under certain gauge transformations. \rm Math. Res. Lett. Vol. 18  no. 5, (2011), 875--887.
+\medskip
+
+
+\bibitem{KNZ}  P. Kevrekidis, A. R. Nahmod and C. Zeng,  Radial standing and self-similar waves for the hyperbolic cubic NLS in $2$D  \rm Nonlinearity, Vol. 24,  no. 5, (2011),  1523-1538 (selected {\underbar{Featured Article}}).
+
+
+
+\medskip
+
+\bibitem{BMNT}  A. Benyi, D. Maldonado, A. R. Nahmod and R.H. Torres, Bilinear Paraproducts Revisited. \rm Math. Nachr., Volume 283, Issue 9 (2010), 1257--1276.
+
+\medskip
+
+\bibitem{BDNTTV}  A. Benyi, A. Nahmod, C. Demeter,  C. Thiele, R. Torres and  F. Villarroya,  Modulation Invariant Bilinear T(1)-theorem. \rm Journal D'Analyse Math\'ematiques, 109 (2009), 279--352.
+
+\medskip
+
+\bibitem{NSVZ} A. Nahmod,  J. Shatah, L. Vega and C. Zeng, Schr\"odinger maps and their associated frame systems, \rm  International Math. Research Notices, article ID rnm088, (2007), 29 pages. 
+
+\medskip
+
+\bibitem{BNT}  A. Benyi,  A. R. Nahmod and R. H. Torres, Sobolev space
+estimates and symbolic calculus for bilinear pseudodifferential
+operators. \rm  J. Geom. Anal. Vol. 16 (2006), no. 3,  431--454.
+
+
+
+\medskip
+
+\bibitem{KenNah}  C. Kenig, and A. Nahmod, The Cauchy problem for the hyperbolic-elliptic
+Ishimori system and \newline Schr\"odinger Maps, \rm  Nonlinearity, Vol. 18
+(2005) no. 5,  1987--2009.
+
+
+
+\medskip
+
+
+\bibitem{DG} Andrea R. Nahmod,  On global existence of wave maps with critical regularity,
+\rm Surveys in Differential Geometry  (Ed. S-T. Yau), Volume 8, (2003), 285--313.  
+
+  \medskip
+
+\bibitem{NSU2} A. Nahmod, A. Stefanov and K. Uhlenbeck,  On the well-posedness
+of the wave map problem in high dimensions, \rm 
+Comm. in Analysis and Geometry 11 (2003), no. 1, 49--84. 
+
+
+  \medskip
+
+\bibitem{surveyams} Andrea R. Nahmod, On Schr\"odinger and wave maps.  \, \rm   Contemp. Math., 320,
+Amer. Math. Soc., Providence, RI,  (2003)  295--322.  
+
+
+
+\medskip
+
+\bibitem{NSU1} A. Nahmod, A. Stefanov and K. Uhlenbeck.  On Schr\"odinger
+Maps, \rm  Comm. Pure Appl. Math.  56  (2003),  no. 1,
+114--151. \,   Erratum to {\it On
+Schr\"odinger Maps  \rm   Comm. Pure Appl. Math.  57  (2004),  no. 6,
+833--839.
+
+
+
+\medskip  
+
+\bibitem{Bilinear2}  J.E.  Gilbert and  A. R. Nahmod,  $L^p$-Boundedness for Time--Frequency
+Paraproducts, Part II \rm,  J. of Fourier
+Anal. and Appl., Vol 8, No. 2 (2002), 109--172. 
+
+
+\medskip
+
+
+\bibitem{Bilinear1}  J.E.  Gilbert and  A. R. Nahmod, Bilinear Operators with
+ Nonsmooth Symbols, Part I \rm, J. of
+Fourier Anal. and Appl., Vol. 6, No. 5 (2000), 437--469
+
+  
+\medskip
+
+\bibitem{MRL}  J.E.  Gilbert and  A. R. Nahmod,Boundedness of Bilinear Operators with
+Nonsmooth Symbols, \rm Math. Res. Letters, 7 (2000), 1--12. 
+
+\medskip
+
+\bibitem{Heat}   A.  McIntosh and A. R. Nahmod, Heat Kernel Estimates and Functional
+Calculi of $- b(x)\Delta $ in ${\bold R}^n$, \rm Mathematica
+Scandinavica, Vol. 87 (2000), 287--319.
+
+\medskip
+
+\bibitem{Walsh}  J.E.  Gilbert and  A. R. Nahmod,  Hardy spaces and a Walsh model for Bilinear
+Cone Operators, \rm Trans. Amer. Math. Soc., Vol. 351 (1999), no. 8, 3267--3300. 
+
+
+\medskip
+
+\bibitem{Root}  P. Auscher, A.  McIntosh and A. R. Nahmod, The square root problem of Kato in one dimension,
+and first order elliptic systems, \rm  Indiana University Mathematics  
+Journal, Vol. 46, No. 3 (1997), 659-695.
+
+\medskip 
+
+\bibitem{Quad}  P. Auscher, A.  McIntosh and A. R. Nahmod, 
+\it Quadratic Estimates and Interpolation, \rm Indiana University Mathematics Journal, Vol 46, No. 2 (1997), 375-403.
+
+  
+\medskip
+\bibitem{Revista} Andrea R. Nahmod,  Hyperbolic Singular Integral Operators, \rm Revista Matem\'atica
+Iberoamericana, 11 Num. 1 (1995), 103-123.
+
+ \medskip
+
+\bibitem{JFA} Andrea R. Nahmod, Generalized Uncertainty Principles on Spaces of Homogeneous Type,
+\rm Journal of Functional Analysis, Vol. 119, No. 1, (1994), 171-209. 
+
+\medskip
+
+\bibitem{CRM} Andrea R. Nahmod,  Geometry of Operators and Spectral Analysis on Spaces of
+Homogeneous type}, \rm Comptes Rendus de L'Acad\'emie des
+Sciences, Paris, 313, S\'erie I, (1991), 721-725.
+
+ }}
+
+
+
+\end{thebibliography}
+
+%\vskip .3in
+%\renewcommand\refname{\hskip -4.2in{\bf Manuscripts in Preparation}}
+%
+%\begin{thebibliography}{}
+%\vskip .05in
+%
+%{\normalsize{
+%
+%
+%\bibitem{DNY3}  {Y. Deng, A. R. Nahmod, G. Staffilani and H. Yue, Optimal } \, Random average multilinear operators and almost sure well-posedness for the nonlinear Schrodinger equation at optimal regularity, \rm In preparation (2019). 
+%
+%\medskip
+%
+%\bibitem{HMNRS}  {Z. Hani, J. Mattingly, A. Nahmod, L. Rey-Bellet and G. Staffilani,} \, Non-equilibrium invariant measures for cubic resonant NLS in 2D, \rm In preparation (2019). 
+%
+%\medskip
+%
+%\bibitem{NPST} {N. Pavlovic, A. Nahmod, G. Staffilani and N. Totz,} \, Stochastic viscous surface quasi-geostrophic equation with additive noise in supercritical regime. \rm In preparation (2019).
+%
+%\medskip
+%
+%\bibitem{FN} T. Flock and A. R. Nahmod, A singular bilinear operator with a determinant like kernel, In preparation (2019). 
+%
+%}}
+%\end{thebibliography}
+\vskip .4in
+
+
+
+\renewcommand\refname{\hskip -4.8in {\bf Other Publications}}
+
+\begin{thebibliography}{}
+\vskip .05in
+{\normalsize{
+\bibitem{Oberw1}  {Andrea R. Nahmod,} Non-equilibrium invariant measures for the resonant nonlinear Schršdinger equation.\rm  \rm  Oberwolfach Reports  Extended Abstract, Gibbs Measures for nonlinear dispersive equations Workshop, European Math. Society (2018).
+
+\medskip
+\bibitem{Oberw2}  {Andrea R. Nahmod,} Invariant measures and long time dynamics for NLS, \rm  Oberwolfach Reports Extended Abstract, {Nonlinear Evolution Problems Workshop}, European Math. Soc. (2016).
+
+
+\medskip
+\bibitem{Oberw3}  {Andrea R. Nahmod,} Long time dynamics of random data nonlinear dispersive equations, \rm  Oberwolfach Reports Extended Abstract,  Rough Paths, Regularity Structures and Related Topics Workshop,  European Math. Soc. (2016).
+
+
+\medskip
+
+
+\bibitem{Oberw4}  Andrea R. Nahmod, Global existence almost surely of weak solutions for supercritical Navier-Stokes equations, \rm  Oberwolfach Reports Extended Abstract Vol. 9, no 2 (2012)  1563--1637,  European Math. Soc. 
+
+
+\medskip
+
+\bibitem{Oberw5}  {Andrea R. Nahmod,} Boundedness of bilinear pseudodifferential operators,  \rm  Oberwolfach Reports Extended Abstracts, Spectral theory and Harmonic analysis Workshop, European Math.Soc. (2004)
+
+\medskip
+
+\bibitem{Oberw6}  {Andrea R. Nahmod,} The hyperbolic-elliptic Ishimori system, \rm Oberwolfach Reports Extended Abstracts, Nonlinear Waves and Dispersive Equations Workshop, European Math.Soc. (2004).
+
+\medskip
+
+\bibitem{PhD} {Andrea R. Nahmod,}  Geometry of Operators and Spectral Analysis, \rm Ph.D.
+Dissertation, Yale University,  Department of Mathematics, December 1991.
+
+\medskip
+
+\bibitem{Licenciada} {Andrea R. Nahmod,}  The Niki\v sin-Stein Theory and Factorization of Operators,
+\rm Licenciatura  in Mathematics Thesis, University of Buenos Aires, June 1985.
+
+}}
+
+
+\end{thebibliography}
+
+
+\vskip .4in
+
+
+\renewcommand\refname{\hskip -4.5in {\bf {PhD Thesis Supervised}}}
+
+\begin{thebibliography}{}
+
+
+
+
+
+{\normalsize{
+
+\bibitem{Tzirakis} Nikoalos Tzirakis, Global Well-Posedness for some Dispersive Partial Differential Equations.  Ph.D. Thesis, University of Massachusetts Amherst, 2004.   Awarded a  Clay Institute Liftoff Fellowship  (Summer 2004) and IAS Princeton Member in 2004-2005. Postdoc. at Univ. of Toronto, Canada 2005-2007.  Tenured Associate Prof. at the University of Illinois at Urbana-Champaign (Current).
+
+\medskip
+
+\bibitem{Oh}  Tadahiro Oh,  Well-Posedness Theory of a One Parameter Family of Coupled Kdv-Type Systems and Their Invariant Gibbs Measures.  Ph.D. Thesis, University of Massachusetts Amherst,  2007. Postdoc at Univ. of Toronto, Canada 2007-2010. Assistant Prof. at Princeton Univ.,  NJ.  2010--2013. Chancellor's Fellow\&Reader  (Tenured Associate Prof.) at University of Edinburgh, UK (Current).
+
+\medskip
+
+\bibitem{Grigoryan} Viktor Grigoryan,  Stability of Geodesic Wave Maps.  Ph.D. Thesis, University of Massachusetts Amherst,  2008. Postdoc at Univ. of California at Santa Barbara, 2008-2012. Asst. Professor at Simmons College, MA (Current). 
+
+\medskip
+
+\bibitem{Tanguay} Allison Tanguay,  New Bilinear Estimates for Quadratic-Derivative Nonlinear Wave Equations in 2+1 Dimensions.  Ph.D. Thesis, University of Massachusetts Amherst, 2012.  Postdoc at Univ. of T\"ubingen, Germany, 2012-2013 and Carleton College, MN 2013-2015. Amherst College, Amherst, MA (Current).
+
+\medskip
+
+\bibitem{XYu}  Xueying Yu,  Global well-posedness and scattering for the defocusing quintic nonlinear Schr\"odinger equation in two dimensions. Ph.D. Thesis, University of Massachusetts Amherst, 2018.   Postdoc  at MIT (CLE Moore Instructor at MIT), 2018-2021.
+
+\medskip
+
+\bibitem{HYue} Haitian Yue,  Well-posedness for the cubic Nonlinear Schr\"odinger equations on tori.  Ph.D. Thesis, University of Massachusetts Amherst, 2018. Postdoc University of Southern California, 2018-2021.
+
+\medskip
+
+\bibitem{Boratko} Michael Boratko,  On the growth of Sobolev norms for the NLS on tori and boundary unique continuations for elliptic PDE, PhD Thesis,  University of Massachusetts, Amherst, 2018. Postdoc at the College of Information and Computer Sciences at UMass Amherst (Prof. Andrew McCallum's Lab on Information Extraction and Synthesis) 2018--2021.
+
+}}
+
+\end{thebibliography} 
+
+
+
+
+
+
+
+
+
+
+\renewcommand\refname{\hskip -5.1in {\bf {Editorial Work}}}
+
+\begin{thebibliography}{}
+
+{\normalsize{
+
+\bibitem{AMSTr} American Mathematical Society Translations of Mathematical Monographs Editorial Committee, (February 2020- 2024).
+\smallskip
+
+\bibitem{Pota}  Associate Editor: \, Potential Analysis Journal,  Springer (since 2012--present).
+\smallskip
+
+\bibitem{Sogge}  A. R. Nahmod,  C. Sogge, S. Zhang, and X. Zhang (Editors) Recent Advances in harmonic Analysis and Partial Differential Equations.  AMS Contemporary Mathematics Series Volume 58 (2012) 
+\smallskip
+
+
+\bibitem{Rem} E. Gavosto,  A.R. Nahmod, M.C. Pereyra, G. Ponce, R.H. Torres, and W. Urbina,  Remembering Cora Sadosky. With additional contributions by Steven Krantz, Maria Dolores Mor‡n and Guido L. Weiss.  Harmonic analysis, partial differential equations, complex analysis, Banach spaces, and operator theory. Vol. 1, 29Ð52, Springer (2016). 
+
+}}
+
+\end{thebibliography} 
+
+
+%\smallskip 
+%
+%{\hskip -.2in {\bf{Current Doctoral Students:}}   Dean Katsaros and ByeongHo Ban }
+%
+%\vskip .2in
+%
+%
+%
+%
+%\subsection*{Postdoctoral Faculty} 
+%\hfill\
+%
+%\smallskip
+%
+%\vskip .1in
+%
+%$\bullet$ Dr. Siddhant Agrawal, University of Massachusetts,  Amherst  2018- 2021.
+%\vskip .03in
+%$\bullet$ Dr. Taryn Flock, University of Massachusetts,  Amherst  2017- 2020.
+%\vskip .03in
+%$\bullet$ Dr. Nathan Totz, University of Massachusetts,  Amherst  2014- 2017.
+% \vskip .03in
+%$\bullet$ Dr. Nan Lu, University of Massachusetts,  Amherst  2011- 2014. 
+%\vskip .03in
+%$\bullet$ Dr. Arpad Benyi at University of Massachusetts, Amherst, MA;  2002-2004.
+%\vskip .03in
+%$\bullet$ Dr. Atanas Stefanov at University of Massachusetts, Amherst, MA;   2000-2002. 
+%\vskip .03in
+%$\bullet$ Dr. Sanja Hukovic at University of Massachusetts, Amherst, MA;  1999-2001.
+%
+%\vskip .1in
+%
+%\subsection*{Outside Doctoral Committee Member} 
+%\hfill\
+%\vskip .1in
+%$\bullet$ \, Helena McGahagan;  Math. PhD 2004 Courant Institute, NYU (advisor J. Shatah). 
+%
+%$\bullet$ \, Magda Czubak; Math.  PhD 2008 Univ. of Texas Austin (advisor K. Uhlenbeck) 
+%
+%$\bullet$ \, Shabnam Beheshti;  Math. PhD  2007 UMass, Amherst (advisor F. Williams).  
+%
+%$\bullet$ \, Ogzur Simsek;  Comp. Sci. PhD 2008 UMass. Amherst (advisor A. Barto) 
+%
+%$\bullet$ \, Sarah Ostemtoski; Comp. Sci. PhD 2010 UMass Amherst (advisor S.  Mahadevan)
+%
+%$\bullet$ \,Sung-Ha Hwang; Math, PhD 2011 UMass Amherst (advisor L. Rey-Bellet; M. Katsoulakis)
+%
+%\vskip .1in 
+%
+% 
+%\subsection*{Undergraduate Supervison}
+%\hfill\
+%
+%\vskip .05in 
+%
+%\vskip .05in 
+%
+%$\bullet$  Scott Destromp,\,   Research Undergarduate Experience (REU) Summer 2016. 
+%%Entering Math. PhD Program at UMass Amherst.
+%
+%
+%$\bullet$ Michael Breeling,\,  Capstone Research and Honors Thesis, Fall 2012 -- Spring 2013. 
+%%Entered Math. PhD Program at Rutgers.
+%
+%
+%$\bullet$ Domonic Mei, \, Capstone Research and Honors Thesis, Fall 2012 -- Spring 2013. 
+%%Entered Applied Math. MSci Program at UMass Amherst.
+%
+%
+%$\bullet$ Nathan Senecal, \, Capstone Research and Honors Thesis, Spring 2011-Fall 2011.  
+%
+%$\bullet$ Nathan Senecal, \,  Research Undergarduate Experience (REU), Summer 2011. 
+%%Entered PhD Program at UCLA.
+%%{\footnote{ He has  unfortunately withdrawn for personal  reasons.}}.
+%
+%$\bullet$  Derek Wood,\,   Capstone research and Honors Thesis, Fall 2011-Spring 2012. 
+%
+%$\bullet$  Derek Wood,\,  Independent Study, Spring 2011. 
+%%Entered Math. PhD program at U. of Michigan, Ann Arbor.
+%
+% 
+%
+%$\bullet$ Adam Cardinal-Stakenas, \,  Independent Study, Spring 2001 and REU Summer 2001. 
+%%Recruited by NSA.
+%
+%\vskip .08in 
+% 
+% \subsection*{ Other Advising Activities}
+%\hfill\
+%
+%\vskip .05in
+%
+%$\bullet$\,Mentor to female junior faculty, graduate and undergraduate students in Mathematics.
+%
+%\vskip .05in 
+% 
+%$\bullet$ \,Mentor at the Women Program in Mathematics, Institute for Advanced Study at Princeton, Princeton, NJ,  May 2004. 
+%
+%\vskip .05in 
+%
+%$\bullet$\,Independent Study, (graduate and master students.)
+%
+%
+%%\subheading{Postgraduate Mentoring: 5} {\rm  S. Hukovic;  A. Stefanov; A. Benyi; N. Lu; N. Totz}
+%
+%
+%
+%\vskip .1in 
+%\subsection* {\bf Service to the Department/University}
+%\vskip .1in 
+%\hfill\
+%
+%$\bullet$ Chair, Advisory Committee on Workplace Climate at Math\&Stats (Advisory to Dean) 2018-2019.
+%\vskip .03in
+%
+%$\bullet$ Member of CNS Advisory Committee on Workplace Climate (Dean's committee) 2018-2019.
+%
+%\vskip .03in
+%
+%$\bullet$   Faculty Sponsor to UMass-Association for Women in Mathematics(AWM) Student Chapter.
+%\vskip .03in
+%$\bullet$  Founding Member of College of Natural Sciences' Women Caucus (2013--present)
+%\vskip .03in
+%$\bullet$ Bylaws Committee (chair), Department of Mathematics \& Statistics,  2016--2017.
+%\vskip .03in
+%$\bullet$ Space Committee, 2014--2016 
+%\vskip .03in
+%$\bullet$ Distinguished Lectures Series and Colloquiums Committee, Chair 2010--present. 
+%\vskip .03in
+%$\bullet$ Faculty Search Committee (Hiring Committee in Mathematics and Statistics); 2000-2002, 2006--2008, 2010-2012 (Chair 2011-2012), 2015-2016.
+%\vskip .03in
+%$\bullet$ Dean's Head Search Committee for Mathematics and Statistics 2002 \& 2005 \& 2008 (Chair)
+%\vskip .03in
+%$\bullet$ Director Graduate Admissions in Mathematics and Statistics 2002-2003
+%\vskip .03in
+%$\bullet$ Departmental Personnel Committee 2004-2005 \&  2008-2009. 
+%\vskip .03in
+%$\bullet$ Departmental Executive Committee 2008-2010.  
+%\vskip .03in
+%$\bullet$ Hiring Subcommittee in Analysis and PDE's; 1998--present.
+%\vskip .03in
+%$\bullet$ Hiring Subcommittee in Geometry and Topology; 1998--2008.
+%\vskip .03in
+%$\bullet$ Undergraduate Affairs Committee, 2007--2009
+%\vskip .03in
+%$\bullet$  Committee for Advanced Qualifying Exams in Analysis;  1998--present 
+%\vskip .03in
+%$\bullet$  Committee for Advanced Qualifying Exams in Differential Equations 2008, 2011-2013.
+%\vskip .2in 
+%
+%
+%\subsection*{ \bf Teaching Experience at the University of Massachusetts, Amherst}
+%\hfill\
+%
+%\vskip .1in
+%
+%
+%M797DP  Nonlinear Dispersive PDE (Grad.) Spring 2016 $^{\ast}$ 
+%\vskip .03in
+% M797DP  Nondeterministic Nonlinear Dispersive PDE (Grad.) Spring 2012 $^{\ast}$ 
+%\vskip .03in
+%M791A  Nonlinear Fourier Analysis and Dispersive Equations
+%(Graduate) Spring 2003.$^{\ast}$ 
+%\vskip .03in
+%M797N  Introd. to Harmonic Analysis (Grad.) Spring 2001.$^{\ast}$ 
+%\vskip .03in
+%M731 Introd.to Partial Differential Equations (Grad.) Fall 2007, 2008, 2010, 2011, 2012, 2019.
+%\vskip .03in
+%M725 Functional Analysis (Grad.) Spring 2019 (new course), Spr. 2020.
+%\vskip .03in
+%M697L Wave-packet Analysis and Applications, (Grad.) Spring 2007 $^{\ast}$ 
+%\vskip .03in
+%M624 Real Analysis II (Grad.) Spring 2002, 2003, 2005, 2006, 2009, 2015, 2017, 2018.
+%\vskip .03in
+%M623 Real Analysis I. Measure theory (Grad.) Fall 2001, 2002, 2014, 2016, 2017
+%\vskip .03in
+%M534H Introd. to PDE (Honors Undergrad) Spr. 2008, 2009, 2013, 2017, 2018, 2019, 2020.
+%\vskip .03in
+%M524  Introd. to Modern Analysis II (Honors Undergrad.), Spring 2015, 2016. 
+%\vskip .03in
+%M523H Introd. to Modern Analysis (Honors Undergrad.),Fall 1999-2000, 2002, 2006, 2010, Spr. 2000, 2012, 2018.
+%\vskip .03in
+%M425 Vector Calculus, Fall 2004;  Spring 2006, 2011
+%\vskip .03in
+%M331 Ordinary Differential Equations,  Fall 2006, Spring 2008, 2013.
+%\vskip .03in
+%M132H  Honors Calculus II, Spring 2001, Fall 2002.
+%\vskip .03in
+%Math M131H Honors Calculus I, Fall 2001.
+%\vskip .03in
+% Math M127 Calculus for Business and Social Sci.(Large sections),
+%Fall 2000, 2004.
+%\vskip .03in
+%Math M132  Calculus II,  Spring 1999 and Spring 2000.
+%\vskip .03in
+%Math M131  Calculus I, Fall 1998. 
+%
+%\vskip .05in
+%
+%\, \, $^{\ast}${\it Advanced Special Topics Courses Developed by Nahmod and Taught at UMass Amherst }.
+%\vskip .05in
+%Also:
+%\quad  Research Working Seminar on Nonlinear PDEs and KAM theory (with L. Rey-Bellet and W-M. Wang), Spring 2005.
+%
+%
+%
+%
+%
+%
+%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

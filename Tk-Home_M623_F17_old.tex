@@ -1,0 +1,254 @@
+\documentclass[12pt]{article}
+\usepackage{times}
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage{amsfonts}
+\newcommand{\limj}{\lim_{j\rightarrow\infty}}
+\newcommand{\limn}{\lim_{n\rightarrow\infty}}
+\newcommand{\limx}{\lim_{x\rightarrow\infty}}
+\newcommand{\noi}{\noindent}
+\newcommand{\R}{I\!\!R}
+\newcommand{\Rd}{\R^d}
+\newcommand{\rd}{\R^d}
+\newcommand{\ZZ}{{Z\!\!\!Z}}
+\newcommand{\X}{{\cal X}}
+\newcommand{\M}{{\cal M}}
+\newcommand{\N}{{I\!\!N}}
+\newcommand{\C}{l\!\!\!C}
+\newcommand{\T}{I\!\|\|T}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\lan}{\langle}
+\newcommand{\ran}{\rangle}
+\newcommand{\goto}{\rightarrow}
+\newcommand{\hf}{\widehat f}
+\setlength{\textheight}{22.5cm}
+\setlength{\textwidth}{16cm}
+\setlength{\topmargin}{-1cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+
+\begin{document}
+
+{\bf \Large NAME:}
+\vspace{.2in}
+
+\begin{center}
+{\bf MATH  623  \quad FINAL EXAM}\\
+\underbar{\bf Due}: Friday, December 15th, 2017 no later than 11AM
+\end{center}
+\vskip .5in
+
+{\bf Instructions} 
+\begin{enumerate}
+
+\item This exam consists of four (4) problems all counted equally 
+for a total of $100\%$.
+\vskip .2in 
+
+\item You may consult Stein-Shakarchi's Vol. III and class material (class notes, homeworks done, handouts) \underbar{\bf only}.
+No other books or notes are permitted. 
+
+\vskip .2in 
+
+\item You should work on the problems alone; do not discuss the problems with other people or classmates. 
+You may ask me any questions you have.
+
+\vskip .2in 
+\item {\bf\underbar{Type}} each problem and its solution in an ordered fashion (new page for each problem)  and staple them all together with this cover. 
+Insert additional pages if needed.
+
+\vskip .2in 
+
+\item State explicitly all results that you use in your proofs and
+verify that these results apply.
+\vskip .2in 
+
+
+
+\item Show all your work and \underbar{ justify } the steps in your proofs. 
+
+
+
+
+
+\end{enumerate}
+\vspace{.25in}
+
+{\bf Conventions}
+\begin{enumerate}
+%
+%\item For a set $A$, $1_A$ denotes the
+%indicator function or characteristic function of $A$. 
+%
+%\vskip .1in 
+%
+\item If a measure is not specified, use Lebesgue measure. This measure is denoted by $dm$ or $dx$.
+%
+%\vskip .1in 
+%
+%\item If a $\sigma$-algebra on $\R$ is not specified, use the
+%Borel $\sigma$-algebra ${\cal B}(\R)$
+\end{enumerate}
+%
+
+
+\begin{enumerate}
+\newpage
+\item
+\vspace{.2in}
+% Problem 1
+
+
+a) Let $F: [-1, 4] \to \Bbb R$ be the function defined by  $F(x)= 2|x| - |x-2| $. 
+Prove that $F$ is of bounded variation and compute the total variation  $T_F(-1, 4)$ of $F$ over $[-1,4]$. 
+
+\vskip .5in
+
+
+%b) Prove that if $F \in C^1([a, b])$  then $F$ is $BV([a, b])$. Recall $C^1$ means  continuous on $[a,b]$, differentiable on $(a, b)$ with continuous derivative. 
+
+
+b) Let $F \in BV([a, b])$ and let  $c$ be such that $ a <c <b$. Show that 
+$$ T_F(a, b) \, =\, T_F(a, c) \, +\, T_F(c, b) $$
+
+\vskip .5in
+
+c) \, Show that if $L$ is Lipschitz continuous and $F$ is of bounded variation then the composition $L \circ F$ is of 
+bounded variation.  Recall $L$ Lipschitz continuous means that there exists $M>0$ such that 
+$|L(x) - L(y)| \le M |x-y|$ for all $x,y$.
+
+%\newpage
+%\item
+%\vspace{.2in}
+%% Problem 2
+%
+%
+%\vskip 1in
+%
+%b) \, Suppose that $F$ is of bounded variation and $F(x) > \eta >0$ for all  $x \in [a, b]$ ($F(x)$ is uniformly strictly positive) . Show that there exist two monotone increasing functions $G$ and $H$ such that for all $x \in [a, b]$ we have that 
+%$$F(x) = \frac{G(x)}{H(x)}$$ 
+%\underbar{Hint.}  \, Use part a) with a suitable function $L$.
+%
+
+\newpage
+\item
+\vspace{.2in}
+% Problem  5
+ \, For each fixed $N\geq 1$ natural number, let $\mathcal R_N :
+= [0, N] \times [0, \infty)$, be a region in  $[0, \infty) \times [0,
+\infty)$ endowed with the Lebesgue measure.
+
+
+(a) Consider the continuous function
+$f(x, t) := (\text{sin} \,x) e^{-x t}$  defined
+on  $[0, \infty) \times [0, \infty)$. 
+Prove that for each fixed $N$,  $f$ is integrable over $\mathcal R_N$; i.e.,
+$$ \int \! \! \int_{\mathcal R_N} \, \,  | f(x, t) | \, dx dt \, < \infty. $$ 
+
+
+(Hint. Use Tonelli's Theorem)
+
+
+\vskip .2in 
+
+
+(b)  Use part (a) and
+the fact that for any $x \in \mathbb R$ , $x \neq 0$ $$ \frac{1}{x}
+= \int_0^{\infty}  \, e^{-x t } \, dt $$  
+to rigorously prove that   
+$$ \lim_{N \to \infty} \, \int_0^{N} \, \frac{\sin \,x }{x} \, dx \, =
+\, \frac{\pi}{2}.$$
+
+
+(Hints. Use Fubini's Theorem in conjunction with the Dominated 
+Convergence Theorem.)
+
+
+
+
+
+\newpage 
+%
+%
+\item
+\vspace{.2in}
+%% Problem  3
+ Let $f \in L^1(\mathbb R)$ and let ${\widehat f}$ be its Fourier transform
+   defined by $$\widehat f (\xi) := \, \int_{\mathbb R} f(x) \, e^{- i \xi x} \, dx
+   $$ for all $\xi \in \mathbb R$. 
+\vskip .2in 
+
+a) Prove that $\hf$ is uniformly continuous on $\mathbb R$.
+\underbar{Hint}. Prove and use the fact that for real numbers $a, b$ and $z$, \, \, $| e^{i a z} - e^{i b z}| \leq |z| |a-b|$.
+
+\vskip .5in
+
+b)  Prove that $\hf$ is also bounded on $\mathbb R$.  What is the $\sup_{ \xi \in \mathbb R} | \hf(\xi) |$ less than or equal to?
+
+
+\vskip .5in
+
+
+c) Assume  $f \in L^1(\mathbb R)$ satisfies
+\begin{eqnarray*}  &\int_{|x| \le N}  \, |x| \, | f (x) | \, dx \leq N^{1/2} \\ \\
+&\int_{ |x| > N } | f(x)| \, dx  \leq \dfrac{1}{N^{1/2}} \end{eqnarray*}
+for all $0 < N < \infty$. \, Show then that there exists a constant $C>0$ and $0< \beta <1$ such that 
+for all $\xi$ and $\eta \in \mathbb R$, 
+ $$ | {\widehat f}(\xi) - {\widehat f}(\eta) | \le C \, | \xi -
+\eta |^{\beta} $$ 
+( in other words, $\widehat f$ is H\"older continuous of order $\beta$). 
+
+\vskip .1in
+
+\underbar{Hint}. Obtain an estimate for 
+$\int_{ |x| \le N} ( e^{-i x \xi} - e^{-i
+x \eta} ) \, f(x) \, dx $  and another estimate for 
+$\int_{ |x| > N} ( e^{-i x \xi} - e^{-i x \eta} ) \, f(x) \, dx $. 
+Then optimize your choice of $N$ (in terms of $|\xi- \eta|$) to obtain the desired estimate. 
+
+\vskip .5in
+
+d) Now assume that in addition to having $f\in L^1(\mathbb R)$, the
+function $x f(x)$ is also integrable; that is,  
+$\int_{\mathbb R} \, | x f(x) | \, dx < \infty$. 
+\vskip .1in
+Show then that:   $\hf$ is  differentiable  and moreover that, 
+$$\frac{d}{d\xi} \hf(\xi) = {\widehat {( -i x f)} } (\xi). $$ 
+
+\underbar{Hint}. Use the Dominated Convergence Theorem. 
+
+\newpage 
+
+\item
+\vspace{.2in}
+% Problem  4
+ Let $f \in L^1(\mathbb R)$ and $r >0$. Set $$ A_r(f)(x) :=
+   \frac{1}{2r} \int_{x-r}^{x+r} \, f(y) \, dy .$$
+
+\vskip .1in 
+
+(a) Show that the average $A_r(f)(x)$ is a continuous function in {\bf both}  $x$ and $r$.
+
+\vskip 1in 
+
+(b) Show that if in addition $f$ is continuous, then $$\lim_{r \to 0}
+A_r(f)(x) \, = \, f(x) .$$
+\vskip 1in
+
+(c) Show that $A_r$ is a contraction in $L^1(\mathbb R)$ in the sense that
+$$\Vert A_r(f) \Vert_{L^1(\mathbb R)}  \leq \Vert f \Vert_{L^1(\mathbb R)} .$$
+\underbar{Hint.} Use Tonelli)
+\vskip 1in 
+
+(d) Use (b) and (c) to show that if $f \in L^1(\mathbb R)$ then 
+$$ \lim_{r \to 0} \Vert A_r(f) - f \Vert_{L^1(\mathbb R)} \, = \, 0 . $$
+
+\underbar{Hint}. You may use without proof the fact that $L^1(\mathbb R)$ functions can be approximated in
+$L^1(\mathbb R)$ by continuous functions. 
+
+
+
+
+\end{enumerate} 
+\end{document}
+                                   

@@ -1,0 +1,506 @@
+\magnification=1200
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+\NoPageNumbers
+\pagewidth{16truecm}
+\pageheight{22truecm}
+\vcorrection{-1.truecm}
+
+\def \IR {\Bbb R}
+\def \IN {\Bbb N}
+\def \IC {\Bbb C}
+\def \B {\Cal B}
+\def \M {\Cal M}
+\def \N {\Cal N}
+\def \H {\Cal H}
+\def \C {\Cal C}
+\def \R {\Cal R}
+\def \A {\Cal A}
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+%\hcorrection{.3in}
+\hskip 3.2in {\bf NAME: }
+\vskip .15in 
+\hskip 3.2in {\bf  ID \#: }
+
+\vskip .7in
+
+\centerline{ \bf TAKE HOME FINAL MATH 534H}
+\vskip .2in
+\centerline{ Due no later than Wednesday May 6th,  2020 at 4:00PM }
+\vskip .5in
+\document
+\subhead{ Instructions }\endsubhead
+\vskip .3in 
+ 
+\roster
+
+
+\item {\bf This exam consists of 5 problems with parts for a total of $\bold{100\%}$.}
+\vskip .3in 
+
+\item {\bf You should work on it alone. You may consult W. Strauss'  book, the class notes and your homework ONLY. \, No other material is allowed. }
+
+\vskip .3in 
+
+\item {\bf Show \underbar{all} the work needed to reach your answer for full credit.}
+\vskip .3in 
+
+\item {\bf You cannot discuss the problems with other people, including
+classmates.}
+\vskip .2in 
+
+
+\item {\bf \underbar{Type} each problem and its solution in an ordered fashion (new page for each problem)  and staple them all together with this cover. 
+Insert additional pages if needed.}
+
+\vskip .3in
+
+\item {\bf  Due no later than Wednesday May 6th at {\bf 4:00 pm}  in Moodle} 
+ 
+
+\endroster 
+
+
+
+\newpage 
+
+\underbar{\bf Final Problem 1}
+\medskip
+
+
+\medskip
+
+Consider the {\it initial value problem for the wave equation} on $\Bbb R$:
+
+$$\cases  u_{tt} - u_{xx} \,=\,0  \\
+u(x, 0) \,=\, \phi(x) \\
+u_t(x, 0) \,=\, \psi(x) \endcases $$ where $\phi, \psi :\Bbb R \to \Bbb R$ are two smooth given functions (data).  Let $x_0 \in \Bbb R$ $t_0 >0$ be fixed and \underbar{suppose} that $\phi(x)$ and $\psi(x)$ vanish for all 
+$x$ in the interval $[x_0 - t_0, x_0 + t_0]$. 
+
+\vskip .2in
+
+
+\underbar{\it Finite Propagation Speed Theorem:}.   The solution  $u(x,t)$ to the initial value problem above vanishes for all  $(x,t)$ within  $\Cal C$, the domain of dependence of $(x_0, t_0)$.  Recall $$\Cal C :=  \{ (x,t)  :  0 \le t \le t_0  \, \text{ and }  \, x_0 -(t_0 - t)  \le x \le x_0 + (t_0 -t) \}.$$
+
+\vskip .2in 
+
+
+{\bf Remark:} The Theorem is also valid in higher dimensions but for simplicity I will ask you to prove it only in one (space) dimension. In one dimension, one can trivially prove the above theorem directly using the representation formulas for the solution $u(x,t)$  in terms of the initial data which are available in one dimension.  Or, one could prove it \underbar{without} using this explicit representation of $u$, but by using the \underbar{{\it energy method}} instead --as we have seen in class-. This proof is a bit harder but the advantage of the method is that it also works in higher dimensions.
+
+\vskip .1in 
+
+{\bf The project consists then to prove the Finite Propagation Speed Theorem above using the \underbar{energy method}. }
+\vskip .2in 
+To do so, for each \, \,  \,$0 \le t \le t_0$, \,  let  \,\, \, $I_t : = [x_0-(t_0-t), x_0 + (t_0-t) ]$. 
+
+Note $I_t$ is contained in the interval $(x_0 - t_0, x_0 + t_0)$. Define the modified energy:
+
+$${\widetilde E} (t) = \frac{1}{2} \int_{I_t} \, |u_t|^2 + |u_x|^2 \, dx $$
+
+Note ${\widetilde E} (t) \ge 0$ for any $t$ and that  $\Cal C = \bigcup_{ 0 \le t \le t_0}  I_t$.
+The goal is to show that for each $0 \le t \le t_0$, $u(x,t)=0$ for all $x \in I_t$. Do so by proving the following: 
+
+\vskip .1in
+
+
+(1) \, Prove that ${\widetilde E} (t)$ is a decreasing function of $t$ by showing that 
+$\dfrac{d{\widetilde E}}{dt} \le 0$ 
+
+\vskip .1in
+
+To compute the derivative in time \underbar{use}: (see A.3 Theorem 3 in Strauss's book p.421).
+
+$$\frac{d}{dt} \int_{a(t)}^{b(t)} \, F(x,t) \, dx \,= \,  \int_{a(t)}^{b(t)} \, \frac{d}{dt} F(x,t) \, dx  +  [ F(b(t), t) b^{\prime}(t) - F(a(t), t) a^{\prime}(t) ] $$
+
+\vskip .2in
+
+(2) Show that ${\widetilde E} (0) =0$  
+ 
+ \vskip .2in 
+ 
+(3) By (1) you then have that $\widetilde E(t) \le \widetilde E (0)$ for any $0 \le t \le t_0$ and 
+by (1) you can conclude that ${\widetilde E} (t)  =0$ for any $0 \le t \le t_0$.
+\underbar{Prove} then that this implies that $u(x,t)=0$ for  any $x \in I_t$ and any $0 \le t \le t_0$.
+
+\newpage
+
+
+\underbar{\bf Final Problem 2}  (a)  Solve the following hyperbolic initial value problem on $\Bbb R$ by first completing the square and solve the equation in terms of generic functions $f$ and $g$. Then use the initial conditions to choose appropriate $f, \, g$ and constants. 
+
+$$\cases  u_{xx} + 2 u_{xt}  -  80 u_{tt}\, = \, 0 \\  
+u(x, 0) = x^2 \\
+u_t(x, 0) = 0 \endcases $$ 
+
+\vskip .2in
+
+
+(b) Consider the inhomogeneous  problem for the wave equation  on $[0, L]$:
+$$\cases  u_{tt} -  u_{xx}  \, =\, f(x,t) \qquad  \, t >0 \\  
+u(0, t) = g(t), \quad  u(L, t)= h(t) \\
+u (x, 0) =  \phi(x)  \quad u_t(x, 0) =  \psi(x)  \endcases \tag {WE} $$
+(i) Are the boundary conditions of (WE) of Dirichlet or Neumann type?
+\vskip .3in 
+(ii) Prove the \underbar{uniqueness} of solutions to this problem \underbar{using} the energy method. 
+
+\noindent \underbar{Hint.} Consider the difference $w$ of two possible solutions $u_1$ and $u_2$ to (WE) and use the energy conservation of energy applied to $w$.
+
+
+
+\newpage
+
+\underbar{\bf Final Problem 3}
+ \medskip
+(a)
+Consider now the initial value problem for the diffusion equation on the {\bf whole} real line $\Bbb R$ with $k=1$:
+ $$ {(\ast)} \qquad \qquad  \cases u_{t} \,- \,    u_{xx} \, =\, 0,   \qquad  x \in \Bbb R, \, \, \, t>0 \\
+  u(x, 0) \, =\, e^{2x}, \quad   x \in \Bbb R \\
+ \endcases $$ 
+Use the fact that the solution $u(x,t)$ is obtain by the convolution of the fundamental solution with the initial data; that is by:
+$$ u(x, t) \, = \, \int_{-\infty}^\infty \, \Gamma_k ( x-y,  t) \, e^{2y} \, dy $$
+to find the function that $u(x,t)$ equals to. Check that your answer solves indeed  $(\ast)$. 
+
+\medskip
+
+{\underbar {To solve proceed as follows: }}
+\medskip
+
+ 1)  Recall that in 1D,  $\Gamma_k(x-y, t) = \frac{1}{\sqrt{4 \pi k t}} e^{-\frac{(x-y)^2}{4kt}}, \, \,  t>0$  (in Strauss notation this is $S(x-y, t)$).   Note that here we have $k=1$. 
+
+\smallskip
+
+2)  After developing the square in $\Gamma$, collect all the exponents of the exponentials and 
+ {\bf complete the square in the $y$} variable. Note that terms that have only $x$ and $t$ in the exponents can 
+ come out of the integral. 
+ \smallskip
+ 3) You may use that $\int_{-\infty}^{\infty} \, e^{-p^2} \, dp = \sqrt{\pi}$. 
+ You may find  the change of variables $p= \frac{y - (x +4t)}{\sqrt 4t}$ useful. 
+
+
+
+\vskip .25in
+
+
+(b) Let  $u_1(x, t)$ and $u_2(x,t)$ be solutions to the heat equation \, \, $u_t \, = \, k \, u_{xx} $ \, , with initial and boundary conditions: \qquad  $ u_1(x, 0) = f_1(x), \, \, u_1(0, t) = g_1(x),  \, \, u_1( L, t)= h_1(t)$, \quad and   \quad 
+$u_2(x, 0) = f_2(x), \, \, u_2(0, t) = g_2(x), \, \, u_2( L, t)= h_2(t)$ \,  \underbar{respectively}. 
+
+Assume that $f_1 \ge f_2, \, \, g_1 \ge g_2$ and $h_1 \ge h_2$.  Prove that then $u_1 \ge u_2$ in the region ${\Cal R} = [0, L] \times [0, \infty)$. 
+
+\noindent \underbar{Hint.}  Consider $w = u_1 - u_2$,  set up an appropriate boundary-initial value problem for $w$ and use the  max or the min principle  (specify) to prove that $w \ge 0$ on $\Cal R$.  
+ 
+
+%\vskip .2in
+%
+% b) The following problem aims at showing that for the following boundary/initial value problem for the 
+%heat equation with internal heat source  $ F(x,t) : = 2(t+1) + x (1-x) $,  the maximum principle \underbar{does not} hold. 
+%Consider 
+%$$\cases  u_{t} -  u_{xx}  \, =\, F(x,t) \qquad  \, 0<x<1, \quad   t >0 \\  
+%u(0, t) = 0, \quad  u(1, t)= 0 \\
+%u (x, 0) =  x (1-x)  \endcases \tag H $$
+%i) Verify that $u(x, t) = (t+1)\, x (1-x)$ is a solution to (H). Verify equation and initial/boundary conditions 
+%\smallskip
+%\noindent ii) Find the maximum $M$ and the minimum $m$ over the parabolic boundary data.
+%\smallskip
+%\noindent iii) Show that for all $t >0$ the values of  the temperature $u(x,t)$ exceeds $M$ at a certain point $x$ with  $ 0<x<1.$
+
+
+\newpage
+
+
+\underbar{\bf Final Problem 4}
+ \medskip
+ a) \, [Wave on the half line. {\bf Use Handout 9)} ] 
+ 
+ Find the solution to the following wave equation on the half-line {\underbar{using the reflection method.} 
+Show all your work.
+
+$$\cases u_{tt} - 4 u_{xx} \, = \, 0 \\  
+u(x, 0) = 1, \quad  u_t(x, 0) = 0 \\
+u(0, t) = 0  \endcases $$
+
+The solution has a jump discontinuity in the $(x, t)$ plane. Find its location (explain).
+
+\vskip  .3in 
+
+b) \,[Wave with a source. {\bf Use Handout 10)}]. 
+
+Find the solution to the following inhomogeneous wave equation on $\Bbb R$. Evaluate all the integrals to obtain a nice formula for the solution
+
+$$u_{tt} - 9 u_{xx} \, =\, x \, t  \qquad u(x, 0)\, =\, \sin(x) \qquad u_t(x, 0)\,=\, 1 + x $$
+
+
+\newpage
+
+\underbar{\bf Final Problem 5}
+ \medskip
+a)  Find the Fourier \underbar{cosine} series of $\phi(x) = x^2$ \,\, for  \,\, $x \in [0, 1]$
+\medskip
+b) State in what sense does the cosine series in part a) converges to the function $x^2$ on  $[0,1]$. 
+\medskip
+c)   Use separation of variables and the superposition principle to find the general solution to the following 
+boundary value problem for the heat equation on an interval:
+ $$ {(H)}  \qquad \qquad  \cases u_{t} \,- \,    u_{xx} \, =\, 0,   \qquad  0< x < 1,  \, \, \, t>0 \\
+  u_x(0, t) \, =\, 0  \, =\,  u_x(1, t)\quad  t>0   \\
+ \endcases $$ 
+ In the course of your proof do an analysis of all the possible eigenvalues ($\lambda >0$, $\lambda =0$, $\lambda <0$ ) to the problem,
+ $$ \cases X^{\prime\prime} + \lambda X(x) = 0   \qquad  0< x < 1 \\
+  X^{\prime}(0) \, =\, 0  \, =\,  X^{\prime}(1) 
+ \endcases $$ 
+\medskip 
+ d) Find the particular solution to (H) that also satisfies the initial condition that $u(x, 0) = x^2$, \, for \, $0 < x < 1$.
+
+
+
+
+
+
+\enddocument
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Consider the {\it initial value problem for the wave equation} on $\Bbb R$:
+
+$$\cases  u_{tt} - u_{xx} \,=\,0  \\
+u(x, 0) \,=\, \phi(x) \\
+u_t(x, 0) \,=\, \psi(x) \endcases $$ where $\phi, \psi :\Bbb R \to \Bbb R$ are two smooth given functions (data).  Let $x_0 \in \Bbb R$ $t_0 >0$ be fixed and \underbar{suppose} that $\phi(x)$ and $\psi(x)$ vanish for all 
+$x$ in the interval $[x_0 - t_0, x_0 + t_0]$. 
+
+\vskip .2in
+
+
+\underbar{\it Finite Propagation Speed Theorem:}.   The solution  $u(x,t)$ to the initial value problem above vanishes for all  $(x,t)$ within  $\Cal C$, the domain of dependence of $(x_0, t_0)$.  Recall $$\Cal C :=  \{ (x,t)  :  0 \le t \le t_0  \, \text{ and }  \, x_0 -(t_0 - t)  \le x \le x_0 + (t_0 -t) \}.$$
+
+\vskip .2in 
+
+
+{\bf Remark:} The Theorem is also valid in higher dimensions but for simplicity I will ask you to prove it only in one (space) dimension. In one dimension, one can trivially prove the above theorem directly using the representation formulas for the solution $u(x,t)$  in terms of the initial data which are available in one dimension.  Or, one could prove it \underbar{without} using this explicit representation of $u$, but by using the \underbar{{\it energy method}} instead --as we have seen in class-. This proof is a bit harder but the advantage of the method is that it also works in higher dimensions.
+
+\vskip .1in 
+
+{\bf The project consists then to prove the Finite Propagation Speed Theorem above using the \underbar{energy method}. }
+\vskip .2in 
+To do so, for each \, \,  \,$0 \le t \le t_0$, \,  let  \,\, \, $I_t : = [x_0-(t_0-t), x_0 + (t_0-t) ]$. 
+
+Note $I_t$ is contained in the interval $(x_0 - t_0, x_0 + t_0)$. Define the modified energy:
+
+$${\widetilde E} (t) = \frac{1}{2} \int_{I_t} \, |u_t|^2 + |u_x|^2 \, dx $$
+
+Note ${\widetilde E} (t) \ge 0$ for any $t$ and that  $\Cal C = \bigcup_{ 0 \le t \le t_0}  I_t$.
+The goal is to show that for each $0 \le t \le t_0$, $u(x,t)=0$ for all $x \in I_t$. Do so by proving the following: 
+
+\vskip .1in
+
+
+(1) \, Prove that ${\widetilde E} (t)$ is a decreasing function of $t$ by showing that 
+$\dfrac{d{\widetilde E}}{dt} \le 0$ 
+
+\vskip .1in
+
+To compute the derivative in time \underbar{use}: (see A.3 Theorem 3 in Strauss's book p.421).
+
+$$\frac{d}{dt} \int_{a(t)}^{b(t)} \, F(x,t) \, dx \,= \,  \int_{a(t)}^{b(t)} \, \frac{d}{dt} F(x,t) \, dx  +  [ F(b(t), t) b^{\prime}(t) - F(a(t), t) a^{\prime}(t) ] $$
+
+\vskip .2in
+
+(2) Show that ${\widetilde E} (0) =0$  
+ 
+ \vskip .2in 
+ 
+(3) By (1) you then have that $\widetilde E(t) \le \widetilde E (0)$ for any $0 \le t \le t_0$ and 
+by (1) you can conclude that ${\widetilde E} (t)  =0$ for any $0 \le t \le t_0$.
+\underbar{Prove} then that this implies that $u(x,t)=0$ for  any $x \in I_t$ and any $0 \le t \le t_0$.
+
+\newpage
+
+\underbar{\bf Final Problem 2}
+\medskip
+
+Consider now the initial value problem for the diffusion equation on the {\bf whole} real line $\Bbb R$ with $k=1$:
+ $$ {(\ast)} \qquad \qquad  \cases u_{t} \,- \,    u_{xx} \, =\, 0,   \qquad  x \in \Bbb R, \, \, \, t>0 \\
+  u(x, 0) \, =\, e^{2x}, \quad   x \in \Bbb R \\
+ \endcases $$ 
+Use the fact that the solution $u(x,t)$ is obtain by the convolution of the fundamental solution with the initial data; that is by:
+$$ u(x, t) \, = \, \int_{-\infty}^\infty \, \Gamma_k ( x-y,  t) \, e^{2y} \, dy $$
+to find the function that $u(x,t)$ equals to. Check that your answer solves indeed  $(\ast)$. 
+
+\medskip
+
+{\underbar {Follow the following Hints:}}
+\medskip
+
+ 1)  Recall that in 1D,  $\Gamma_k(x-y, t) = \frac{1}{\sqrt{4 \pi k t}} e^{-\frac{(x-y)^2}{4kt}}, \, \,  t>0$  (in Strauss notation this is $S(x-y, t)$).   Note that here we have $k=1$. 
+
+\smallskip
+
+2)  After developing the square in $\Gamma$, collect all the exponents of the exponentials and 
+ {\bf complete the square in the $y$} variable. Note that terms that have only $x$ and $t$ in the exponents can 
+ come out of the integral. 
+ \smallskip
+ 3) You may use that $\int_{-\infty}^{\infty} \, e^{-p^2} \, dp = \sqrt{\pi}$. 
+ You may find  the change of variables $p= \frac{y - (x +4t)}{\sqrt 4t}$ useful. 
+
+\newpage
+
+\underbar{\bf Final Problem 3}
+ \medskip
+ 
+a) \,(wave with a source) Find the solution to the following inhomogeneous wave equation on $\Bbb R$. Evaluate all the integrals to obtain a nice formula for the solution
+
+$$u_{tt} - 9 u_{xx} \, =\, x \, t  \qquad u(x, 0)\, =\, \sin(x) \qquad u_t(x, 0)\,=\, 1 + x $$
+
+\vskip  .3in 
+
+b) \, (wave on the half line). Find the solution to the following wave equation on the half-line {\underbar{using the reflection method.} 
+Show all your work.
+
+$$\cases u_{tt} - 4 u_{xx} \, = \, 0 \\  
+u(x, 0) = 1, \quad  u_t(x, 0) = 0 \\
+u(0, t) = 0  \endcases $$
+
+The solution has a jump discontinuity in the $(x, t)$ plane. Find its location (explain).
+
+
+\newpage
+
+\underbar{\bf Final Problem 4}
+ \medskip
+
+a)  Find the Fourier \underbar{cosine} series of $\phi(x) = x^2$ \,\, for  \,\, $x \in [0, 1]$
+\medskip
+b) State in what sense does the cosine series in part a) converges to the function $x^2$ on  [$[0,1]$. 
+\medskip
+c)   Use separation of variables and the superposition principle to find the general solution to the following 
+boundary value problem for the heat equation on an interval:
+ $$ {(H)}  \qquad \qquad  \cases u_{t} \,- \,    u_{xx} \, =\, 0,   \qquad  0< x < 1,  \, \, \, t>0 \\
+  u_x(0, t) \, =\, 0  \, =\,  u_x(1, t)\quad  t>0   \\
+ \endcases $$ 
+ In the course of your proof do an analysis of all the possible eigenvalues ($\lambda >0$, $\lambda =0$, $\lambda <0$ ) to the problem,
+ $$ \cases X^{\prime\prime} + \lambda X(x) = 0   \qquad  0< x < 1 \\
+  X^{\prime}(0) \, =\, 0  \, =\,  X^{\prime}(1) 
+ \endcases $$ 
+\medskip 
+ d) Find the particular solution to (H) that also satisfies the initial condition that $u(x, 0) = x^2$, \, for \, $0 < x < 1$.
+
+
+
+
+
+
+
+
+\enddocument
+
+Consider the {\it initial value problem for the wave equation} on $\Bbb R$:
+
+$$\cases  u_{tt} - u_{xx} \,=\,0  \\
+u(x, 0) \,=\, \phi(x) \\
+u_t(x, 0) \,=\, \psi(x) \endcases $$ where $\phi, \psi :\Bbb R \to \Bbb R$ are two smooth given functions (data).  Let $x_0 \in \Bbb R$ $t_0 >0$ be fixed and \underbar{suppose} that $\phi(x)$ and $\psi(x)$ vanish for all 
+$x$ in the interval $[x_0 - t_0, x_0 + t_0]$. 
+
+\vskip .1in
+
+\underbar{Prove} the  {\it Finite Propagation Speed Theorem}. That is prove that $u(x,t)$ vanishes for all  $(x,t)$ within  $\Cal C$, the domain of dependence of $(x_0, t_0)$.  Recall $$\Cal C :=  \{ (x,t)  :  0 \le t \le t_0  \, \text{ and }  \, x_0 -(t_0 - t)  \le x \le x_0 + (t_0 -t) \}.$$
+
+\vskip .1in 
+
+
+{\bf Note:} The Theorem is also valid in higher dimensions but for simplicity prove it only in one (space) dimension. In one dimension, one can trivially prove the above theorem directly using the representation formulas for the solution $u(x,t)$  in terms of the initial data which are available in one dimension.  Or, one could prove it \underbar{without} using this explicit representation of $u$, but by using the \underbar{{\it energy method}} instead --as we have seen in class-. This is a harder proof but the advantage of the method is that it also works in higher dimensions.
+
+This assignment is then to prove the Finite Propagation Speed Theorem using the {\it energy method}. 
+To do so, for each \, \,  \,$0 \le t \le t_0$, \,  let  \,\, \, $I_t : = [x_0-(t_0-t), x_0 + (t_0-t) ]$. 
+
+Note $I_t$ is contained in the interval $(x_0 - t_0, x_0 + t_0)$. Define the modified energy:
+
+$${\widetilde E} (t) = \frac{1}{2} \int_{I_t} \, |u_t|^2 + |u_x|^2 \, dx $$
+
+Note ${\widetilde E} (t) \ge 0$ for any $t$ and that  $\Cal C = \bigcup_{ 0 \le t \le t_0}  I_t$.
+The goal is to show that for each $0 \le t \le t_0$, $u(x,t)=0$ for all $x \in I_t$. Do so by proving the following: 
+
+
+
+(1) \, Prove that ${\widetilde E} (t)$ is a decreasing function of $t$ by showing that 
+$\dfrac{d{\widetilde E}}{dt} \le 0$ 
+
+To compute the derivative in time \underbar{use}: (see A.3 Theorem 3 in Strauss's book p.421).
+
+$$\frac{d}{dt} \int_{a(t)}^{b(t)} \, F(x,t) \, dx \,= \,  \int_{a(t)}^{b(t)} \, \frac{d}{dt} F(x,t) \, dx  +  [ F(b(t), t) b^{\prime}(t) - F(a(t), t) a^{\prime}(t) ] $$
+
+\vskip .1in
+
+(2) Show that ${\widetilde E} (0) =0$  
+ 
+ \vskip .1in 
+ 
+(3) By (1) you then have that $\widetilde E(t) \le \widetilde E (0)$ for any $0 \le t \le t_0$ and 
+by (1) you can conclude that ${\widetilde E} (t)  =0$ for any $0 \le t \le t_0$.
+\underbar{Prove} then that this implies that $u(x,t)=0$ for  any $x \in I_t$ and any $0 \le t \le t_0$.
+
+\newpage
+
+\underbar{\bf Final Problem 2}
+ \medskip
+ 
+a) \,(wave with a source) Find the solution to the following inhomogeneous wave equation on $\Bbb R$. Evaluate all the integrals to obtain a nice formula for the solution
+
+$$u_{tt} - 9 u_{xx} \, =\, x \, t  \qquad u(x, 0)\, =\, \sin(x) \qquad u_t(x, 0)\,=\, 1 + x $$
+
+\vskip  .3in 
+
+b) \, (wave on the half line). Find the solution to the following wave equation on the half-line {\underbar{using the reflection method.} 
+Show all your work.
+
+$$\cases u_{tt} - 4 u_{xx} \, = \, 0 \\  
+u(x, 0) = 1, \quad  u_t(x, 0) = 0 \\
+u(0, t) = 0  \endcases $$
+
+The solution has a jump discontinuity in the $(x, t)$ plane. Find its location (explain).
+
+\newpage
+
+\underbar{\bf Final Problem 3}
+ \medskip
+
+Consider now the initial value problem for the diffusion equation on the {\bf whole} real line $\Bbb R$ with $k=1$:
+ $$ {(\ast)} \qquad \qquad  \cases u_{t} \,- \,    u_{xx} \, =\, 0,   \qquad  x \in \Bbb R, \, \, \, t>0 \\
+  u(x, 0) \, =\, e^{2x}, \quad   x \in \Bbb R \\
+ \endcases $$ 
+Use the fact that the solution $u(x,t)$ is obtain by the convolution of the fundamental solution with the initial data; that is by:
+$$ u(x, t) \, = \, \int_{-\infty}^\infty \, \Gamma_k ( x-y,  t) \, e^{2y} \, dy $$
+to explicitly find the function that $u(x,t)$ equals to. Check that your answer solves indeed  $(\ast)$. 
+
+ \underbar{Hints.} 
+ Recall that in 1D,  $\Gamma_k(x-y, t) = \frac{1}{\sqrt{4 \pi k t}} e^{\frac{(x-y)^2}{4kt}}, \, \,  t>0$  (in Strauss notation this is $S(x-y, t)$).  
+ Note that here we have $k=1$. 
+
+ After developing the square in $\Gamma$, collect all the exponents of the exponentials and 
+ {\bf complete the square in the $y$} variable. Note that terms that have only $x$ and $t$ in the exponents can 
+ come out of the integral. You may use that $\int_{-\infty}^{\infty} \, e^{-p^2} \, dp = \sqrt{\pi}$. 
+ You may find  the change of variables $p= \frac{y - (x +4t)}{\sqrt 4t}$ useful. 
+
+\newpage
+
+\underbar{\bf Final Problem 4}
+ \medskip
+a)  Find the Fourier \underbar{cosine} series of $\phi(x) = x^2$ \,\, for  \,\, $x \in [0, 1]$
+\medskip
+b) State in what sense does the cosine series in part a) converges to the function $x^2$ on  $[0,1]$. 
+\medskip
+c)   Use separation of variables and the superposition principle to find the general solution to the following 
+boundary value problem for the heat equation on an interval:
+ $$ {(H)}  \qquad \qquad  \cases u_{t} \,- \,    u_{xx} \, =\, 0,   \qquad  0< x < 1,  \, \, \, t>0 \\
+  u_x(0, t) \, =\, 0  \, =\,  u_x(1, t)\quad  t>0   \\
+ \endcases $$ 
+ In the course of your proof do an analysis of all the possible eigenvalues ($\lambda >0$, $\lambda =0$, $\lambda <0$ ) to the problem,
+ $$ \cases X^{\prime\prime} + \lambda X(x) = 0   \qquad  0< x < 1 \\
+  X^{\prime}(0) \, =\, 0  \, =\,  X^{\prime}(1) 
+ \endcases $$ 
+\medskip 
+ d) Find the particular solution to (H) that also satisfies the initial condition that $u(x, 0) = x^2$, \, for \, $0 < x < 1$.
+
+
+\enddocument

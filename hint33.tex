@@ -1,0 +1,201 @@
+\magnification=1100
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+%\NoPageNumbers
+\def \IR {\Bbb R}
+\def \B {\Cal B}
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+\def \E {\Cal E}
+\document
+
+\head Handout for Assignment $\#1$  M624 \endhead 
+
+\bigskip 
+\subhead  Problem 33 \endsubhead
+
+\bigskip 
+
+Let us call denote by $$I= \int f dx \qquad a_n= \int f_n dx \qquad \text{and} 
+\qquad A= \liminf \int f_n dx $$ We wish to prove that $$ I \le A$$ By assumption we know 
+\roster 
+
+\item \qquad $f_n \ge 0$  (in particular $a_n \ge 0$ also) 
+
+\item \qquad $f_n \to f$ in measure. 
+
+\endroster
+
+Now since A is the smallest of all limit points, there must exist a subsequence of $a_{n_k} $ of  $a_n$ that converges to A ; i.e. 
+$$\lim_{k \to \infty} a_{n_k} = A.$$
+In particular note that $$ A = \lim_{k \to \infty} \int f_{n_k} dx \qquad \text{and that }  \, f_{n_k} \to f \text{ in measure as well } $$  
+Then for every subsequence $a_{n_{k_j}}$ of $a_{n_k}$ we also have that 
+ $$ A = \lim_{j \to \infty}a_{n_{k_j}} =  \lim_{j \to \infty} \int f_{n_{k_j}} dx $$ and  $f_{n_{k_j}} \to f \text{ in measure as well } $ . 
+\vskip .1in
+
+In particular then, there exists one such sub(sub)sequence for which we have 
+a.e. convergence to $f$. By abuse of notation let us refer to {\it this particular} sub(sub)sequence as $f_{n_{k_j}}$ once again. Now, by Fatou's lemma we have that
+$$ I= \int f = \int \lim  f_{n_{k_j}} = \int \liminf f_{n_{k_j}} \le \liminf a_{n_{k_j}} = \lim_{j \to \infty}a_{n_{k_j}}= A $$ as desired. \qquad \qquad \qquad \qed
+
+\vskip .2in 
+
+\subhead Problem 38 Part b) \endsubhead
+
+\bigskip
+
+First note that : 
+
+$$ f_n g_n - f g = (f_n -f)(g_n-g) + f (g_n-g) + g (f_n -f) $$
+
+Then {\bf prove} that if a function is finite a.e. and $\mu(X) < \infty$
+then the function is {\it almost} bounded : i.e.
+
+$$ \forall \varepsilon > 0 \text{there exists} M = M(\varepsilon) >0
+\,  \, \mu(\{ x \in X \, : \, f(x) > M\}) < \varepsilon $$
+
+To see this look at the sequence of sets $E_n = \{ x \in X \, : \,
+f(x) > n\}$ and use the continuity from {\it above} of the measure $\mu$. Note $\mu(E_1) \le
+\mu(X) < \infty$.
+
+\bigskip
+
+
+To find a counterexample in the case $\mu(X) = \infty$ consider $X=
+\IR$ and $\mu$ Lebesgue measure. 
+Define a sequence of functions $f_n(x) = a_n$ for all x in
+$\IR$ where $\{a_n\}$ is any sequence of positive real numbers you care to {\bf choose}
+such that $a_n \to 0$ as $n \to \infty$. And define $g_n(x) = g(x)$ for all $n \ge 1$
+where $g(x)$  is any function you care to {\bf choose} over $\IR$ such that $g(x) \to  
+\pm \infty$ as $x \to \pm \infty$.
+Show $f_n$ converges in measure to zero, $g_n$ converges in measure to
+$g$
+but $f_n\,g_n$ does not converge in measure to zero.
+
+
+
+
+\subhead  Problem 41 \endsubhead
+
+\bigskip 
+{\bf The argument below might need some fine tuning: check it carefully.} 
+\bigskip 
+
+Since $X$ is $\sigma$-finite we can write $$X = \bigcup_{i=1}^{\infty} X_i \qquad \mu(X_i) < \infty \qquad X_i \cap X_{i'} = \emptyset, \qquad i \neq i' $$
+
+Since $ f_m \to f $\quad a.e. in $X$ then $ f_m \to f $\quad a.e. in $X_i, \, \, \forall i.$
+\vskip .1in
+
+Let $\varepsilon > 0$ be given and fixed. For each  $i \ge 1$ we will apply Egoroff's theorem with $\frac{\varepsilon}{2^i}$. 
+\vskip .1in 
+
+\noindent Then there exists $F_i \subset X_i$, $\mu(F_i) < \frac{\varepsilon}{2^i}$ such that $$ f_m \to f \quad \text{uniformly on } \, X_i \setminus F_i $$ Note that $F_i \cap F_{i'} = \emptyset \quad i \neq i'$. 
+
+Let us denote by $G_i =   X_i \setminus F_i $  then  since 
+$$G_i^{c} = X \setminus G_i = \bigcup_{j \neq i} X_j \, \cup \, F_i $$ where all unions are disjoints one can \underbar{{\it prove}}  (homework: prove it ! ) that 
+$$ \bigcap_{i=1}^{\infty} G_i^{c} \, \subseteq \, \bigcup_{i=1}^{\infty} F_i $$ (again 
+last union is disjoint union ). Hence $$ \mu ( (\bigcup_{i=1}^{\infty} G_i)^{c})\, = \, \mu ( \bigcap_{i=1}^{\infty} G_i^{c}) \leq
+\sum_{i=1}^{\infty} \mu(F_i) \leq \varepsilon $$ For later use we now denote by $$H_1=  \bigl ( \bigcup_{i=1}^{\infty} G_i \bigr) ^{c}  = X \setminus  \bigl( \bigcup_{i=1}^{\infty} G_i \bigr) \text{ and } \E_1 =  \bigl ( \bigcup_{i=1}^{\infty} G_i \bigr) $$
+ 
+\vskip .2in 
+
+Now consider the sequence $\varepsilon_n = 2^{-n}$, $n \ge 1$. 
+
+\vskip .1in 
+
+\noindent Let $n=1$ and run the argument above with $\varepsilon = \varepsilon_1 = 1/2 $. We get $\E_1$ and $H_1$ such that 
+
+\vskip .2in 
+
+\roster
+
+\item $ X= \E_1 \cup H_1$ where the union is disjoint and $\mu( X \setminus \E_1) = \mu(H_1) < 1/2 $
+
+\vskip .1in 
+
+\item $f_m \to f$ uniformly on each set $G_i$ in $\E_1$
+
+\vskip .1in 
+
+\item  $f_m \to f$ a.e in $X$; hence in particular,  $f_m \to f$ a.e in $H_1$
+
+\endroster
+
+\vskip .2in 
+
+For $n=2$ we now consider as full space $X= H_1$ and apply Egoroff's theorem with $\varepsilon_2 = 1/4$. Then there exists a set $\E_2$ such that 
+
+\roster
+
+\item $ X= \E_2 \cup H_2$ , where the union is disjoint,  
+$H_2 = H_1 \setminus \E_2 $ and $\mu( H_1 \setminus \E_2) = \mu(H_2) < 1/4 $
+
+\vskip .1in 
+
+\item $f_m \to f$ uniformly in $\E_2$
+
+\vskip .1in 
+
+\item  $f_m \to f$ a.e in $H_1$; hence in particular,  $f_m \to f$ a.e in $H_2$
+
+\endroster
+
+\vskip .2in 
+
+Repeat the step $n=2$ above inductively for all $n \ge 3$ applying Egoroff to $X= H_{n-1}$ and $\varepsilon = \varepsilon_n = 2^{-n}$ to get sets $\E_n$ and $H_n$ such that 
+
+\vskip .2in 
+
+
+\roster
+
+\item $ X= \E_n \cup H_n$ , where the union is disjoint,  
+$H_n = H_{n-1}  \setminus \E_n $ and $\mu( H_{n-1} \setminus \E_n) = \mu(H_n) < 2^{-n} $
+
+\vskip .1in 
+
+\item $f_m \to f$ uniformly in $\E_n$
+
+\vskip .1in 
+
+\item  $f_m \to f$ a.e in $H_{n-1}$; hence in particular,  $f_m \to f$ a.e in $H_n$
+
+\endroster
+
+Note that $ \mu(H_1) < \infty$ and $ \dots \dots \subseteq H_n \subseteq H_{n-1} \dots \dots \subseteq H_2 \subseteq H_1 \ $. Then  $$ X=  \bigcup_{n=1}^\infty \E_n  \, \cup H \qquad \text{where} \quad H = \bigl ( \bigcup_{n=1}^\infty \E_n \bigr )^{c} \text{ and } $$
+$$\mu (H) = \mu( X \setminus \bigcup_{n=1}^\infty \E_n ) = \mu( \bigcap_{n=1}^{\infty}H_n ) = \lim_{n \to \infty} \mu(H_n) = 0 $$ On the other hand by relabeling all the $G_i$ in $\E_1$ and all the $\E_n, \, n\ge 2$  as  $E_m, \, m\ge 1$
+(note that the union of two countable families of sets is countable) for example by sending $G_i$ , $i \ge 1$ to $E_{2k}, \, k \ge 1$ and $\E_n, \, n\ge 2$ to $E_{2k+1}, \, k \ge 0$ we obtained the desired conslusion.\qquad \qquad \qquad \qed 
+
+
+
+
+
+
+
+
+
+\enddocument 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

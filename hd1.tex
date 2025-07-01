@@ -1,0 +1,78 @@
+
+\magnification=1200
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+%\NoPageNumbers
+\def \IR {\Bbb R}
+\def \B {\Cal B}
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+
+\document
+
+%\head Handout \endhead 
+
+
+\bigskip 
+\head On a Counterexample to Fubini  \endhead
+
+\bigskip 
+
+%The last counterexample to Fubini we covered in class 
+%is related to problem $47$. 
+
+Let W be a well ordered set;  
+$$j : [0,1] \to W$$ and let 
+$Q$ be defined as the set of pairs $(x,y) \in [0,1] \times [0,1]$ 
+ such that $j(x)$ preceds $j(y)$ in $W$ (here preceds means with respect to the total order in W). 
+
+We need that 
+
+\roster
+
+\item $Q_x$ should contain all of $[0,1]$ except for a countable set in $[0,1]$.  
+
+\item $ Q^y$  should contain at most a countable set in $[0,1]$. 
+
+\endroster 
+Hence note in particular both sections would be Borel sets. 
+
+Then the counterexample follows by considering $f(x,y) = \chi_Q(x,y) $ 
+and observing that the integrals over $[0,1]$ w.r.t. Lebegue measure of 
+$f_x$ and $f^y$ (which would be Borel functions themselves) were different 
+( first one $= 1$; second one $= 0$)
+
+The reason why Fubini doesn't work is because $f$ itself is 
+not measurable w.r.t the product Borel sigma algebra
+
+Proving 2) above maybe tricky if $j(x)$ is "too general". One needs to actually assume a few additional things: 
+
+\vskip .1in 
+
+a) Well Ordering Principle: every nonempty set $X$ can be "well ordered". 
+(this relies on an equivalent form of Zorn's lemma which states that every partially ordered set has a maximally linearly ordered set i.e. given X there exists a subset E of X for which the partial order in X becomes a total or linear order in E and E is maximal in the sense that no other subset of X that is also 
+totally ordered with respect to the same partial order strictly contains E )
+
+\vskip .1in 
+
+b) The Continuum Hypothesis : there is no set whose cardinality is strictly bigeer than that of the natural numbers and strictly smaller than that of the reals.
+(In other words if a set is uncountable then its cardinality is bigger or equal than that of the reals).
+
+As a consequence of a) we have the existence of uncountable well order sets. We need then to assume our $W$ above is such a set.
+
+As a consequence of b) and the fact $W$ has cardinality at least that of $[0,1]$ 
+we can choose $j(x)$ to be one-to-one function. Now if j(x) is chosen as above in a one-to-one fashion then this guarantees that 1) and 2) above holds as desired. 
+
+
+
+\enddocument 
+
+
+
+
+
+

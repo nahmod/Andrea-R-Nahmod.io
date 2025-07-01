@@ -1,0 +1,230 @@
+\magnification=1200
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+%\NoPageNumbers
+\pagewidth{16.5truecm}
+\pageheight{22truecm}
+
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+%\hcorrection{.3in}
+
+\centerline{ \bf  M623 HOMEWORK  Part I  -- Fall 2014}
+\vskip .1in
+\centerline{ Prof. Andrea R. Nahmod }
+\vskip .2in
+
+\document
+
+
+\vskip .1in
+\head{\underbar{Some more problems (do not turn in yet)}}\endhead
+
+
+\medskip
+
+Do problems:   8 (p. 39),   13a) (p 41), 17 (p 42), 19 (p 42),  20 (p42-43),  30 (p 44), 
+\medskip
+{\bf I.\,}   Consider the sequence of functions $f_n(x): = \frac{n}{1 +  (n x)^2}$.  For $a \in \Bbb R$ be a fixed number consider the Lebesgue integral $I_a(f_n)(x) := \int_a^\infty \, f_n(x)  \, dm$. Compute $\lim_{n \to \infty} I_a(f_n)(x)$ in each case: i) $a =0$  ii) $a > 0$  and iii) $a <0$. Carefully justify your calculations (recall the transformation of integrals under dilations). 
+
+\medskip 
+
+{\bf II.\,}   Use the DCT to prove the following:   let $\{f_n\}_{n \ge 1}$ be a sequence of integrable functions on $\Bbb R^d$ such that $\sum_{n=1}^{\infty}\,  \int  |f_n(x)| \, dm < \infty$.  \, Show that   $\sum_{n=1}^{\infty}\,  f_n(x) \,$ {\it converges} a.e. \, $x \in \Bbb R^d$ to an {\it integrable function} and that  $\sum_{n=1}^{\infty}\,  \int  f_n(x) \, dm \, = \,  \int \, \sum_{n=1}^{\infty}\,  f_n(x) dm $.
+
+\medskip 
+
+{\bf III.\,}  Let $ 0 < c <d$ be fixed real numbers and for $n \geq 1$ consider the sequence function $f_n(x) =    c e^{ - c n x}  -    d e^{ - d n x},$ where $ x \geq 0$. Prove that:
+
+\roster
+\item  $\sum_{n=1}^{\infty} \int |f_n(x)| \, dm   $   diverges 
+\item  $\sum_{n=1}^{\infty} \int f_n(x) \, dm  = 0 $  
+\item  $\sum_{n=1}^{\infty} f_n(x)$   is an integrable function on $[0, \infty)$ and that 
+$$ \int_{[0, \infty)} \, \sum_{n=1}^{\infty} f_n(x)  \, dm \, =\, \ln(\frac{d}{c}). $$
+\endroster
+
+\medskip
+{\bf IV.\,}   Consider the function on $\Bbb R \times \Bbb R$ given by 
+$$f(x, y) =  y e^{-(x^2 +1) y^2}\quad \text{ if }   x \geq 0, y \geq 0 \quad \text{and} \quad  0 \quad \text{ otherwise }.$$
+
+a) Integrate $f(x,y)$ over $\Bbb R \times \Bbb R$   (justify your steps carefully)
+
+b) Use a) to prove that $\int_0^\infty  e^{-x^2} \, d x \, =\, \frac{\sqrt{\pi}}{2}$.
+
+c) Use b) and dilation to prove that $\int_{-\infty}^\infty  e^{- a x^2} \, d x \, =\, \sqrt{\frac{\pi}{a}}$.
+
+\medskip
+
+{\bf V.\,}  Let $f(x)$ be a measurable function over $\Bbb R^{d_1}$ and $g(y)$  be a measurable function over $\Bbb R^{d_2}$. Prove that $F(x,y) = f(x) g(y) $ is a measurable function over $\Bbb R^{d_1 + d_2}$.
+
+
+\head {\underbar{SET 4:  Due Date 10/30/14}  }\endhead
+\vskip .1in
+
+\noindent {\bf From Chapter 2 (pp 88-97)}: 2, 8, 15 
+
+\vskip .1in
+\underbar{Additional Problems:}
+\medskip
+{\bf I.\,} If a function $f$ is integrable then we proved in Proposition 1.12 (Chapter 2) that for any $\varepsilon>0$ there exists a $\delta >0$
+such that for any set $A$ with $m(A) \leq \delta$, we have that $\int_A |f(x)| \, dm \leq \varepsilon$ ({\it absolute continuity of the Lebesgue integral}).
+
+\smallskip
+
+ We say that a sequence of functions $\{ f_n\}_{n\geq 1}$ is {\bf equi-integrable} if for every $\varepsilon >0$
+there exists $\delta >0$ s.t.  for any set $A$ with $m(A) \leq \delta$, we have that $\int_A |f_n(x)| \, dm \leq \varepsilon$ \underbar{for all} $n \geq 1$. 
+
+\smallskip
+
+Now prove the following.   
+
+\smallskip
+
+Let $E$ be  a set of finite measure, $m(E) < 1$, and let $\{f_n\}: E \to R $ be a
+sequence of functions which is equi-integrable. Show that if  $\lim_{n \to \infty} f_n(x) = f(x)$ a.e. $x$, then 
+$$ \lim_{n \to \infty} \int_E |f_n(x) - f(x)| \, dm \, =\, 0.$$
+\underbar{Hint}. Use Egorov's Theorem as in the bounded convergence theorem.
+
+\bigskip
+
+{\bf II.\,} In class we first proved the {Bounded Convergence Theorem} (using Egorov Theorem).
+Then, we proved Fatou's Lemma (using the BCT) and
+deduced from it the Monotone Convergence Theorem. Finally we proved the Dominated 
+Convergence Theorem (using both BCT and MCT). Here we would like to prove these sequence of results in a different order.
+Namely, prove:
+
+{\bf a)}\,  Prove Fatou's Lemma {\it from} the MCT by showing
+that for any sequence of measurable functions $\{f_n\}_{n \geq 1}$, 
+$$  \int  \liminf_{ n\to \infty}  f_n  \, dm \,  \leq  \,  \liminf_{ n\to \infty} \int f_n \, dm . $$
+
+\underbar{Hint}. \, Note that   $\inf_{ n \geq k} \,  f_n \leq f_j$ for any $ j \geq k$, whence  $\int \inf_{ n \geq k} \, f_n \, dm\,  \leq \, \inf_{j \geq k} \int  f_j.$ 
+\medskip
+
+{\bf b)}  Now prove the DCT  from Fatou's Lemma. 
+
+\smallskip
+
+\underbar{Hint}. Apply Fatou's Lemma to the nonnegative functions $g + f_n$ and  $g - f_n$.
+
+
+\vskip .2in
+
+
+
+
+
+
+\noindent {\bf Problems on Fubini-Tonelli} 4, 18, 19, 
+
+\medskip
+
+Some Additional Problems on Fubini coming soon.
+
+\newpage
+
+
+\head { SET 3:  Due Date 10/16/14   }\endhead
+\vskip .1in
+\noindent {\bf From Chapter 2 (pp 88-97)}:  6,  9, 10,  11
+
+\medskip
+
+
+\underbar{Additional Problem:}   Fill in all details to give a full proof of  Lemma 1.2 (ii)  (Chapter 2 pages 53-54).
+
+\bigskip
+
+
+
+\head { SET 2:  Due Date:  Thursday October 2, 2014 }\endhead
+\vskip .1in
+
+
+\noindent {\bf From Chapter 1 (pp 37-42)}:\,  18 (assume $f$ is finite-valued),\, 22, 28, 32 ( Part b) should say:  ``...prove that {\it there exists} a subset of G which is...." ).
+
+\vskip .1in
+
+\underbar{Additional Problem:}    Suppose that A is a measurable set in $\Bbb R^d$ with $m(A) > 0$. Show that for any
+$q < m(A)$ there exist a measurable set $B\subset  A$ with $m(B) = q$. 
+
+(Hint: Prove it first for the case that $m(A)=p < \infty$. Use then the intermediate value theorem for
+$A \cap B_R(0)$.)
+
+
+
+\vskip .2in
+
+\head { SET 1:  Due Date:  Thursday September 18, 2014 }\endhead
+\vskip .1in
+
+\noindent {\bf From Chapter 1 (pp 37-42)}:\, 1, 2, 3,  4a), 5, 6, 7, 10, 11, 16 (Do {\bf{ III.}} below before 16)
+
+\medskip
+
+
+
+
+
+
+\underbar{Additional Problems}
+
+\medskip
+
+
+{\bf I.}  First recall that a set $E$ in $\Bbb R^d$ is closed if and only if $E$ contains all its limit points; in particular any convergent sequence in $E$ has limit in $E$.
+Next recall that a set $K \subset \Bbb R^d$ is said to be compact if $K$ is closed and bounded. 
+
+\medskip
+
+Show that the following are equivalent:
+\smallskip
+
+i)  \, $K$ is compact
+\smallskip
+
+ii) \,  Any cover of $K$ by open sets, $K \subset \cup_{\alpha} \Cal{O}_{\alpha}, \quad \Cal{O}_{\alpha}$ open,  contains a finite sub-cover $$K \subset \cup_{j=1}^M  \Cal{O}_{j}, \qquad \text{ for some } \, \, M \geq 1$$ 
+
+\smallskip
+
+iii)\, Any sequence $\{y_n\}_{n \geq 1} \subset K$, contains a convergent subsequence whose limit is in $K$.
+
+\bigskip
+
+{\bf II.}   a) \, Let $ A = \cup_{n=1}^{\infty} A_n$ with $ m_{\ast}(A_n) = 0$. \underbar{Use} the definition of exterior measure to prove that $m_{\ast}(A) =0$.
+
+\smallskip
+
+b)\, Use a) to prove that any countable set in $\Bbb R^d$ is measurable and has measure zero. 
+
+{\bf III.}  Let $\{E_n\}_{n\geq 1}$ be a countable collection of measurable sets in $\Bbb R^d$. Define
+$$  \quad  \limsup_{n \to \infty} E_n \,:=\, \{ x \in \Bbb R^d \, :\, \, x \in E_n, \, \text{ for infinitely many } \, n \, \} $$
+$$  \quad  \liminf_{n \to \infty} E_n \,:=\, \{ x \in \Bbb R^d \, :\, \, x \in E_n, \, \text{ for all but finitely many } \, n \, \} $$
+ 
+\smallskip 
+
+a) Show that  $$\limsup_{n\to \infty} E_n \,=\, \bigcap_{n=1}^\infty \bigcup_{k=n}^{\infty} E_k \qquad \liminf_{n\to \infty} E_n \,=\, \bigcup_{n=1}^\infty \bigcap_{j=n}^{\infty} E_j $$
+
+b) Show that $$ m( \liminf_{n\to \infty} E_n ) \leq \liminf_{n\to \infty} m(E_n ) $$ 
+$$  m( \limsup_{n\to \infty} E_n ) \geq   \liminf_{n\to \infty} m(E_n )  \quad \text{ provided that } \, m(\bigcup_{n=1}^\infty E_n ) < \infty $$
+
+\enddocument
+
+
+
+                                               
+
+
+
+
+
+
+
+
+
+
+
+
+

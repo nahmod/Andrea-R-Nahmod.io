@@ -1,0 +1,149 @@
+\magnification=1100
+\input amstex
+
+\documentstyle{amsppt}
+\NoBlackBoxes
+\NoPageNumbers
+\pagewidth{16truecm}
+\pageheight{22truecm}
+\vcorrection{-1.truecm}
+
+\def \IR {\Bbb R}
+\def \IN {\Bbb N}
+\def \IC {\Bbb C}
+\def \B {\Cal B}
+\def \M {\Cal M}
+\def \N {\Cal N}
+\def \H {\Cal H}
+\def \C {\Cal C}
+\def \R {\Cal R}
+\def \A {\Cal A}
+{\catcode`@=11
+\gdef\nologo{\let\logo@\empty}
+\catcode`@=12}
+\nologo
+%\hcorrection{.3in}
+\hskip 3.2in {\bf NAME: }
+\vskip .15in 
+\hskip 3.2in {\bf  ID \#: }
+
+\vskip .7in
+
+\centerline{ \bf TAKE HOME FINAL MATH 534H}
+\vskip .2in
+\centerline{ Saturday May 6th,  2017 }
+\vskip 1in
+\document
+\subhead{ Instructions }\endsubhead
+\vskip .3in 
+ 
+\roster
+
+
+\item {\bf This exam consists of 4 problems with parts for a total of $\bold{100\%}$.}
+\vskip .3in 
+
+\item {\bf  It is due no later than Tuesday May 9th by {\bf 3:30 pm}  in LGRT 1338 } 
+\vskip .3in 
+
+\item {\bf You should work on it alone. You may consult Salsa'  book,  the class notes and your homework ONLY. \, No other material is allowed. }
+
+\vskip .3in 
+
+\item {\bf Show \underbar{all} the work needed to reach your answer for full credit.}
+\vskip .3in 
+
+\item {\bf You cannot discuss the problems with other people, including
+classmates.}
+\vskip .2in 
+
+
+\item {\bf \underbar{Type} each problem and its solution in an ordered fashion (new page for each problem)  and staple them all together with this cover. 
+Insert additional pages if needed.}
+
+\endroster 
+
+
+
+\newpage 
+
+
+{\underbar{Final Problem 1}:  Find the solution $u(x,t)$ to the following inhomogeneous diffusion boundary/initial value problem  with Dirichlet boundary conditions (proceed as in handout example). 
+
+\vskip .05in
+  $$\cases u_{t} \,- \,  u_{xx} \, =\, e^{-t},   \qquad  0< x < 1, \, \, \, t>0  \\
+  u(x, 0) \, =\, 1, \quad 0< x<1  \\
+u(0, t) \,= \, 0 \quad \text{and} \quad u(1, t) \,=\, 0 \endcases $$
+
+\underbar{Hints}  First find the sine Fourier series for $e^{-t}$ on $(0, 1)$. Note that you had to find the sine Fourier series for $1$ in Set  2 Problem 4.  
+
+At some point you'll encounter an ODE of the form  $$a_n^{\prime}(t)  + c_1 n^2 \pi^2  a_n(t)  = c_2 \frac{e^{-t}}{n\pi}$$  for some specific constants $c_1, c_2$. To find the solution to this ODE, consider $a_n(t) = A_n e^{-t}$ for suitable $A_n$ that you would need to find.
+
+\bigskip
+
+\newpage
+
+
+{\underbar{Final Problem 2}}:  a) Let $f$ be a smooth function with compact support (that is  the support of f is contained in some fixed ball of radius $R.0$ centered at the origin which means,  $f(x) =0$ for $|x| > R$ for some $R>0$ ). Consider the Poisson equation on the whole space  $\Bbb R^d$ 
+$$ (\dagger)  \qquad  \Delta u = f  $$
+\bigskip 
+
+i)  Consider $d=3$. We know that  there exist smooth solutions $u$ that tend to zero at $\infty$  ($u(x)  \to  0$ as $|x| \to \infty$).  \, Use Liouville's theorem to prove that these solutions are unique. Carefully show all steps and justify them. 
+ 
+ \bigskip
+ 
+ii) Consider $d=2$.  We know  now that there exist smooth solutions solutions $u(x)$ which could grow like $\ln |x|$ at infinity.   \, Use Liouville's theorem to prove that smooth solutions $u(x)$ whose gradient $|\nabla u(x)|  \to  0$ as $|x| \to \infty$  are unique up to a constant;  \, i.e. if $u_1$ and $u_2$ are solutions, then $u_1 = u_2 + C$ for some $C>0$. Carefully show all steps and justify them. 
+ 
+
+\vskip .5in
+
+b) Let $\Omega$ be a smooth  and bounded domain in $\Bbb R^d$ and let $g$ be a given smooth function on $\partial \Omega$,  the boundary of $\Omega$. Consider  the Dirichlet boundary value problem for the Laplace equation:
+$$ \cases \, &\Delta u=\, 0 \qquad \qquad x \in \Omega \\
+&u( {\overline x}) \, = \, g({\overline x}) \qquad  {\overline x} \in \partial \Omega
+\endcases $$
+ Use the energy method to show that smooth (and continuous up to the boundary) solutions  to this problem are unique. To prove this consider $w = u_1 - u_2$  (where $u_1, u_2$ are two solutions)  and write down the boundary value problem that $w$ solves.  Next, prove that 
+ $$ E(w) = \int_{\Omega}  | \nabla w (x) |^2 \, dx \, =\, 0 \tag1$$
+ and use this in conjunction with the boundary values of  $w$ --and the fact that $w$ is continuous on $\overline{\Omega}$ --  to conclude uniqueness.
+ 
+ \underbar{Hint} To prove (1), note that $$ 0 = \int_{\Omega}  w(x) \, \Delta w(x)\,  dx $$ and integrate by parts/divergence theorem.
+
+\newpage
+
+
+{\underbar{Final Problem 3}}
+
+  Consider the solution to the initial value problem for the wave equation on $\IR$:
+$$ \cases u_{tt} - u_{xx} \,=\, 0  \qquad x \in \IR, \\
+u(x, 0) = 0 \\
+u_t (x, 0) = \chi_{[-2, 2]}(x)  \quad \text{this is }  1 \text{ on }  |x| \le 2; \text{ and } \, 0 \, \text{ otherwise. } \endcases $$ 
+
+
+(a) Use D' Alembert's formula to write down the solution $u(x,t)$ in terms of its initial data (do not evaluate the integral).
+  \vskip .2in
+
+(b) Use differentiation rules for integrals to compute $u_t (x,  t)$.
+
+\noindent (\underbar{Hint} Recall homework problem 8 in Set 4). 
+  \vskip .2in
+(c)  Set $x=0$ in (b) and prove that for all $|t|>2$ we have that $u_t (0,  t) \,=\, 0$. 
+
+\newpage
+
+{\underbar{Final Problem 4}}:
+
+Consider the following linear wave equation equation on the interval $[0,\pi]$ with zero Dirichlet boundary conditions:
+
+$$ \cases \, &u_{tt} \, - \, u_{xx} \,=\, 0 \qquad \qquad  0 < x < \pi \\
+&u(0, t) \, = \, 0 = u(\pi, t) \\
+& u(x, 0)= \phi(x)  \qquad u_t(x, 0) = \psi(x) \endcases \tag{1}$$ where $\phi, \psi$ are smooth functions on $[0, \pi]$
+
+a) Use separation of variables and fully solve the corresponding eigenvalue problems associated to (1) to write down the sine-cosine series expansion of the solution $u(x,t) \, =\, \sum_{n=1}^{\infty} \, X_n(x) T_n(t)$.  Describe the coefficients in terms of the initial data $\phi(x)$ and $\psi(x)$.   
+
+  \vskip .2in
+  
+  b) Suppose that $\phi(x) =x$ and $\psi(x)=0$.  Find the sine Fourier series for  $\phi$ in this case and use it to give the explicit solution to $(1)$ by finding the corresponding coefficients in a).
+  
+  
+
+
+\enddocument
